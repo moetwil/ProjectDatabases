@@ -8,9 +8,7 @@ namespace SomerenModel
 {
     public class Teacher
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string FullName { get { return $"{FirstName} {LastName}"; } }
+        public string Name { get; set; }
         public int Number { get; set; } // LecturerNumber, e.g. 47198
     }
 }
