@@ -20,13 +20,15 @@ namespace SomerenLogic
 
         public List<Room> GetRooms()
         {
+            // collect all rooms from the database
             List<Room> rooms = roomdb.GetAllRooms();
             return rooms;
         }
 
-        // returns a string with the correct type of room
+        
         public string IsTeacherRoom(Room room)
         {
+            // returns a string with the correct type of room
             if (room.Type)
                 return "Teacher Room";
 

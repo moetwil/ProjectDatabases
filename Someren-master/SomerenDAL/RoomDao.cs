@@ -14,6 +14,7 @@ namespace SomerenDAL
     {      
         public List<Room> GetAllRooms()
         {
+            // SQL query that selects the information that we need, where the roomId is bigger than 200
             string query = "SELECT roomId, capacity, roomType FROM [Rooms] WHERE roomId > 200";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
@@ -21,10 +22,11 @@ namespace SomerenDAL
 
         private List<Room> ReadTables(DataTable dataTable)
         {
-            List<Room> students = new List<Room>();
+            List<Room> rooms = new List<Room>();
 
             foreach (DataRow dr in dataTable.Rows)
             {
+                // create a room with with information from the database and add it to the list
                 Room room = new Room()
                 {
                     Number = (int)dr["roomId"],
@@ -32,9 +34,9 @@ namespace SomerenDAL
                     Type = (bool)dr["roomType"]
                     
                 };
-                students.Add(room);
+                rooms.Add(room);
             }
-            return students;
+            return rooms;
         }
     }
 }

@@ -30,8 +30,7 @@ namespace SomerenUI
             if (panelName == "Dashboard")
             {
                 // hide all other panels
-                pnlStudents.Hide();
-                pnlRooms.Hide();
+                HideAllPanels();
 
                 // show dashboard
                 pnlDashboard.Show();
@@ -69,13 +68,8 @@ namespace SomerenUI
             }
             else if (panelName == "Rooms")
             {
-                // hide all other panels
-                pnlDashboard.Hide();
-                imgDashboard.Hide();
-                pnlStudents.Hide();
-                pictureStudents.Hide();
-
-                // show rooms
+                // hide all panels and show the room panel
+                HideAllPanels();
                 pnlRooms.Show();
 
                 try
@@ -96,6 +90,7 @@ namespace SomerenUI
                     listViewRooms.Columns.Add("Capacity", 90);
                     listViewRooms.Columns.Add("Room type", 90);
 
+                    // add every room to the listView
                     foreach (Room room in roomList)
                     {
                         ListViewItem li = new ListViewItem(room.Number.ToString());
@@ -144,6 +139,16 @@ namespace SomerenUI
         private void roomsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showPanel("Rooms");
+        }
+
+        void HideAllPanels()
+        {
+            // hide every panel
+            pnlDashboard.Hide();
+            imgDashboard.Hide();
+            pnlStudents.Hide();
+            pnlRooms.Hide();
+            pictureStudents.Hide();
         }
     }
 }
