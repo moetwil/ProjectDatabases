@@ -24,6 +24,15 @@ namespace SomerenLogic
             return rooms;
         }
 
+        // returns if room is Teacher Room or Student Room
+        public string IsTeacherRoom(Room room)
+        {
+            if (room.Type == true)
+                return "Teacher Room";
+
+            return "Student Room";
+        }
+
         
     }
 }

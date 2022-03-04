@@ -85,10 +85,19 @@ namespace SomerenUI
 
                     // clear the listview before filling it again *********************
                     listViewRooms.Clear();
+                    listViewRooms.GridLines = true;
+                    listViewRooms.View = View.Details;
+
+                    listViewRooms.Columns.Add("Room number", 90);
+                    listViewRooms.Columns.Add("Capacity", 90);
+                    listViewRooms.Columns.Add("Room type", 90);
 
                     foreach (Room room in roomList)
                     {
-                        ListViewItem li = new ListViewItem(room.Number.ToString(), room.Capacity);
+                        //ListViewItem li = new ListViewItem(room.Number.ToString());
+                        ListViewItem li = new ListViewItem(room.Number.ToString());
+                        li.SubItems.Add(room.Capacity.ToString());
+                        li.SubItems.Add(roomService.IsTeacherRoom(room));
                         listViewRooms.Items.Add(li);
                     }
                 }

@@ -44,9 +44,9 @@
             this.pnlStudents = new System.Windows.Forms.Panel();
             this.pnlRooms = new System.Windows.Forms.Panel();
             this.listViewRooms = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.RoomNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.capacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureRooms = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listViewStudents = new System.Windows.Forms.ListView();
@@ -185,9 +185,9 @@
             // listViewRooms
             // 
             this.listViewRooms.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
+            this.RoomNumber,
+            this.capacity,
+            this.type});
             this.listViewRooms.HideSelection = false;
             this.listViewRooms.Location = new System.Drawing.Point(16, 43);
             this.listViewRooms.Name = "listViewRooms";
@@ -195,17 +195,17 @@
             this.listViewRooms.TabIndex = 5;
             this.listViewRooms.UseCompatibleStateImageBehavior = false;
             // 
-            // columnHeader1
+            // RoomNumber
             // 
-            this.columnHeader1.Text = "ID";
+            this.RoomNumber.Text = "Room Number";
             // 
-            // columnHeader2
+            // capacity
             // 
-            this.columnHeader2.Text = "Name";
+            this.capacity.Text = "Capacity";
             // 
-            // columnHeader3
+            // type
             // 
-            this.columnHeader3.Text = "Date of Birth";
+            this.type.Text = "Type of room";
             // 
             // pictureRooms
             // 
@@ -326,9 +326,9 @@
         private System.Windows.Forms.ColumnHeader studentDOB;
         private System.Windows.Forms.Panel pnlRooms;
         private System.Windows.Forms.ListView listViewRooms;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader RoomNumber;
+        private System.Windows.Forms.ColumnHeader capacity;
+        private System.Windows.Forms.ColumnHeader type;
         private System.Windows.Forms.PictureBox pictureRooms;
         private System.Windows.Forms.Label label1;
     }
