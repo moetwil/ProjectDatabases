@@ -65,6 +65,35 @@ namespace SomerenUI
                     MessageBox.Show("Something went wrong while loading the students: " + e.Message);
                 }
             }
+            else if (panelName == "Rooms")
+            {
+                // hide all other panels
+                pnlDashboard.Hide();
+                imgDashboard.Hide();
+
+                // show students
+                pnlStudents.Show();
+
+                try
+                {
+                    // fill the students listview within the students panel with a list of students
+                    StudentService studService = new StudentService(); ;
+                    List<Student> studentList = studService.GetStudents(); ;
+
+                    // clear the listview before filling it again
+                    listViewStudents.Clear();
+
+                    foreach (Student s in studentList)
+                    {
+                        ListViewItem li = new ListViewItem(s.Name);
+                        listViewStudents.Items.Add(li);
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Something went wrong while loading the students: " + e.Message);
+                }
+            }
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
