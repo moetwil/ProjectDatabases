@@ -23,5 +23,7 @@ namespace SomerenLogic
             List<Room> rooms = roomdb.GetAllRooms();
             return rooms;
         }
+
+        
     }
 }
