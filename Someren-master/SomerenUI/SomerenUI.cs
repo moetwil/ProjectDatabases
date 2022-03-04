@@ -31,6 +31,7 @@ namespace SomerenUI
             {
                 // hide all other panels
                 pnlStudents.Hide();
+                pnlRooms.Hide();
 
                 // show dashboard
                 pnlDashboard.Show();
@@ -83,18 +84,20 @@ namespace SomerenUI
                     RoomService roomService = new RoomService(); 
                     List<Room> roomList = roomService.GetRooms(); 
 
-                    // clear the listview before filling it again *********************
+                    // clear the listview before filling it again
                     listViewRooms.Clear();
+
+                    // styling of the listView
                     listViewRooms.GridLines = true;
                     listViewRooms.View = View.Details;
 
+                    // create listView columns
                     listViewRooms.Columns.Add("Room number", 90);
                     listViewRooms.Columns.Add("Capacity", 90);
                     listViewRooms.Columns.Add("Room type", 90);
 
                     foreach (Room room in roomList)
                     {
-                        //ListViewItem li = new ListViewItem(room.Number.ToString());
                         ListViewItem li = new ListViewItem(room.Number.ToString());
                         li.SubItems.Add(room.Capacity.ToString());
                         li.SubItems.Add(roomService.IsTeacherRoom(room));

@@ -14,7 +14,7 @@ namespace SomerenDAL
     {      
         public List<Room> GetAllRooms()
         {
-            string query = "SELECT roomId, capacity, roomType FROM [Rooms]";
+            string query = "SELECT roomId, capacity, roomType FROM [Rooms] WHERE roomId > 200";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
