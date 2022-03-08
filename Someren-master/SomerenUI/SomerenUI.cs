@@ -66,6 +66,48 @@ namespace SomerenUI
                     MessageBox.Show("Something went wrong while loading the students: " + e.Message);
                 }
             }
+            else if (panelName == "Teachers")
+            {
+                // hide all panels and show the room panel
+                HideAllPanels();
+                pnlTeachers.Show();
+
+                try
+                {
+                    // fill the students listview within the students panel with a list of students
+                    TeacherService teacherService = new TeacherService();
+                    List<Teacher> teacherList = teacherService.GetTeachers();
+
+                    // clear the listview before filling it again
+                    listViewTeachers.Clear();
+
+                    // styling of the listView
+                    listViewTeachers.GridLines = true;
+                    listViewTeachers.View = View.Details;
+
+                    // create listView columns
+                    listViewTeachers.Columns.Add("Lecturer number", 90);
+                    listViewTeachers.Columns.Add("First name", 90);
+                    listViewTeachers.Columns.Add("Last name", 90);
+                    listViewTeachers.Columns.Add("Room number", 90);
+                    listViewTeachers.Columns.Add("Supervisor", 90);
+
+                    // add every teacher to the listView
+                    foreach (Teacher teacher in teacherList)
+                    {
+                        ListViewItem listTeachter = new ListViewItem(teacher.TeacherId.ToString());
+                        listTeachter.SubItems.Add(teacher.FirstName.ToString());
+                        listTeachter.SubItems.Add(teacher.LastName.ToString());
+                        listTeachter.SubItems.Add(teacher.RoomId.ToString());
+                        listTeachter.SubItems.Add("Yes");
+                        listViewTeachers.Items.Add(listTeachter);
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show($"Something went wrong while loading the teachers: {e.Message} Please try refreshing the page or close the window and try again.");
+                }
+            }
             else if (panelName == "Rooms")
             {
                 // hide all panels and show the room panel
@@ -150,9 +192,18 @@ namespace SomerenUI
             // hide every panel
             pnlDashboard.Hide();
             imgDashboard.Hide();
+
             pnlStudents.Hide();
+
             pnlRooms.Hide();
             pictureStudents.Hide();
+
+            pnlTeachers.Hide();
+        }
+
+        private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Teachers");
         }
     }
 }

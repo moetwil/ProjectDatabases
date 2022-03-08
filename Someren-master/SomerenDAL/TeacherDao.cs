@@ -5,33 +5,50 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SomerenModel;
 
 namespace SomerenDAL
 {
     public class TeacherDao : BaseDao
     {
-        public List<SomerenModel.Teacher> GetAllStudents()
+        public List<Teacher> GetAllTeachers()
         {
-            string query = "SELECT student_id, student_name FROM [TABLE]";
+            // getting the information about Teachers
+            string query = "SELECT teacherId, firstName, lastName, roomId FROM [Teachers]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            // if the query or parameter is zero, than there will be an exception
+            if(query.Length == 0)
+            {
+                throw new Exception("information from the database has not been loaded correctly.");
+            }
+
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        private List<SomerenModel.Teacher> ReadTables(DataTable dataTable)
+        private List<Teacher> ReadTables(DataTable dataTable)
         {
-            List<SomerenModel.Teacher> teachers = new List<SomerenModel.Teacher>();
+            // linking teacher field to database and adding it to the list
+            List<Teacher> teachers = new List<Teacher>();
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                SomerenModel.Teacher teacher = new SomerenModel.Teacher()
+                Teacher teacher = new Teacher()
                 {
-                    int teacherId = (int)dr["teacherId"],
-                    string firstName = (string)(dr["firstName"].ToString()),
-                    string lastName = (string)(dr["lastName"].ToString()),
-                    int roomdId = (int)dr["roomId"],
+                    TeacherId = (int)dr["teacherId"],
+                    FirstName = (string)(dr["firstName"].ToString()),
+                    LastName = (string)(dr["lastName"].ToString()),
+                    RoomId = (int)dr["roomId"],
                 };
                 teachers.Add(teacher);
             }
+
+            // if the teacher list is not found than there will be an exception
+            if(teachers.Count == 0)
+            {
+                throw new Exception("information about the teachers has not been found.");
+            }
+
             return teachers;
         }
     }
