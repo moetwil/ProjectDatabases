@@ -104,6 +104,7 @@ namespace SomerenUI
                 catch (Exception e)
                 {
                     MessageBox.Show("Something went wrong while loading the rooms: " + e.Message);
+                    LoggerService.WriteLog(e);
                 }
             }
         }
