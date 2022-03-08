@@ -24,7 +24,7 @@ namespace SomerenDAL
         {
             List<Room> rooms = new List<Room>();
 
-            if (dataTable != null)
+            if (dataTable == null)
                 throw new Exception("Datatable is empty");
 
             foreach (DataRow dr in dataTable.Rows)

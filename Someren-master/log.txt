@@ -1,0 +1,22 @@
+8-3-2022 14:51:44 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.RoomDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RoomDao.cs:regel 28
+   bij SomerenDAL.RoomDao.GetAllRooms() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RoomDao.cs:regel 20
+   bij SomerenLogic.RoomService.GetRooms() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\RoomService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 81
+8-3-2022 14:52:54 : Test Log | System.Exception: Test Log
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 104
+8-3-2022 15:04:44 : Test exception | System.Exception: Test exception
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 104
+
+8-3-2022 15:06:59 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.RoomDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RoomDao.cs:regel 28
+   bij SomerenDAL.RoomDao.GetAllRooms() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RoomDao.cs:regel 20
+   bij SomerenLogic.RoomService.GetRooms() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\RoomService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 81
+
+8-3-2022 15:07:14 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.RoomDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RoomDao.cs:regel 28
+   bij SomerenDAL.RoomDao.GetAllRooms() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RoomDao.cs:regel 20
+   bij SomerenLogic.RoomService.GetRooms() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\RoomService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 81
+

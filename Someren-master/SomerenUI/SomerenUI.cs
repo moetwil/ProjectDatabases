@@ -100,6 +100,7 @@ namespace SomerenUI
                         li.SubItems.Add(roomService.IsTeacherRoom(room));
                         listViewRooms.Items.Add(li);
                     }
+
                 }
                 catch (Exception e)
                 {

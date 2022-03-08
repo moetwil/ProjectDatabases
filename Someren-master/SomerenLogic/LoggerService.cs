@@ -17,6 +17,7 @@ namespace SomerenLogic
             using(StreamWriter writer = new StreamWriter(logPath, true))
             {
                 writer.WriteLine($"{DateTime.Now} : {ex.Message} | {ex}");
+                writer.WriteLine();
             }
 
         }
