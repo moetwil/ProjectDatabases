@@ -8,6 +8,7 @@ namespace SomerenModel
 {
     public class Teacher
     {
+        // field
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int TeacherId { get; set; }

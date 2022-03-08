@@ -105,7 +105,7 @@ namespace SomerenUI
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("Something went wrong while loading the teachers: " + e.Message);
+                    MessageBox.Show($"Something went wrong while loading the teachers: {e.Message} Please try refreshing the page or close the window and try again.");
                 }
             }
             else if (panelName == "Rooms")

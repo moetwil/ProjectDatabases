@@ -13,13 +13,22 @@ namespace SomerenDAL
     {
         public List<Teacher> GetAllTeachers()
         {
+            // getting the information about Teachers
             string query = "SELECT teacherId, firstName, lastName, roomId FROM [Teachers]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            // if the query or parameter is zero, than there will be an exception
+            if(query.Length == 0)
+            {
+                throw new Exception("information from the database has not been loaded correctly.");
+            }
+
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
         private List<Teacher> ReadTables(DataTable dataTable)
         {
+            // linking teacher field to database and adding it to the list
             List<Teacher> teachers = new List<Teacher>();
 
             foreach (DataRow dr in dataTable.Rows)
@@ -33,6 +42,13 @@ namespace SomerenDAL
                 };
                 teachers.Add(teacher);
             }
+
+            // if the teacher list is not found than there will be an exception
+            if(teachers.Count == 0)
+            {
+                throw new Exception("information about the teachers has not been found.");
+            }
+
             return teachers;
         }
     }

@@ -17,6 +17,7 @@ namespace SomerenLogic
             teacherdb = new TeacherDao();
         }
 
+        // display all list of teachers
         public List<Teacher> GetTeachers()
         {
             List<Teacher> teachers = teacherdb.GetAllTeachers();
