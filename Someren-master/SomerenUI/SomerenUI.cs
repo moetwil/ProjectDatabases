@@ -64,6 +64,7 @@ namespace SomerenUI
                 catch (Exception e)
                 {
                     MessageBox.Show("Something went wrong while loading the students: " + e.Message);
+                    LoggerService.WriteLog(e);
                 }
             }
             else if (panelName == "Teachers")
@@ -106,6 +107,7 @@ namespace SomerenUI
                 catch (Exception e)
                 {
                     MessageBox.Show($"Something went wrong while loading the teachers: {e.Message} Please try refreshing the page or close the window and try again.");
+                    LoggerService.WriteLog(e);
                 }
             }
             else if (panelName == "Rooms")
