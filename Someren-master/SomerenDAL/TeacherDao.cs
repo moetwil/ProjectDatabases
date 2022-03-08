@@ -11,7 +11,7 @@ namespace SomerenDAL
 {
     public class TeacherDao : BaseDao
     {
-        public List<SomerenModel.Teacher> GetAllStudents()
+        public List<Teacher> GetAllTeachers()
         {
             string query = "SELECT teacherId, firstName, lastName, roomId FROM [Teachers]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
