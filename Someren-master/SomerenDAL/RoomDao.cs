@@ -24,6 +24,9 @@ namespace SomerenDAL
         {
             List<Room> rooms = new List<Room>();
 
+            if (dataTable == null)
+                throw new Exception("Datatable is empty");
+
             foreach (DataRow dr in dataTable.Rows)
             {
                 // create a room with with information from the database and add it to the list
@@ -32,10 +35,13 @@ namespace SomerenDAL
                     Number = (int)dr["roomId"],
                     Capacity = (int)dr["capacity"],
                     Type = (bool)dr["roomType"]
-                    
                 };
                 rooms.Add(room);
             }
+
+
+
+
             return rooms;
         }
     }

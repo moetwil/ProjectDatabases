@@ -74,6 +74,8 @@ namespace SomerenUI
 
                 try
                 {
+
+                   
                     // fill the students listview within the students panel with a list of students
                     RoomService roomService = new RoomService(); 
                     List<Room> roomList = roomService.GetRooms(); 

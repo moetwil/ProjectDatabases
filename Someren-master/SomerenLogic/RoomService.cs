@@ -22,6 +22,10 @@ namespace SomerenLogic
         {
             // collect all rooms from the database
             List<Room> rooms = roomdb.GetAllRooms();
+
+            if (rooms.Count == 0)
+                throw new Exception("No rooms loaded from the database.");
+
             return rooms;
         }
 
