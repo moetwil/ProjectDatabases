@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SomerenModel;
 
 namespace SomerenDAL
 {
@@ -12,23 +13,23 @@ namespace SomerenDAL
     {
         public List<SomerenModel.Teacher> GetAllStudents()
         {
-            string query = "SELECT student_id, student_name FROM [TABLE]";
+            string query = "SELECT teacherId, firstName, lastName, roomId FROM [Teachers]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        private List<SomerenModel.Teacher> ReadTables(DataTable dataTable)
+        private List<Teacher> ReadTables(DataTable dataTable)
         {
-            List<SomerenModel.Teacher> teachers = new List<SomerenModel.Teacher>();
+            List<Teacher> teachers = new List<Teacher>();
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                SomerenModel.Teacher teacher = new SomerenModel.Teacher()
+                Teacher teacher = new Teacher()
                 {
-                    int teacherId = (int)dr["teacherId"],
-                    string firstName = (string)(dr["firstName"].ToString()),
-                    string lastName = (string)(dr["lastName"].ToString()),
-                    int roomdId = (int)dr["roomId"],
+                    TeacherId = (int)dr["teacherId"],
+                    FirstName = (string)(dr["firstName"].ToString()),
+                    LastName = (string)(dr["lastName"].ToString()),
+                    RoomId = (int)dr["roomId"],
                 };
                 teachers.Add(teacher);
             }

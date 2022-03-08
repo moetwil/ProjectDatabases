@@ -13,14 +13,5 @@ namespace SomerenModel
         public int TeacherId { get; set; }
         public int RoomId { get; set; }  // LecturerNumber, e.g. 47198
 
-        public Teacher(int teacherId, string firstName, string lastName, int roomId)
-        {
-            this.TeacherId = teacherId;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.RoomId = roomId;
-        }
-
-
     }
 }
