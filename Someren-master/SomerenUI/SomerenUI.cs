@@ -17,7 +17,79 @@ namespace SomerenUI
         public SomerenUI()
         {
             InitializeComponent();
+            dashboardToolStripMenuItem.MouseEnter += OnMouseEnterButton1;
+            dashboardToolStripMenuItem.MouseLeave += OnMouseLeaveButton1;
+
+            studentsToolStripMenuItem.MouseEnter += OnMouseEnterButton2;
+            studentsToolStripMenuItem.MouseLeave += OnMouseLeaveButton2;
+
+            lecturersToolStripMenuItem.MouseEnter += OnMouseEnterButton3;
+            lecturersToolStripMenuItem.MouseLeave += OnMouseLeaveButton3;
+
+            activitiesToolStripMenuItem.MouseEnter += OnMouseEnterButton4;
+            activitiesToolStripMenuItem.MouseLeave += OnMouseLeaveButton4;
+
+            roomsToolStripMenuItem.MouseEnter += OnMouseEnterButton5;
+            roomsToolStripMenuItem.MouseLeave += OnMouseLeaveButton5;
         }
+
+   
+        // button1
+        private void OnMouseEnterButton1(object sender, EventArgs e)
+        {
+            this.dashboardToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); // or Color.Red or whatever you want
+        }
+
+        private void OnMouseLeaveButton1(object sender, EventArgs e)
+        {
+            this.dashboardToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); // or Color.Red or whatever you want
+        }
+
+        // button2
+        private void OnMouseEnterButton2(object sender, EventArgs e)
+        {
+            this.studentsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); // or Color.Red or whatever you want
+        }
+
+        private void OnMouseLeaveButton2(object sender, EventArgs e)
+        {
+            this.studentsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); // or Color.Red or whatever you want
+        }
+
+        // button3
+        private void OnMouseEnterButton3(object sender, EventArgs e)
+        {
+            this.lecturersToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); // or Color.Red or whatever you want
+        }
+
+        private void OnMouseLeaveButton3(object sender, EventArgs e)
+        {
+            this.lecturersToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); // or Color.Red or whatever you want
+        }
+
+        // button4
+        private void OnMouseEnterButton4(object sender, EventArgs e)
+        {
+            this.activitiesToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); // or Color.Red or whatever you want
+        }
+
+        private void OnMouseLeaveButton4(object sender, EventArgs e)
+        {
+            this.activitiesToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); // or Color.Red or whatever you want
+        }
+
+        // button5
+        private void OnMouseEnterButton5(object sender, EventArgs e)
+        {
+            this.roomsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); // or Color.Red or whatever you want
+        }
+
+        private void OnMouseLeaveButton5(object sender, EventArgs e)
+        {
+            this.roomsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); // or Color.Red or whatever you want
+        }
+
+
 
         private void SomerenUI_Load(object sender, EventArgs e)
         {
