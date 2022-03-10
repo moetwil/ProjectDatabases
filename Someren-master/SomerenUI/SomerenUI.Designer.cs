@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SomerenUI));
-            this.imgDashboard = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dashboardToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +39,10 @@
             this.activitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlDashboard = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.lbl_Dashboard = new System.Windows.Forms.Label();
+            this.imgDashboard = new System.Windows.Forms.PictureBox();
             this.pnlStudents = new System.Windows.Forms.Panel();
             this.listViewStudents = new System.Windows.Forms.ListView();
             this.studentID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,11 +64,11 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            ((System.ComponentModel.ISupportInitialize)(this.imgDashboard)).BeginInit();
+            this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDashboard)).BeginInit();
             this.pnlStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStudents)).BeginInit();
             this.pnlRooms.SuspendLayout();
@@ -75,29 +77,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // imgDashboard
-            // 
-            this.imgDashboard.Image = global::SomerenUI.Properties.Resources.someren;
-            this.imgDashboard.Location = new System.Drawing.Point(627, 0);
-            this.imgDashboard.Name = "imgDashboard";
-            this.imgDashboard.Size = new System.Drawing.Size(311, 270);
-            this.imgDashboard.TabIndex = 0;
-            this.imgDashboard.TabStop = false;
-            this.imgDashboard.Click += new System.EventHandler(this.imgDashboard_Click);
-            // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dashboardToolStripMenuItem,
             this.studentsToolStripMenuItem,
             this.lecturersToolStripMenuItem,
             this.activitiesToolStripMenuItem,
-            this.roomsToolStripMenuItem});
+            this.roomsToolStripMenuItem,
+            this.shopToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(962, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(962, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -109,26 +103,26 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(95, 26);
             this.dashboardToolStripMenuItem.Text = "Application";
             this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
             // dashboardToolStripMenuItem1
             // 
             this.dashboardToolStripMenuItem1.Name = "dashboardToolStripMenuItem1";
-            this.dashboardToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
+            this.dashboardToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.dashboardToolStripMenuItem1.Text = "Dashboard";
             this.dashboardToolStripMenuItem1.Click += new System.EventHandler(this.dashboardToolStripMenuItem1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(128, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -136,7 +130,7 @@
             // 
             this.studentsToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
             this.studentsToolStripMenuItem.Text = "Students";
             this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             // 
@@ -144,7 +138,7 @@
             // 
             this.lecturersToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.lecturersToolStripMenuItem.Name = "lecturersToolStripMenuItem";
-            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
             this.lecturersToolStripMenuItem.Text = "Lecturers";
             this.lecturersToolStripMenuItem.Click += new System.EventHandler(this.lecturersToolStripMenuItem_Click);
             // 
@@ -152,27 +146,47 @@
             // 
             this.activitiesToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
-            this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
             this.activitiesToolStripMenuItem.Text = "Activities";
             // 
             // roomsToolStripMenuItem
             // 
             this.roomsToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.roomsToolStripMenuItem.Name = "roomsToolStripMenuItem";
-            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(66, 26);
             this.roomsToolStripMenuItem.Text = "Rooms";
             this.roomsToolStripMenuItem.Click += new System.EventHandler(this.roomsToolStripMenuItem_Click);
             // 
             // pnlDashboard
             // 
-            this.pnlDashboard.Controls.Add(this.webBrowser1);
+            this.pnlDashboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlDashboard.BackColor = System.Drawing.Color.Lavender;
+            this.pnlDashboard.Controls.Add(this.pictureBox2);
             this.pnlDashboard.Controls.Add(this.monthCalendar1);
             this.pnlDashboard.Controls.Add(this.lbl_Dashboard);
             this.pnlDashboard.Controls.Add(this.imgDashboard);
-            this.pnlDashboard.Location = new System.Drawing.Point(11, 25);
+            this.pnlDashboard.Location = new System.Drawing.Point(12, 24);
             this.pnlDashboard.Name = "pnlDashboard";
             this.pnlDashboard.Size = new System.Drawing.Size(938, 466);
             this.pnlDashboard.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::SomerenUI.Properties.Resources.inholland_logo;
+            this.pictureBox2.Location = new System.Drawing.Point(854, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(81, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.monthCalendar1.Location = new System.Drawing.Point(16, 41);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 2;
             // 
             // lbl_Dashboard
             // 
@@ -184,12 +198,23 @@
             this.lbl_Dashboard.Text = "Welcome to the Someren Application!";
             this.lbl_Dashboard.Click += new System.EventHandler(this.label1_Click);
             // 
+            // imgDashboard
+            // 
+            this.imgDashboard.Image = global::SomerenUI.Properties.Resources.someren;
+            this.imgDashboard.Location = new System.Drawing.Point(803, 59);
+            this.imgDashboard.Name = "imgDashboard";
+            this.imgDashboard.Size = new System.Drawing.Size(132, 125);
+            this.imgDashboard.TabIndex = 0;
+            this.imgDashboard.TabStop = false;
+            this.imgDashboard.Click += new System.EventHandler(this.imgDashboard_Click);
+            // 
             // pnlStudents
             // 
+            this.pnlStudents.BackColor = System.Drawing.Color.Lavender;
             this.pnlStudents.Controls.Add(this.listViewStudents);
             this.pnlStudents.Controls.Add(this.pictureStudents);
             this.pnlStudents.Controls.Add(this.lbl_Students);
-            this.pnlStudents.Location = new System.Drawing.Point(12, 24);
+            this.pnlStudents.Location = new System.Drawing.Point(11, 25);
             this.pnlStudents.Name = "pnlStudents";
             this.pnlStudents.Size = new System.Drawing.Size(938, 466);
             this.pnlStudents.TabIndex = 4;
@@ -203,7 +228,7 @@
             this.listViewStudents.HideSelection = false;
             this.listViewStudents.Location = new System.Drawing.Point(16, 42);
             this.listViewStudents.Name = "listViewStudents";
-            this.listViewStudents.Size = new System.Drawing.Size(766, 307);
+            this.listViewStudents.Size = new System.Drawing.Size(621, 307);
             this.listViewStudents.TabIndex = 5;
             this.listViewStudents.UseCompatibleStateImageBehavior = false;
             // 
@@ -241,10 +266,11 @@
             // 
             // pnlRooms
             // 
+            this.pnlRooms.BackColor = System.Drawing.Color.Lavender;
             this.pnlRooms.Controls.Add(this.listViewRooms);
             this.pnlRooms.Controls.Add(this.pictureRooms);
             this.pnlRooms.Controls.Add(this.label1);
-            this.pnlRooms.Location = new System.Drawing.Point(11, 25);
+            this.pnlRooms.Location = new System.Drawing.Point(13, 27);
             this.pnlRooms.Name = "pnlRooms";
             this.pnlRooms.Size = new System.Drawing.Size(938, 466);
             this.pnlRooms.TabIndex = 6;
@@ -262,7 +288,7 @@
             this.listViewRooms.HideSelection = false;
             this.listViewRooms.Location = new System.Drawing.Point(16, 43);
             this.listViewRooms.Name = "listViewRooms";
-            this.listViewRooms.Size = new System.Drawing.Size(766, 307);
+            this.listViewRooms.Size = new System.Drawing.Size(557, 307);
             this.listViewRooms.TabIndex = 5;
             this.listViewRooms.TileSize = new System.Drawing.Size(9, 1);
             this.listViewRooms.UseCompatibleStateImageBehavior = false;
@@ -301,10 +327,11 @@
             // 
             // pnlTeachers
             // 
+            this.pnlTeachers.BackColor = System.Drawing.Color.Lavender;
             this.pnlTeachers.Controls.Add(this.listViewTeachers);
             this.pnlTeachers.Controls.Add(this.pictureBox1);
             this.pnlTeachers.Controls.Add(this.label2);
-            this.pnlTeachers.Location = new System.Drawing.Point(11, 26);
+            this.pnlTeachers.Location = new System.Drawing.Point(12, 27);
             this.pnlTeachers.Name = "pnlTeachers";
             this.pnlTeachers.Size = new System.Drawing.Size(938, 466);
             this.pnlTeachers.TabIndex = 7;
@@ -322,7 +349,7 @@
             this.listViewTeachers.HideSelection = false;
             this.listViewTeachers.Location = new System.Drawing.Point(16, 43);
             this.listViewTeachers.Name = "listViewTeachers";
-            this.listViewTeachers.Size = new System.Drawing.Size(766, 307);
+            this.listViewTeachers.Size = new System.Drawing.Size(586, 307);
             this.listViewTeachers.TabIndex = 5;
             this.listViewTeachers.TileSize = new System.Drawing.Size(9, 1);
             this.listViewTeachers.UseCompatibleStateImageBehavior = false;
@@ -359,41 +386,35 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Teachers";
             // 
-            // monthCalendar1
+            // shopToolStripMenuItem
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(16, 41);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 2;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(359, 65);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(250, 250);
-            this.webBrowser1.TabIndex = 3;
+            this.shopToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
+            this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
+            this.shopToolStripMenuItem.Text = "Shop";
             // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 505);
-            this.Controls.Add(this.pnlDashboard);
-            this.Controls.Add(this.pnlTeachers);
-            this.Controls.Add(this.pnlRooms);
-            this.Controls.Add(this.pnlStudents);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pnlDashboard);
+            this.Controls.Add(this.pnlRooms);
+            this.Controls.Add(this.pnlTeachers);
+            this.Controls.Add(this.pnlStudents);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SomerenUI";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "SomerenApp";
             this.Load += new System.EventHandler(this.SomerenUI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.imgDashboard)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnlDashboard.ResumeLayout(false);
             this.pnlDashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDashboard)).EndInit();
             this.pnlStudents.ResumeLayout(false);
             this.pnlStudents.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureStudents)).EndInit();
@@ -443,8 +464,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolStripMenuItem shopToolStripMenuItem;
     }
 }
 

@@ -112,9 +112,10 @@ namespace SomerenUI
             else if (panelName == "Students")
             {
                 // hide all other panels
-                pnlDashboard.Hide();
-                imgDashboard.Hide();
-                pnlRooms.Hide();
+                //pnlDashboard.Hide();
+                //imgDashboard.Hide();
+                //pnlRooms.Hide();
+                HideAllPanels();
 
                 // show students
                 pnlStudents.Show();
@@ -278,7 +279,6 @@ namespace SomerenUI
         {
             // hide every panel
             pnlDashboard.Hide();
-            imgDashboard.Hide();
 
             pnlStudents.Hide();
 
