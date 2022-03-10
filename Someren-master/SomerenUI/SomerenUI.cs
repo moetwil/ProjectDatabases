@@ -48,18 +48,30 @@ namespace SomerenUI
 
                 try
                 {
-                    // fill the students listview within the students panel with a list of students
-                    /*StudentService studService = new StudentService(); ;
+                    //fill the students listview within the students panel with a list of students
+                    StudentService studService = new StudentService(); ;
                     List<Student> studentList = studService.GetStudents(); ;
 
-                    // clear the listview before filling it again
+                    //clear the listview before filling it again
                     listViewStudents.Clear();
+
+                    listViewStudents.GridLines = true;
+                    listViewStudents.View = View.Details;
+
+                    listViewStudents.Columns.Add("student id", 90);
+                    listViewStudents.Columns.Add("First name", 90);
+                    listViewStudents.Columns.Add("Last name", 90);
+                    listViewStudents.Columns.Add("Class", 90);
+                    listViewStudents.Columns.Add("Date of birth", 85);
+                    listViewStudents.Columns.Add("Room id", 70);
 
                     foreach (Student s in studentList)
                     {
-                        ListViewItem li = new ListViewItem(s.Name);
+                        ListViewItem li = new ListViewItem(new[] { s.StudentId.ToString(), s.FirstName, s.LastName,
+                            s.Class, s.DateOfBirth.ToString(), s.RoomId.ToString() });
                         listViewStudents.Items.Add(li);
-                    }*/
+
+                    }
                 }
                 catch (Exception e)
                 {

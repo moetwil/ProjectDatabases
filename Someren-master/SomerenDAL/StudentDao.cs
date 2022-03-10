@@ -14,7 +14,7 @@ namespace SomerenDAL
     {      
         public List<Student> GetAllStudents()
         {
-            string query = "SELECT student_id, student_name FROM [TABLE]";
+            string query = "SELECT studentId, firstName, lastName, class, dateOfBirth, roomId FROM [Students]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -27,10 +27,17 @@ namespace SomerenDAL
             {
                 Student student = new Student()
                 {
-                    Number = (int)dr["student_id"],
-                    Name = (string)(dr["student_name"].ToString())
+                    StudentId = (int)dr["studentId"],
+                    FirstName = (string)(dr["firstName"].ToString()),
+                    LastName = (string)(dr["lastName"].ToString()),
+                    Class = (string)(dr["class"].ToString()),
+                    DateOfBirth = (DateTime)dr["dateOfBirth"],
+                    RoomId = (int)dr["roomId"]
                 };
                 students.Add(student);
+                if (students.Count != 0) {
+                    throw new Exception("No students loaded from the database");
+                }
             }
             return students;
         }
