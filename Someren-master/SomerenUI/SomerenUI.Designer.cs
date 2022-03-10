@@ -65,6 +65,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlShop = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.shopLabel = new System.Windows.Forms.Label();
+            this.listBoxShopStudents = new System.Windows.Forms.ListBox();
+            this.listBoxShopDrinks = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -75,6 +80,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureRooms)).BeginInit();
             this.pnlTeachers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlShop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -392,6 +399,55 @@
             this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
             this.shopToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
             this.shopToolStripMenuItem.Text = "Shop";
+            this.shopToolStripMenuItem.Click += new System.EventHandler(this.shopToolStripMenuItem_Click);
+            // 
+            // pnlShop
+            // 
+            this.pnlShop.BackColor = System.Drawing.Color.Lavender;
+            this.pnlShop.Controls.Add(this.listBoxShopDrinks);
+            this.pnlShop.Controls.Add(this.listBoxShopStudents);
+            this.pnlShop.Controls.Add(this.pictureBox3);
+            this.pnlShop.Controls.Add(this.shopLabel);
+            this.pnlShop.Location = new System.Drawing.Point(13, 26);
+            this.pnlShop.Name = "pnlShop";
+            this.pnlShop.Size = new System.Drawing.Size(938, 466);
+            this.pnlShop.TabIndex = 7;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SomerenUI.Properties.Resources.someren;
+            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(805, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(130, 123);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // shopLabel
+            // 
+            this.shopLabel.AutoSize = true;
+            this.shopLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shopLabel.Location = new System.Drawing.Point(10, 10);
+            this.shopLabel.Name = "shopLabel";
+            this.shopLabel.Size = new System.Drawing.Size(70, 29);
+            this.shopLabel.TabIndex = 3;
+            this.shopLabel.Text = "Shop";
+            // 
+            // listBoxShopStudents
+            // 
+            this.listBoxShopStudents.FormattingEnabled = true;
+            this.listBoxShopStudents.Location = new System.Drawing.Point(16, 80);
+            this.listBoxShopStudents.Name = "listBoxShopStudents";
+            this.listBoxShopStudents.Size = new System.Drawing.Size(280, 212);
+            this.listBoxShopStudents.TabIndex = 6;
+            // 
+            // listBoxShopDrinks
+            // 
+            this.listBoxShopDrinks.FormattingEnabled = true;
+            this.listBoxShopDrinks.Location = new System.Drawing.Point(355, 80);
+            this.listBoxShopDrinks.Name = "listBoxShopDrinks";
+            this.listBoxShopDrinks.Size = new System.Drawing.Size(280, 212);
+            this.listBoxShopDrinks.TabIndex = 7;
             // 
             // SomerenUI
             // 
@@ -399,6 +455,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 505);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pnlShop);
             this.Controls.Add(this.pnlDashboard);
             this.Controls.Add(this.pnlRooms);
             this.Controls.Add(this.pnlTeachers);
@@ -424,6 +481,9 @@
             this.pnlTeachers.ResumeLayout(false);
             this.pnlTeachers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlShop.ResumeLayout(false);
+            this.pnlShop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,6 +527,11 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem shopToolStripMenuItem;
+        private System.Windows.Forms.Panel pnlShop;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label shopLabel;
+        private System.Windows.Forms.ListBox listBoxShopStudents;
+        private System.Windows.Forms.ListBox listBoxShopDrinks;
     }
 }
 

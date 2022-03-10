@@ -238,6 +238,40 @@ namespace SomerenUI
                     LoggerService.WriteLog(e);
                 }
             }
+            else if (panelName == "Shop")
+            {
+                // hide all panels and show the room panel
+                HideAllPanels();
+                pnlShop.Show();
+
+                try
+                {
+                    //fill the students listview within the students panel with a list of students
+                    StudentService studService = new StudentService(); ;
+                    List<Student> studentList = studService.GetStudents(); ;
+
+                    // place all the students in the listBox
+                    foreach (Student student in studentList)
+                    {
+                        listBoxShopStudents.Items.Add($"{student.StudentId}. {student.FullName}");
+                    }
+
+                    // drinks
+                    DrinkService drinkService = new DrinkService();
+                    List<Drink> drinkList = drinkService.GetDrinks();
+
+                    foreach (Drink drink in drinkList)
+                    {
+                        listBoxShopDrinks.Items.Add($"{drink.DrinkId}. {drink.Name}");
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Something went wrong while loading the drinks: " + e.Message);
+                    LoggerService.WriteLog(e);
+                }
+            }
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -279,10 +313,9 @@ namespace SomerenUI
         {
             // hide every panel
             pnlDashboard.Hide();
-
             pnlStudents.Hide();
-
             pnlRooms.Hide();
+            pnlShop.Hide();
             pictureStudents.Hide();
 
             pnlTeachers.Hide();
@@ -291,6 +324,11 @@ namespace SomerenUI
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showPanel("Teachers");
+        }
+
+        private void shopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Shop");
         }
     }
 }

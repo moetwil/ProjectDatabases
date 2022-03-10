@@ -32,3 +32,61 @@
    at SomerenLogic.StudentService.GetStudents() in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenLogic\StudentService.cs:line 23
    at SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:line 53
 
+10-3-2022 19:58:36 : No drinks loaded from the database. | System.Exception: No drinks loaded from the database.
+   bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 27
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 260
+
+10-3-2022 19:59:47 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.DrinkDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 33
+   bij SomerenDAL.DrinkDao.GetAllDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 20
+   bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 260
+
+10-3-2022 19:59:50 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.DrinkDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 33
+   bij SomerenDAL.DrinkDao.GetAllDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 20
+   bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 260
+
+10-3-2022 20:02:46 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.DrinkDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 34
+   bij SomerenDAL.DrinkDao.GetAllDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 21
+   bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 260
+
+10-3-2022 20:02:51 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.DrinkDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 34
+   bij SomerenDAL.DrinkDao.GetAllDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 21
+   bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 260
+
+10-3-2022 20:03:08 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.DrinkDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 34
+   bij SomerenDAL.DrinkDao.GetAllDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 21
+   bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 260
+
+10-3-2022 20:09:04 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.DrinkDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 43
+   bij SomerenDAL.DrinkDao.GetAllDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 21
+   bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 261
+
+10-3-2022 20:09:08 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.DrinkDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 43
+   bij SomerenDAL.DrinkDao.GetAllDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 21
+   bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 261
+
+10-3-2022 20:19:52 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.DrinkDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 34
+   bij SomerenDAL.DrinkDao.GetAllDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 21
+   bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 261
+
+10-3-2022 20:22:58 : Kan een object van het type System.Decimal niet converteren naar het type System.String. | System.InvalidCastException: Kan een object van het type System.Decimal niet converteren naar het type System.String.
+   bij SomerenDAL.DrinkDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 34
+   bij SomerenDAL.DrinkDao.GetAllDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\DrinkDao.cs:regel 21
+   bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 24
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 261
+
