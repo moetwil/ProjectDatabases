@@ -342,7 +342,10 @@ namespace SomerenUI
             int drinkId = int.Parse(drinkString[0]);
 
 
-            testLabel.Text = drinkId.ToString();
+            //testLabel.Text = drinkId.ToString();
+
+            PurchaseService purchaseService = new PurchaseService();
+            purchaseService.WritePurchase(studentId, drinkId);
         }
     }
 }
