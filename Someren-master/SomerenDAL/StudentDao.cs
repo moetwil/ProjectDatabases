@@ -35,7 +35,7 @@ namespace SomerenDAL
                     RoomId = (int)dr["roomId"]
                 };
                 students.Add(student);
-                if (students.Count != 0) {
+                if (students.Count == 0) {
                     throw new Exception("No students loaded from the database");
                 }
             }

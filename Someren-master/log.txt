@@ -20,3 +20,15 @@
    bij SomerenLogic.RoomService.GetRooms() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\RoomService.cs:regel 24
    bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 81
 
+10/03/2022 10:13:27 : No students loaded from the database | System.Exception: No students loaded from the database
+   at SomerenDAL.StudentDao.ReadTables(DataTable dataTable) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:line 39
+   at SomerenDAL.StudentDao.GetAllStudents() in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:line 19
+   at SomerenLogic.StudentService.GetStudents() in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenLogic\StudentService.cs:line 23
+   at SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:line 53
+
+10/03/2022 10:13:35 : No students loaded from the database | System.Exception: No students loaded from the database
+   at SomerenDAL.StudentDao.ReadTables(DataTable dataTable) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:line 39
+   at SomerenDAL.StudentDao.GetAllStudents() in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:line 19
+   at SomerenLogic.StudentService.GetStudents() in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenLogic\StudentService.cs:line 23
+   at SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:line 53
+
