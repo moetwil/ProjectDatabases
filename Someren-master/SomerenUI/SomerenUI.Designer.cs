@@ -38,6 +38,7 @@
             this.lecturersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlDashboard = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -64,12 +65,13 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlShop = new System.Windows.Forms.Panel();
+            this.listBoxShopDrinks = new System.Windows.Forms.ListBox();
+            this.listBoxShopStudents = new System.Windows.Forms.ListBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.shopLabel = new System.Windows.Forms.Label();
-            this.listBoxShopStudents = new System.Windows.Forms.ListBox();
-            this.listBoxShopDrinks = new System.Windows.Forms.ListBox();
+            this.checkOutShopButton = new System.Windows.Forms.Button();
+            this.testLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -117,19 +119,19 @@
             // dashboardToolStripMenuItem1
             // 
             this.dashboardToolStripMenuItem1.Name = "dashboardToolStripMenuItem1";
-            this.dashboardToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.dashboardToolStripMenuItem1.Size = new System.Drawing.Size(149, 26);
             this.dashboardToolStripMenuItem1.Text = "Dashboard";
             this.dashboardToolStripMenuItem1.Click += new System.EventHandler(this.dashboardToolStripMenuItem1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(146, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -163,6 +165,14 @@
             this.roomsToolStripMenuItem.Size = new System.Drawing.Size(66, 26);
             this.roomsToolStripMenuItem.Text = "Rooms";
             this.roomsToolStripMenuItem.Click += new System.EventHandler(this.roomsToolStripMenuItem_Click);
+            // 
+            // shopToolStripMenuItem
+            // 
+            this.shopToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
+            this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
+            this.shopToolStripMenuItem.Text = "Shop";
+            this.shopToolStripMenuItem.Click += new System.EventHandler(this.shopToolStripMenuItem_Click);
             // 
             // pnlDashboard
             // 
@@ -393,17 +403,11 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Teachers";
             // 
-            // shopToolStripMenuItem
-            // 
-            this.shopToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
-            this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
-            this.shopToolStripMenuItem.Text = "Shop";
-            this.shopToolStripMenuItem.Click += new System.EventHandler(this.shopToolStripMenuItem_Click);
-            // 
             // pnlShop
             // 
             this.pnlShop.BackColor = System.Drawing.Color.Lavender;
+            this.pnlShop.Controls.Add(this.testLabel);
+            this.pnlShop.Controls.Add(this.checkOutShopButton);
             this.pnlShop.Controls.Add(this.listBoxShopDrinks);
             this.pnlShop.Controls.Add(this.listBoxShopStudents);
             this.pnlShop.Controls.Add(this.pictureBox3);
@@ -412,6 +416,22 @@
             this.pnlShop.Name = "pnlShop";
             this.pnlShop.Size = new System.Drawing.Size(938, 466);
             this.pnlShop.TabIndex = 7;
+            // 
+            // listBoxShopDrinks
+            // 
+            this.listBoxShopDrinks.FormattingEnabled = true;
+            this.listBoxShopDrinks.Location = new System.Drawing.Point(355, 80);
+            this.listBoxShopDrinks.Name = "listBoxShopDrinks";
+            this.listBoxShopDrinks.Size = new System.Drawing.Size(280, 212);
+            this.listBoxShopDrinks.TabIndex = 7;
+            // 
+            // listBoxShopStudents
+            // 
+            this.listBoxShopStudents.FormattingEnabled = true;
+            this.listBoxShopStudents.Location = new System.Drawing.Point(16, 80);
+            this.listBoxShopStudents.Name = "listBoxShopStudents";
+            this.listBoxShopStudents.Size = new System.Drawing.Size(280, 212);
+            this.listBoxShopStudents.TabIndex = 6;
             // 
             // pictureBox3
             // 
@@ -433,21 +453,24 @@
             this.shopLabel.TabIndex = 3;
             this.shopLabel.Text = "Shop";
             // 
-            // listBoxShopStudents
+            // checkOutShopButton
             // 
-            this.listBoxShopStudents.FormattingEnabled = true;
-            this.listBoxShopStudents.Location = new System.Drawing.Point(16, 80);
-            this.listBoxShopStudents.Name = "listBoxShopStudents";
-            this.listBoxShopStudents.Size = new System.Drawing.Size(280, 212);
-            this.listBoxShopStudents.TabIndex = 6;
+            this.checkOutShopButton.Location = new System.Drawing.Point(288, 337);
+            this.checkOutShopButton.Name = "checkOutShopButton";
+            this.checkOutShopButton.Size = new System.Drawing.Size(75, 23);
+            this.checkOutShopButton.TabIndex = 8;
+            this.checkOutShopButton.Text = "Checkout";
+            this.checkOutShopButton.UseVisualStyleBackColor = true;
+            this.checkOutShopButton.Click += new System.EventHandler(this.checkOutShopButton_Click);
             // 
-            // listBoxShopDrinks
+            // testLabel
             // 
-            this.listBoxShopDrinks.FormattingEnabled = true;
-            this.listBoxShopDrinks.Location = new System.Drawing.Point(355, 80);
-            this.listBoxShopDrinks.Name = "listBoxShopDrinks";
-            this.listBoxShopDrinks.Size = new System.Drawing.Size(280, 212);
-            this.listBoxShopDrinks.TabIndex = 7;
+            this.testLabel.AutoSize = true;
+            this.testLabel.Location = new System.Drawing.Point(537, 394);
+            this.testLabel.Name = "testLabel";
+            this.testLabel.Size = new System.Drawing.Size(35, 13);
+            this.testLabel.TabIndex = 9;
+            this.testLabel.Text = "label3";
             // 
             // SomerenUI
             // 
@@ -532,6 +555,8 @@
         private System.Windows.Forms.Label shopLabel;
         private System.Windows.Forms.ListBox listBoxShopStudents;
         private System.Windows.Forms.ListBox listBoxShopDrinks;
+        private System.Windows.Forms.Button checkOutShopButton;
+        private System.Windows.Forms.Label testLabel;
     }
 }
 

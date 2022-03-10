@@ -330,5 +330,19 @@ namespace SomerenUI
         {
             showPanel("Shop");
         }
+
+        private void checkOutShopButton_Click(object sender, EventArgs e)
+        {
+            // get id from selected student
+            string[] studentString = listBoxShopStudents.SelectedItem.ToString().Split('.');
+            int studentId = int.Parse(studentString[0]);
+
+            // get id from selected drink
+            string[] drinkString = listBoxShopDrinks.SelectedItem.ToString().Split('.');
+            int drinkId = int.Parse(drinkString[0]);
+
+
+            testLabel.Text = drinkId.ToString();
+        }
     }
 }

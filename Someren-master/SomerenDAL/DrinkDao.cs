@@ -15,8 +15,7 @@ namespace SomerenDAL
         public List<Drink> GetAllDrinks()
         {
             // SQL query that selects the information that we need, where the roomId is bigger than 200
-            //string query = "SELECT drinkId, alcohol, drinkName, price, VAT FROM [Drinks]";
-            string query = "SELECT * FROM [Drinks]";
+            string query = "SELECT drinkId, alcohol, drinkName, price, VAT FROM [Drinks]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -39,15 +38,6 @@ namespace SomerenDAL
                     Price = Convert.ToDouble((decimal)(dr["price"])),
                     VAT = (double)dr["VAT"]
                 };
-
-                /*Drink drink = new Drink()
-                {
-                    DrinkId = (int)dr[0],
-                    HasAlcohol = (bool)dr[1],
-                    Name = (string)dr[2],
-                    Price = (double)dr[3],
-                    VAT = (double)dr[4]
-                };*/
                 drinks.Add(drink);
             }
 
