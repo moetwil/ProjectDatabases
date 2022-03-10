@@ -341,11 +341,14 @@ namespace SomerenUI
             string[] drinkString = listBoxShopDrinks.SelectedItem.ToString().Split('.');
             int drinkId = int.Parse(drinkString[0]);
 
-
-            //testLabel.Text = drinkId.ToString();
-
             PurchaseService purchaseService = new PurchaseService();
             purchaseService.WritePurchase(studentId, drinkId);
+
+            MessageBox.Show("Your order has been placed :)");
+
+            // reset the listBoxes
+            listBoxShopDrinks.ClearSelected();
+            listBoxShopStudents.ClearSelected();
         }
     }
 }
