@@ -270,6 +270,12 @@ namespace SomerenUI
                     LoggerService.WriteLog(e);
                 }
             }
+            else if (panelName == "Omzetrapportage")
+            {
+                // hide all panels and show the room panel
+                HideAllPanels();
+                pnlOmzet.Show();
+            }
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -316,6 +322,7 @@ namespace SomerenUI
             pnlShop.Hide();
             pictureStudents.Hide();
             pnlTeachers.Hide();
+            pnlOmzet.Hide();
         }
 
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -346,6 +353,11 @@ namespace SomerenUI
             // reset the listBoxes
             listBoxShopDrinks.ClearSelected();
             listBoxShopStudents.ClearSelected();
+        }
+
+        private void omzetrapportageToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            showPanel("Omzetrapportage");
         }
     }
 }
