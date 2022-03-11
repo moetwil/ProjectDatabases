@@ -17,74 +17,74 @@ namespace SomerenUI
         public SomerenUI()
         {
             InitializeComponent();
-            dashboardToolStripMenuItem.MouseEnter += OnMouseHoverButton1;
-            dashboardToolStripMenuItem.MouseLeave += OnMouseLeaveButton1;
+            dashboardToolStripMenuItem.MouseEnter += OnMouseEnterDashboard;
+            dashboardToolStripMenuItem.MouseLeave += OnMouseLeaveDashboard;
 
-            studentsToolStripMenuItem.MouseEnter += OnMouseEnterButton2;
-            studentsToolStripMenuItem.MouseLeave += OnMouseLeaveButton2;
+            studentsToolStripMenuItem.MouseEnter += OnMouseEnterStudents;
+            studentsToolStripMenuItem.MouseLeave += OnMouseLeaveStudents;
 
-            lecturersToolStripMenuItem.MouseEnter += OnMouseEnterButton3;
-            lecturersToolStripMenuItem.MouseLeave += OnMouseLeaveButton3;
+            lecturersToolStripMenuItem.MouseEnter += OnMouseEnterLecturers;
+            lecturersToolStripMenuItem.MouseLeave += OnMouseLeaveLecturers;
 
-            activitiesToolStripMenuItem.MouseEnter += OnMouseEnterButton4;
-            activitiesToolStripMenuItem.MouseLeave += OnMouseLeaveButton4;
+            activitiesToolStripMenuItem.MouseEnter += OnMouseEnterActivities;
+            activitiesToolStripMenuItem.MouseLeave += OnMouseLeaveActivities;
 
-            roomsToolStripMenuItem.MouseEnter += OnMouseEnterButton5;
-            roomsToolStripMenuItem.MouseLeave += OnMouseLeaveButton5;
+            roomsToolStripMenuItem.MouseEnter += OnMouseEnterRooms;
+            roomsToolStripMenuItem.MouseLeave += OnMouseLeaveRooms;
         }
 
    
-        // button1
-        private void OnMouseHoverButton1(object sender, EventArgs e)
+        // button Dashboard
+        private void OnMouseEnterDashboard(object sender, EventArgs e)
         {
             this.dashboardToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); 
         }
 
-        private void OnMouseLeaveButton1(object sender, EventArgs e)
+        private void OnMouseLeaveDashboard(object sender, EventArgs e)
         {
             this.dashboardToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); 
         }
 
-        // button2
-        private void OnMouseEnterButton2(object sender, EventArgs e)
+        // button Students
+        private void OnMouseEnterStudents(object sender, EventArgs e)
         {
             this.studentsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57");
         }
 
-        private void OnMouseLeaveButton2(object sender, EventArgs e)
+        private void OnMouseLeaveStudents(object sender, EventArgs e)
         {
             this.studentsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); 
         }
 
-        // button3
-        private void OnMouseEnterButton3(object sender, EventArgs e)
+        // button Lecturers
+        private void OnMouseEnterLecturers(object sender, EventArgs e)
         {
             this.lecturersToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); 
         }
 
-        private void OnMouseLeaveButton3(object sender, EventArgs e)
+        private void OnMouseLeaveLecturers(object sender, EventArgs e)
         {
             this.lecturersToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); 
         }
 
-        // button4
-        private void OnMouseEnterButton4(object sender, EventArgs e)
+        // button Activities
+        private void OnMouseEnterActivities(object sender, EventArgs e)
         {
             this.activitiesToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); 
         }
 
-        private void OnMouseLeaveButton4(object sender, EventArgs e)
+        private void OnMouseLeaveActivities(object sender, EventArgs e)
         {
             this.activitiesToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); // or Color.Red or whatever you want
         }
 
-        // button5
-        private void OnMouseEnterButton5(object sender, EventArgs e)
+        // button Rooms
+        private void OnMouseEnterRooms(object sender, EventArgs e)
         {
             this.roomsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); // or Color.Red or whatever you want
         }
 
-        private void OnMouseLeaveButton5(object sender, EventArgs e)
+        private void OnMouseLeaveRooms(object sender, EventArgs e)
         {
             this.roomsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); // or Color.Red or whatever you want
         }
