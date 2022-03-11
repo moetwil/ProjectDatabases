@@ -17,7 +17,7 @@ namespace SomerenUI
         public SomerenUI()
         {
             InitializeComponent();
-            dashboardToolStripMenuItem.MouseHover += OnMouseHoverButton1;
+            dashboardToolStripMenuItem.MouseEnter += OnMouseHoverButton1;
             dashboardToolStripMenuItem.MouseLeave += OnMouseLeaveButton1;
 
             studentsToolStripMenuItem.MouseEnter += OnMouseEnterButton2;
@@ -112,9 +112,6 @@ namespace SomerenUI
             else if (panelName == "Students")
             {
                 // hide all other panels
-                //pnlDashboard.Hide();
-                //imgDashboard.Hide();
-                //pnlRooms.Hide();
                 HideAllPanels();
 
                 // show students
@@ -129,20 +126,23 @@ namespace SomerenUI
                     //clear the listview before filling it again
                     listViewStudents.Clear();
 
+                    // set styling for listView
                     listViewStudents.GridLines = true;
                     listViewStudents.View = View.Details;
 
+                    // add columns to the listView
                     listViewStudents.Columns.Add("student id", 90);
                     listViewStudents.Columns.Add("First name", 90);
                     listViewStudents.Columns.Add("Last name", 90);
                     listViewStudents.Columns.Add("Class", 90);
                     listViewStudents.Columns.Add("Date of birth", 85);
-                    listViewStudents.Columns.Add("Room id", 70);
+                    listViewStudents.Columns.Add("Room number", 90);
 
+                    // fill the list view with students from the List
                     foreach (Student s in studentList)
                     {
                         ListViewItem li = new ListViewItem(new[] { s.StudentId.ToString(), s.FirstName, s.LastName,
-                            s.Class, s.DateOfBirth.ToString(), s.RoomId.ToString() });
+                            s.Class, s.DateOfBirth.ToString("dd-MM-yyyy"), s.RoomId.ToString() });
                         listViewStudents.Items.Add(li);
 
                     }
@@ -155,13 +155,13 @@ namespace SomerenUI
             }
             else if (panelName == "Teachers")
             {
-                // hide all panels and show the room panel
+                // hide all panels and show the teacher panel
                 HideAllPanels();
                 pnlTeachers.Show();
 
                 try
                 {
-                    // fill the students listview within the students panel with a list of students
+                    // fill the teachers listview within the teacher panel with a list of teachers
                     TeacherService teacherService = new TeacherService();
                     List<Teacher> teacherList = teacherService.GetTeachers();
 
@@ -204,9 +204,7 @@ namespace SomerenUI
 
                 try
                 {
-
-                   
-                    // fill the students listview within the students panel with a list of students
+                    // fill the room listview within the room panel with a list of rooms
                     RoomService roomService = new RoomService(); 
                     List<Room> roomList = roomService.GetRooms(); 
 
@@ -317,7 +315,6 @@ namespace SomerenUI
             pnlRooms.Hide();
             pnlShop.Hide();
             pictureStudents.Hide();
-
             pnlTeachers.Hide();
         }
 

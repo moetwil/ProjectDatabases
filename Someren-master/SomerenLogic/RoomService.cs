@@ -13,6 +13,7 @@ namespace SomerenLogic
     {
         RoomDao roomdb;
 
+        // create room database connection
         public RoomService()
         {
             roomdb = new RoomDao();

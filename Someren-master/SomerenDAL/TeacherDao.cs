@@ -31,6 +31,7 @@ namespace SomerenDAL
             // linking teacher field to database and adding it to the list
             List<Teacher> teachers = new List<Teacher>();
 
+            // fill a teacher object with data from the database
             foreach (DataRow dr in dataTable.Rows)
             {
                 Teacher teacher = new Teacher()

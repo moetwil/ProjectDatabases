@@ -12,8 +12,10 @@ namespace SomerenLogic
     {
         public static void WriteLog(Exception ex)
         {
+            // location of the logfile
             string logPath = ConfigurationManager.AppSettings["logPath"];
 
+            // streamwriter that adds the information to the logfile
             using(StreamWriter writer = new StreamWriter(logPath, true))
             {
                 writer.WriteLine($"{DateTime.Now} : {ex.Message} | {ex}");

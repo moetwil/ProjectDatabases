@@ -12,6 +12,8 @@ namespace SomerenDAL
 {
     public class RoomDao : BaseDao
     {      
+
+        // select all rooms from the database
         public List<Room> GetAllRooms()
         {
             // SQL query that selects the information that we need, where the roomId is bigger than 200
@@ -24,6 +26,7 @@ namespace SomerenDAL
         {
             List<Room> rooms = new List<Room>();
 
+            // give error if the datatable is empty
             if (dataTable == null)
                 throw new Exception("Datatable is empty");
 
@@ -36,11 +39,13 @@ namespace SomerenDAL
                     Capacity = (int)dr["capacity"],
                     Type = (bool)dr["roomType"]
                 };
+
                 rooms.Add(room);
             }
 
-
-
+            // give error if the list of rooms is empty
+            if (rooms.Count == 0)
+                throw new Exception("No rooms loaded from the database");
 
             return rooms;
         }
