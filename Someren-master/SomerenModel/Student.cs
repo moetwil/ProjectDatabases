@@ -9,9 +9,18 @@ namespace SomerenModel
     public class Student
     { 
         public string FirstName { get; set; }
-        public int StudentId { get; set; } // StudentNumber, e.g. 474791
-        public DateTime BirthDate { get; set; }
         public string LastName { get; set; }
+
+        // calculated property that returns the full name of the student 
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+        }
+        public int StudentId { get; set; }
+        public DateTime BirthDate { get; set; }
         public string Class { get; set; }
         public DateTime DateOfBirth { get; set; }
         public int RoomId { get; set; }

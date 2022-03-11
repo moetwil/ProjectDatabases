@@ -17,8 +17,81 @@ namespace SomerenUI
         public SomerenUI()
         {
             InitializeComponent();
+            dashboardToolStripMenuItem.MouseEnter += OnMouseHoverButton1;
+            dashboardToolStripMenuItem.MouseLeave += OnMouseLeaveButton1;
+
+            studentsToolStripMenuItem.MouseEnter += OnMouseEnterButton2;
+            studentsToolStripMenuItem.MouseLeave += OnMouseLeaveButton2;
+
+            lecturersToolStripMenuItem.MouseEnter += OnMouseEnterButton3;
+            lecturersToolStripMenuItem.MouseLeave += OnMouseLeaveButton3;
+
+            activitiesToolStripMenuItem.MouseEnter += OnMouseEnterButton4;
+            activitiesToolStripMenuItem.MouseLeave += OnMouseLeaveButton4;
+
+            roomsToolStripMenuItem.MouseEnter += OnMouseEnterButton5;
+            roomsToolStripMenuItem.MouseLeave += OnMouseLeaveButton5;
         }
 
+   
+        // button1
+        private void OnMouseHoverButton1(object sender, EventArgs e)
+        {
+            this.dashboardToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); 
+        }
+
+        private void OnMouseLeaveButton1(object sender, EventArgs e)
+        {
+            this.dashboardToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); 
+        }
+
+        // button2
+        private void OnMouseEnterButton2(object sender, EventArgs e)
+        {
+            this.studentsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57");
+        }
+
+        private void OnMouseLeaveButton2(object sender, EventArgs e)
+        {
+            this.studentsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); 
+        }
+
+        // button3
+        private void OnMouseEnterButton3(object sender, EventArgs e)
+        {
+            this.lecturersToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); 
+        }
+
+        private void OnMouseLeaveButton3(object sender, EventArgs e)
+        {
+            this.lecturersToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); 
+        }
+
+        // button4
+        private void OnMouseEnterButton4(object sender, EventArgs e)
+        {
+            this.activitiesToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); 
+        }
+
+        private void OnMouseLeaveButton4(object sender, EventArgs e)
+        {
+            this.activitiesToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); // or Color.Red or whatever you want
+        }
+
+        // button5
+        private void OnMouseEnterButton5(object sender, EventArgs e)
+        {
+            this.roomsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#2e8b57"); // or Color.Red or whatever you want
+        }
+
+        private void OnMouseLeaveButton5(object sender, EventArgs e)
+        {
+            this.roomsToolStripMenuItem.BackColor = ColorTranslator.FromHtml("#4e8b57"); // or Color.Red or whatever you want
+        }
+
+
+
+        // All the panels
         private void SomerenUI_Load(object sender, EventArgs e)
         {
             showPanel("Dashboard");
@@ -41,7 +114,6 @@ namespace SomerenUI
                 // hide all other panels
                 HideAllPanels();
 
-
                 // show students
                 pnlStudents.Show();
 
@@ -54,20 +126,23 @@ namespace SomerenUI
                     //clear the listview before filling it again
                     listViewStudents.Clear();
 
+                    // set styling for listView
                     listViewStudents.GridLines = true;
                     listViewStudents.View = View.Details;
 
+                    // add columns to the listView
                     listViewStudents.Columns.Add("student id", 90);
                     listViewStudents.Columns.Add("First name", 90);
                     listViewStudents.Columns.Add("Last name", 90);
                     listViewStudents.Columns.Add("Class", 90);
                     listViewStudents.Columns.Add("Date of birth", 85);
-                    listViewStudents.Columns.Add("Room id", 70);
+                    listViewStudents.Columns.Add("Room number", 90);
 
+                    // fill the list view with students from the List
                     foreach (Student s in studentList)
                     {
                         ListViewItem li = new ListViewItem(new[] { s.StudentId.ToString(), s.FirstName, s.LastName,
-                            s.Class, s.DateOfBirth.ToString(), s.RoomId.ToString() });
+                            s.Class, s.DateOfBirth.ToString("dd-MM-yyyy"), s.RoomId.ToString() });
                         listViewStudents.Items.Add(li);
 
                     }
@@ -80,13 +155,13 @@ namespace SomerenUI
             }
             else if (panelName == "Teachers")
             {
-                // hide all panels and show the room panel
+                // hide all panels and show the teacher panel
                 HideAllPanels();
                 pnlTeachers.Show();
 
                 try
                 {
-                    // fill the students listview within the students panel with a list of students
+                    // fill the teachers listview within the teacher panel with a list of teachers
                     TeacherService teacherService = new TeacherService();
                     List<Teacher> teacherList = teacherService.GetTeachers();
 
@@ -129,9 +204,7 @@ namespace SomerenUI
 
                 try
                 {
-
-                   
-                    // fill the students listview within the students panel with a list of students
+                    // fill the room listview within the room panel with a list of rooms
                     RoomService roomService = new RoomService(); 
                     List<Room> roomList = roomService.GetRooms(); 
 
@@ -160,6 +233,40 @@ namespace SomerenUI
                 catch (Exception e)
                 {
                     MessageBox.Show("Something went wrong while loading the rooms: " + e.Message);
+                    LoggerService.WriteLog(e);
+                }
+            }
+            else if (panelName == "Shop")
+            {
+                // hide all panels and show the room panel
+                HideAllPanels();
+                pnlShop.Show();
+
+                try
+                {
+                    //fill the students listview within the students panel with a list of students
+                    StudentService studService = new StudentService(); ;
+                    List<Student> studentList = studService.GetStudents(); ;
+
+                    // place all the students in the listBox
+                    foreach (Student student in studentList)
+                    {
+                        listBoxShopStudents.Items.Add($"{student.StudentId}. {student.FullName}");
+                    }
+
+                    // drinks
+                    DrinkService drinkService = new DrinkService();
+                    List<Drink> drinkList = drinkService.GetDrinks();
+
+                    foreach (Drink drink in drinkList)
+                    {
+                        listBoxShopDrinks.Items.Add($"{drink.DrinkId}. {drink.Name}");
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Something went wrong while loading the drinks: " + e.Message);
                     LoggerService.WriteLog(e);
                 }
             }
@@ -204,19 +311,41 @@ namespace SomerenUI
         {
             // hide every panel
             pnlDashboard.Hide();
-            imgDashboard.Hide();
-
             pnlStudents.Hide();
-
             pnlRooms.Hide();
+            pnlShop.Hide();
             pictureStudents.Hide();
-
             pnlTeachers.Hide();
         }
 
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showPanel("Teachers");
+        }
+
+        private void shopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Shop");
+        }
+
+        private void checkOutShopButton_Click(object sender, EventArgs e)
+        {
+            // get id from selected student
+            string[] studentString = listBoxShopStudents.SelectedItem.ToString().Split('.');
+            int studentId = int.Parse(studentString[0]);
+
+            // get id from selected drink
+            string[] drinkString = listBoxShopDrinks.SelectedItem.ToString().Split('.');
+            int drinkId = int.Parse(drinkString[0]);
+
+            PurchaseService purchaseService = new PurchaseService();
+            purchaseService.WritePurchase(studentId, drinkId);
+
+            MessageBox.Show("Your order has been placed :)");
+
+            // reset the listBoxes
+            listBoxShopDrinks.ClearSelected();
+            listBoxShopStudents.ClearSelected();
         }
     }
 }

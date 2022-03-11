@@ -12,12 +12,13 @@ namespace SomerenLogic
     {
         TeacherDao teacherdb;
 
+        // create teacher database connection
         public TeacherService()
         {
             teacherdb = new TeacherDao();
         }
 
-        // display all list of teachers
+        // load a list of teachers
         public List<Teacher> GetTeachers()
         {
             List<Teacher> teachers = teacherdb.GetAllTeachers();

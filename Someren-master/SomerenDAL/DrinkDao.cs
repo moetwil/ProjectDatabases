@@ -10,44 +10,38 @@ using SomerenModel;
 
 namespace SomerenDAL
 {
-    public class RoomDao : BaseDao
+    public class DrinkDao : BaseDao
     {      
-
-        // select all rooms from the database
-        public List<Room> GetAllRooms()
+        public List<Drink> GetAllDrinks()
         {
             // SQL query that selects the information that we need, where the roomId is bigger than 200
-            string query = "SELECT roomId, capacity, roomType FROM [Rooms] WHERE roomId > 200";
+            string query = "SELECT drinkId, alcohol, drinkName, price, VAT FROM [Drinks]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        private List<Room> ReadTables(DataTable dataTable)
+        private List<Drink> ReadTables(DataTable dataTable)
         {
-            List<Room> rooms = new List<Room>();
+            List<Drink> drinks = new List<Drink>();
 
-            // give error if the datatable is empty
             if (dataTable == null)
                 throw new Exception("Datatable is empty");
 
             foreach (DataRow dr in dataTable.Rows)
             {
                 // create a room with with information from the database and add it to the list
-                Room room = new Room()
+                Drink drink = new Drink()
                 {
-                    Number = (int)dr["roomId"],
-                    Capacity = (int)dr["capacity"],
-                    Type = (bool)dr["roomType"]
+                    DrinkId = (int)dr["drinkId"],
+                    HasAlcohol = (bool)dr["alcohol"],
+                    Name = (string)dr["drinkName"],
+                    Price = Convert.ToDouble((decimal)(dr["price"])),
+                    VAT = (double)dr["VAT"]
                 };
-
-                rooms.Add(room);
+                drinks.Add(drink);
             }
 
-            // give error if the list of rooms is empty
-            if (rooms.Count == 0)
-                throw new Exception("No rooms loaded from the database");
-
-            return rooms;
+            return drinks;
         }
     }
 }

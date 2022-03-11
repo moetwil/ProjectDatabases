@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace SomerenModel
 {
-    public class Room
+    public class Purchase
     {
-        public int Number { get; set; } 
-        public int Capacity { get; set; } 
-        public bool Type { get; set; }
+        public int StudentId { get; set; } 
+        public int DrinkId { get; set; } 
     }
 }

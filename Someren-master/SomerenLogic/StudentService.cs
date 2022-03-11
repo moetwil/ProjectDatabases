@@ -13,11 +13,13 @@ namespace SomerenLogic
     {
         StudentDao studentdb;
 
+        // create student database connection
         public StudentService()
         {
             studentdb = new StudentDao();
         }
 
+        // load a list of students
         public List<Student> GetStudents()
         {
             List<Student> students = studentdb.GetAllStudents();

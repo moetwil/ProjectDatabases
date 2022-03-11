@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoggerService.cs" />
+    <Compile Include="DrinkService.cs" />
     <Compile Include="RoomService.cs" />
+    <Compile Include="PurchaseService.cs" />
     <Compile Include="StudentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeacherService.cs" />

@@ -12,6 +12,7 @@ namespace SomerenDAL
 {
     public class StudentDao : BaseDao
     {      
+        // get all the students from the database
         public List<Student> GetAllStudents()
         {
             string query = "SELECT studentId, firstName, lastName, class, dateOfBirth, roomId FROM [Students]";
@@ -23,6 +24,7 @@ namespace SomerenDAL
         {
             List<Student> students = new List<Student>();
 
+            // fill a student object with data from the database
             foreach (DataRow dr in dataTable.Rows)
             {
                 Student student = new Student()
@@ -35,6 +37,8 @@ namespace SomerenDAL
                     RoomId = (int)dr["roomId"]
                 };
                 students.Add(student);
+
+                // if the students List is empty return an error message
                 if (students.Count == 0) {
                     throw new Exception("No students loaded from the database");
                 }
