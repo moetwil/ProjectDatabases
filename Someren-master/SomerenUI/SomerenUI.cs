@@ -375,7 +375,7 @@ namespace SomerenUI
             showPanel("Revenue report");
         }
 
-        private void buttonCalculate_Click(object sender, EventArgs e)
+        private void buttonRevenue_Click(object sender, EventArgs e)
         {
             // lables are linked to the selected dates on the calendar
             textBoxStart.Text = monthCalendar2.SelectionRange.Start.Date.ToString("dd-MM-yyyy");
