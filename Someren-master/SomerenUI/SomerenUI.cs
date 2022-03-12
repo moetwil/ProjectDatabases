@@ -261,23 +261,59 @@ namespace SomerenUI
                 {
                     //fill the students listview within the students panel with a list of students
                     StudentService studService = new StudentService(); ;
-                    List<Student> studentList = studService.GetStudents(); ;
+                    List<Student> studentList = studService.GetStudents();
 
-                    // place all the students in the listBox
-                    foreach (Student student in studentList)
+                    //clear the listview before filling it again
+                    listViewShopStudents.Clear();
+
+                    // set styling for listView
+                    listViewShopStudents.GridLines = true;
+                    listViewShopStudents.View = View.Details;
+                    listViewShopStudents.FullRowSelect = true;
+
+                    // add columns to the listView
+                    listViewShopStudents.Columns.Add("student id", 90);
+                    listViewShopStudents.Columns.Add("First name", 90);
+                    listViewShopStudents.Columns.Add("Last name", 90);
+                    listViewShopStudents.Columns.Add("Class", 90);
+                    listViewShopStudents.Columns.Add("Date of birth", 85);
+                    listViewShopStudents.Columns.Add("Room number", 90);
+
+                    // fill the list view with students from the List
+                    foreach (Student s in studentList)
                     {
-                        listBoxShopStudents.Items.Add($"{student.StudentId}. {student.FullName}");
+                        ListViewItem li = new ListViewItem(new[] { s.StudentId.ToString(), s.FirstName, s.LastName,
+                            s.Class, s.DateOfBirth.ToString("dd-MM-yyyy"), s.RoomId.ToString() });
+                        listViewShopStudents.Items.Add(li);
+
                     }
+
+
 
                     // drinks
                     DrinkService drinkService = new DrinkService();
                     List<Drink> drinkList = drinkService.GetDrinks();
 
+                    listViewShopDrinks.Clear();
+
+                    // set styling for listView
+                    listViewShopDrinks.GridLines = true;
+                    listViewShopDrinks.View = View.Details;
+                    listViewShopDrinks.FullRowSelect = true;
+
+                    // add columns to the listView
+                    listViewShopDrinks.Columns.Add("drink id", 90);
+                    listViewShopDrinks.Columns.Add("Drink name", 90);
+                    listViewShopDrinks.Columns.Add("Alcohol", 90);
+
                     foreach (Drink drink in drinkList)
                     {
-                        listBoxShopDrinks.Items.Add($"{drink.DrinkId}. {drink.Name}");
+                        ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
+                        item.Tag = drink;
+                        item.SubItems.Add(drink.Name);
+                        item.SubItems.Add(drink.HasAlcohol.ToString());
+                        listViewShopDrinks.Items.Add(item);
                     }
-
                 }
                 catch (Exception e)
                 {
@@ -386,22 +422,15 @@ namespace SomerenUI
 
         private void checkOutShopButton_Click(object sender, EventArgs e)
         {
-            // get id from selected student
-            string[] studentString = listBoxShopStudents.SelectedItem.ToString().Split('.');
-            int studentId = int.Parse(studentString[0]);
-
-            // get id from selected drink
-            string[] drinkString = listBoxShopDrinks.SelectedItem.ToString().Split('.');
-            int drinkId = int.Parse(drinkString[0]);
-
             PurchaseService purchaseService = new PurchaseService();
+
+            // get selected items
+            int studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
+            int drinkId = int.Parse(listViewShopDrinks.SelectedItems[0].Text);
+
+            // write the purchase to the database
             purchaseService.WritePurchase(studentId, drinkId);
-
             MessageBox.Show("Your order has been placed :)");
-
-            // reset the listBoxes
-            listBoxShopDrinks.ClearSelected();
-            listBoxShopStudents.ClearSelected();
         }
 
         private void revenueReportToolStripMenuItem_Click_1(object sender, EventArgs e)
