@@ -303,9 +303,11 @@ namespace SomerenUI
                     listViewShopDrinks.CheckBoxes = true;
 
                     // add columns to the listView
-                    listViewShopDrinks.Columns.Add("drink id", 90);
-                    listViewShopDrinks.Columns.Add("Drink name", 90);
-                    listViewShopDrinks.Columns.Add("Alcohol", 90);
+                    listViewShopDrinks.Columns.Add("drink id", 50);
+                    listViewShopDrinks.Columns.Add("Drink name", 70);
+                    listViewShopDrinks.Columns.Add("Alcohol", 50);
+                    listViewShopDrinks.Columns.Add("Price", 50);
+                    listViewShopDrinks.Columns.Add("Stock", 40);
 
                     foreach (Drink drink in drinkList)
                     {
@@ -313,6 +315,8 @@ namespace SomerenUI
                         item.Tag = drink;
                         item.SubItems.Add(drink.Name);
                         item.SubItems.Add(drink.HasAlcohol.ToString());
+                        item.SubItems.Add($"\u20AC{drink.Price.ToString("0.00")}");
+                        item.SubItems.Add(drink.Stock.ToString());
                         listViewShopDrinks.Items.Add(item);
                     }
                 }
