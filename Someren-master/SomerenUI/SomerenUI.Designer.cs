@@ -519,9 +519,10 @@
             // 
             this.pictureBox4.Image = global::SomerenUI.Properties.Resources.someren;
             this.pictureBox4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.InitialImage")));
-            this.pictureBox4.Location = new System.Drawing.Point(806, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(1074, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(130, 123);
+            this.pictureBox4.Size = new System.Drawing.Size(173, 151);
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
@@ -672,6 +673,15 @@
             this.listViewShopDrinks.TabIndex = 11;
             this.listViewShopDrinks.UseCompatibleStateImageBehavior = false;
             // 
+            // listViewPurchases
+            // 
+            this.listViewPurchases.HideSelection = false;
+            this.listViewPurchases.Location = new System.Drawing.Point(31, 27);
+            this.listViewPurchases.Name = "listViewPurchases";
+            this.listViewPurchases.Size = new System.Drawing.Size(397, 384);
+            this.listViewPurchases.TabIndex = 10;
+            this.listViewPurchases.UseCompatibleStateImageBehavior = false;
+            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -778,7 +788,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewPurchases;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListView listViewShopStudents;
         private System.Windows.Forms.ListView listViewShopDrinks;
