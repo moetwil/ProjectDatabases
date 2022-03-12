@@ -272,18 +272,14 @@ namespace SomerenUI
                     listViewShopStudents.FullRowSelect = true;
 
                     // add columns to the listView
-                    listViewShopStudents.Columns.Add("student id", 90);
-                    listViewShopStudents.Columns.Add("First name", 90);
-                    listViewShopStudents.Columns.Add("Last name", 90);
-                    listViewShopStudents.Columns.Add("Class", 90);
+                    listViewShopStudents.Columns.Add("student id", 80);
+                    listViewShopStudents.Columns.Add("student name", 90);
                     listViewShopStudents.Columns.Add("Date of birth", 85);
-                    listViewShopStudents.Columns.Add("Room number", 90);
 
                     // fill the list view with students from the List
                     foreach (Student s in studentList)
                     {
-                        ListViewItem li = new ListViewItem(new[] { s.StudentId.ToString(), s.FirstName, s.LastName,
-                            s.Class, s.DateOfBirth.ToString("dd-MM-yyyy"), s.RoomId.ToString() });
+                        ListViewItem li = new ListViewItem(new[] { s.StudentId.ToString(), s.FullName, s.DateOfBirth.ToString("dd-MM-yyyy")});
                         listViewShopStudents.Items.Add(li);
 
                     }
