@@ -284,8 +284,6 @@ namespace SomerenUI
 
                     }
 
-
-
                     // drinks
                     DrinkService drinkService = new DrinkService();
                     List<Drink> drinkList = drinkService.GetDrinks();
@@ -311,7 +309,7 @@ namespace SomerenUI
                         item.Tag = drink;
                         item.SubItems.Add(drink.Name);
                         item.SubItems.Add(drink.HasAlcohol.ToString());
-                        item.SubItems.Add($"\u20AC{drink.Price.ToString("0.00")}");
+                        item.SubItems.Add(drink.Price.ToString("0.00"));
                         item.SubItems.Add(drink.Stock.ToString());
                         listViewShopDrinks.Items.Add(item);
                     }
@@ -423,24 +421,25 @@ namespace SomerenUI
 
         private void checkOutShopButton_Click(object sender, EventArgs e)
         {
+            double totalPrice = 0;
             PurchaseService purchaseService = new PurchaseService();
 
             // get selected student
             int studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
 
-            //int drinkId = int.Parse(listViewShopDrinks.SelectedItems[0].Text);
-
             foreach (ListViewItem item in listViewShopDrinks.Items)
             {
                 if (item.Checked)
                 {
+                    // get drink id
                     int drinkId = int.Parse(item.SubItems[0].Text);
+                    totalPrice += double.Parse(item.SubItems[3].Text);
+
+                    // write purchase to the database
                     purchaseService.WritePurchase(studentId, drinkId);
                 }
             }
-
-            // write the purchase to the database
-            //purchaseService.WritePurchase(studentId, drinkId);
+            MessageBox.Show($"Your order will be \u20AC{totalPrice:0.00}");
             MessageBox.Show("Your order has been placed :)");
         }
 
