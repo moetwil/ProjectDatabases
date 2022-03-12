@@ -14,7 +14,8 @@ namespace SomerenDAL
     {      
         public void WritePurchase(int studentId, int drinkId)
         {
-            string query = $"INSERT INTO Purchases VALUES ({studentId}, {drinkId})";
+            string query = $"INSERT INTO Purchases ([studentId], [drinkId]) VALUES ({studentId}, {drinkId})";
+            
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
@@ -32,6 +33,7 @@ namespace SomerenDAL
                 // create a purchase with with information from the database and add it to the list
                 Purchase purchase = new Purchase()
                 {
+                    PurchaseId = (int)dr["purchaseId"],
                     StudentId = (int)dr["studentId"],
                     DrinkId = (int)dr["drinkId"],
                 };
