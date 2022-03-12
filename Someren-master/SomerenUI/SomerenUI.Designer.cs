@@ -74,19 +74,19 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.shopLabel = new System.Windows.Forms.Label();
             this.pnlRevenue = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.buttonRevenue = new System.Windows.Forms.Button();
-            this.textBoxEnd = new System.Windows.Forms.TextBox();
-            this.textBoxStart = new System.Windows.Forms.TextBox();
-            this.textEndDate = new System.Windows.Forms.Label();
-            this.textStartDate = new System.Windows.Forms.Label();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
+            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.buttonRevenue = new System.Windows.Forms.Button();
+            this.textStartDate = new System.Windows.Forms.Label();
+            this.textBoxEnd = new System.Windows.Forms.TextBox();
+            this.textEndDate = new System.Windows.Forms.Label();
+            this.textBoxStart = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listViewPurchases = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -539,69 +539,6 @@
             this.pnlRevenue.Size = new System.Drawing.Size(1251, 574);
             this.pnlRevenue.TabIndex = 10;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(252, 17);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Select the dates by dragging along the";
-            // 
-            // buttonRevenue
-            // 
-            this.buttonRevenue.BackColor = System.Drawing.Color.DarkGray;
-            this.buttonRevenue.Location = new System.Drawing.Point(92, 373);
-            this.buttonRevenue.Name = "buttonRevenue";
-            this.buttonRevenue.Size = new System.Drawing.Size(202, 34);
-            this.buttonRevenue.TabIndex = 9;
-            this.buttonRevenue.Text = "Show Revenue";
-            this.buttonRevenue.UseVisualStyleBackColor = false;
-            this.buttonRevenue.Click += new System.EventHandler(this.buttonCalculate_Click);
-            // 
-            // textBoxEnd
-            // 
-            this.textBoxEnd.Location = new System.Drawing.Point(194, 339);
-            this.textBoxEnd.Name = "textBoxEnd";
-            this.textBoxEnd.Size = new System.Drawing.Size(100, 22);
-            this.textBoxEnd.TabIndex = 8;
-            // 
-            // textBoxStart
-            // 
-            this.textBoxStart.Location = new System.Drawing.Point(194, 306);
-            this.textBoxStart.Name = "textBoxStart";
-            this.textBoxStart.Size = new System.Drawing.Size(100, 22);
-            this.textBoxStart.TabIndex = 7;
-            // 
-            // textEndDate
-            // 
-            this.textEndDate.AutoSize = true;
-            this.textEndDate.Location = new System.Drawing.Point(92, 342);
-            this.textEndDate.Name = "textEndDate";
-            this.textEndDate.Size = new System.Drawing.Size(65, 17);
-            this.textEndDate.TabIndex = 6;
-            this.textEndDate.Text = "End date";
-            // 
-            // textStartDate
-            // 
-            this.textStartDate.AutoSize = true;
-            this.textStartDate.Location = new System.Drawing.Point(92, 309);
-            this.textStartDate.Name = "textStartDate";
-            this.textStartDate.Size = new System.Drawing.Size(70, 17);
-            this.textStartDate.TabIndex = 5;
-            this.textStartDate.Text = "Start date";
-            // 
-            // monthCalendar2
-            // 
-            this.monthCalendar2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.monthCalendar2.Location = new System.Drawing.Point(92, 82);
-            this.monthCalendar2.MaxDate = new System.DateTime(2022, 5, 18, 0, 0, 0, 0);
-            this.monthCalendar2.MinDate = new System.DateTime(2022, 5, 16, 0, 0, 0, 0);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.TabIndex = 4;
-            this.monthCalendar2.TitleBackColor = System.Drawing.Color.DarkOliveGreen;
-            this.monthCalendar2.TrailingForeColor = System.Drawing.Color.YellowGreen;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::SomerenUI.Properties.Resources.someren;
@@ -630,6 +567,78 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
+            // monthCalendar2
+            // 
+            this.monthCalendar2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.monthCalendar2.Location = new System.Drawing.Point(90, 80);
+            this.monthCalendar2.MaxDate = new System.DateTime(2022, 5, 18, 0, 0, 0, 0);
+            this.monthCalendar2.MinDate = new System.DateTime(2022, 5, 16, 0, 0, 0, 0);
+            this.monthCalendar2.Name = "monthCalendar2";
+            this.monthCalendar2.TabIndex = 4;
+            this.monthCalendar2.TitleBackColor = System.Drawing.Color.DarkOliveGreen;
+            this.monthCalendar2.TrailingForeColor = System.Drawing.Color.YellowGreen;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(61, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(252, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Select the dates by dragging along the";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(61, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(228, 17);
+            this.label5.TabIndex = 0;
+            this.label5.Text = " from the start date to the end date";
+            // 
+            // buttonRevenue
+            // 
+            this.buttonRevenue.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonRevenue.Location = new System.Drawing.Point(90, 371);
+            this.buttonRevenue.Name = "buttonRevenue";
+            this.buttonRevenue.Size = new System.Drawing.Size(202, 34);
+            this.buttonRevenue.TabIndex = 9;
+            this.buttonRevenue.Text = "Show Revenue";
+            this.buttonRevenue.UseVisualStyleBackColor = false;
+            this.buttonRevenue.Click += new System.EventHandler(this.buttonRevenue_Click);
+            // 
+            // textStartDate
+            // 
+            this.textStartDate.AutoSize = true;
+            this.textStartDate.Location = new System.Drawing.Point(90, 307);
+            this.textStartDate.Name = "textStartDate";
+            this.textStartDate.Size = new System.Drawing.Size(70, 17);
+            this.textStartDate.TabIndex = 5;
+            this.textStartDate.Text = "Start date";
+            // 
+            // textBoxEnd
+            // 
+            this.textBoxEnd.Location = new System.Drawing.Point(192, 337);
+            this.textBoxEnd.Name = "textBoxEnd";
+            this.textBoxEnd.Size = new System.Drawing.Size(100, 22);
+            this.textBoxEnd.TabIndex = 8;
+            // 
+            // textEndDate
+            // 
+            this.textEndDate.AutoSize = true;
+            this.textEndDate.Location = new System.Drawing.Point(90, 340);
+            this.textEndDate.Name = "textEndDate";
+            this.textEndDate.Size = new System.Drawing.Size(65, 17);
+            this.textEndDate.TabIndex = 6;
+            this.textEndDate.Text = "End date";
+            // 
+            // textBoxStart
+            // 
+            this.textBoxStart.Location = new System.Drawing.Point(192, 304);
+            this.textBoxStart.Name = "textBoxStart";
+            this.textBoxStart.Size = new System.Drawing.Size(100, 22);
+            this.textBoxStart.TabIndex = 7;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -641,32 +650,23 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Revenue report";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(61, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(228, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = " from the start date to the end date";
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(38, 27);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(382, 384);
-            this.listView1.TabIndex = 10;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listView1);
+            this.groupBox2.Controls.Add(this.listViewPurchases);
             this.groupBox2.Location = new System.Drawing.Point(448, 72);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(460, 447);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
+            // 
+            // listViewPurchases
+            // 
+            this.listViewPurchases.HideSelection = false;
+            this.listViewPurchases.Location = new System.Drawing.Point(31, 27);
+            this.listViewPurchases.Name = "listViewPurchases";
+            this.listViewPurchases.Size = new System.Drawing.Size(397, 384);
+            this.listViewPurchases.TabIndex = 10;
+            this.listViewPurchases.UseCompatibleStateImageBehavior = false;
             // 
             // SomerenUI
             // 
@@ -775,7 +775,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewPurchases;
         private System.Windows.Forms.GroupBox groupBox2;
     }
 }

@@ -290,6 +290,40 @@ namespace SomerenUI
                 // hide all panels and show the room panel
                 HideAllPanels();
                 pnlRevenue.Show();
+
+                try
+                {
+                    // fill the purchases listview within the purchase panel with a list of purchases
+                    PurchaseService purchaseService = new PurchaseService();
+                    //List<Purchase> pruchaseList = purchaseService.WritePurchase();
+
+                    // clear the listview before filling it again
+                    listViewPurchases.Clear();
+
+                    // styling of the listView
+                    listViewPurchases.GridLines = true;
+                    listViewPurchases.View = View.Details;
+
+                    // create listView columns
+                    listViewPurchases.Columns.Add("Drinks sold", 90);
+                    listViewPurchases.Columns.Add("Turn over", 90);
+                    listViewPurchases.Columns.Add("Number customers", 120);
+
+                    // add every purchase to the listView
+                    /*foreach (Purchase purchase in purchaseList)
+                    {
+                        ListViewItem listPurchase = new ListViewItem(purchase.DrinkId.ToString());
+                        listPurchase.SubItems.Add(purchase.FirstName.ToString());
+                        listPurchase.SubItems.Add(purchase.LastName.ToString());
+                        listPurchase.SubItems.Add(purchase.RoomId.ToString());
+                        listPurchases.Items.Add(listPurchase);
+                    }*/
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show($"Something went wrong while loading the teachers: {e.Message} Please try refreshing the page or close the window and try again.");
+                    LoggerService.WriteLog(e);
+                }
             }
         }
 
