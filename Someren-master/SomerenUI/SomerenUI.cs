@@ -17,6 +17,8 @@ namespace SomerenUI
         public SomerenUI()
         {
             InitializeComponent();
+
+            // button enter and leave
             dashboardToolStripMenuItem.MouseEnter += OnMouseEnterDashboard;
             dashboardToolStripMenuItem.MouseLeave += OnMouseLeaveDashboard;
 
@@ -31,6 +33,19 @@ namespace SomerenUI
 
             roomsToolStripMenuItem.MouseEnter += OnMouseEnterRooms;
             roomsToolStripMenuItem.MouseLeave += OnMouseLeaveRooms;
+
+
+            // monthcalendar range
+            // only selects two days
+            monthCalendar2.MaxSelectionCount = 2;
+
+            // shows begin date and end date on calendar
+            DateTime firstDayIntroduction = new DateTime(2022, 5, 16);
+            DateTime secondDayIntroduction = new DateTime(2022, 5, 17);
+
+            monthCalendar2.SelectionRange = new SelectionRange(firstDayIntroduction, secondDayIntroduction);
+
+            
         }
 
    
@@ -270,11 +285,11 @@ namespace SomerenUI
                     LoggerService.WriteLog(e);
                 }
             }
-            else if (panelName == "Omzetrapportage")
+            else if (panelName == "Revenue report")
             {
                 // hide all panels and show the room panel
                 HideAllPanels();
-                pnlOmzet.Show();
+                pnlRevenue.Show();
             }
         }
 
@@ -322,7 +337,7 @@ namespace SomerenUI
             pnlShop.Hide();
             pictureStudents.Hide();
             pnlTeachers.Hide();
-            pnlOmzet.Hide();
+            pnlRevenue.Hide();
         }
 
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -355,9 +370,16 @@ namespace SomerenUI
             listBoxShopStudents.ClearSelected();
         }
 
-        private void omzetrapportageToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void revenueReportToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            showPanel("Omzetrapportage");
+            showPanel("Revenue report");
+        }
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            // lables are linked to the selected dates on the calendar
+            textBoxStart.Text = monthCalendar2.SelectionRange.Start.Date.ToString("dd-MM-yyyy");
+            textBoxEnd.Text = monthCalendar2.SelectionRange.End.Date.ToString("dd-MM-yyyy");
         }
     }
 }

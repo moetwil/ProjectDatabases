@@ -39,7 +39,7 @@
             this.activitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.omzetrapportageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.revenueReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlDashboard = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -73,9 +73,17 @@
             this.listBoxShopStudents = new System.Windows.Forms.ListBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.shopLabel = new System.Windows.Forms.Label();
-            this.pnlOmzet = new System.Windows.Forms.Panel();
+            this.pnlRevenue = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
+            this.textStartDate = new System.Windows.Forms.Label();
+            this.textEndDate = new System.Windows.Forms.Label();
+            this.textBoxStart = new System.Windows.Forms.TextBox();
+            this.textBoxEnd = new System.Windows.Forms.TextBox();
+            this.buttonCalculate = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -88,7 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlShop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.pnlOmzet.SuspendLayout();
+            this.pnlRevenue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +114,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1283, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(1283, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -118,7 +126,7 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(104, 26);
             this.dashboardToolStripMenuItem.Text = "Application";
             this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
@@ -145,7 +153,7 @@
             // 
             this.studentsToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(88, 22);
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(88, 26);
             this.studentsToolStripMenuItem.Text = "Students";
             this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             // 
@@ -153,7 +161,7 @@
             // 
             this.lecturersToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.lecturersToolStripMenuItem.Name = "lecturersToolStripMenuItem";
-            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(93, 26);
             this.lecturersToolStripMenuItem.Text = "Lecturers";
             this.lecturersToolStripMenuItem.Click += new System.EventHandler(this.lecturersToolStripMenuItem_Click);
             // 
@@ -161,14 +169,14 @@
             // 
             this.activitiesToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
-            this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
+            this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(89, 26);
             this.activitiesToolStripMenuItem.Text = "Activities";
             // 
             // roomsToolStripMenuItem
             // 
             this.roomsToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.roomsToolStripMenuItem.Name = "roomsToolStripMenuItem";
-            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(77, 22);
+            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
             this.roomsToolStripMenuItem.Text = "Rooms";
             this.roomsToolStripMenuItem.Click += new System.EventHandler(this.roomsToolStripMenuItem_Click);
             // 
@@ -176,18 +184,18 @@
             // 
             this.shopToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.shopToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.omzetrapportageToolStripMenuItem});
+            this.revenueReportToolStripMenuItem});
             this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(61, 26);
             this.shopToolStripMenuItem.Text = "Shop";
             this.shopToolStripMenuItem.Click += new System.EventHandler(this.shopToolStripMenuItem_Click);
             // 
-            // omzetrapportageToolStripMenuItem
+            // revenueReportToolStripMenuItem
             // 
-            this.omzetrapportageToolStripMenuItem.Name = "omzetrapportageToolStripMenuItem";
-            this.omzetrapportageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.omzetrapportageToolStripMenuItem.Text = "Omzetrapportage";
-            this.omzetrapportageToolStripMenuItem.Click += new System.EventHandler(this.omzetrapportageToolStripMenuItem_Click_1);
+            this.revenueReportToolStripMenuItem.Name = "revenueReportToolStripMenuItem";
+            this.revenueReportToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.revenueReportToolStripMenuItem.Text = "Revenue report";
+            this.revenueReportToolStripMenuItem.Click += new System.EventHandler(this.revenueReportToolStripMenuItem_Click_1);
             // 
             // pnlDashboard
             // 
@@ -513,16 +521,24 @@
             this.shopLabel.TabIndex = 3;
             this.shopLabel.Text = "Shop";
             // 
-            // pnlOmzet
+            // pnlRevenue
             // 
-            this.pnlOmzet.BackColor = System.Drawing.Color.Lavender;
-            this.pnlOmzet.Controls.Add(this.pictureBox4);
-            this.pnlOmzet.Controls.Add(this.label4);
-            this.pnlOmzet.Location = new System.Drawing.Point(17, 31);
-            this.pnlOmzet.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlOmzet.Name = "pnlOmzet";
-            this.pnlOmzet.Size = new System.Drawing.Size(1251, 574);
-            this.pnlOmzet.TabIndex = 10;
+            this.pnlRevenue.BackColor = System.Drawing.Color.Lavender;
+            this.pnlRevenue.Controls.Add(this.label3);
+            this.pnlRevenue.Controls.Add(this.buttonCalculate);
+            this.pnlRevenue.Controls.Add(this.textBoxEnd);
+            this.pnlRevenue.Controls.Add(this.textBoxStart);
+            this.pnlRevenue.Controls.Add(this.textEndDate);
+            this.pnlRevenue.Controls.Add(this.textStartDate);
+            this.pnlRevenue.Controls.Add(this.monthCalendar2);
+            this.pnlRevenue.Controls.Add(this.pictureBox4);
+            this.pnlRevenue.Controls.Add(this.groupBox1);
+            this.pnlRevenue.Controls.Add(this.label4);
+            this.pnlRevenue.Location = new System.Drawing.Point(17, 31);
+            this.pnlRevenue.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlRevenue.Name = "pnlRevenue";
+            this.pnlRevenue.Size = new System.Drawing.Size(1251, 574);
+            this.pnlRevenue.TabIndex = 10;
             // 
             // pictureBox4
             // 
@@ -542,16 +558,90 @@
             this.label4.Location = new System.Drawing.Point(13, 12);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(242, 33);
+            this.label4.Size = new System.Drawing.Size(215, 33);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Omzetrapportage";
+            this.label4.Text = "Revenue report";
+            // 
+            // monthCalendar2
+            // 
+            this.monthCalendar2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.monthCalendar2.Location = new System.Drawing.Point(91, 128);
+            this.monthCalendar2.MaxDate = new System.DateTime(2022, 5, 18, 0, 0, 0, 0);
+            this.monthCalendar2.MinDate = new System.DateTime(2022, 5, 16, 0, 0, 0, 0);
+            this.monthCalendar2.Name = "monthCalendar2";
+            this.monthCalendar2.TabIndex = 4;
+            this.monthCalendar2.TitleBackColor = System.Drawing.Color.DarkOliveGreen;
+            this.monthCalendar2.TrailingForeColor = System.Drawing.Color.YellowGreen;
+            // 
+            // textStartDate
+            // 
+            this.textStartDate.AutoSize = true;
+            this.textStartDate.Location = new System.Drawing.Point(360, 177);
+            this.textStartDate.Name = "textStartDate";
+            this.textStartDate.Size = new System.Drawing.Size(70, 17);
+            this.textStartDate.TabIndex = 5;
+            this.textStartDate.Text = "Start date";
+            // 
+            // textEndDate
+            // 
+            this.textEndDate.AutoSize = true;
+            this.textEndDate.Location = new System.Drawing.Point(365, 216);
+            this.textEndDate.Name = "textEndDate";
+            this.textEndDate.Size = new System.Drawing.Size(65, 17);
+            this.textEndDate.TabIndex = 6;
+            this.textEndDate.Text = "End date";
+            // 
+            // textBoxStart
+            // 
+            this.textBoxStart.Location = new System.Drawing.Point(454, 174);
+            this.textBoxStart.Name = "textBoxStart";
+            this.textBoxStart.Size = new System.Drawing.Size(100, 22);
+            this.textBoxStart.TabIndex = 7;
+            // 
+            // textBoxEnd
+            // 
+            this.textBoxEnd.Location = new System.Drawing.Point(454, 216);
+            this.textBoxEnd.Name = "textBoxEnd";
+            this.textBoxEnd.Size = new System.Drawing.Size(100, 22);
+            this.textBoxEnd.TabIndex = 8;
+            // 
+            // buttonCalculate
+            // 
+            this.buttonCalculate.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonCalculate.Location = new System.Drawing.Point(368, 265);
+            this.buttonCalculate.Name = "buttonCalculate";
+            this.buttonCalculate.Size = new System.Drawing.Size(187, 34);
+            this.buttonCalculate.TabIndex = 9;
+            this.buttonCalculate.Text = "Calculate";
+            this.buttonCalculate.UseVisualStyleBackColor = false;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(360, 128);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(531, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Select the dates by dragging along the calendar from the start date to the end da" +
+    "te";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox1.Location = new System.Drawing.Point(61, 96);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(862, 275);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
             // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1283, 622);
-            this.Controls.Add(this.pnlOmzet);
+            this.Controls.Add(this.pnlRevenue);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pnlShop);
             this.Controls.Add(this.pnlDashboard);
@@ -583,8 +673,8 @@
             this.pnlShop.ResumeLayout(false);
             this.pnlShop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.pnlOmzet.ResumeLayout(false);
-            this.pnlOmzet.PerformLayout();
+            this.pnlRevenue.ResumeLayout(false);
+            this.pnlRevenue.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -636,10 +726,18 @@
         private System.Windows.Forms.ListBox listBoxShopDrinks;
         private System.Windows.Forms.Button checkOutShopButton;
         private System.Windows.Forms.Label testLabel;
-        private System.Windows.Forms.ToolStripMenuItem omzetrapportageToolStripMenuItem;
-        private System.Windows.Forms.Panel pnlOmzet;
+        private System.Windows.Forms.ToolStripMenuItem revenueReportToolStripMenuItem;
+        private System.Windows.Forms.Panel pnlRevenue;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonCalculate;
+        private System.Windows.Forms.TextBox textBoxEnd;
+        private System.Windows.Forms.TextBox textBoxStart;
+        private System.Windows.Forms.Label textEndDate;
+        private System.Windows.Forms.Label textStartDate;
+        private System.Windows.Forms.MonthCalendar monthCalendar2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
