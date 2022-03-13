@@ -22,5 +22,18 @@ namespace SomerenLogic
         {
             purchasedb.WritePurchase(studentId, drinkId);
         }
+
+        // load a list of purchases
+        public List<Purchase> GetPurchases()
+        {
+            List<Purchase> purchases = purchasedb.GetAllPurchases();
+
+            if (purchases.Count == 0)
+            {
+                throw new Exception("Not loaded from database");
+            }
+
+            return purchases;
+        }
     }
 }

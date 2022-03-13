@@ -326,39 +326,8 @@ namespace SomerenUI
                 HideAllPanels();
                 pnlRevenue.Show();
 
-                try
-                {
-                    // fill the purchases listview within the purchase panel with a list of purchases
-                    PurchaseService purchaseService = new PurchaseService();
-                    //List<Purchase> pruchaseList = purchaseService.WritePurchase();
+                // ListView will show the results after the dates are selected
 
-                    // clear the listview before filling it again
-                    listViewPurchases.Clear();
-
-                    // styling of the listView
-                    listViewPurchases.GridLines = true;
-                    listViewPurchases.View = View.Details;
-
-                    // create listView columns
-                    listViewPurchases.Columns.Add("Drinks sold", 90);
-                    listViewPurchases.Columns.Add("Turn over", 90);
-                    listViewPurchases.Columns.Add("Number customers", 120);
-
-                    // add every purchase to the listView
-                    /*foreach (Purchase purchase in purchaseList)
-                    {
-                        ListViewItem listPurchase = new ListViewItem(purchase.DrinkId.ToString());
-                        listPurchase.SubItems.Add(purchase.FirstName.ToString());
-                        listPurchase.SubItems.Add(purchase.LastName.ToString());
-                        listPurchase.SubItems.Add(purchase.RoomId.ToString());
-                        listPurchases.Items.Add(listPurchase);
-                    }*/
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show($"Something went wrong while loading the teachers: {e.Message} Please try refreshing the page or close the window and try again.");
-                    LoggerService.WriteLog(e);
-                }
             }
         }
 
@@ -453,6 +422,82 @@ namespace SomerenUI
             // lables are linked to the selected dates on the calendar
             textBoxStart.Text = monthCalendar2.SelectionRange.Start.Date.ToString("dd-MM-yyyy");
             textBoxEnd.Text = monthCalendar2.SelectionRange.End.Date.ToString("dd-MM-yyyy");
+
+
+
+            try
+            {
+                //fill the students listview within the students panel with a list of students
+                DrinkService drinkService = new DrinkService(); ;
+                List<Drink> drinkList = drinkService.GetDrinks();
+
+                // clear the listview before filling it again
+                listViewRevenueDrinks.Clear();
+
+                // styling of the listView
+                listViewRevenueDrinks.GridLines = true;
+                listViewRevenueDrinks.View = View.Details;
+
+                // create listView columns
+                listViewRevenueDrinks.Columns.Add("Drinks sold", 90);
+
+                // add every purchase to the listView
+                foreach (Drink drink in drinkList)
+                {
+                    ListViewItem listAllDrink = new ListViewItem(drink.Name.ToString());
+                    listViewRevenueDrinks.Items.Add(listAllDrink);
+                }
+
+
+                // fill the purchases listview within the purchase panel with a list of purchases
+                //PurchaseService purchaseService = new PurchaseService();
+                //List<Purchase> purchaseList = purchaseService.GetPurchases();
+
+                // clear the listview before filling it again
+                listViewRevenueTurnOver.Clear();
+
+                // styling of the listView
+                listViewRevenueTurnOver.GridLines = true;
+                listViewRevenueTurnOver.View = View.Details;
+
+                listViewRevenueTurnOver.Columns.Add("Turn over", 90);
+
+                // add every purchase to the listView
+                /* foreach (Purchase purchase in purchaseList)
+                 {
+                     ListViewItem listPurchase = new ListViewItem(purchase.PurchaseId.ToString());
+                     listPurchase.SubItems.Add(purchase.StudentId.ToString());
+                     listViewPurchases.Items.Add(listPurchase);
+                 }*/
+
+
+                //fill the students listview within the students panel with a list of students
+                StudentService studentService = new StudentService(); ;
+                List<Student> studentList = studentService.GetStudents();
+
+                // clear the listview before filling it again
+                listViewRevenueStudents.Clear();
+
+                // styling of the listView
+                listViewRevenueStudents.GridLines = true;
+                listViewRevenueStudents.View = View.Details;
+
+                // create listView columns
+                listViewRevenueStudents.Columns.Add("Customers", 90);
+
+                // add every purchase to the listView
+                foreach (Student stud in studentList)
+                {
+                    ListViewItem listAllStudents = new ListViewItem(stud.FullName.ToString());
+                    listViewRevenueStudents.Items.Add(listAllStudents);
+                }
+
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show($"Something went wrong while loading the revenue: {exc.Message} Please try refreshing the page or close the window and try again.");
+                LoggerService.WriteLog(exc);
+            }
         }
     }
 }

@@ -19,7 +19,15 @@ namespace SomerenDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
-       
+
+        public List<Purchase> GetAllPurchases()
+        {
+            // getting the information about the Purchases
+            string query = "SELECT purchaseId, studentenId, drinkId FROM [Purchases]";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
 
         private List<Purchase> ReadTables(DataTable dataTable)
         {
