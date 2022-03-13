@@ -575,9 +575,11 @@
             // 
             this.monthCalendar2.BackColor = System.Drawing.SystemColors.Highlight;
             this.monthCalendar2.Location = new System.Drawing.Point(88, 80);
-            this.monthCalendar2.MaxDate = new System.DateTime(2022, 5, 18, 0, 0, 0, 0);
-            this.monthCalendar2.MinDate = new System.DateTime(2022, 5, 16, 0, 0, 0, 0);
+            this.monthCalendar2.MaxDate = new System.DateTime(2030, 5, 18, 0, 0, 0, 0);
+            this.monthCalendar2.MaxSelectionCount = 2;
+            this.monthCalendar2.MinDate = new System.DateTime(2000, 5, 16, 0, 0, 0, 0);
             this.monthCalendar2.Name = "monthCalendar2";
+            this.monthCalendar2.SelectionRange = new System.Windows.Forms.SelectionRange(new System.DateTime(2022, 5, 16, 0, 0, 0, 0), new System.DateTime(2022, 5, 17, 0, 0, 0, 0));
             this.monthCalendar2.TabIndex = 4;
             this.monthCalendar2.TitleBackColor = System.Drawing.Color.DarkOliveGreen;
             this.monthCalendar2.TrailingForeColor = System.Drawing.Color.YellowGreen;

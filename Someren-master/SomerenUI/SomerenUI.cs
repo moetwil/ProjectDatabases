@@ -37,15 +37,7 @@ namespace SomerenUI
 
             // monthcalendar range
             // only selects two days
-            monthCalendar2.MaxSelectionCount = 2;
-
-            // shows begin date and end date on calendar
-            DateTime firstDayIntroduction = new DateTime(2022, 5, 16);
-            DateTime secondDayIntroduction = new DateTime(2022, 5, 17);
-
-            monthCalendar2.SelectionRange = new SelectionRange(firstDayIntroduction, secondDayIntroduction);
-
-            
+            monthCalendar2.MaxSelectionCount = 2;          
         }
 
    
@@ -423,80 +415,89 @@ namespace SomerenUI
             textBoxStart.Text = monthCalendar2.SelectionRange.Start.Date.ToString("dd-MM-yyyy");
             textBoxEnd.Text = monthCalendar2.SelectionRange.End.Date.ToString("dd-MM-yyyy");
 
+            DateTime firstDay = new DateTime(2022, 5, 16);
+            DateTime secondDay = new DateTime(2022, 5, 17);
 
-
-            try
+            if (DateTime.TryParse(textBoxStart.Text, out firstDay) && DateTime.TryParse(textBoxEnd.Text, out secondDay))
             {
-                //fill the students listview within the students panel with a list of students
-                DrinkService drinkService = new DrinkService(); ;
-                List<Drink> drinkList = drinkService.GetDrinks();
 
-                // clear the listview before filling it again
-                listViewRevenueDrinks.Clear();
+                try
+                    {
+                    //fill the students listview within the students panel with a list of students
+                    DrinkService drinkService = new DrinkService(); ;
+                    List<Drink> drinkList = drinkService.GetDrinks();
 
-                // styling of the listView
-                listViewRevenueDrinks.GridLines = true;
-                listViewRevenueDrinks.View = View.Details;
+                    // clear the listview before filling it again
+                    listViewRevenueDrinks.Clear();
 
-                // create listView columns
-                listViewRevenueDrinks.Columns.Add("Drinks sold", 90);
+                    // styling of the listView
+                    listViewRevenueDrinks.GridLines = true;
+                    listViewRevenueDrinks.View = View.Details;
 
-                // add every purchase to the listView
-                foreach (Drink drink in drinkList)
-                {
-                    ListViewItem listAllDrink = new ListViewItem(drink.Name.ToString());
-                    listViewRevenueDrinks.Items.Add(listAllDrink);
+                    // create listView columns
+                    listViewRevenueDrinks.Columns.Add("Drinks sold", 90);
+
+                    // add every purchase to the listView
+                    foreach (Drink drink in drinkList)
+                    {
+                        ListViewItem listAllDrink = new ListViewItem(drink.Name.ToString());
+                        listViewRevenueDrinks.Items.Add(listAllDrink);
+                    }
+
+
+                    // fill the purchases listview within the purchase panel with a list of purchases
+                    //PurchaseService purchaseService = new PurchaseService();
+                    //List<Purchase> purchaseList = purchaseService.GetPurchases();
+
+                    // clear the listview before filling it again
+                    listViewRevenueTurnOver.Clear();
+
+                    // styling of the listView
+                    listViewRevenueTurnOver.GridLines = true;
+                    listViewRevenueTurnOver.View = View.Details;
+
+                    listViewRevenueTurnOver.Columns.Add("Turn over", 90);
+
+                    // add every purchase to the listView
+                    /* foreach (Purchase purchase in purchaseList)
+                     {
+                         ListViewItem listPurchase = new ListViewItem(purchase.PurchaseId.ToString());
+                         listPurchase.SubItems.Add(purchase.StudentId.ToString());
+                         listViewPurchases.Items.Add(listPurchase);
+                     }*/
+
+
+                    //fill the students listview within the students panel with a list of students
+                    StudentService studentService = new StudentService(); ;
+                    List<Student> studentList = studentService.GetStudents();
+
+                    // clear the listview before filling it again
+                    listViewRevenueStudents.Clear();
+
+                    // styling of the listView
+                    listViewRevenueStudents.GridLines = true;
+                    listViewRevenueStudents.View = View.Details;
+
+                    // create listView columns
+                    listViewRevenueStudents.Columns.Add("Customers", 90);
+
+                    // add every purchase to the listView
+                    foreach (Student stud in studentList)
+                    {
+                        ListViewItem listAllStudents = new ListViewItem(stud.FullName.ToString());
+                        listViewRevenueStudents.Items.Add(listAllStudents);
+                    }
+
                 }
-
-
-                // fill the purchases listview within the purchase panel with a list of purchases
-                //PurchaseService purchaseService = new PurchaseService();
-                //List<Purchase> purchaseList = purchaseService.GetPurchases();
-
-                // clear the listview before filling it again
-                listViewRevenueTurnOver.Clear();
-
-                // styling of the listView
-                listViewRevenueTurnOver.GridLines = true;
-                listViewRevenueTurnOver.View = View.Details;
-
-                listViewRevenueTurnOver.Columns.Add("Turn over", 90);
-
-                // add every purchase to the listView
-                /* foreach (Purchase purchase in purchaseList)
-                 {
-                     ListViewItem listPurchase = new ListViewItem(purchase.PurchaseId.ToString());
-                     listPurchase.SubItems.Add(purchase.StudentId.ToString());
-                     listViewPurchases.Items.Add(listPurchase);
-                 }*/
-
-
-                //fill the students listview within the students panel with a list of students
-                StudentService studentService = new StudentService(); ;
-                List<Student> studentList = studentService.GetStudents();
-
-                // clear the listview before filling it again
-                listViewRevenueStudents.Clear();
-
-                // styling of the listView
-                listViewRevenueStudents.GridLines = true;
-                listViewRevenueStudents.View = View.Details;
-
-                // create listView columns
-                listViewRevenueStudents.Columns.Add("Customers", 90);
-
-                // add every purchase to the listView
-                foreach (Student stud in studentList)
+                catch (Exception exc)
                 {
-                    ListViewItem listAllStudents = new ListViewItem(stud.FullName.ToString());
-                    listViewRevenueStudents.Items.Add(listAllStudents);
+                    MessageBox.Show($"Something went wrong while loading the revenue: {exc.Message} Please try refreshing the page or close the window and try again.");
+                    LoggerService.WriteLog(exc);
                 }
-
             }
-            catch (Exception exc)
+            else
             {
-                MessageBox.Show($"Something went wrong while loading the revenue: {exc.Message} Please try refreshing the page or close the window and try again.");
-                LoggerService.WriteLog(exc);
+                MessageBox.Show("Wrong date. Choose another one.");
             }
         }
     }
