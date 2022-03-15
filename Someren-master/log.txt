@@ -111,3 +111,9 @@ Parameternaam: index
 15-3-2022 16:39:53 : No student selected. | System.Exception: No student selected.
    bij SomerenUI.SomerenUI.checkOutShopButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 394
 
+15-3-2022 16:44:52 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 65
+
+15-3-2022 16:44:55 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 72
+

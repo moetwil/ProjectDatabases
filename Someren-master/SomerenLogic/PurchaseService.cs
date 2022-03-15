@@ -53,5 +53,47 @@ namespace SomerenLogic
 
             return totalPrice;
         }
+
+        public void PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks)
+        {
+            int studentId;
+
+            try
+            {
+                // get the student id
+                if (listViewShopStudents.SelectedItems.Count == 0)
+                    throw new Exception("No student selected.");
+                else
+                    studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
+
+                // check if there are any drinks selected, if not send error message
+                if (listViewShopDrinks.SelectedItems.Count == 0)
+                {
+                    throw new Exception("No shop item(s) selected");
+                }
+                else
+                {
+                    foreach (ListViewItem item in listViewShopDrinks.SelectedItems)
+                    {
+                        if (item.Selected)
+                        {
+                            // get drink id
+                            int drinkId = int.Parse(item.SubItems[0].Text);
+                            //totalPrice += double.Parse(item.SubItems[3].Text);
+
+                            // write purchase to the database
+                            WritePurchase(studentId, drinkId);
+                        }
+                    }
+                    // write nice message after the purchase has been done
+                    MessageBox.Show("Your order has been placed :)");
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong: " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }
+        }
     }
 }

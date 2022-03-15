@@ -383,46 +383,13 @@ namespace SomerenUI
 
         private void checkOutShopButton_Click(object sender, EventArgs e)
         {
-            double totalPrice = 0;
-            int studentId;
+            /*double totalPrice = 0;
+            int studentId;*/
             PurchaseService purchaseService = new PurchaseService();
 
-            try
-            {
-                // get the student id
-                if (listViewShopStudents.SelectedItems.Count == 0)
-                    throw new Exception("No student selected.");
-                else
-                    studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
+            purchaseService.PlaceOrder(listViewShopStudents, listViewShopDrinks);
 
-                // check if there are any drinks selected, if not send error message
-                if (listViewShopDrinks.SelectedItems.Count == 0) 
-                { 
-                    throw new Exception("No shop item(s) selected");
-                }
-                else
-                {
-                    foreach (ListViewItem item in listViewShopDrinks.SelectedItems)
-                    {
-                        if (item.Selected)
-                        {
-                            // get drink id
-                            int drinkId = int.Parse(item.SubItems[0].Text);
-                            totalPrice += double.Parse(item.SubItems[3].Text);
-
-                            // write purchase to the database
-                            purchaseService.WritePurchase(studentId, drinkId);
-                        }
-                    }
-                    // write nice message after the purchase has been done
-                    MessageBox.Show("Your order has been placed :)");
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show("Something went wrong: " + exception.Message);
-                LoggerService.WriteLog(exception);
-            }
+           
         }
 
         private void revenueReportToolStripMenuItem_Click_1(object sender, EventArgs e)
