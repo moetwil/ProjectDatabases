@@ -204,7 +204,7 @@
             // revenueReportToolStripMenuItem
             // 
             this.revenueReportToolStripMenuItem.Name = "revenueReportToolStripMenuItem";
-            this.revenueReportToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.revenueReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.revenueReportToolStripMenuItem.Text = "Revenue report";
             this.revenueReportToolStripMenuItem.Click += new System.EventHandler(this.revenueReportToolStripMenuItem_Click_1);
             // 
@@ -502,7 +502,6 @@
             // 
             // listViewShopDrinks
             // 
-            this.listViewShopDrinks.CheckBoxes = true;
             this.listViewShopDrinks.FullRowSelect = true;
             this.listViewShopDrinks.GridLines = true;
             this.listViewShopDrinks.HideSelection = false;

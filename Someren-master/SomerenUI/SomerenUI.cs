@@ -286,7 +286,8 @@ namespace SomerenUI
                     listViewShopDrinks.GridLines = true;
                     listViewShopDrinks.View = View.Details;
                     listViewShopDrinks.FullRowSelect = true;
-                    listViewShopDrinks.CheckBoxes = true;
+                    //listViewShopDrinks.CheckBoxes = true;
+                    listViewShopDrinks.MultiSelect = true;
 
                     // add columns to the listView
                     listViewShopDrinks.Columns.Add("drink id", 50);
@@ -388,16 +389,16 @@ namespace SomerenUI
             // get selected student
             int studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
 
-            foreach (ListViewItem item in listViewShopDrinks.Items)
+            foreach (ListViewItem item in listViewShopDrinks.SelectedItems)
             {
-                if (item.Checked)
+                if (item.Selected)
                 {
                     // get drink id
                     int drinkId = int.Parse(item.SubItems[0].Text);
                     totalPrice += double.Parse(item.SubItems[3].Text);
 
                     // write purchase to the database
-                    purchaseService.WritePurchase(studentId, drinkId);
+                    //purchaseService.WritePurchase(studentId, drinkId);
                 }
             }
             MessageBox.Show($"Your order will be \u20AC{totalPrice:0.00}");
