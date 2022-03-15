@@ -251,67 +251,19 @@ namespace SomerenUI
 
                 try
                 {
-                    //fill the students listview within the students panel with a list of students
-                    StudentService studService = new StudentService(); ;
-                    List<Student> studentList = studService.GetStudents();
+                    // load the listview with all the students
+                    LoadShopStudents();
 
-                    //clear the listview before filling it again
-                    listViewShopStudents.Clear();
+                    // load the listview with all the drinks
+                    LoadShopDrinks();
 
-                    // set styling for listView
-                    listViewShopStudents.GridLines = true;
-                    listViewShopStudents.View = View.Details;
-                    listViewShopStudents.FullRowSelect = true;
-
-                    // add columns to the listView
-                    listViewShopStudents.Columns.Add("student id", 80);
-                    listViewShopStudents.Columns.Add("student name", 90);
-                    listViewShopStudents.Columns.Add("Date of birth", 85);
-
-                    // fill the list view with students from the List
-                    foreach (Student s in studentList)
-                    {
-                        ListViewItem li = new ListViewItem(new[] { s.StudentId.ToString(), s.FullName, s.DateOfBirth.ToString("dd-MM-yyyy")});
-                        listViewShopStudents.Items.Add(li);
-
-                    }
-
-                    // drinks
-                    DrinkService drinkService = new DrinkService();
-                    List<Drink> drinkList = drinkService.GetDrinks();
-
-                    listViewShopDrinks.Clear();
-
-                    // set styling for listView
-                    listViewShopDrinks.GridLines = true;
-                    listViewShopDrinks.View = View.Details;
-                    listViewShopDrinks.FullRowSelect = true;
-                    //listViewShopDrinks.CheckBoxes = true;
-                    listViewShopDrinks.MultiSelect = true;
-
-                    // add columns to the listView
-                    listViewShopDrinks.Columns.Add("drink id", 50);
-                    listViewShopDrinks.Columns.Add("Drink name", 70);
-                    listViewShopDrinks.Columns.Add("Alcohol", 50);
-                    listViewShopDrinks.Columns.Add("Price", 50);
-                    listViewShopDrinks.Columns.Add("Stock", 40);
-
-                    foreach (Drink drink in drinkList)
-                    {
-                        ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
-                        item.Tag = drink;
-                        item.SubItems.Add(drink.Name);
-                        item.SubItems.Add(drink.HasAlcohol.ToString());
-                        item.SubItems.Add(drink.Price.ToString("0.00"));
-                        item.SubItems.Add(drink.Stock.ToString());
-                        listViewShopDrinks.Items.Add(item);
-                    }
                 }
                 catch (Exception e)
                 {
                     MessageBox.Show("Something went wrong while loading the drinks: " + e.Message);
                     LoggerService.WriteLog(e);
                 }
+
             }
             else if (panelName == "Revenue report")
             {
@@ -389,10 +341,9 @@ namespace SomerenUI
 
             purchaseService.PlaceOrder(listViewShopStudents, listViewShopDrinks);
 
+            // clear the selected rows in both listviews
             listViewShopStudents.SelectedItems.Clear();
             listViewShopDrinks.SelectedItems.Clear();
-
-           
         }
 
         private void revenueReportToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -502,6 +453,67 @@ namespace SomerenUI
             double totalPrice = purchaseService.TotalPrice(this.listViewShopDrinks.SelectedItems);
             orderPriceLabel.Text = $"Total price: \u20AC {totalPrice.ToString("0.00")}";
 
+        }
+
+        private void LoadShopStudents()
+        {
+            //fill the students listview within the students panel with a list of students
+            StudentService studService = new StudentService(); ;
+            List<Student> studentList = studService.GetStudents();
+
+            //clear the listview before filling it again
+            listViewShopStudents.Clear();
+
+            // set styling for listView
+            listViewShopStudents.GridLines = true;
+            listViewShopStudents.View = View.Details;
+            listViewShopStudents.FullRowSelect = true;
+
+            // add columns to the listView
+            listViewShopStudents.Columns.Add("student id", 80);
+            listViewShopStudents.Columns.Add("student name", 90);
+            listViewShopStudents.Columns.Add("Date of birth", 85);
+
+            // fill the list view with students from the List
+            foreach (Student s in studentList)
+            {
+                ListViewItem li = new ListViewItem(new[] { s.StudentId.ToString(), s.FullName, s.DateOfBirth.ToString("dd-MM-yyyy") });
+                listViewShopStudents.Items.Add(li);
+
+            }
+        }
+
+        private void LoadShopDrinks()
+        {
+            DrinkService drinkService = new DrinkService();
+            List<Drink> drinkList = drinkService.GetDrinks();
+
+            listViewShopDrinks.Clear();
+
+            // set styling for listView
+            listViewShopDrinks.GridLines = true;
+            listViewShopDrinks.View = View.Details;
+            listViewShopDrinks.FullRowSelect = true;
+            //listViewShopDrinks.CheckBoxes = true;
+            listViewShopDrinks.MultiSelect = true;
+
+            // add columns to the listView
+            listViewShopDrinks.Columns.Add("drink id", 50);
+            listViewShopDrinks.Columns.Add("Drink name", 70);
+            listViewShopDrinks.Columns.Add("Alcohol", 50);
+            listViewShopDrinks.Columns.Add("Price", 50);
+            listViewShopDrinks.Columns.Add("Stock", 40);
+
+            foreach (Drink drink in drinkList)
+            {
+                ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
+                item.Tag = drink;
+                item.SubItems.Add(drink.Name);
+                item.SubItems.Add(drink.HasAlcohol.ToString());
+                item.SubItems.Add(drink.Price.ToString("0.00"));
+                item.SubItems.Add(drink.Stock.ToString());
+                listViewShopDrinks.Items.Add(item);
+            }
         }
     }
 }
