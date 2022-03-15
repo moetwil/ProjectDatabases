@@ -512,7 +512,9 @@
             this.listViewShopDrinks.Size = new System.Drawing.Size(306, 211);
             this.listViewShopDrinks.TabIndex = 11;
             this.listViewShopDrinks.UseCompatibleStateImageBehavior = false;
-            this.listViewShopDrinks.SelectedIndexChanged += new System.EventHandler(this.listViewShopDrinks_SelectedIndexChanged);
+            //this.listViewShopDrinks.SelectedIndexChanged += new System.EventHandler(this.listViewShopDrinks_SelectedIndexChanged);
+            this.listViewShopDrinks.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.listViewShopDrinks_ItemChecked);
+            //this.listViewShopDrinks.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewShopDrinks_ItemSelectionChanged);
             // 
             // testLabel
             // 

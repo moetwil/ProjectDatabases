@@ -67,15 +67,15 @@ namespace SomerenLogic
                     studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
 
                 // check if there are any drinks selected, if not send error message
-                if (listViewShopDrinks.SelectedItems.Count == 0)
+                if (listViewShopDrinks.Items.Count == 0)
                 {
                     throw new Exception("No shop item(s) selected");
                 }
                 else
                 {
-                    foreach (ListViewItem item in listViewShopDrinks.SelectedItems)
+                    foreach (ListViewItem item in listViewShopDrinks.Items)
                     {
-                        if (item.Selected)
+                        if (item.Checked)
                         {
                             // get drink id
                             int drinkId = int.Parse(item.SubItems[0].Text);

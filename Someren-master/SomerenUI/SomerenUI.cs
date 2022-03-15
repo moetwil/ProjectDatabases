@@ -256,7 +256,6 @@ namespace SomerenUI
 
                     // load the listview with all the drinks
                     LoadShopDrinks();
-
                 }
                 catch (Exception e)
                 {
@@ -272,7 +271,6 @@ namespace SomerenUI
                 pnlRevenue.Show();
 
                 // ListView will show the results after the dates are selected
-
             }
         }
 
@@ -477,7 +475,9 @@ namespace SomerenUI
             // fill the list view with students from the List
             foreach (Student s in studentList)
             {
-                ListViewItem li = new ListViewItem(new[] { s.StudentId.ToString(), s.FullName, s.DateOfBirth.ToString("dd-MM-yyyy") });
+                ListViewItem li = new ListViewItem(new[] { s.StudentId.ToString(), 
+                    s.FullName, 
+                    s.DateOfBirth.ToString("dd-MM-yyyy") });
                 listViewShopStudents.Items.Add(li);
 
             }
@@ -494,7 +494,7 @@ namespace SomerenUI
             listViewShopDrinks.GridLines = true;
             listViewShopDrinks.View = View.Details;
             listViewShopDrinks.FullRowSelect = true;
-            //listViewShopDrinks.CheckBoxes = true;
+            listViewShopDrinks.CheckBoxes = true;
             listViewShopDrinks.MultiSelect = true;
 
             // add columns to the listView
@@ -514,6 +514,21 @@ namespace SomerenUI
                 item.SubItems.Add(drink.Stock.ToString());
                 listViewShopDrinks.Items.Add(item);
             }
+        }
+
+        private void listViewShopDrinks_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            double totalPrice = 0;
+
+            // loop through all the selected items in the given listview
+            foreach (ListViewItem item in listViewShopDrinks.CheckedItems)
+            {
+                // add the item price to the total price
+                double price = double.Parse(item.SubItems[3].Text);
+                totalPrice += price;
+
+            }
+            orderPriceLabel.Text = $"Total price: \u20AC {totalPrice.ToString("0.00")}";
         }
     }
 }
