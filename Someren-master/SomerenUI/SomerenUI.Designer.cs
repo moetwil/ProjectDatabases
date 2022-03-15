@@ -466,11 +466,11 @@
             // orderPriceLabel
             // 
             this.orderPriceLabel.AutoSize = true;
-            this.orderPriceLabel.Location = new System.Drawing.Point(621, 278);
+            this.orderPriceLabel.Location = new System.Drawing.Point(354, 278);
             this.orderPriceLabel.Name = "orderPriceLabel";
-            this.orderPriceLabel.Size = new System.Drawing.Size(10, 13);
+            this.orderPriceLabel.Size = new System.Drawing.Size(60, 13);
             this.orderPriceLabel.TabIndex = 13;
-            this.orderPriceLabel.Text = "-";
+            this.orderPriceLabel.Text = "Total price:";
             // 
             // shopInfoLabel
             // 
@@ -510,6 +510,7 @@
             this.listViewShopDrinks.Size = new System.Drawing.Size(306, 211);
             this.listViewShopDrinks.TabIndex = 11;
             this.listViewShopDrinks.UseCompatibleStateImageBehavior = false;
+            this.listViewShopDrinks.SelectedIndexChanged += new System.EventHandler(this.listViewShopDrinks_SelectedIndexChanged);
             // 
             // testLabel
             // 

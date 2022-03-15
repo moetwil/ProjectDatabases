@@ -398,10 +398,10 @@ namespace SomerenUI
                     totalPrice += double.Parse(item.SubItems[3].Text);
 
                     // write purchase to the database
-                    //purchaseService.WritePurchase(studentId, drinkId);
+                    purchaseService.WritePurchase(studentId, drinkId);
                 }
             }
-            MessageBox.Show($"Your order will be \u20AC{totalPrice:0.00}");
+            //MessageBox.Show($"Your order will be \u20AC{totalPrice:0.00}");
             MessageBox.Show("Your order has been placed :)");
         }
 
@@ -502,8 +502,22 @@ namespace SomerenUI
             }
         }
 
+       
 
+        private void listViewShopDrinks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            double totalPrice = 0;
+            ListView.SelectedListViewItemCollection selectedItems = this.listViewShopDrinks.SelectedItems;
 
-        
+            foreach (ListViewItem item in selectedItems)
+            {
+                double price = double.Parse(item.SubItems[3].Text);
+                totalPrice += price;
+
+            }
+
+            orderPriceLabel.Text = $"Total price: \u20AC {totalPrice.ToString("0.00")}";
+
+        }
     }
 }
