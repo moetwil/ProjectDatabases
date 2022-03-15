@@ -285,7 +285,7 @@ namespace SomerenUI
                     // set styling for listView
                     listViewShopDrinks.GridLines = true;
                     listViewShopDrinks.View = View.Details;
-                    //listViewShopDrinks.FullRowSelect = true;
+                    listViewShopDrinks.FullRowSelect = true;
                     listViewShopDrinks.CheckBoxes = true;
 
                     // add columns to the listView
@@ -500,5 +500,9 @@ namespace SomerenUI
                 MessageBox.Show("Wrong date. Choose another one.");
             }
         }
+
+
+
+        
     }
 }
