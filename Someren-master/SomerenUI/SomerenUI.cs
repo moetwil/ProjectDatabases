@@ -387,8 +387,6 @@ namespace SomerenUI
             int studentId;
             PurchaseService purchaseService = new PurchaseService();
 
-            // get selected student
-
             try
             {
                 // get the student id
@@ -397,7 +395,7 @@ namespace SomerenUI
                 else
                     studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
 
-
+                // check if there are any drinks selected, if not send error message
                 if (listViewShopDrinks.SelectedItems.Count == 0) 
                 { 
                     throw new Exception("No shop item(s) selected");
@@ -413,9 +411,10 @@ namespace SomerenUI
                             totalPrice += double.Parse(item.SubItems[3].Text);
 
                             // write purchase to the database
-                            //purchaseService.WritePurchase(studentId, drinkId);
+                            purchaseService.WritePurchase(studentId, drinkId);
                         }
                     }
+                    // write nice message after the purchase has been done
                     MessageBox.Show("Your order has been placed :)");
                 }
             }
@@ -424,10 +423,6 @@ namespace SomerenUI
                 MessageBox.Show("Something went wrong: " + exception.Message);
                 LoggerService.WriteLog(exception);
             }
-            
-            
-
-            
         }
 
         private void revenueReportToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -528,19 +523,13 @@ namespace SomerenUI
         }
 
        
-
+        // event handler method - on listview select - listViewShopDrinks
         private void listViewShopDrinks_SelectedIndexChanged(object sender, EventArgs e)
         {
-            double totalPrice = 0;
-            ListView.SelectedListViewItemCollection selectedItems = this.listViewShopDrinks.SelectedItems;
-
-            foreach (ListViewItem item in selectedItems)
-            {
-                double price = double.Parse(item.SubItems[3].Text);
-                totalPrice += price;
-
-            }
-
+            PurchaseService purchaseService = new PurchaseService();
+            
+            // calculate the total price and write to the label
+            double totalPrice = purchaseService.TotalPrice(this.listViewShopDrinks.SelectedItems);
             orderPriceLabel.Text = $"Total price: \u20AC {totalPrice.ToString("0.00")}";
 
         }

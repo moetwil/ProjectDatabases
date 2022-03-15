@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SomerenLogic
 {
@@ -34,6 +35,23 @@ namespace SomerenLogic
             }
 
             return purchases;
+        }
+
+        public double TotalPrice(ListView.SelectedListViewItemCollection selectedItems)
+        {
+            // set starting totalPrice to zero
+            double totalPrice = 0;
+
+            // loop through all the selected items in the given listview
+            foreach (ListViewItem item in selectedItems)
+            {
+                // add the item price to the total price
+                double price = double.Parse(item.SubItems[3].Text);
+                totalPrice += price;
+
+            }
+
+            return totalPrice;
         }
     }
 }
