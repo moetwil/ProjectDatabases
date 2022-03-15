@@ -90,3 +90,18 @@
    bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 24
    bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 261
 
+15-3-2022 16:25:24 : InvalidArgument=Waarde van 0 is niet geldig voor index.
+Parameternaam: index | System.ArgumentOutOfRangeException: InvalidArgument=Waarde van 0 is niet geldig voor index.
+Parameternaam: index
+   bij System.Windows.Forms.ListView.SelectedListViewItemCollection.get_Item(Int32 index)
+   bij SomerenUI.SomerenUI.checkOutShopButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 393
+
+15-3-2022 16:26:37 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.checkOutShopButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 395
+
+15-3-2022 16:27:15 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.checkOutShopButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 395
+
+15-3-2022 16:31:19 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenUI.SomerenUI.checkOutShopButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 403
+

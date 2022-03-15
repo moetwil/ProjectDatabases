@@ -384,25 +384,50 @@ namespace SomerenUI
         private void checkOutShopButton_Click(object sender, EventArgs e)
         {
             double totalPrice = 0;
+            int studentId;
             PurchaseService purchaseService = new PurchaseService();
 
             // get selected student
-            int studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
 
-            foreach (ListViewItem item in listViewShopDrinks.SelectedItems)
+            try
             {
-                if (item.Selected)
-                {
-                    // get drink id
-                    int drinkId = int.Parse(item.SubItems[0].Text);
-                    totalPrice += double.Parse(item.SubItems[3].Text);
+                // get the student id
+                if (listViewShopStudents.SelectedItems.Count == 0)
+                    throw new Exception("No student selected.");
+                else
+                    studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
 
-                    // write purchase to the database
-                    purchaseService.WritePurchase(studentId, drinkId);
+
+                if (listViewShopDrinks.SelectedItems.Count == 0) 
+                { 
+                    throw new Exception("No shop item(s) selected");
+                }
+                else
+                {
+                    foreach (ListViewItem item in listViewShopDrinks.SelectedItems)
+                    {
+                        if (item.Selected)
+                        {
+                            // get drink id
+                            int drinkId = int.Parse(item.SubItems[0].Text);
+                            totalPrice += double.Parse(item.SubItems[3].Text);
+
+                            // write purchase to the database
+                            //purchaseService.WritePurchase(studentId, drinkId);
+                        }
+                    }
+                    MessageBox.Show("Your order has been placed :)");
                 }
             }
-            //MessageBox.Show($"Your order will be \u20AC{totalPrice:0.00}");
-            MessageBox.Show("Your order has been placed :)");
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong: " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }
+            
+            
+
+            
         }
 
         private void revenueReportToolStripMenuItem_Click_1(object sender, EventArgs e)
