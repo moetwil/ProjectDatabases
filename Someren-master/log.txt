@@ -117,3 +117,96 @@ Parameternaam: index
 15-3-2022 16:44:55 : No shop item(s) selected | System.Exception: No shop item(s) selected
    bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 72
 
+15-3-2022 16:52:49 : The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated. | System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated.
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.PurchaseDao.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 24
+   bij SomerenLogic.PurchaseService.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 24
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 85
+ClientConnectionId:4bd746ae-9ff1-4bc6-9b52-a0042d7f3871
+Error Number:547,State:0,Class:16
+
+15-3-2022 16:54:02 : The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated. | System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated.
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.PurchaseDao.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 24
+   bij SomerenLogic.PurchaseService.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 24
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 85
+ClientConnectionId:e9f55062-1380-4a9d-903b-10b23f18d84b
+Error Number:547,State:0,Class:16
+
+15-3-2022 16:56:32 : The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated. | System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated.
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.PurchaseDao.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 24
+   bij SomerenLogic.PurchaseService.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 24
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 85
+ClientConnectionId:db2ec99e-28c2-46c5-a44c-01b44eea9a87
+Error Number:547,State:0,Class:16
+
+15-3-2022 16:56:57 : Column name or number of supplied values does not match table definition. | System.Data.SqlClient.SqlException (0x80131904): Column name or number of supplied values does not match table definition.
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.PurchaseDao.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 24
+   bij SomerenLogic.PurchaseService.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 24
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 85
+ClientConnectionId:d43fa70f-67fd-4bee-8e1b-949a7cdf7f0a
+Error Number:213,State:1,Class:16
+
+15-3-2022 16:57:45 : The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated. | System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated.
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.PurchaseDao.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 24
+   bij SomerenLogic.PurchaseService.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 24
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 85
+ClientConnectionId:9f3ca5ed-5cc6-4db8-8eee-21214c72e904
+Error Number:547,State:0,Class:16
+

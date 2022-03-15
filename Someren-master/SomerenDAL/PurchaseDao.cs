@@ -14,6 +14,7 @@ namespace SomerenDAL
     {      
         public void WritePurchase(int studentId, int drinkId)
         {
+            // write purchase to the database
             string query = $"INSERT INTO Purchases ([studentId], [drinkId]) VALUES ({studentId}, {drinkId})";
             
             SqlParameter[] sqlParameters = new SqlParameter[0];

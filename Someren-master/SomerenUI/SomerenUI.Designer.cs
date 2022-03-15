@@ -204,7 +204,7 @@
             // revenueReportToolStripMenuItem
             // 
             this.revenueReportToolStripMenuItem.Name = "revenueReportToolStripMenuItem";
-            this.revenueReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.revenueReportToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.revenueReportToolStripMenuItem.Text = "Revenue report";
             this.revenueReportToolStripMenuItem.Click += new System.EventHandler(this.revenueReportToolStripMenuItem_Click_1);
             // 
@@ -493,6 +493,7 @@
             // 
             // listViewShopStudents
             // 
+            this.listViewShopStudents.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewShopStudents.HideSelection = false;
             this.listViewShopStudents.Location = new System.Drawing.Point(6, 53);
             this.listViewShopStudents.Name = "listViewShopStudents";
@@ -504,6 +505,7 @@
             // 
             this.listViewShopDrinks.FullRowSelect = true;
             this.listViewShopDrinks.GridLines = true;
+            this.listViewShopDrinks.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewShopDrinks.HideSelection = false;
             this.listViewShopDrinks.Location = new System.Drawing.Point(351, 53);
             this.listViewShopDrinks.Name = "listViewShopDrinks";

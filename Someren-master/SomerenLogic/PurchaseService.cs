@@ -82,7 +82,7 @@ namespace SomerenLogic
                             //totalPrice += double.Parse(item.SubItems[3].Text);
 
                             // write purchase to the database
-                            WritePurchase(studentId, drinkId);
+                            //WritePurchase(studentId, drinkId);
                         }
                     }
                     // write nice message after the purchase has been done

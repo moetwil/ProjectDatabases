@@ -389,6 +389,9 @@ namespace SomerenUI
 
             purchaseService.PlaceOrder(listViewShopStudents, listViewShopDrinks);
 
+            listViewShopStudents.SelectedItems.Clear();
+            listViewShopDrinks.SelectedItems.Clear();
+
            
         }
 
