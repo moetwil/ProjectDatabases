@@ -67,7 +67,7 @@ namespace SomerenLogic
                     studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
 
                 // check if there are any drinks selected, if not send error message
-                if (listViewShopDrinks.Items.Count == 0)
+                if (listViewShopDrinks.CheckedItems.Count == 0)
                 {
                     throw new Exception("No shop item(s) selected");
                 }

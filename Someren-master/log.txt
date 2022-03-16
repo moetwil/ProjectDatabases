@@ -222,3 +222,12 @@ Error Number:547,State:0,Class:16
 15-3-2022 20:15:35 : No student selected. | System.Exception: No student selected.
    bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 65
 
+16-3-2022 09:20:38 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 65
+
+16-3-2022 09:24:04 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 73
+
+16-3-2022 09:24:19 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 73
+
