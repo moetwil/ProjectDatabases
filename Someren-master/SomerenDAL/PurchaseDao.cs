@@ -24,7 +24,7 @@ namespace SomerenDAL
         public List<Purchase> GetAllPurchases()
         {
             // getting the information about the Purchases
-            string query = "SELECT purchaseId, studentenId, drinkId FROM [Purchases]";
+            string query = "SELECT purchaseId, studentId, drinkId FROM [Purchases]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
 
             // return a list of all the purchases
