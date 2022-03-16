@@ -473,13 +473,14 @@ namespace SomerenUI
             listViewShopStudents.Columns.Add("Date of birth", 85);
 
             // fill the list view with students from the List
-            foreach (Student s in studentList)
+            foreach (Student student in studentList)
             {
-                ListViewItem li = new ListViewItem(new[] { s.StudentId.ToString(), 
-                    s.FullName, 
-                    s.DateOfBirth.ToString("dd-MM-yyyy") });
-                listViewShopStudents.Items.Add(li);
+                ListViewItem item = new ListViewItem(student.StudentId.ToString());
+                item.Tag = student;
+                item.SubItems.Add(student.FullName);
+                item.SubItems.Add(student.DateOfBirth.ToString("dd-MM-yyyy"));
 
+                listViewShopStudents.Items.Add(item);
             }
         }
 
