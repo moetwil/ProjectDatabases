@@ -15,7 +15,7 @@ namespace SomerenDAL
         public List<Drink> GetAllDrinks()
         {
             // SQL query that selects the information that we need, where the roomId is bigger than 200
-            string query = "SELECT drinkId, alcohol, drinkName, price, VAT, stock FROM [Drinks]";
+            string query = "SELECT drinkId, alcohol, drinkName, price, VAT, stock FROM [Drinks] ORDER BY stock, price";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }

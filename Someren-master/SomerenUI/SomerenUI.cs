@@ -267,6 +267,14 @@ namespace SomerenUI
 
                 // ListView will show the results after the dates are selected
             }
+            else if (panelName == "Drinks suplies")
+            {
+                // hide all panels and show the room panel
+                HideAllPanels();
+                pnlDrinksSuplies.Show();
+
+                // ListView will show the results after the dates are selected
+            }
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -314,6 +322,7 @@ namespace SomerenUI
             pictureStudents.Hide();
             pnlTeachers.Hide();
             pnlRevenue.Hide();
+            pnlDrinksSuplies.Hide();
         }
 
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -486,6 +495,41 @@ namespace SomerenUI
 
             }
             orderPriceLabel.Text = $"Total price: \u20AC {totalPrice.ToString("0.00")}";
+        }
+
+        private void drinksSuppliesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Drinks suplies");
+
+            DrinkService drinkService = new DrinkService();
+            List<Drink> drinkList = drinkService.GetDrinks();
+
+            listViewDrinkSuplies.Clear();
+
+            // set styling for listView
+            listViewDrinkSuplies.GridLines = true;
+            listViewDrinkSuplies.View = View.Details;
+            listViewDrinkSuplies.FullRowSelect = true;
+            listViewDrinkSuplies.MultiSelect = true;
+
+            // add columns to the listView
+            listViewDrinkSuplies.Columns.Add("drink id", 50);
+            listViewDrinkSuplies.Columns.Add("Drink name", 70);
+            listViewDrinkSuplies.Columns.Add("Alcohol", 50);
+            listViewDrinkSuplies.Columns.Add("Price", 50);
+            listViewDrinkSuplies.Columns.Add("Stock", 40);
+
+            foreach (Drink drink in drinkList)
+            {
+                ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
+                item.Tag = drink;
+                item.SubItems.Add(drink.Name);
+                item.SubItems.Add(drink.HasAlcohol.ToString());
+                item.SubItems.Add(drink.Price.ToString("0.00"));
+                item.SubItems.Add(drink.Stock.ToString());
+                listViewDrinkSuplies.Items.Add(item);
+            }
+
         }
     }
 }
