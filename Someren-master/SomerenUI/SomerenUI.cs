@@ -378,7 +378,7 @@ namespace SomerenUI
                     listViewRevenue.GridLines = true;
                     listViewRevenue.View = View.Details;
 
-                    listViewRevenue.Columns.Add("Purchase idd", 90);
+                    listViewRevenue.Columns.Add("Purchase id", 90);
                     listViewRevenue.Columns.Add("Drinks sold", 90);
                     listViewRevenue.Columns.Add("Turn over", 90);
                     listViewRevenue.Columns.Add("Customers", 90);
