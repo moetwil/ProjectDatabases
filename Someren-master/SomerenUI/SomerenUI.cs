@@ -259,7 +259,7 @@ namespace SomerenUI
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("Something went wrong while loading the drinks: " + e.Message);
+                    MessageBox.Show("Something went wrong while loading the shop: " + e.Message);
                     LoggerService.WriteLog(e);
                 }
 

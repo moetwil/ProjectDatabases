@@ -19,6 +19,7 @@ namespace SomerenLogic
             purchasedb = new PurchaseDao();
         }
 
+        // write purchase to the database
         public void WritePurchase(int studentId, int drinkId)
         {
             purchasedb.WritePurchase(studentId, drinkId);
@@ -29,6 +30,7 @@ namespace SomerenLogic
         {
             List<Purchase> purchases = purchasedb.GetAllPurchases();
 
+            // if the list is empty, send error message
             if (purchases.Count == 0)
             {
                 throw new Exception("Not loaded from database");

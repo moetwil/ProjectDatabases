@@ -27,6 +27,7 @@ namespace SomerenDAL
             string query = "SELECT purchaseId, studentenId, drinkId FROM [Purchases]";
             SqlParameter[] sqlParameters = new SqlParameter[0];
 
+            // return a list of all the purchases
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
@@ -34,6 +35,7 @@ namespace SomerenDAL
         {
             List<Purchase> purchases = new List<Purchase>();
 
+            // if the datatable is empty send error message
             if (dataTable == null)
                 throw new Exception("Datatable is empty");
 
