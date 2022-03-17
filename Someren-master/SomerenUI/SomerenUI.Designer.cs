@@ -99,9 +99,7 @@
             this.Drinks = new System.Windows.Forms.Label();
             this.pnlActivityParticipants = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.listViewActivities = new System.Windows.Forms.ListView();
             this.listViewActivityStudents = new System.Windows.Forms.ListView();
             this.label8 = new System.Windows.Forms.Label();
@@ -798,9 +796,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.listViewActivities);
             this.groupBox3.Controls.Add(this.listViewActivityStudents);
             this.groupBox3.Location = new System.Drawing.Point(51, 57);
@@ -808,16 +804,7 @@
             this.groupBox3.Size = new System.Drawing.Size(748, 358);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Students and drinks";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(354, 278);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Total price:";
+            this.groupBox3.Text = "Activities with participating students";
             // 
             // label7
             // 
@@ -827,15 +814,6 @@
             this.label7.Size = new System.Drawing.Size(230, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "Select a student and the products for the order.";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(516, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 40);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Checkout";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // listViewActivities
             // 
@@ -1024,9 +1002,7 @@
         private System.Windows.Forms.ToolStripMenuItem activityParticipantsToolStripMenuItem;
         private System.Windows.Forms.Panel pnlActivityParticipants;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView listViewActivities;
         private System.Windows.Forms.ListView listViewActivityStudents;
         private System.Windows.Forms.Label label8;
