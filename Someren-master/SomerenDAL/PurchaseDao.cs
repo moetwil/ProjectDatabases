@@ -24,11 +24,11 @@ namespace SomerenDAL
         public List<Purchase> GetAllPurchases()
         {
             // getting the information about the Purchases
-            string query = "SELECT COUNT(Purchases.purchaseId) AS [Purchase id], COUNT(Purchases.drinkId) AS [Drinks sold], " +
-                            "(SELECT COUNT(Purchases.drinkId) * AVG(Drinks.price) " +
-                            "FROM Purchases JOIN Drinks ON Purchases.drinkId = Drinks.drinkId)" +
+            string query = "SELECT COUNT(Purchases.purchaseId) AS [Purchase id], COUNT(Purchases.drinkId) AS [Drinks sold]," +
+                            "(SELECT COUNT(Purchases.drinkId) * AVG(Drinks.price)" +
+                            "FROM Purchases JOIN Drinks ON Purchases.drinkId = Drinks.drinkId) AS [Turn over]" +
                             ", COUNT(DISTINCT Purchases.studentId) AS [Number of customers]" +
-                            "FROM Purchases " +
+                            "FROM Purchases" +
                             "JOIN Drinks ON Purchases.drinkId = Drinks.drinkId";
             SqlParameter[] sqlParameters = new SqlParameter[0];
 
@@ -49,13 +49,13 @@ namespace SomerenDAL
                 // create a purchase with with information from the database and add it to the list
                 Purchase purchase = new Purchase()
                 {
-                    PurchaseId = (int)dr["purchaseId"],
-                    StudentId = (int)dr["studentId"],
-                    DrinkId = (int)dr["drinkId"],
+                    PurchaseId = (int)dr["Purchase Id"],
+                    DrinksSold = (int)dr["Drinks sold"],
+                    TurnOver = (int)dr["Turn over"],
+                    NumberOfCustomers = (int)dr["Number of customers"]
                 };
                 purchases.Add(purchase);
             }
-
             return purchases;
         }
     }
