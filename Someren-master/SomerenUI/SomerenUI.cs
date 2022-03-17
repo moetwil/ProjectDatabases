@@ -603,9 +603,14 @@ namespace SomerenUI
                 throw new Exception("No activity selected");
             }
 
-            
-            
-            
+
+            /*int activityId = GetActivityId();
+
+
+            //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+
+            LoadActivityStudents(activityId);*/
+
 
         }
 
@@ -617,6 +622,9 @@ namespace SomerenUI
                 //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
                 activityId = ((Activity)(item.Tag)).ActivityId;
             }
+
+            if (activityId == null)
+                throw new Exception("No activity selected");
 
             return activityId;
         }
@@ -661,25 +669,40 @@ namespace SomerenUI
         {
             ActivityService activityService = new ActivityService();
 
-            // get id of selected activity
-            int activityId = GetActivityId();
 
-            // get id from selected student
-            int studentId = ((Student)listBoxStudents.SelectedItem).StudentId;
-
-            // check if student is in activity
-            bool isInActivity = activityService.IsInActivity(activityId, studentId);
-
-            if (!isInActivity)
+            try
             {
-                MessageBox.Show("Student added to activity");
-                //MessageBox.Show($"{activityId} + {studentId}");
-                activityService.AddStudent(activityId, studentId);
+                // get id of selected activity
+                int activityId = GetActivityId();
+
+                // get id from selected student
+                if (listBoxStudents.SelectedItem == null)
+                    throw new Exception("No student selected");
+
+                int studentId = ((Student)listBoxStudents.SelectedItem).StudentId;
+
+                // check if student is in activity
+                bool isInActivity = activityService.IsInActivity(activityId, studentId);
+
+                if (!isInActivity)
+                {
+                    MessageBox.Show("Student added to activity");
+                    //MessageBox.Show($"{activityId} + {studentId}");
+                    //activityService.AddStudent(activityId, studentId);
+                }
+                else
+                {
+                    MessageBox.Show("Student already in activity");
+                }
             }
-            else
+            catch (Exception exception)
             {
-                MessageBox.Show("Student already in activity");
+                MessageBox.Show("Something went wrong with adding a student to an activity: " + exception.Message);
+                LoggerService.WriteLog(exception);
+
             }
+
+            
 
 
 
@@ -689,9 +712,5 @@ namespace SomerenUI
         // check if a student is in a certain activity
         
 
-        private void AddStudentToActivity(int activityId, int studentId)
-        {
-
-        }
     }
 }
