@@ -24,7 +24,12 @@ namespace SomerenDAL
         public List<Purchase> GetAllPurchases()
         {
             // getting the information about the Purchases
-            string query = "SELECT purchaseId, studentId, drinkId FROM [Purchases]";
+            string query = "SELECT COUNT(Purchases.purchaseId) AS [Purchase id], COUNT(Purchases.drinkId) AS [Drinks sold], " +
+                            "(SELECT COUNT(Purchases.drinkId) * AVG(Drinks.price) " +
+                            "FROM Purchases JOIN Drinks ON Purchases.drinkId = Drinks.drinkId)" +
+                            ", COUNT(DISTINCT Purchases.studentId) AS [Number of customers]" +
+                            "FROM Purchases " +
+                            "JOIN Drinks ON Purchases.drinkId = Drinks.drinkId";
             SqlParameter[] sqlParameters = new SqlParameter[0];
 
             // return a list of all the purchases

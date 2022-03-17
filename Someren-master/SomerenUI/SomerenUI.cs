@@ -402,15 +402,15 @@ namespace SomerenUI
                     listViewRevenue.Columns.Add("Turn over", 90);
                     listViewRevenue.Columns.Add("Customers", 90);
 
-                    // add every purchase to the listView
-                    foreach (Purchase purchase in purchaseList)
-                    {
-                         ListViewItem listPurchase = new ListViewItem(purchase.PurchaseId.ToString());
-                        listPurchase.SubItems.Add(purchase.DrinkId.ToString());
-                        //listPurchase.SubItems.Add(purchase.TurnOver.ToString());
-                        listPurchase.SubItems.Add(purchase.StudentId.ToString());
-                        listViewRevenue.Items.Add(listPurchase);
-                    }
+                    //// add every purchase to the listView
+                    //foreach (Purchase purchase in purchaseList)
+                    //{
+                    //     ListViewItem listPurchase = new ListViewItem(purchase.PurchaseId.ToString());
+                    //    listPurchase.SubItems.Add(purchase.DrinkId.ToString());
+                    //    //listPurchase.SubItems.Add(purchase.TurnOver.ToString());
+                    //    listPurchase.SubItems.Add(purchase.StudentId.ToString());
+                    //    listViewRevenue.Items.Add(listPurchase);
+                    //}
 
                 }
                 catch (Exception exc)
