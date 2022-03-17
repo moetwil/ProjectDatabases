@@ -623,8 +623,8 @@ namespace SomerenUI
                 activityId = ((Activity)(item.Tag)).ActivityId;
             }
 
-            if (activityId == null)
-                throw new Exception("No activity selected");
+            /*if (activityId == null)
+                throw new Exception("No activity selected");*/
 
             return activityId;
         }
@@ -674,6 +674,8 @@ namespace SomerenUI
             {
                 // get id of selected activity
                 int activityId = GetActivityId();
+                if (activityId == 0)
+                    throw new Exception("No activity selected");
 
                 // get id from selected student
                 if (listBoxStudents.SelectedItem == null)

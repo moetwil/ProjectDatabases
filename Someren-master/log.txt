@@ -264,3 +264,9 @@ Error Number:547,State:0,Class:16
 17-3-2022 14:54:08 : No student selected | System.Exception: No student selected
    bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 680
 
+17-3-2022 15:04:32 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 678
+
+17-3-2022 15:04:35 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 682
+
