@@ -101,6 +101,7 @@ namespace SomerenUI
 
         private void showPanel(string panelName)
         {
+            HideAllPanels();
 
             if (panelName == "Dashboard")
             {
@@ -201,7 +202,7 @@ namespace SomerenUI
             else if (panelName == "Rooms")
             {
                 // hide all panels and show the room panel
-                HideAllPanels();
+                //HideAllPanels();
                 pnlRooms.Show();
 
                 try
@@ -241,7 +242,7 @@ namespace SomerenUI
             else if (panelName == "Shop")
             {
                 // hide all panels and show the room panel
-                HideAllPanels();
+                //HideAllPanels();
                 pnlShop.Show();
 
                 try
@@ -274,6 +275,10 @@ namespace SomerenUI
                 pnlDrinksSuplies.Show();
 
                 // ListView will show the results after the dates are selected
+            }
+            else if(panelName == "ActivityParticipants")
+            {
+                pnlActivityParticipants.Show();
             }
         }
 
@@ -323,6 +328,7 @@ namespace SomerenUI
             pnlTeachers.Hide();
             pnlRevenue.Hide();
             pnlDrinksSuplies.Hide();
+            pnlActivityParticipants.Hide();
         }
 
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -530,6 +536,11 @@ namespace SomerenUI
                 listViewDrinkSuplies.Items.Add(item);
             }
 
+        }
+
+        private void activityParticipantsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("ActivityParticipants");
         }
     }
 }
