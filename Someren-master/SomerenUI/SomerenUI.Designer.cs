@@ -801,7 +801,7 @@
             this.groupBox3.Controls.Add(this.listViewActivityStudents);
             this.groupBox3.Location = new System.Drawing.Point(51, 57);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(748, 358);
+            this.groupBox3.Size = new System.Drawing.Size(659, 200);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Activities with participating students";
@@ -811,9 +811,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(7, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(230, 13);
+            this.label7.Size = new System.Drawing.Size(195, 13);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Select a student and the products for the order.";
+            this.label7.Text = "Select an activity to see the participants";
             // 
             // listViewActivities
             // 
@@ -824,7 +824,7 @@
             this.listViewActivities.Location = new System.Drawing.Point(6, 53);
             this.listViewActivities.MultiSelect = false;
             this.listViewActivities.Name = "listViewActivities";
-            this.listViewActivities.Size = new System.Drawing.Size(326, 211);
+            this.listViewActivities.Size = new System.Drawing.Size(326, 122);
             this.listViewActivities.TabIndex = 10;
             this.listViewActivities.UseCompatibleStateImageBehavior = false;
             this.listViewActivities.SelectedIndexChanged += new System.EventHandler(this.listViewActivities_SelectedIndexChanged);
@@ -837,7 +837,7 @@
             this.listViewActivityStudents.HideSelection = false;
             this.listViewActivityStudents.Location = new System.Drawing.Point(351, 53);
             this.listViewActivityStudents.Name = "listViewActivityStudents";
-            this.listViewActivityStudents.Size = new System.Drawing.Size(306, 211);
+            this.listViewActivityStudents.Size = new System.Drawing.Size(306, 122);
             this.listViewActivityStudents.TabIndex = 11;
             this.listViewActivityStudents.UseCompatibleStateImageBehavior = false;
             // 
