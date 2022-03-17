@@ -25,9 +25,9 @@ namespace SomerenDAL
             string query = "SELECT Students.studentId, Students.firstName, Students.lastName, Students.class, Students.dateOfBirth, Students.roomId " +
                 "FROM [Students] " +
                 "INNER JOIN [ActivityStudent] ON ActivityStudent.studentId = Students.studentId " +
-               $"WHERE [activityId] = {activityId}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            //sqlParameters[0] = new SqlParameter("@ActivityId", activityId);
+               $"WHERE [activityId] = @ActivityId";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@ActivityId", activityId);
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
