@@ -282,6 +282,7 @@ namespace SomerenUI
                 try
                 {
                     LoadActivities();
+                    LoadStudentsListBox();
                 }
                 catch (Exception e)
                 {
@@ -635,6 +636,17 @@ namespace SomerenUI
                 item.Tag = student;
                 item.SubItems.Add(student.FullName);
                 listViewActivityStudents.Items.Add(item);
+            }
+        }
+
+        private void LoadStudentsListBox()
+        {
+            StudentService studentService = new StudentService();
+            List<Student> students = studentService.GetStudents();
+
+            foreach (Student student in students)
+            {
+                listBoxStudents.Items.Add(student);
             }
         }
     }

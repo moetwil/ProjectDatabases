@@ -102,9 +102,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.listViewActivities = new System.Windows.Forms.ListView();
             this.listViewActivityStudents = new System.Windows.Forms.ListView();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelAddUitleg = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.labelActivityParticipants = new System.Windows.Forms.Label();
+            this.listBoxStudents = new System.Windows.Forms.ListBox();
+            this.addStudentButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -786,7 +788,6 @@
             // 
             this.pnlActivityParticipants.BackColor = System.Drawing.Color.Lavender;
             this.pnlActivityParticipants.Controls.Add(this.groupBox3);
-            this.pnlActivityParticipants.Controls.Add(this.label8);
             this.pnlActivityParticipants.Controls.Add(this.pictureBox6);
             this.pnlActivityParticipants.Controls.Add(this.labelActivityParticipants);
             this.pnlActivityParticipants.Location = new System.Drawing.Point(11, 24);
@@ -796,12 +797,15 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.addStudentButton);
+            this.groupBox3.Controls.Add(this.listBoxStudents);
+            this.groupBox3.Controls.Add(this.labelAddUitleg);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.listViewActivities);
             this.groupBox3.Controls.Add(this.listViewActivityStudents);
             this.groupBox3.Location = new System.Drawing.Point(51, 57);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(659, 200);
+            this.groupBox3.Size = new System.Drawing.Size(659, 407);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Activities with participating students";
@@ -841,14 +845,14 @@
             this.listViewActivityStudents.TabIndex = 11;
             this.listViewActivityStudents.UseCompatibleStateImageBehavior = false;
             // 
-            // label8
+            // labelAddUitleg
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(537, 394);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "label3";
+            this.labelAddUitleg.AutoSize = true;
+            this.labelAddUitleg.Location = new System.Drawing.Point(13, 196);
+            this.labelAddUitleg.Name = "labelAddUitleg";
+            this.labelAddUitleg.Size = new System.Drawing.Size(183, 13);
+            this.labelAddUitleg.TabIndex = 9;
+            this.labelAddUitleg.Text = "Select a student to add to the activity";
             // 
             // pictureBox6
             // 
@@ -870,12 +874,29 @@
             this.labelActivityParticipants.TabIndex = 3;
             this.labelActivityParticipants.Text = "Activity participants";
             // 
+            // listBoxStudents
+            // 
+            this.listBoxStudents.FormattingEnabled = true;
+            this.listBoxStudents.Location = new System.Drawing.Point(12, 223);
+            this.listBoxStudents.Name = "listBoxStudents";
+            this.listBoxStudents.Size = new System.Drawing.Size(320, 95);
+            this.listBoxStudents.TabIndex = 13;
+            // 
+            // addStudentButton
+            // 
+            this.addStudentButton.Location = new System.Drawing.Point(16, 338);
+            this.addStudentButton.Name = "addStudentButton";
+            this.addStudentButton.Size = new System.Drawing.Size(75, 23);
+            this.addStudentButton.TabIndex = 14;
+            this.addStudentButton.Text = "Add student";
+            this.addStudentButton.UseVisualStyleBackColor = true;
+            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(962, 506);
+            this.ClientSize = new System.Drawing.Size(962, 614);
             this.Controls.Add(this.pnlActivityParticipants);
             this.Controls.Add(this.pnlDrinksSuplies);
             this.Controls.Add(this.pnlRevenue);
@@ -1005,9 +1026,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListView listViewActivities;
         private System.Windows.Forms.ListView listViewActivityStudents;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelAddUitleg;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label labelActivityParticipants;
+        private System.Windows.Forms.ListBox listBoxStudents;
+        private System.Windows.Forms.Button addStudentButton;
     }
 }
 
