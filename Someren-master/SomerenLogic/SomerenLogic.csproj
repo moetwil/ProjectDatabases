@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityService.cs" />
     <Compile Include="LoggerService.cs" />
     <Compile Include="DrinkService.cs" />
     <Compile Include="RoomService.cs" />

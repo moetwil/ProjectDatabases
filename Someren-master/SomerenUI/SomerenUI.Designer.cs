@@ -102,7 +102,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewActivities = new System.Windows.Forms.ListView();
             this.listView2 = new System.Windows.Forms.ListView();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -801,7 +801,7 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.listView1);
+            this.groupBox3.Controls.Add(this.listViewActivities);
             this.groupBox3.Controls.Add(this.listView2);
             this.groupBox3.Location = new System.Drawing.Point(51, 57);
             this.groupBox3.Name = "groupBox3";
@@ -837,15 +837,15 @@
             this.button1.Text = "Checkout";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // listViewActivities
             // 
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 53);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(326, 211);
-            this.listView1.TabIndex = 10;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listViewActivities.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewActivities.HideSelection = false;
+            this.listViewActivities.Location = new System.Drawing.Point(6, 53);
+            this.listViewActivities.Name = "listViewActivities";
+            this.listViewActivities.Size = new System.Drawing.Size(326, 211);
+            this.listViewActivities.TabIndex = 10;
+            this.listViewActivities.UseCompatibleStateImageBehavior = false;
             // 
             // listView2
             // 
@@ -1023,7 +1023,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewActivities;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox6;

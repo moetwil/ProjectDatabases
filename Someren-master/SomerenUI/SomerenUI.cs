@@ -279,6 +279,7 @@ namespace SomerenUI
             else if(panelName == "ActivityParticipants")
             {
                 pnlActivityParticipants.Show();
+                LoadActivities();
             }
         }
 
@@ -538,9 +539,39 @@ namespace SomerenUI
 
         }
 
+        // menu button Activity Participants
         private void activityParticipantsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showPanel("ActivityParticipants");
+        }
+
+        private void LoadActivities()
+        {
+            ActivityService activityService = new ActivityService();
+            List<Activity> activityList = activityService.GetActivities();
+
+            listViewActivities.Clear();
+
+            // set styling for listView
+            listViewActivities.GridLines = true;
+            listViewActivities.View = View.Details;
+            listViewActivities.FullRowSelect = true;
+
+            // add columns to the listView
+            listViewActivities.Columns.Add("Id", 25);
+            listViewActivities.Columns.Add("Description", 70);
+            listViewActivities.Columns.Add("Start DateTime", 110);
+            listViewActivities.Columns.Add("End DateTime", 110);
+
+            foreach (Activity activity in activityList)
+            {
+                ListViewItem item = new ListViewItem(activity.ActivityId.ToString());
+                item.Tag = activity;
+                item.SubItems.Add(activity.Description);
+                item.SubItems.Add(activity.StartDateTime.ToString());
+                item.SubItems.Add(activity.EndDateTime.ToString());
+                listViewActivities.Items.Add(item);
+            }
         }
     }
 }
