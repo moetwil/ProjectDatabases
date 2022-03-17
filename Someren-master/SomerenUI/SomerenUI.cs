@@ -279,7 +279,18 @@ namespace SomerenUI
             else if(panelName == "ActivityParticipants")
             {
                 pnlActivityParticipants.Show();
-                LoadActivities();
+                try
+                {
+                    LoadActivities();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Something went wrong while loading the Activities: " + e.Message);
+                    LoggerService.WriteLog(e);
+                }
+
+                
+                
             }
         }
 
@@ -577,9 +588,28 @@ namespace SomerenUI
         // selected activity event method
         private void listViewActivities_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // get id of selected activity
-            int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
-            LoadActivityStudents(activityId);
+            try
+            {
+                int activityId = 0;
+                foreach (ListViewItem item in listViewActivities.SelectedItems)
+                {
+                    //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+                    activityId = ((Activity)(item.Tag)).ActivityId;
+                }
+
+                
+                //int activityId = ((Activity)(listViewActivities.se.Tag)).ActivityId;
+                
+                LoadActivityStudents(activityId);
+            }
+            catch (Exception)
+            {
+                throw new Exception("No activity selected");
+            }
+
+            
+            
+            
 
         }
 
