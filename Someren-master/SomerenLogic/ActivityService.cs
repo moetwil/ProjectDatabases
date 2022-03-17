@@ -29,6 +29,11 @@ namespace SomerenLogic
             return activities;
         }
 
+        public void AddStudent(int activityId, int studentId)
+        {
+            activitydb.AddStudent(activityId, studentId);
+        }
+
 
         public bool IsInActivity(int activityId, int studentId)
         {

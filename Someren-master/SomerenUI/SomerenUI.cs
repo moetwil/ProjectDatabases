@@ -591,12 +591,7 @@ namespace SomerenUI
         {
             try
             {
-                int activityId = 0;
-                foreach (ListViewItem item in listViewActivities.SelectedItems)
-                {
-                    //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
-                    activityId = ((Activity)(item.Tag)).ActivityId;
-                }
+                int activityId = GetActivityId();
 
 
                 //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
@@ -612,6 +607,18 @@ namespace SomerenUI
             
             
 
+        }
+
+        private int GetActivityId() 
+        {
+            int activityId = 0;
+            foreach (ListViewItem item in listViewActivities.SelectedItems)
+            {
+                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+                activityId = ((Activity)(item.Tag)).ActivityId;
+            }
+
+            return activityId;
         }
 
         private void LoadActivityStudents(int activityId)
@@ -655,12 +662,7 @@ namespace SomerenUI
             ActivityService activityService = new ActivityService();
 
             // get id of selected activity
-            int activityId = 0;
-            foreach (ListViewItem item in listViewActivities.SelectedItems)
-            {
-                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
-                activityId = ((Activity)(item.Tag)).ActivityId;
-            }
+            int activityId = GetActivityId();
 
             // get id from selected student
             int studentId = ((Student)listBoxStudents.SelectedItem).StudentId;
@@ -668,7 +670,17 @@ namespace SomerenUI
             // check if student is in activity
             bool isInActivity = activityService.IsInActivity(activityId, studentId);
 
-            MessageBox.Show(isInActivity.ToString());
+            if (!isInActivity)
+            {
+                MessageBox.Show("Student added to activity");
+                //MessageBox.Show($"{activityId} + {studentId}");
+                activityService.AddStudent(activityId, studentId);
+            }
+            else
+            {
+                MessageBox.Show("Student already in activity");
+            }
+
 
 
         }
