@@ -649,5 +649,37 @@ namespace SomerenUI
                 listBoxStudents.Items.Add(student);
             }
         }
+
+        private void addStudentButton_Click(object sender, EventArgs e)
+        {
+            ActivityService activityService = new ActivityService();
+
+            // get id of selected activity
+            int activityId = 0;
+            foreach (ListViewItem item in listViewActivities.SelectedItems)
+            {
+                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+                activityId = ((Activity)(item.Tag)).ActivityId;
+            }
+
+            // get id from selected student
+            int studentId = ((Student)listBoxStudents.SelectedItem).StudentId;
+
+            // check if student is in activity
+            bool isInActivity = activityService.IsInActivity(activityId, studentId);
+
+            MessageBox.Show(isInActivity.ToString());
+
+
+        }
+
+
+        // check if a student is in a certain activity
+        
+
+        private void AddStudentToActivity(int activityId, int studentId)
+        {
+
+        }
     }
 }

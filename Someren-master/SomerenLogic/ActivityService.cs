@@ -30,6 +30,22 @@ namespace SomerenLogic
         }
 
 
-        
+        public bool IsInActivity(int activityId, int studentId)
+        {
+            StudentService studentService = new StudentService();
+            List<Student> students = studentService.GetStudentsByActivity(activityId);
+
+            bool isInActivity = false;
+            foreach (Student student in students)
+            {
+                if (student.StudentId == studentId)
+                    isInActivity = true;
+            }
+
+            return isInActivity;
+        }
+
+
+
     }
 }
