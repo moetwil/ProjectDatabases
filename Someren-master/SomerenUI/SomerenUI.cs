@@ -597,9 +597,9 @@ namespace SomerenUI
                     activityId = ((Activity)(item.Tag)).ActivityId;
                 }
 
-                
-                //int activityId = ((Activity)(listViewActivities.se.Tag)).ActivityId;
-                
+
+                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+
                 LoadActivityStudents(activityId);
             }
             catch (Exception)

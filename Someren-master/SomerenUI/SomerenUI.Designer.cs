@@ -37,6 +37,7 @@
             this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lecturersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activityParticipantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.revenueReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,7 +97,6 @@
             this.listViewDrinkSuplies = new System.Windows.Forms.ListView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.Drinks = new System.Windows.Forms.Label();
-            this.activityParticipantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlActivityParticipants = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -204,6 +204,13 @@
             this.activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
             this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(75, 22);
             this.activitiesToolStripMenuItem.Text = "Activities";
+            // 
+            // activityParticipantsToolStripMenuItem
+            // 
+            this.activityParticipantsToolStripMenuItem.Name = "activityParticipantsToolStripMenuItem";
+            this.activityParticipantsToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.activityParticipantsToolStripMenuItem.Text = "Activity Participants";
+            this.activityParticipantsToolStripMenuItem.Click += new System.EventHandler(this.activityParticipantsToolStripMenuItem_Click);
             // 
             // roomsToolStripMenuItem
             // 
@@ -618,7 +625,7 @@
             // 
             this.monthCalendar2.BackColor = System.Drawing.SystemColors.Highlight;
             this.monthCalendar2.Location = new System.Drawing.Point(66, 65);
-            this.monthCalendar2.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.monthCalendar2.Margin = new System.Windows.Forms.Padding(7);
             this.monthCalendar2.MaxDate = new System.DateTime(2030, 5, 18, 0, 0, 0, 0);
             this.monthCalendar2.MaxSelectionCount = 2;
             this.monthCalendar2.MinDate = new System.DateTime(2000, 5, 16, 0, 0, 0, 0);
@@ -742,7 +749,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(543, 43);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(68, 20);
             this.textBox1.TabIndex = 11;
@@ -776,13 +783,6 @@
             this.Drinks.Size = new System.Drawing.Size(164, 29);
             this.Drinks.TabIndex = 3;
             this.Drinks.Text = "Drinks suplies";
-            // 
-            // activityParticipantsToolStripMenuItem
-            // 
-            this.activityParticipantsToolStripMenuItem.Name = "activityParticipantsToolStripMenuItem";
-            this.activityParticipantsToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.activityParticipantsToolStripMenuItem.Text = "Activity Participants";
-            this.activityParticipantsToolStripMenuItem.Click += new System.EventHandler(this.activityParticipantsToolStripMenuItem_Click);
             // 
             // pnlActivityParticipants
             // 
@@ -839,9 +839,12 @@
             // 
             // listViewActivities
             // 
+            this.listViewActivities.FullRowSelect = true;
+            this.listViewActivities.GridLines = true;
             this.listViewActivities.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewActivities.HideSelection = false;
             this.listViewActivities.Location = new System.Drawing.Point(6, 53);
+            this.listViewActivities.MultiSelect = false;
             this.listViewActivities.Name = "listViewActivities";
             this.listViewActivities.Size = new System.Drawing.Size(326, 211);
             this.listViewActivities.TabIndex = 10;
