@@ -103,7 +103,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.listViewActivities = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.listViewActivityStudents = new System.Windows.Forms.ListView();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.labelActivityParticipants = new System.Windows.Forms.Label();
@@ -802,7 +802,7 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.listViewActivities);
-            this.groupBox3.Controls.Add(this.listView2);
+            this.groupBox3.Controls.Add(this.listViewActivityStudents);
             this.groupBox3.Location = new System.Drawing.Point(51, 57);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(748, 358);
@@ -846,18 +846,19 @@
             this.listViewActivities.Size = new System.Drawing.Size(326, 211);
             this.listViewActivities.TabIndex = 10;
             this.listViewActivities.UseCompatibleStateImageBehavior = false;
+            this.listViewActivities.SelectedIndexChanged += new System.EventHandler(this.listViewActivities_SelectedIndexChanged);
             // 
-            // listView2
+            // listViewActivityStudents
             // 
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(351, 53);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(306, 211);
-            this.listView2.TabIndex = 11;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listViewActivityStudents.FullRowSelect = true;
+            this.listViewActivityStudents.GridLines = true;
+            this.listViewActivityStudents.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewActivityStudents.HideSelection = false;
+            this.listViewActivityStudents.Location = new System.Drawing.Point(351, 53);
+            this.listViewActivityStudents.Name = "listViewActivityStudents";
+            this.listViewActivityStudents.Size = new System.Drawing.Size(306, 211);
+            this.listViewActivityStudents.TabIndex = 11;
+            this.listViewActivityStudents.UseCompatibleStateImageBehavior = false;
             // 
             // label8
             // 
@@ -1024,7 +1025,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView listViewActivities;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listViewActivityStudents;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label labelActivityParticipants;

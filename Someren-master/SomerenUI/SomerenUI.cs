@@ -573,5 +573,39 @@ namespace SomerenUI
                 listViewActivities.Items.Add(item);
             }
         }
+
+        // selected activity event method
+        private void listViewActivities_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // get id of selected activity
+            int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+            LoadActivityStudents(activityId);
+
+        }
+
+        private void LoadActivityStudents(int activityId)
+        {
+            StudentService studentService = new StudentService();
+            List<Student> students = studentService.GetStudentsByActivity(activityId);
+
+            listViewActivityStudents.Clear();
+
+            // set styling for listView
+            listViewActivityStudents.GridLines = true;
+            listViewActivityStudents.View = View.Details;
+            listViewActivityStudents.FullRowSelect = true;
+
+            // add columns to the listView
+            listViewActivityStudents.Columns.Add("Id", 25);
+            listViewActivityStudents.Columns.Add("Full Name", 70);
+
+            foreach (Student student in students)
+            {
+                ListViewItem item = new ListViewItem(student.StudentId.ToString());
+                item.Tag = student;
+                item.SubItems.Add(student.FullName);
+                listViewActivityStudents.Items.Add(item);
+            }
+        }
     }
 }

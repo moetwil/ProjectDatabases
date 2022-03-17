@@ -25,5 +25,11 @@ namespace SomerenLogic
             List<Student> students = studentdb.GetAllStudents();
             return students;
         }
+
+        public List<Student> GetStudentsByActivity(int activityId)
+        {
+            List<Student> students = studentdb.GetStudentsByActivity(activityId);
+            return students;
+        }
     }
 }
