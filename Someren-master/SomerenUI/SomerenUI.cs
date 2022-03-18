@@ -768,6 +768,7 @@ namespace SomerenUI
             drinkService.AddDrinks((drinkBox.Text).ToString(), int.Parse(stockBox.Text), alcohol, 
                 double.Parse(priceBox.Text), double.Parse(VATbox.Text));
             RefreshView();
+            alcoholButton.Checked = false;
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
@@ -793,6 +794,7 @@ namespace SomerenUI
             drinkService.UpdateDrinks(int.Parse(drinkIdBox.Text), (drinkBox.Text).ToString(), int.Parse(stockBox.Text), alcohol,
                 double.Parse(priceBox.Text), double.Parse(VATbox.Text));
             RefreshView();
+            alcoholButton.Checked = false;
         }
 
 
