@@ -29,6 +29,11 @@ namespace SomerenLogic
             return drinks;
         }
 
+        public void AddDrinks(string drinkName, int stock)
+        {
+            drinkdb.AddDrinks(drinkName, stock);
+        }
+
         //public bool ContainsAlcohol()
 
         
