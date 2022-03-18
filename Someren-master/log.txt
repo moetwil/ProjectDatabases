@@ -449,3 +449,12 @@ Error Number:547,State:0,Class:16
 18-3-2022 18:13:17 : Choose a valid date between 12-03-22 and 19-03-22 | System.Exception: Choose a valid date between 12-03-22 and 19-03-22
    bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 392
 
+18-3-2022 19:19:00 : Make sure to enter all the data in the checkboxes | System.Exception: Make sure to enter all the data in the checkboxes
+   bij SomerenUI.SomerenUI.Updatebutton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 799
+
+18-3-2022 19:20:20 : Make sure to enter all the data in the checkboxes | System.Exception: Make sure to enter all the data in the checkboxes
+   bij SomerenUI.SomerenUI.Addbutton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 774
+
+18-3-2022 19:21:45 : Make sure to enter an Id | System.Exception: Make sure to enter an Id
+   bij SomerenUI.SomerenUI.DeleteButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 801
+

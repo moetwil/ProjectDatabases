@@ -755,46 +755,96 @@ namespace SomerenUI
 
         private void Addbutton_Click(object sender, EventArgs e)
         {
-            DrinkService drinkService = new DrinkService();
-            bool alcohol;
-            if (alcoholButton.Checked)
+
+            try
             {
-                alcohol = true;
+                DrinkService drinkService = new DrinkService();
+                bool alcohol;
+                if (alcoholButton.Checked)
+                {
+                    alcohol = true;
+                }
+                else
+                {
+                    alcohol = false;
+                }
+
+                if (drinkBox.Text == String.Empty || drinkBox.Text == String.Empty || stockBox.Text == String.Empty || priceBox.Text == String.Empty || VATbox.Text == String.Empty)
+                {
+                    throw new Exception("Make sure to enter all the data in the checkboxes");
+                }
+
+                drinkService.AddDrinks((drinkBox.Text).ToString(), int.Parse(stockBox.Text), alcohol,
+                    double.Parse(priceBox.Text), double.Parse(VATbox.Text));
+                RefreshView();
+                alcoholButton.Checked = false;
+
             }
-            else
+            catch (Exception exception)
             {
-                alcohol = false;
+                MessageBox.Show("Something went wrong with updating a drink " + exception.Message);
+                LoggerService.WriteLog(exception);
             }
-            drinkService.AddDrinks((drinkBox.Text).ToString(), int.Parse(stockBox.Text), alcohol, 
-                double.Parse(priceBox.Text), double.Parse(VATbox.Text));
-            RefreshView();
-            alcoholButton.Checked = false;
+            
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             DrinkService drinkService = new DrinkService();
-            drinkService.DeleteDrinks(int.Parse(drinkIdBox.Text));
-            RefreshView();
+
+            
+
+            try
+            {
+                if (drinkIdBox.Text == String.Empty)
+                {
+                    throw new Exception("Make sure to enter an Id");
+                }
+
+                drinkService.DeleteDrinks(int.Parse(drinkIdBox.Text));
+                RefreshView();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with updating a drink " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }
+            
 
         }
 
         private void Updatebutton_Click(object sender, EventArgs e)
         {
-            DrinkService drinkService = new DrinkService();
-            bool alcohol;
-            if (alcoholButton.Checked)
+            try
             {
-                alcohol = true;
+                DrinkService drinkService = new DrinkService();
+                bool alcohol;
+                if (alcoholButton.Checked)
+                {
+                    alcohol = true;
+                }
+                else
+                {
+                    alcohol = false;
+                }
+
+                if (drinkBox.Text == String.Empty || drinkBox.Text == String.Empty || stockBox.Text == String.Empty || priceBox.Text == String.Empty || VATbox.Text == String.Empty)
+                {
+                    throw new Exception("Make sure to enter all the data in the checkboxes");
+                }
+
+                drinkService.UpdateDrinks(int.Parse(drinkIdBox.Text), (drinkBox.Text).ToString(), int.Parse(stockBox.Text), alcohol,
+                    double.Parse(priceBox.Text), double.Parse(VATbox.Text));
+                RefreshView();
+                alcoholButton.Checked = false;
             }
-            else
+            catch (Exception exception)
             {
-                alcohol = false;
+                MessageBox.Show("Something went wrong with updating a drink " + exception.Message);
+                LoggerService.WriteLog(exception);
             }
-            drinkService.UpdateDrinks(int.Parse(drinkIdBox.Text), (drinkBox.Text).ToString(), int.Parse(stockBox.Text), alcohol,
-                double.Parse(priceBox.Text), double.Parse(VATbox.Text));
-            RefreshView();
-            alcoholButton.Checked = false;
+
+           
         }
 
 
