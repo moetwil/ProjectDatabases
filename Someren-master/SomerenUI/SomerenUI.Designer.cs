@@ -93,6 +93,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listViewRevenue = new System.Windows.Forms.ListView();
             this.pnlDrinksSuplies = new System.Windows.Forms.Panel();
+            this.Addbutton = new System.Windows.Forms.Button();
+            this.Updatebutton = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.a = new System.Windows.Forms.Label();
+            this.stockBox = new System.Windows.Forms.TextBox();
             this.drinkBox = new System.Windows.Forms.TextBox();
             this.listViewDrinkSuplies = new System.Windows.Forms.ListView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -107,11 +112,10 @@
             this.listViewActivityStudents = new System.Windows.Forms.ListView();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.labelActivityParticipants = new System.Windows.Forms.Label();
-            this.stockBox = new System.Windows.Forms.TextBox();
-            this.a = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Updatebutton = new System.Windows.Forms.Button();
-            this.Addbutton = new System.Windows.Forms.Button();
+            this.alcoholBox = new System.Windows.Forms.TextBox();
+            this.alcoholLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.priceBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -769,6 +773,10 @@
             // pnlDrinksSuplies
             // 
             this.pnlDrinksSuplies.BackColor = System.Drawing.Color.Lavender;
+            this.pnlDrinksSuplies.Controls.Add(this.priceBox);
+            this.pnlDrinksSuplies.Controls.Add(this.label6);
+            this.pnlDrinksSuplies.Controls.Add(this.alcoholLabel);
+            this.pnlDrinksSuplies.Controls.Add(this.alcoholBox);
             this.pnlDrinksSuplies.Controls.Add(this.Addbutton);
             this.pnlDrinksSuplies.Controls.Add(this.Updatebutton);
             this.pnlDrinksSuplies.Controls.Add(this.label8);
@@ -783,6 +791,49 @@
             this.pnlDrinksSuplies.Name = "pnlDrinksSuplies";
             this.pnlDrinksSuplies.Size = new System.Drawing.Size(1407, 718);
             this.pnlDrinksSuplies.TabIndex = 13;
+            // 
+            // Addbutton
+            // 
+            this.Addbutton.Location = new System.Drawing.Point(961, 335);
+            this.Addbutton.Name = "Addbutton";
+            this.Addbutton.Size = new System.Drawing.Size(99, 41);
+            this.Addbutton.TabIndex = 16;
+            this.Addbutton.Text = "Add";
+            this.Addbutton.UseVisualStyleBackColor = true;
+            // 
+            // Updatebutton
+            // 
+            this.Updatebutton.Location = new System.Drawing.Point(815, 335);
+            this.Updatebutton.Name = "Updatebutton";
+            this.Updatebutton.Size = new System.Drawing.Size(99, 41);
+            this.Updatebutton.TabIndex = 15;
+            this.Updatebutton.Text = "Update";
+            this.Updatebutton.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(726, 168);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 20);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Stocks";
+            // 
+            // a
+            // 
+            this.a.AutoSize = true;
+            this.a.Location = new System.Drawing.Point(726, 120);
+            this.a.Name = "a";
+            this.a.Size = new System.Drawing.Size(54, 20);
+            this.a.TabIndex = 13;
+            this.a.Text = "Drinks";
+            // 
+            // stockBox
+            // 
+            this.stockBox.Location = new System.Drawing.Point(815, 162);
+            this.stockBox.Name = "stockBox";
+            this.stockBox.Size = new System.Drawing.Size(100, 26);
+            this.stockBox.TabIndex = 12;
             // 
             // drinkBox
             // 
@@ -943,48 +994,37 @@
             this.labelActivityParticipants.TabIndex = 3;
             this.labelActivityParticipants.Text = "Activity participants";
             // 
-            // stockBox
+            // alcoholBox
             // 
-            this.stockBox.Location = new System.Drawing.Point(815, 200);
-            this.stockBox.Name = "stockBox";
-            this.stockBox.Size = new System.Drawing.Size(100, 26);
-            this.stockBox.TabIndex = 12;
+            this.alcoholBox.Location = new System.Drawing.Point(815, 217);
+            this.alcoholBox.Name = "alcoholBox";
+            this.alcoholBox.Size = new System.Drawing.Size(100, 26);
+            this.alcoholBox.TabIndex = 17;
             // 
-            // a
+            // alcoholLabel
             // 
-            this.a.AutoSize = true;
-            this.a.Location = new System.Drawing.Point(726, 120);
-            this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(54, 20);
-            this.a.TabIndex = 13;
-            this.a.Text = "Drinks";
+            this.alcoholLabel.AutoSize = true;
+            this.alcoholLabel.Location = new System.Drawing.Point(726, 220);
+            this.alcoholLabel.Name = "alcoholLabel";
+            this.alcoholLabel.Size = new System.Drawing.Size(61, 20);
+            this.alcoholLabel.TabIndex = 18;
+            this.alcoholLabel.Text = "Alcohol";
             // 
-            // label8
+            // label6
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(726, 206);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 20);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Stocks";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(726, 263);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 20);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Price";
             // 
-            // Updatebutton
+            // priceBox
             // 
-            this.Updatebutton.Location = new System.Drawing.Point(815, 335);
-            this.Updatebutton.Name = "Updatebutton";
-            this.Updatebutton.Size = new System.Drawing.Size(99, 41);
-            this.Updatebutton.TabIndex = 15;
-            this.Updatebutton.Text = "Update";
-            this.Updatebutton.UseVisualStyleBackColor = true;
-            // 
-            // Addbutton
-            // 
-            this.Addbutton.Location = new System.Drawing.Point(961, 335);
-            this.Addbutton.Name = "Addbutton";
-            this.Addbutton.Size = new System.Drawing.Size(99, 41);
-            this.Addbutton.TabIndex = 16;
-            this.Addbutton.Text = "Add";
-            this.Addbutton.UseVisualStyleBackColor = true;
+            this.priceBox.Location = new System.Drawing.Point(814, 263);
+            this.priceBox.Name = "priceBox";
+            this.priceBox.Size = new System.Drawing.Size(100, 26);
+            this.priceBox.TabIndex = 20;
             // 
             // SomerenUI
             // 
@@ -1132,6 +1172,10 @@
         private System.Windows.Forms.TextBox stockBox;
         private System.Windows.Forms.Button Addbutton;
         private System.Windows.Forms.Button Updatebutton;
+        private System.Windows.Forms.TextBox alcoholBox;
+        private System.Windows.Forms.Label alcoholLabel;
+        private System.Windows.Forms.TextBox priceBox;
+        private System.Windows.Forms.Label label6;
     }
 }
 

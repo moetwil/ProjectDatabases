@@ -19,12 +19,14 @@ namespace SomerenDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-        public void AddDrinks(string drinkName, int stock)
+        public void AddDrinks(string drinkName, int stock, string alcohol, int price)
         {
-            string query = $"INSERT INTO Drinks (drinkName, stock) VALUES (@drinkName, @stock)";
-            SqlParameter[] sqlParameters = new SqlParameter[2];
+            string query = $"INSERT INTO Drinks (drinkName, stock, alcohol, price) VALUES (@drinkName, @stock)";
+            SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@drinkName", drinkName);
             sqlParameters[1] = new SqlParameter("@stock", stock);
+            sqlParameters[2] = new SqlParameter("@alcohol", alcohol);
+            sqlParameters[3] = new SqlParameter("@price", price);
             ExecuteSelectQuery(query, sqlParameters);
         }
 
