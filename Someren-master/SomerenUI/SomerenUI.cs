@@ -406,9 +406,9 @@ namespace SomerenUI
                     {
                         throw new Exception("Choose a valid starting date");
                     }
-                    if (endDate < minimumDate || endDate > maximumDate)
+                    if (endDate > maximumDate || endDate < minimumDate)
                     {
-
+                        throw new Exception("Choose a valid end date");
                     }
 
 
