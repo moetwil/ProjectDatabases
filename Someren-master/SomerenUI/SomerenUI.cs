@@ -374,16 +374,9 @@ namespace SomerenUI
 
         private void buttonRevenue_Click(object sender, EventArgs e)
         {
-
-
-
             // lables are linked to the selected dates on the calendar
             textBoxStart.Text = monthCalendar2.SelectionRange.Start.Date.ToString("dd-MM-yyyy");
             textBoxEnd.Text = monthCalendar2.SelectionRange.End.Date.ToString("dd-MM-yyyy");
-
-            DateTime firstDay = new DateTime(2022, 5, 16);
-            DateTime secondDay = new DateTime(2022, 5, 17);
-
 
             DateTime startDate = DateTime.Parse(textBoxStart.Text);
             DateTime endDate = DateTime.Parse(textBoxEnd.Text);
@@ -391,24 +384,16 @@ namespace SomerenUI
             DateTime minimumDate = new DateTime(2022, 3, 12);
             DateTime maximumDate = new DateTime(2022, 3, 19);
 
-
-
-
-            
-
-            if (DateTime.TryParse(textBoxStart.Text, out firstDay) && DateTime.TryParse(textBoxEnd.Text, out secondDay))
-            {
-
                 try
                 {
 
                     if (startDate < minimumDate || startDate > maximumDate)
                     {
-                        throw new Exception("Choose a valid starting date");
+                        throw new Exception("Choose a valid date between 12-03-22 and 19-03-22");
                     }
                     if (endDate > maximumDate || endDate < minimumDate)
                     {
-                        throw new Exception("Choose a valid end date");
+                        throw new Exception("Choose a valid date between 12-03-22 and 19-03-22");
                     }
 
 
@@ -440,11 +425,6 @@ namespace SomerenUI
                     MessageBox.Show($"Something went wrong while loading the revenue: {exc.Message} Please try refreshing the page or close the window and try again.");
                     LoggerService.WriteLog(exc);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Wrong date. Choose another one.");
-            }
         }
 
        

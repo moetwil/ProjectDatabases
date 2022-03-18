@@ -440,3 +440,12 @@ Error Number:547,State:0,Class:16
    bij SomerenLogic.RevenueService.GetRevenue(DateTime start, DateTime end) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
    bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 417
 
+18-3-2022 18:11:32 : Choose a valid starting date | System.Exception: Choose a valid starting date
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 392
+
+18-3-2022 18:13:11 : Choose a valid date between 12-03-22 and 19-03-22 | System.Exception: Choose a valid date between 12-03-22 and 19-03-22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 392
+
+18-3-2022 18:13:17 : Choose a valid date between 12-03-22 and 19-03-22 | System.Exception: Choose a valid date between 12-03-22 and 19-03-22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 392
+
