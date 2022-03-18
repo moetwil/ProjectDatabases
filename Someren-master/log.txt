@@ -422,3 +422,6 @@ Error Number:547,State:0,Class:16
    bij SomerenLogic.RevenueService.GetRevenue(DateTime start, DateTime end) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
    bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 398
 
+18-3-2022 17:41:16 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 67
+
