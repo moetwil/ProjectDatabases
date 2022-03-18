@@ -540,6 +540,7 @@ namespace SomerenUI
             listViewDrinkSuplies.Columns.Add("Alcohol", 50);
             listViewDrinkSuplies.Columns.Add("Price", 50);
             listViewDrinkSuplies.Columns.Add("Stock", 40);
+            listViewDrinkSuplies.Columns.Add("VAT", 40);
 
             foreach (Drink drink in drinkList)
             {
@@ -549,27 +550,14 @@ namespace SomerenUI
                 item.SubItems.Add(drink.HasAlcohol.ToString());
                 item.SubItems.Add(drink.Price.ToString("0.00"));
                 item.SubItems.Add(drink.Stock.ToString());
+                item.SubItems.Add(drink.VAT.ToString());
                 listViewDrinkSuplies.Items.Add(item);
             }
 
             
         }
 
-        private void Updatebutton_Click(object sender, EventArgs e)
-        {
-            listViewDrinkSuplies.SelectedItems[2].SubItems[2].Text = drinkBox.Text;
-            Update();
-        }
-
-        private void Addbutton_Click(object sender, EventArgs e)
-        {
-            //DrinkService drinksService = new DrinkService();
-            //drinksService.AddDrinks(drinkBox.Text, int.Parse(drinkBox.Text));
-            //drinksService.AddDrinks(drinkBox.Text, int.Parse(stockBox.Text));
-            //drinksService.AddDrinks(drinkBox.Text, int.Parse(alcoholBox.Text));
-            //drinksService.AddDrinks(drinkBox.Text, int.Parse(priceBox.Text));
-            //Update();
-        }
+      
 
         // menu button Activity Participants
         private void activityParticipantsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -730,9 +718,61 @@ namespace SomerenUI
 
         }
 
+        private void RefreshView()
+        {
+            showPanel("Drinks suplies");
+
+            DrinkService drinkService = new DrinkService();
+            List<Drink> drinkList = drinkService.GetDrinks();
+
+            listViewDrinkSuplies.Clear();
+
+            // set styling for listView
+            listViewDrinkSuplies.GridLines = true;
+            listViewDrinkSuplies.View = View.Details;
+            listViewDrinkSuplies.FullRowSelect = true;
+            listViewDrinkSuplies.MultiSelect = true;
+
+            // add columns to the listView
+            listViewDrinkSuplies.Columns.Add("drink id", 50);
+            listViewDrinkSuplies.Columns.Add("Drink name", 70);
+            listViewDrinkSuplies.Columns.Add("Alcohol", 50);
+            listViewDrinkSuplies.Columns.Add("Price", 50);
+            listViewDrinkSuplies.Columns.Add("Stock", 40);
+            listViewDrinkSuplies.Columns.Add("VAT", 40);
+
+            foreach (Drink drink in drinkList)
+            {
+                ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
+                item.Tag = drink;
+                item.SubItems.Add(drink.Name);
+                item.SubItems.Add(drink.HasAlcohol.ToString());
+                item.SubItems.Add(drink.Price.ToString("0.00"));
+                item.SubItems.Add(drink.Stock.ToString());
+                item.SubItems.Add(drink.VAT.ToString());
+                listViewDrinkSuplies.Items.Add(item);
+            }
+        }
+
+        private void Addbutton_Click(object sender, EventArgs e)
+        {
+            DrinkService drinkService = new DrinkService();
+            bool isAlcoholic;
+            if (alcoholButton.Checked)
+            {
+                isAlcoholic = true;
+            }
+            else
+            {
+                isAlcoholic = false;
+            }
+            drinkService.AddDrinks((drinkBox.Text).ToString(), int.Parse(stockBox.Text), isAlcoholic, double.Parse(priceBox.Text), double.Parse(VATbox.Text));
+            RefreshView();
+        }
+
 
         // check if a student is in a certain activity
-        
+
 
     }
 }
