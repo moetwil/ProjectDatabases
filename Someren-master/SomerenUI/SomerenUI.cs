@@ -757,16 +757,42 @@ namespace SomerenUI
         private void Addbutton_Click(object sender, EventArgs e)
         {
             DrinkService drinkService = new DrinkService();
-            bool isAlcoholic;
+            bool alcohol;
             if (alcoholButton.Checked)
             {
-                isAlcoholic = true;
+                alcohol = true;
             }
             else
             {
-                isAlcoholic = false;
+                alcohol = false;
             }
-            drinkService.AddDrinks((drinkBox.Text).ToString(), int.Parse(stockBox.Text), isAlcoholic, double.Parse(priceBox.Text), double.Parse(VATbox.Text));
+            drinkService.AddDrinks((drinkBox.Text).ToString(), int.Parse(stockBox.Text), alcohol, 
+                double.Parse(priceBox.Text), double.Parse(VATbox.Text));
+            RefreshView();
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            DrinkService drinkService = new DrinkService();
+            drinkService.DeleteDrinks(int.Parse(drinkIdBox.Text));
+            RefreshView();
+
+        }
+
+        private void Updatebutton_Click(object sender, EventArgs e)
+        {
+            DrinkService drinkService = new DrinkService();
+            bool alcohol;
+            if (alcoholButton.Checked)
+            {
+                alcohol = true;
+            }
+            else
+            {
+                alcohol = false;
+            }
+            drinkService.UpdateDrinks(int.Parse(drinkIdBox.Text), (drinkBox.Text).ToString(), int.Parse(stockBox.Text), alcohol,
+                double.Parse(priceBox.Text), double.Parse(VATbox.Text));
             RefreshView();
         }
 

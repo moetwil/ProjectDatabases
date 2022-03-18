@@ -118,6 +118,10 @@
             this.alcoholButton = new System.Windows.Forms.RadioButton();
             this.VAT = new System.Windows.Forms.Label();
             this.VATbox = new System.Windows.Forms.TextBox();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.drinkIdBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -776,6 +780,10 @@
             // pnlDrinksSuplies
             // 
             this.pnlDrinksSuplies.BackColor = System.Drawing.Color.Lavender;
+            this.pnlDrinksSuplies.Controls.Add(this.label10);
+            this.pnlDrinksSuplies.Controls.Add(this.label9);
+            this.pnlDrinksSuplies.Controls.Add(this.drinkIdBox);
+            this.pnlDrinksSuplies.Controls.Add(this.DeleteButton);
             this.pnlDrinksSuplies.Controls.Add(this.VATbox);
             this.pnlDrinksSuplies.Controls.Add(this.VAT);
             this.pnlDrinksSuplies.Controls.Add(this.alcoholButton);
@@ -800,7 +808,7 @@
             // 
             // priceBox
             // 
-            this.priceBox.Location = new System.Drawing.Point(814, 262);
+            this.priceBox.Location = new System.Drawing.Point(853, 259);
             this.priceBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.priceBox.Name = "priceBox";
             this.priceBox.Size = new System.Drawing.Size(100, 26);
@@ -826,7 +834,7 @@
             // 
             // Addbutton
             // 
-            this.Addbutton.Location = new System.Drawing.Point(869, 390);
+            this.Addbutton.Location = new System.Drawing.Point(730, 369);
             this.Addbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Addbutton.Name = "Addbutton";
             this.Addbutton.Size = new System.Drawing.Size(99, 41);
@@ -837,13 +845,14 @@
             // 
             // Updatebutton
             // 
-            this.Updatebutton.Location = new System.Drawing.Point(730, 390);
+            this.Updatebutton.Location = new System.Drawing.Point(854, 369);
             this.Updatebutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Updatebutton.Name = "Updatebutton";
             this.Updatebutton.Size = new System.Drawing.Size(99, 41);
             this.Updatebutton.TabIndex = 15;
             this.Updatebutton.Text = "Update";
             this.Updatebutton.UseVisualStyleBackColor = true;
+            this.Updatebutton.Click += new System.EventHandler(this.Updatebutton_Click);
             // 
             // label8
             // 
@@ -859,13 +868,13 @@
             this.a.AutoSize = true;
             this.a.Location = new System.Drawing.Point(726, 120);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(54, 20);
+            this.a.Size = new System.Drawing.Size(90, 20);
             this.a.TabIndex = 13;
-            this.a.Text = "Drinks";
+            this.a.Text = "Drink name";
             // 
             // stockBox
             // 
-            this.stockBox.Location = new System.Drawing.Point(814, 162);
+            this.stockBox.Location = new System.Drawing.Point(853, 165);
             this.stockBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.stockBox.Name = "stockBox";
             this.stockBox.Size = new System.Drawing.Size(100, 26);
@@ -873,7 +882,7 @@
             // 
             // drinkBox
             // 
-            this.drinkBox.Location = new System.Drawing.Point(814, 114);
+            this.drinkBox.Location = new System.Drawing.Point(853, 123);
             this.drinkBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.drinkBox.Name = "drinkBox";
             this.drinkBox.Size = new System.Drawing.Size(100, 26);
@@ -1034,7 +1043,7 @@
             // alcoholButton
             // 
             this.alcoholButton.AutoSize = true;
-            this.alcoholButton.Location = new System.Drawing.Point(814, 218);
+            this.alcoholButton.Location = new System.Drawing.Point(853, 220);
             this.alcoholButton.Name = "alcoholButton";
             this.alcoholButton.Size = new System.Drawing.Size(21, 20);
             this.alcoholButton.TabIndex = 21;
@@ -1052,10 +1061,47 @@
             // 
             // VATbox
             // 
-            this.VATbox.Location = new System.Drawing.Point(814, 312);
+            this.VATbox.Location = new System.Drawing.Point(853, 309);
             this.VATbox.Name = "VATbox";
             this.VATbox.Size = new System.Drawing.Size(100, 26);
             this.VATbox.TabIndex = 23;
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.Location = new System.Drawing.Point(983, 369);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(99, 41);
+            this.DeleteButton.TabIndex = 24;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // drinkIdBox
+            // 
+            this.drinkIdBox.Location = new System.Drawing.Point(853, 70);
+            this.drinkIdBox.Name = "drinkIdBox";
+            this.drinkIdBox.Size = new System.Drawing.Size(100, 26);
+            this.drinkIdBox.TabIndex = 25;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(726, 73);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 20);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Drink ID";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial Narrow", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(959, 79);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(204, 17);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "fill drink ID only when updating or deleting";
             // 
             // SomerenUI
             // 
@@ -1208,6 +1254,10 @@
         private System.Windows.Forms.RadioButton alcoholButton;
         private System.Windows.Forms.TextBox VATbox;
         private System.Windows.Forms.Label VAT;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox drinkIdBox;
+        private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Label label10;
     }
 }
 
