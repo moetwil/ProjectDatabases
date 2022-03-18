@@ -384,6 +384,10 @@ namespace SomerenUI
             DateTime firstDay = new DateTime(2022, 5, 16);
             DateTime secondDay = new DateTime(2022, 5, 17);
 
+
+            DateTime startDate = DateTime.Parse(textBoxStart.Text);
+            DateTime endDate = DateTime.Parse(textBoxEnd.Text);
+
             if (DateTime.TryParse(textBoxStart.Text, out firstDay) && DateTime.TryParse(textBoxEnd.Text, out secondDay))
             {
 
@@ -391,7 +395,7 @@ namespace SomerenUI
                 {
                     // fill the purchases listview within the purchase panel with a list of purchases
                     RevenueService revenueService = new RevenueService();
-                    Revenue revenue = revenueService.GetRevenue();
+                    Revenue revenue = revenueService.GetRevenue(startDate, endDate);
 
                     // clear the listview before filling it again
                     listViewRevenue.Clear();

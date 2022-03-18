@@ -416,3 +416,9 @@ Error Number:547,State:0,Class:16
    bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
    bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
 
+18-3-2022 16:03:06 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 30
+   bij SomerenDAL.RevenueDao.GetAllRevenues(DateTime start, DateTime end) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 23
+   bij SomerenLogic.RevenueService.GetRevenue(DateTime start, DateTime end) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 398
+

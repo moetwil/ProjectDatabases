@@ -17,9 +17,9 @@ namespace SomerenLogic
             this.revenuedb = new RevenueDao();
         }
 
-        public Revenue GetRevenue()
+        public Revenue GetRevenue(DateTime start, DateTime end)
         {
-            return revenuedb.GetAllRevenues();
+            return revenuedb.GetAllRevenues(start, end);
         }
     }
 }

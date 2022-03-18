@@ -11,11 +11,13 @@ namespace SomerenDAL
 {
     public class RevenueDao : BaseDao
     {
-        public Revenue GetAllRevenues()
+        public Revenue GetAllRevenues(DateTime start, DateTime end)
         {
             // getting the information about the Purchases
-            string query = "SELECT COUNT(Purchases.drinkId) AS [Drinks sold], (SELECT COUNT(Purchases.drinkId) * AVG(Drinks.price) FROM Purchases JOIN Drinks ON Purchases.drinkId = Drinks.drinkId WHERE Purchases.date BETWEEN '2022-03-12' AND '2022-03-19') AS [Turn over], COUNT(DISTINCT Purchases.studentId) AS[Number of customers] FROM Purchases JOIN Drinks ON Purchases.drinkId = Drinks.drinkId WHERE Purchases.date BETWEEN '2022-03-12' AND '2022-03-19'";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = "SELECT COUNT(Purchases.drinkId) AS [Drinks sold], (SELECT COUNT(Purchases.drinkId) * AVG(Drinks.price) FROM Purchases JOIN Drinks ON Purchases.drinkId = Drinks.drinkId WHERE Purchases.date BETWEEN '2022-03-12' AND '2022-03-19') AS [Turn over], COUNT(DISTINCT Purchases.studentId) AS[Number of customers] FROM Purchases JOIN Drinks ON Purchases.drinkId = Drinks.drinkId WHERE Purchases.date BETWEEN @Start AND @End";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@Start", start);
+            sqlParameters[1] = new SqlParameter("@End", end);
 
             // return a list of all the purchases
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
