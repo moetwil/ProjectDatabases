@@ -28,7 +28,7 @@ namespace SomerenDAL
             sqlParameters[2] = new SqlParameter("@alcohol", alcohol);
             sqlParameters[3] = new SqlParameter("@VAT", vat);
             sqlParameters[4] = new SqlParameter("@price", price);
-            ExecuteSelectQuery(query, sqlParameters);
+            ExecuteEditQuery(query, sqlParameters);
         }
 
         private List<Drink> ReadTables(DataTable dataTable)
