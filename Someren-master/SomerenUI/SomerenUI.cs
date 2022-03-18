@@ -374,6 +374,9 @@ namespace SomerenUI
 
         private void buttonRevenue_Click(object sender, EventArgs e)
         {
+
+
+
             // lables are linked to the selected dates on the calendar
             textBoxStart.Text = monthCalendar2.SelectionRange.Start.Date.ToString("dd-MM-yyyy");
             textBoxEnd.Text = monthCalendar2.SelectionRange.End.Date.ToString("dd-MM-yyyy");
@@ -385,10 +388,10 @@ namespace SomerenUI
             {
 
                 try
-                    {
+                {
                     // fill the purchases listview within the purchase panel with a list of purchases
-                    PurchaseService purchaseService = new PurchaseService();
-                    List<Purchase> purchaseList = purchaseService.GetPurchases();
+                    RevenueService revenueService = new RevenueService();
+                    Revenue revenue = revenueService.GetRevenue();
 
                     // clear the listview before filling it again
                     listViewRevenue.Clear();
@@ -397,20 +400,16 @@ namespace SomerenUI
                     listViewRevenue.GridLines = true;
                     listViewRevenue.View = View.Details;
 
-                    listViewRevenue.Columns.Add("Purchase id", 90);
                     listViewRevenue.Columns.Add("Drinks sold", 90);
                     listViewRevenue.Columns.Add("Turn over", 90);
                     listViewRevenue.Columns.Add("Customers", 90);
 
                     // add every purchase to the listView
-                    /*foreach (Purchase purchase in purchaseList)
-                    {
-                        ListViewItem listPurchase = new ListViewItem(purchase.PurchaseId.ToString());
-                        listPurchase.SubItems.Add(purchase.DrinksSold.ToString());
-                        listPurchase.SubItems.Add(purchase.TurnOver.ToString());
-                        listPurchase.SubItems.Add(purchase.NumberOfCustomers.ToString());
-                        listViewRevenue.Items.Add(listPurchase);
-                    }*/
+                    ListViewItem listRevenue = new ListViewItem(revenue.DrinksSold.ToString());
+                    listRevenue.SubItems.Add($"\u20AC {revenue.TurnOver.ToString("0.00")}");
+                    listRevenue.SubItems.Add(revenue.NumberOfCustomers.ToString());
+                    listViewRevenue.Items.Add(listRevenue);
+
 
                 }
                 catch (Exception exc)

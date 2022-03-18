@@ -46,6 +46,7 @@
     <Compile Include="ActivityService.cs" />
     <Compile Include="LoggerService.cs" />
     <Compile Include="DrinkService.cs" />
+    <Compile Include="RevenueService.cs" />
     <Compile Include="RoomService.cs" />
     <Compile Include="PurchaseService.cs" />
     <Compile Include="StudentService.cs" />

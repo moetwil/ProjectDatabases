@@ -49,6 +49,7 @@
     </Compile>
     <Compile Include="Drink.cs" />
     <Compile Include="Purchase.cs" />
+    <Compile Include="Revenue.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="Student.cs" />

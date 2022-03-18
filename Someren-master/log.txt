@@ -338,3 +338,81 @@ Error Number:547,State:0,Class:16
    bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
    bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
 
+18-3-2022 13:51:15 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 35
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 13:53:24 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 35
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 13:54:25 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 35
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 13:55:53 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 39
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 13:58:17 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 39
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:00:43 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 39
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:03:38 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 39
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:08:49 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 39
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:10:18 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 37
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:12:25 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 32
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 21
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:12:57 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 32
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 21
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:13:05 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 32
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 21
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:13:11 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 32
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 21
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
