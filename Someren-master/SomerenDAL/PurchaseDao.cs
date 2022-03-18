@@ -15,9 +15,11 @@ namespace SomerenDAL
         public void WritePurchase(int studentId, int drinkId)
         {
             // write purchase to the database
-            string query = $"INSERT INTO Purchases ([studentId], [drinkId]) VALUES ({studentId}, {drinkId})";
-            
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            //string query = $"INSERT INTO Purchases ([studentId], [drinkId]) VALUES ({studentId}, {drinkId})";
+            string query = $"INSERT INTO Purchases ([studentId], [drinkId]) VALUES (@StudentId,@DrinkId)";            
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@StudentId", studentId);
+            sqlParameters[1] = new SqlParameter("@DrinkId", drinkId);
             ExecuteEditQuery(query, sqlParameters);
         }
 

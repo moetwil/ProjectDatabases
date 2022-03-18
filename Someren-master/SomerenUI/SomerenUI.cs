@@ -388,11 +388,30 @@ namespace SomerenUI
             DateTime startDate = DateTime.Parse(textBoxStart.Text);
             DateTime endDate = DateTime.Parse(textBoxEnd.Text);
 
+            DateTime minimumDate = new DateTime(2022, 3, 12);
+            DateTime maximumDate = new DateTime(2022, 3, 19);
+
+
+
+
+            
+
             if (DateTime.TryParse(textBoxStart.Text, out firstDay) && DateTime.TryParse(textBoxEnd.Text, out secondDay))
             {
 
                 try
                 {
+
+                    if (startDate < minimumDate || startDate > maximumDate)
+                    {
+                        throw new Exception("Choose a valid starting date");
+                    }
+                    if (endDate > maximumDate || endDate < minimumDate)
+                    {
+                        throw new Exception("Choose a valid end date");
+                    }
+
+
                     // fill the purchases listview within the purchase panel with a list of purchases
                     RevenueService revenueService = new RevenueService();
                     Revenue revenue = revenueService.GetRevenue(startDate, endDate);
