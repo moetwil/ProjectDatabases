@@ -270,3 +270,71 @@ Error Number:547,State:0,Class:16
 17-3-2022 15:04:35 : No student selected | System.Exception: No student selected
    bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 682
 
+18-3-2022 09:33:09 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 09:36:40 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.StudentDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:regel 39
+   bij SomerenDAL.StudentDao.GetAllStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:regel 20
+   bij SomerenLogic.StudentService.GetStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\StudentService.cs:regel 25
+   bij SomerenUI.SomerenUI.LoadShopStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 444
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 251
+
+18-3-2022 09:37:00 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:02:08 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.StudentDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:regel 39
+   bij SomerenDAL.StudentDao.GetAllStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:regel 20
+   bij SomerenLogic.StudentService.GetStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\StudentService.cs:regel 25
+   bij SomerenUI.SomerenUI.LoadShopStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 444
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 251
+
+18-3-2022 10:02:17 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:28:23 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 43
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 34
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:34:23 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:36:22 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:38:24 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:44:00 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:46:56 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
