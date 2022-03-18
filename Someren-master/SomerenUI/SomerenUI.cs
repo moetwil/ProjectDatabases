@@ -560,9 +560,9 @@ namespace SomerenUI
 
         private void Addbutton_Click(object sender, EventArgs e)
         {
-            DrinkService drinksService = new DrinkService();
-            drinksService.AddDrinks(drinkBox.Text, int.Parse(stockBox.Text));
-            Update();
+            //DrinkService drinksService = new DrinkService();
+            //drinksService.AddDrinks(drinkBox.Text, int.Parse(stockBox.Text));
+            //Update();
         }
 
         // menu button Activity Participants
