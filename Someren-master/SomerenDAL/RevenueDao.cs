@@ -14,7 +14,7 @@ namespace SomerenDAL
         public Revenue GetAllRevenues()
         {
             // getting the information about the Purchases
-            string query = "SELECT COUNT(Purchases.drinkId) AS [Drinks sold], (SELECT COUNT(Purchases.drinkId) * AVG(Drinks.price) FROM Purchases JOIN Drinks ON Purchases.drinkId = Drinks.drinkId) AS[Turn over], COUNT(DISTINCT Purchases.studentId) AS[Number of customers] FROM Purchases JOIN Drinks ON Purchases.drinkId = Drinks.drinkId";
+            string query = "SELECT COUNT(Purchases.drinkId) AS [Drinks sold], (SELECT COUNT(Purchases.drinkId) * AVG(Drinks.price) FROM Purchases JOIN Drinks ON Purchases.drinkId = Drinks.drinkId WHERE Purchases.date BETWEEN '2022-03-12' AND '2022-03-19') AS [Turn over], COUNT(DISTINCT Purchases.studentId) AS[Number of customers] FROM Purchases JOIN Drinks ON Purchases.drinkId = Drinks.drinkId WHERE Purchases.date BETWEEN '2022-03-12' AND '2022-03-19'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
 
             // return a list of all the purchases
@@ -23,18 +23,9 @@ namespace SomerenDAL
 
         private Revenue ReadTables(DataTable dataTable)
         {
-            //List<Revenue> purchases = new List<Revenue>();
-
             // if the datatable is empty send error message
-            /* if (dataTable == null)
-                 throw new Exception("Datatable is empty");*/
-
-            /* Revenue purchase = new Revenue()
-             {
-                 DrinksSold = (int)dataTable.Rows[0]["Drinks sold"],
-                 TurnOver = (double)dataTable.Rows[0]["Turn over"],
-                 NumberOfCustomers = (int)dataTable.Rows[0]["Number of customers"]
-             };*/
+            if (dataTable == null)
+                 throw new Exception("Datatable is empty");
 
             Revenue purchase = null;
             foreach (DataRow dr in dataTable.Rows)
