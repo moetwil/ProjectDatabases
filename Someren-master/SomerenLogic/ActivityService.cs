@@ -29,12 +29,19 @@ namespace SomerenLogic
             return activities;
         }
 
+        // add student to activity
         public void AddStudent(int activityId, int studentId)
         {
             activitydb.AddStudent(activityId, studentId);
         }
 
+        // delete student from activity
+        public void DeleteStudent(int activityId, int studentId)
+        {
+            activitydb.DeleteStudent(activityId, studentId);
+        }
 
+        // check if a student is in an activity
         public bool IsInActivity(int activityId, int studentId)
         {
             StudentService studentService = new StudentService();

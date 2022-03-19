@@ -20,15 +20,24 @@ namespace SomerenDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        // add a student to an activity
         public void AddStudent(int activityId, int studentId)
         {
-            string query = $"INSERT INTO [ActivityStudent] ([studentId], [activityId]) VALUES (@StudentId, @ActivityId)";
+            string query = "INSERT INTO [ActivityStudent] ([studentId], [activityId]) VALUES (@StudentId, @ActivityId)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@StudentId", studentId);
             sqlParameters[1] = new SqlParameter("@ActivityId", activityId);
             ExecuteEditQuery(query, sqlParameters);
+        }
 
-
+        // delete a student from an activity
+        public void DeleteStudent(int activityId, int studentId)
+        {
+            string query = "DELETE FROM [ActivityStudent] WHERE [studentId] = @StudentId AND [activityId] = @ActivityId;";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@StudentId", studentId);
+            sqlParameters[1] = new SqlParameter("@ActivityId", activityId);
+            ExecuteEditQuery(query, sqlParameters);
         }
 
         private List<Activity> ReadTables(DataTable dataTable)
