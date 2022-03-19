@@ -15,9 +15,40 @@ namespace SomerenDAL
         public List<Drink> GetAllDrinks()
         {
             // SQL query that selects the information that we need, where the roomId is bigger than 200
-            string query = "SELECT drinkId, alcohol, drinkName, price, VAT FROM [Drinks]";
+            string query = "SELECT drinkId, alcohol, drinkName, price, VAT, stock FROM [Drinks] ORDER BY stock, price";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
+        public void AddDrinks(string drinkName, int stock, bool alcohol, double price, double vat)
+        {
+            string query = $"INSERT INTO [Drinks] (drinkName, stock, alcohol, price, VAT) " +
+                $"VALUES (@drinkName, @stock, @alcohol, @price, @VAT)";
+            SqlParameter[] sqlParameters = new SqlParameter[5];
+            sqlParameters[0] = new SqlParameter("@drinkName", drinkName);
+            sqlParameters[1] = new SqlParameter("@stock", stock);
+            sqlParameters[2] = new SqlParameter("@alcohol", alcohol);
+            sqlParameters[3] = new SqlParameter("@VAT", vat);
+            sqlParameters[4] = new SqlParameter("@price", price);
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void UpdateDrinks(int drinkId, string drinkName, int stock, bool alcohol, double price, double vat)
+        {
+            string query = $"UPDATE [Drinks] SET drinkName=@drinkName, stock=@stock, alcohol=@alcohol, price=@price, VAT=@VAT WHERE drinkId={drinkId}";
+            SqlParameter[] sqlParameters = new SqlParameter[5];
+            sqlParameters[0] = new SqlParameter("@drinkName", drinkName);
+            sqlParameters[1] = new SqlParameter("@stock", stock);
+            sqlParameters[2] = new SqlParameter("@alcohol", alcohol);
+            sqlParameters[3] = new SqlParameter("@VAT", vat);
+            sqlParameters[4] = new SqlParameter("@price", price);
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void DeleteDrinks(int drinkId)
+        {
+            string query = $"DELETE FROM [Drinks] WHERE drinkId={drinkId}";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
         }
 
         private List<Drink> ReadTables(DataTable dataTable)
@@ -36,7 +67,8 @@ namespace SomerenDAL
                     HasAlcohol = (bool)dr["alcohol"],
                     Name = (string)dr["drinkName"],
                     Price = Convert.ToDouble((decimal)(dr["price"])),
-                    VAT = (double)dr["VAT"]
+                    VAT = (double)dr["VAT"],
+                    Stock = (int)dr["stock"]
                 };
                 drinks.Add(drink);
             }

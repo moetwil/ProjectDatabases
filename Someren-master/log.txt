@@ -90,3 +90,371 @@
    bij SomerenLogic.DrinkService.GetDrinks() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\DrinkService.cs:regel 24
    bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 261
 
+15-3-2022 16:25:24 : InvalidArgument=Waarde van 0 is niet geldig voor index.
+Parameternaam: index | System.ArgumentOutOfRangeException: InvalidArgument=Waarde van 0 is niet geldig voor index.
+Parameternaam: index
+   bij System.Windows.Forms.ListView.SelectedListViewItemCollection.get_Item(Int32 index)
+   bij SomerenUI.SomerenUI.checkOutShopButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 393
+
+15-3-2022 16:26:37 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.checkOutShopButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 395
+
+15-3-2022 16:27:15 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.checkOutShopButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 395
+
+15-3-2022 16:31:19 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenUI.SomerenUI.checkOutShopButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 403
+
+15-3-2022 16:39:50 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenUI.SomerenUI.checkOutShopButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 401
+
+15-3-2022 16:39:53 : No student selected. | System.Exception: No student selected.
+   bij SomerenUI.SomerenUI.checkOutShopButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 394
+
+15-3-2022 16:44:52 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 65
+
+15-3-2022 16:44:55 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 72
+
+15-3-2022 16:52:49 : The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated. | System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated.
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.PurchaseDao.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 24
+   bij SomerenLogic.PurchaseService.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 24
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 85
+ClientConnectionId:4bd746ae-9ff1-4bc6-9b52-a0042d7f3871
+Error Number:547,State:0,Class:16
+
+15-3-2022 16:54:02 : The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated. | System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated.
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.PurchaseDao.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 24
+   bij SomerenLogic.PurchaseService.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 24
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 85
+ClientConnectionId:e9f55062-1380-4a9d-903b-10b23f18d84b
+Error Number:547,State:0,Class:16
+
+15-3-2022 16:56:32 : The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated. | System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated.
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.PurchaseDao.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 24
+   bij SomerenLogic.PurchaseService.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 24
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 85
+ClientConnectionId:db2ec99e-28c2-46c5-a44c-01b44eea9a87
+Error Number:547,State:0,Class:16
+
+15-3-2022 16:56:57 : Column name or number of supplied values does not match table definition. | System.Data.SqlClient.SqlException (0x80131904): Column name or number of supplied values does not match table definition.
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.PurchaseDao.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 24
+   bij SomerenLogic.PurchaseService.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 24
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 85
+ClientConnectionId:d43fa70f-67fd-4bee-8e1b-949a7cdf7f0a
+Error Number:213,State:1,Class:16
+
+15-3-2022 16:57:45 : The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated. | System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Purchases__drink__59FA5E80". The conflict occurred in database "2122_INF1c_db4", table "dbo.Drinks", column 'drinkId'.
+The statement has been terminated.
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.PurchaseDao.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 24
+   bij SomerenLogic.PurchaseService.WritePurchase(Int32 studentId, Int32 drinkId) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 24
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 85
+ClientConnectionId:9f3ca5ed-5cc6-4db8-8eee-21214c72e904
+Error Number:547,State:0,Class:16
+
+15-3-2022 20:04:48 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 65
+
+15-3-2022 20:04:51 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 72
+
+15-3-2022 20:15:05 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 72
+
+15-3-2022 20:15:35 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 65
+
+16-3-2022 09:20:38 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 65
+
+16-3-2022 09:24:04 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 73
+
+16-3-2022 09:24:19 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 73
+
+16-3-2022 09:41:35 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 65
+
+16-3-2022 09:41:38 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 72
+
+17-3-2022 14:50:43 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 675
+
+17-3-2022 14:50:45 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 675
+
+17-3-2022 14:51:50 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.GetActivityId() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 622
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 671
+
+17-3-2022 14:52:23 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.GetActivityId() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 622
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 671
+
+17-3-2022 14:52:35 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.GetActivityId() in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 622
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 671
+
+17-3-2022 14:52:39 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 675
+
+17-3-2022 14:54:05 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 680
+
+17-3-2022 14:54:08 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 680
+
+17-3-2022 15:04:32 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 678
+
+17-3-2022 15:04:35 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.addStudentButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 682
+
+18-3-2022 09:33:09 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 09:36:40 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.StudentDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:regel 39
+   bij SomerenDAL.StudentDao.GetAllStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:regel 20
+   bij SomerenLogic.StudentService.GetStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\StudentService.cs:regel 25
+   bij SomerenUI.SomerenUI.LoadShopStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 444
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 251
+
+18-3-2022 09:37:00 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:02:08 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.StudentDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:regel 39
+   bij SomerenDAL.StudentDao.GetAllStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\StudentDao.cs:regel 20
+   bij SomerenLogic.StudentService.GetStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\StudentService.cs:regel 25
+   bij SomerenUI.SomerenUI.LoadShopStudents() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 444
+   bij SomerenUI.SomerenUI.showPanel(String panelName) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 251
+
+18-3-2022 10:02:17 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:28:23 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 43
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 34
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:34:23 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:36:22 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:38:24 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:44:00 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 10:46:56 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.PurchaseDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 45
+   bij SomerenDAL.PurchaseDao.GetAllPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\PurchaseDao.cs:regel 36
+   bij SomerenLogic.PurchaseService.GetPurchases() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 31
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 13:51:15 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 35
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 13:53:24 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 35
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 13:54:25 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 35
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 13:55:53 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 39
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 13:58:17 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 39
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:00:43 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 39
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:03:38 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 39
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:08:49 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 39
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:10:18 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 37
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 26
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:12:25 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 32
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 21
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:12:57 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 32
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 21
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:13:05 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 32
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 21
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 14:13:11 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 32
+   bij SomerenDAL.RevenueDao.GetAllRevenues() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 21
+   bij SomerenLogic.RevenueService.GetRevenue() in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 391
+
+18-3-2022 16:03:06 : Datatable is empty | System.Exception: Datatable is empty
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 30
+   bij SomerenDAL.RevenueDao.GetAllRevenues(DateTime start, DateTime end) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 23
+   bij SomerenLogic.RevenueService.GetRevenue(DateTime start, DateTime end) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 398
+
+18-3-2022 17:41:16 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 67
+
+18-3-2022 17:55:01 : Choose a valid starting date | System.Exception: Choose a valid starting date
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 407
+
+18-3-2022 17:55:09 : Choose a valid starting date | System.Exception: Choose a valid starting date
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 407
+
+18-3-2022 17:56:08 : Choose a valid starting date | System.Exception: Choose a valid starting date
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 407
+
+18-3-2022 17:56:20 : De opgegeven conversie is ongeldig. | System.InvalidCastException: De opgegeven conversie is ongeldig.
+   bij SomerenDAL.RevenueDao.ReadTables(DataTable dataTable) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 36
+   bij SomerenDAL.RevenueDao.GetAllRevenues(DateTime start, DateTime end) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenDAL\RevenueDao.cs:regel 23
+   bij SomerenLogic.RevenueService.GetRevenue(DateTime start, DateTime end) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\RevenueService.cs:regel 22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 417
+
+18-3-2022 18:11:32 : Choose a valid starting date | System.Exception: Choose a valid starting date
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 392
+
+18-3-2022 18:13:11 : Choose a valid date between 12-03-22 and 19-03-22 | System.Exception: Choose a valid date between 12-03-22 and 19-03-22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 392
+
+18-3-2022 18:13:17 : Choose a valid date between 12-03-22 and 19-03-22 | System.Exception: Choose a valid date between 12-03-22 and 19-03-22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 392
+
+18-3-2022 19:19:00 : Make sure to enter all the data in the checkboxes | System.Exception: Make sure to enter all the data in the checkboxes
+   bij SomerenUI.SomerenUI.Updatebutton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 799
+
+18-3-2022 19:20:20 : Make sure to enter all the data in the checkboxes | System.Exception: Make sure to enter all the data in the checkboxes
+   bij SomerenUI.SomerenUI.Addbutton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 774
+
+18-3-2022 19:21:45 : Make sure to enter an Id | System.Exception: Make sure to enter an Id
+   bij SomerenUI.SomerenUI.DeleteButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 801
+

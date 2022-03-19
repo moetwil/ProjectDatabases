@@ -13,5 +13,6 @@ namespace SomerenModel
         public string Name { get; set; }
         public double Price { get; set; }
         public double VAT { get; set; }
+        public int Stock { get; set; }
     }
 }

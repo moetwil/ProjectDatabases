@@ -17,6 +17,8 @@ namespace SomerenUI
         public SomerenUI()
         {
             InitializeComponent();
+
+            // button enter and leave
             dashboardToolStripMenuItem.MouseEnter += OnMouseEnterDashboard;
             dashboardToolStripMenuItem.MouseLeave += OnMouseLeaveDashboard;
 
@@ -30,7 +32,7 @@ namespace SomerenUI
             activitiesToolStripMenuItem.MouseLeave += OnMouseLeaveActivities;
 
             roomsToolStripMenuItem.MouseEnter += OnMouseEnterRooms;
-            roomsToolStripMenuItem.MouseLeave += OnMouseLeaveRooms;
+            roomsToolStripMenuItem.MouseLeave += OnMouseLeaveRooms;        
         }
 
    
@@ -99,6 +101,7 @@ namespace SomerenUI
 
         private void showPanel(string panelName)
         {
+            HideAllPanels();
 
             if (panelName == "Dashboard")
             {
@@ -199,7 +202,7 @@ namespace SomerenUI
             else if (panelName == "Rooms")
             {
                 // hide all panels and show the room panel
-                HideAllPanels();
+                //HideAllPanels();
                 pnlRooms.Show();
 
                 try
@@ -239,36 +242,56 @@ namespace SomerenUI
             else if (panelName == "Shop")
             {
                 // hide all panels and show the room panel
-                HideAllPanels();
+                //HideAllPanels();
                 pnlShop.Show();
 
                 try
                 {
-                    //fill the students listview within the students panel with a list of students
-                    StudentService studService = new StudentService(); ;
-                    List<Student> studentList = studService.GetStudents(); ;
+                    // load the listview with all the students
+                    LoadShopStudents();
 
-                    // place all the students in the listBox
-                    foreach (Student student in studentList)
-                    {
-                        listBoxShopStudents.Items.Add($"{student.StudentId}. {student.FullName}");
-                    }
-
-                    // drinks
-                    DrinkService drinkService = new DrinkService();
-                    List<Drink> drinkList = drinkService.GetDrinks();
-
-                    foreach (Drink drink in drinkList)
-                    {
-                        listBoxShopDrinks.Items.Add($"{drink.DrinkId}. {drink.Name}");
-                    }
-
+                    // load the listview with all the drinks
+                    LoadShopDrinks();
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("Something went wrong while loading the drinks: " + e.Message);
+                    MessageBox.Show("Something went wrong while loading the shop: " + e.Message);
                     LoggerService.WriteLog(e);
                 }
+
+            }
+            else if (panelName == "Revenue report")
+            {
+                // hide all panels and show the room panel
+                HideAllPanels();
+                pnlRevenue.Show();
+
+                // ListView will show the results after the dates are selected
+            }
+            else if (panelName == "Drinks suplies")
+            {
+                // hide all panels and show the room panel
+                HideAllPanels();
+                pnlDrinksSuplies.Show();
+
+                // ListView will show the results after the dates are selected
+            }
+            else if(panelName == "ActivityParticipants")
+            {
+                pnlActivityParticipants.Show();
+                try
+                {
+                    LoadActivities();
+                    LoadStudentsListBox();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Something went wrong while loading the Activities: " + e.Message);
+                    LoggerService.WriteLog(e);
+                }
+
+                
+                
             }
         }
 
@@ -316,6 +339,9 @@ namespace SomerenUI
             pnlShop.Hide();
             pictureStudents.Hide();
             pnlTeachers.Hide();
+            pnlRevenue.Hide();
+            pnlDrinksSuplies.Hide();
+            pnlActivityParticipants.Hide();
         }
 
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -330,22 +356,500 @@ namespace SomerenUI
 
         private void checkOutShopButton_Click(object sender, EventArgs e)
         {
-            // get id from selected student
-            string[] studentString = listBoxShopStudents.SelectedItem.ToString().Split('.');
-            int studentId = int.Parse(studentString[0]);
-
-            // get id from selected drink
-            string[] drinkString = listBoxShopDrinks.SelectedItem.ToString().Split('.');
-            int drinkId = int.Parse(drinkString[0]);
-
+            /*double totalPrice = 0;
+            int studentId;*/
             PurchaseService purchaseService = new PurchaseService();
-            purchaseService.WritePurchase(studentId, drinkId);
 
-            MessageBox.Show("Your order has been placed :)");
+            purchaseService.PlaceOrder(listViewShopStudents, listViewShopDrinks);
 
-            // reset the listBoxes
-            listBoxShopDrinks.ClearSelected();
-            listBoxShopStudents.ClearSelected();
+            // clear the selected rows in both listviews
+            listViewShopStudents.SelectedItems.Clear();
+            listViewShopDrinks.SelectedItems.Clear();
         }
+
+        private void revenueReportToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            showPanel("Revenue report");
+        }
+
+        private void buttonRevenue_Click(object sender, EventArgs e)
+        {
+            // lables are linked to the selected dates on the calendar
+            textBoxStart.Text = monthCalendar2.SelectionRange.Start.Date.ToString("dd-MM-yyyy");
+            textBoxEnd.Text = monthCalendar2.SelectionRange.End.Date.ToString("dd-MM-yyyy");
+
+            DateTime startDate = DateTime.Parse(textBoxStart.Text);
+            DateTime endDate = DateTime.Parse(textBoxEnd.Text);
+
+            DateTime minimumDate = new DateTime(2022, 3, 12);
+            DateTime maximumDate = new DateTime(2022, 3, 19);
+
+                try
+                {
+
+                    if (startDate < minimumDate || startDate > maximumDate)
+                    {
+                        throw new Exception("Choose a valid date between 12-03-22 and 19-03-22");
+                    }
+                    if (endDate > maximumDate || endDate < minimumDate)
+                    {
+                        throw new Exception("Choose a valid date between 12-03-22 and 19-03-22");
+                    }
+
+
+                    // fill the purchases listview within the purchase panel with a list of purchases
+                    RevenueService revenueService = new RevenueService();
+                    Revenue revenue = revenueService.GetRevenue(startDate, endDate);
+
+                    // clear the listview before filling it again
+                    listViewRevenue.Clear();
+
+                    // styling of the listView
+                    listViewRevenue.GridLines = true;
+                    listViewRevenue.View = View.Details;
+
+                    listViewRevenue.Columns.Add("Drinks sold", 90);
+                    listViewRevenue.Columns.Add("Turn over", 90);
+                    listViewRevenue.Columns.Add("Customers", 90);
+
+                    // add every purchase to the listView
+                    ListViewItem listRevenue = new ListViewItem(revenue.DrinksSold.ToString());
+                    listRevenue.SubItems.Add($"\u20AC {revenue.TurnOver.ToString("0.00")}");
+                    listRevenue.SubItems.Add(revenue.NumberOfCustomers.ToString());
+                    listViewRevenue.Items.Add(listRevenue);
+
+
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show($"Something went wrong while loading the revenue: {exc.Message} Please try refreshing the page or close the window and try again.");
+                    LoggerService.WriteLog(exc);
+                }
+        }
+
+       
+        // event handler method - on listview select - listViewShopDrinks
+        private void listViewShopDrinks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PurchaseService purchaseService = new PurchaseService();
+            
+            // calculate the total price and write to the label
+            double totalPrice = purchaseService.TotalPrice(this.listViewShopDrinks.SelectedItems);
+            orderPriceLabel.Text = $"Total price: \u20AC {totalPrice.ToString("0.00")}";
+
+        }
+
+        private void LoadShopStudents()
+        {
+            //fill the students listview within the students panel with a list of students
+            StudentService studService = new StudentService(); ;
+            List<Student> studentList = studService.GetStudents();
+
+            //clear the listview before filling it again
+            listViewShopStudents.Clear();
+
+            // set styling for listView
+            listViewShopStudents.GridLines = true;
+            listViewShopStudents.View = View.Details;
+            listViewShopStudents.FullRowSelect = true;
+
+            // add columns to the listView
+            listViewShopStudents.Columns.Add("student id", 80);
+            listViewShopStudents.Columns.Add("student name", 90);
+            listViewShopStudents.Columns.Add("Date of birth", 85);
+
+            // fill the list view with students from the List
+            foreach (Student student in studentList)
+            {
+                ListViewItem item = new ListViewItem(student.StudentId.ToString());
+                item.Tag = student;
+                item.SubItems.Add(student.FullName);
+                item.SubItems.Add(student.DateOfBirth.ToString("dd-MM-yyyy"));
+
+                listViewShopStudents.Items.Add(item);
+            }
+        }
+
+        private void LoadShopDrinks()
+        {
+            DrinkService drinkService = new DrinkService();
+            List<Drink> drinkList = drinkService.GetDrinks();
+
+            listViewShopDrinks.Clear();
+
+            // set styling for listView
+            listViewShopDrinks.GridLines = true;
+            listViewShopDrinks.View = View.Details;
+            listViewShopDrinks.FullRowSelect = true;
+            listViewShopDrinks.CheckBoxes = true;
+            listViewShopDrinks.MultiSelect = true;
+
+            // add columns to the listView
+            listViewShopDrinks.Columns.Add("drink id", 50);
+            listViewShopDrinks.Columns.Add("Drink name", 70);
+            listViewShopDrinks.Columns.Add("Alcohol", 50);
+            listViewShopDrinks.Columns.Add("Price", 50);
+            listViewShopDrinks.Columns.Add("Stock", 40);
+
+            foreach (Drink drink in drinkList)
+            {
+                ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
+                item.Tag = drink;
+                item.SubItems.Add(drink.Name);
+                item.SubItems.Add(drink.HasAlcohol.ToString());
+                item.SubItems.Add(drink.Price.ToString("0.00"));
+                item.SubItems.Add(drink.Stock.ToString());
+                listViewShopDrinks.Items.Add(item);
+            }
+        }
+
+        private void listViewShopDrinks_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            double totalPrice = 0;
+
+            // loop through all the selected items in the given listview
+            foreach (ListViewItem item in listViewShopDrinks.CheckedItems)
+            {
+                // add the item price to the total price
+                double price = double.Parse(item.SubItems[3].Text);
+                totalPrice += price;
+
+            }
+            orderPriceLabel.Text = $"Total price: \u20AC {totalPrice.ToString("0.00")}";
+        }
+
+        private void drinksSuppliesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Drinks suplies");
+
+            DrinkService drinkService = new DrinkService();
+            List<Drink> drinkList = drinkService.GetDrinks();
+
+            listViewDrinkSuplies.Clear();
+
+            // set styling for listView
+            listViewDrinkSuplies.GridLines = true;
+            listViewDrinkSuplies.View = View.Details;
+            listViewDrinkSuplies.FullRowSelect = true;
+            listViewDrinkSuplies.MultiSelect = true;
+
+            // add columns to the listView
+            listViewDrinkSuplies.Columns.Add("drink id", 50);
+            listViewDrinkSuplies.Columns.Add("Drink name", 70);
+            listViewDrinkSuplies.Columns.Add("Alcohol", 50);
+            listViewDrinkSuplies.Columns.Add("Price", 50);
+            listViewDrinkSuplies.Columns.Add("Stock", 40);
+            listViewDrinkSuplies.Columns.Add("VAT", 40);
+
+            foreach (Drink drink in drinkList)
+            {
+                ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
+                item.Tag = drink;
+                item.SubItems.Add(drink.Name);
+                item.SubItems.Add(drink.HasAlcohol.ToString());
+                item.SubItems.Add(drink.Price.ToString("0.00"));
+                item.SubItems.Add(drink.Stock.ToString());
+                item.SubItems.Add(drink.VAT.ToString());
+                listViewDrinkSuplies.Items.Add(item);
+            }
+
+            
+        }
+
+      
+
+        // menu button Activity Participants
+        private void activityParticipantsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("ActivityParticipants");
+        }
+
+        private void LoadActivities()
+        {
+            ActivityService activityService = new ActivityService();
+            List<Activity> activityList = activityService.GetActivities();
+
+            listViewActivities.Clear();
+
+            // set styling for listView
+            listViewActivities.GridLines = true;
+            listViewActivities.View = View.Details;
+            listViewActivities.FullRowSelect = true;
+
+            // add columns to the listView
+            listViewActivities.Columns.Add("Id", 25);
+            listViewActivities.Columns.Add("Description", 70);
+            listViewActivities.Columns.Add("Start DateTime", 110);
+            listViewActivities.Columns.Add("End DateTime", 110);
+
+            foreach (Activity activity in activityList)
+            {
+                ListViewItem item = new ListViewItem(activity.ActivityId.ToString());
+                item.Tag = activity;
+                item.SubItems.Add(activity.Description);
+                item.SubItems.Add(activity.StartDateTime.ToString("dd-MM-yyyy HH:mm"));
+                item.SubItems.Add(activity.EndDateTime.ToString("dd-MM-yyyy HH:mm"));
+                listViewActivities.Items.Add(item);
+            }
+        }
+
+        // selected activity event method
+        private void listViewActivities_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int activityId = GetActivityId();
+
+
+                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+
+                LoadActivityStudents(activityId);
+            }
+            catch (Exception)
+            {
+                throw new Exception("No activity selected");
+            }
+
+
+            /*int activityId = GetActivityId();
+
+
+            //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+
+            LoadActivityStudents(activityId);*/
+
+
+        }
+
+        private int GetActivityId() 
+        {
+            int activityId = 0;
+            foreach (ListViewItem item in listViewActivities.SelectedItems)
+            {
+                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+                activityId = ((Activity)(item.Tag)).ActivityId;
+            }
+
+            /*if (activityId == null)
+                throw new Exception("No activity selected");*/
+
+            return activityId;
+        }
+
+        private void LoadActivityStudents(int activityId)
+        {
+            StudentService studentService = new StudentService();
+            List<Student> students = studentService.GetStudentsByActivity(activityId);
+
+            listViewActivityStudents.Clear();
+
+            // set styling for listView
+            listViewActivityStudents.GridLines = true;
+            listViewActivityStudents.View = View.Details;
+            listViewActivityStudents.FullRowSelect = true;
+
+            // add columns to the listView
+            listViewActivityStudents.Columns.Add("Id", 25);
+            listViewActivityStudents.Columns.Add("Full Name", 70);
+
+            foreach (Student student in students)
+            {
+                ListViewItem item = new ListViewItem(student.StudentId.ToString());
+                item.Tag = student;
+                item.SubItems.Add(student.FullName);
+                listViewActivityStudents.Items.Add(item);
+            }
+        }
+
+        private void LoadStudentsListBox()
+        {
+            StudentService studentService = new StudentService();
+            List<Student> students = studentService.GetStudents();
+
+            foreach (Student student in students)
+            {
+                listBoxStudents.Items.Add(student);
+            }
+        }
+
+        private void addStudentButton_Click(object sender, EventArgs e)
+        {
+            ActivityService activityService = new ActivityService();
+
+
+            try
+            {
+                // get id of selected activity
+                int activityId = GetActivityId();
+                if (activityId == 0)
+                    throw new Exception("No activity selected");
+
+                // get id from selected student
+                if (listBoxStudents.SelectedItem == null)
+                    throw new Exception("No student selected");
+
+                int studentId = ((Student)listBoxStudents.SelectedItem).StudentId;
+
+                // check if student is in activity
+                bool isInActivity = activityService.IsInActivity(activityId, studentId);
+
+                if (!isInActivity)
+                {
+                    MessageBox.Show("Student added to activity");
+                    //MessageBox.Show($"{activityId} + {studentId}");
+                    //activityService.AddStudent(activityId, studentId);
+                }
+                else
+                {
+                    MessageBox.Show("Student already in activity");
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with adding a student to an activity: " + exception.Message);
+                LoggerService.WriteLog(exception);
+
+            }
+
+            
+
+
+
+        }
+
+        private void RefreshView()
+        {
+            showPanel("Drinks suplies");
+
+            DrinkService drinkService = new DrinkService();
+            List<Drink> drinkList = drinkService.GetDrinks();
+
+            listViewDrinkSuplies.Clear();
+
+            // set styling for listView
+            listViewDrinkSuplies.GridLines = true;
+            listViewDrinkSuplies.View = View.Details;
+            listViewDrinkSuplies.FullRowSelect = true;
+            listViewDrinkSuplies.MultiSelect = true;
+
+            // add columns to the listView
+            listViewDrinkSuplies.Columns.Add("drink id", 50);
+            listViewDrinkSuplies.Columns.Add("Drink name", 70);
+            listViewDrinkSuplies.Columns.Add("Alcohol", 50);
+            listViewDrinkSuplies.Columns.Add("Price", 50);
+            listViewDrinkSuplies.Columns.Add("Stock", 40);
+            listViewDrinkSuplies.Columns.Add("VAT", 40);
+
+            foreach (Drink drink in drinkList)
+            {
+                ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
+                item.Tag = drink;
+                item.SubItems.Add(drink.Name);
+                item.SubItems.Add(drink.HasAlcohol.ToString());
+                item.SubItems.Add(drink.Price.ToString("0.00"));
+                item.SubItems.Add(drink.Stock.ToString());
+                item.SubItems.Add(drink.VAT.ToString());
+                listViewDrinkSuplies.Items.Add(item);
+            }
+        }
+
+        private void Addbutton_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                DrinkService drinkService = new DrinkService();
+                bool alcohol;
+                if (alcoholButton.Checked)
+                {
+                    alcohol = true;
+                }
+                else
+                {
+                    alcohol = false;
+                }
+
+                if (drinkBox.Text == String.Empty || drinkBox.Text == String.Empty || stockBox.Text == String.Empty || priceBox.Text == String.Empty || VATbox.Text == String.Empty)
+                {
+                    throw new Exception("Make sure to enter all the data in the checkboxes");
+                }
+
+                drinkService.AddDrinks((drinkBox.Text).ToString(), int.Parse(stockBox.Text), alcohol,
+                    double.Parse(priceBox.Text), double.Parse(VATbox.Text));
+                RefreshView();
+                alcoholButton.Checked = false;
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with updating a drink " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }
+            
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            DrinkService drinkService = new DrinkService();
+
+            
+
+            try
+            {
+                if (drinkIdBox.Text == String.Empty)
+                {
+                    throw new Exception("Make sure to enter an Id");
+                }
+
+                drinkService.DeleteDrinks(int.Parse(drinkIdBox.Text));
+                RefreshView();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with updating a drink " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }
+            
+
+        }
+
+        private void Updatebutton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DrinkService drinkService = new DrinkService();
+                bool alcohol;
+                if (alcoholButton.Checked)
+                {
+                    alcohol = true;
+                }
+                else
+                {
+                    alcohol = false;
+                }
+
+                if (drinkBox.Text == String.Empty || drinkBox.Text == String.Empty || stockBox.Text == String.Empty || priceBox.Text == String.Empty || VATbox.Text == String.Empty)
+                {
+                    throw new Exception("Make sure to enter all the data in the checkboxes");
+                }
+
+                drinkService.UpdateDrinks(int.Parse(drinkIdBox.Text), (drinkBox.Text).ToString(), int.Parse(stockBox.Text), alcohol,
+                    double.Parse(priceBox.Text), double.Parse(VATbox.Text));
+                RefreshView();
+                alcoholButton.Checked = false;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with updating a drink " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }
+
+           
+        }
+
+
+        // check if a student is in a certain activity
+
+
     }
 }

@@ -14,16 +14,30 @@ namespace SomerenDAL
     {      
         public void WritePurchase(int studentId, int drinkId)
         {
-            string query = $"INSERT INTO Purchases VALUES ({studentId}, {drinkId})";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            // write purchase to the database
+            //string query = $"INSERT INTO Purchases ([studentId], [drinkId]) VALUES ({studentId}, {drinkId})";
+            string query = $"INSERT INTO Purchases ([studentId], [drinkId]) VALUES (@StudentId,@DrinkId)";            
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@StudentId", studentId);
+            sqlParameters[1] = new SqlParameter("@DrinkId", drinkId);
             ExecuteEditQuery(query, sqlParameters);
         }
-       
+
+        public List<Purchase> GetAllPurchases()
+        {
+            // getting the information about the Purchases
+            string query = "SELECT purchaseId, studentId, drinkId FROM [Purchases]";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            // return a list of all the purchases
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
 
         private List<Purchase> ReadTables(DataTable dataTable)
         {
             List<Purchase> purchases = new List<Purchase>();
 
+            // if the datatable is empty send error message
             if (dataTable == null)
                 throw new Exception("Datatable is empty");
 
@@ -32,12 +46,12 @@ namespace SomerenDAL
                 // create a purchase with with information from the database and add it to the list
                 Purchase purchase = new Purchase()
                 {
+                    PurchaseId = (int)dr["purchaseId"],
                     StudentId = (int)dr["studentId"],
-                    DrinkId = (int)dr["drinkId"],
+                    DrinkId = (int)dr["drinkId"]
                 };
                 purchases.Add(purchase);
             }
-
             return purchases;
         }
     }

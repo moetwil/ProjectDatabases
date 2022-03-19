@@ -29,6 +29,21 @@ namespace SomerenLogic
             return drinks;
         }
 
+        public void AddDrinks(string drinkName, int stock, bool alcohol, double price, double vat)
+        {
+            drinkdb.AddDrinks(drinkName, stock, alcohol, price, vat);
+        }
+
+        public void UpdateDrinks(int drinkId, string drinkName, int stock, bool alcohol, double price, double vat)
+        {
+            drinkdb.UpdateDrinks(drinkId, drinkName, stock, alcohol, price, vat);
+        }
+
+        public void DeleteDrinks(int drinkId)
+        {
+            drinkdb.DeleteDrinks(drinkId);
+        }
+
         //public bool ContainsAlcohol()
 
         
