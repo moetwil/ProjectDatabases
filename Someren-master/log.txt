@@ -458,3 +458,21 @@ Error Number:547,State:0,Class:16
 18-3-2022 19:21:45 : Make sure to enter an Id | System.Exception: Make sure to enter an Id
    bij SomerenUI.SomerenUI.DeleteButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 801
 
+19-3-2022 14:24:13 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 724
+
+19-3-2022 14:27:16 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 740
+
+19-3-2022 14:27:54 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 740
+
+19-3-2022 14:27:58 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 744
+
+19-3-2022 14:28:21 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 740
+
+19-3-2022 14:28:23 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 744
+

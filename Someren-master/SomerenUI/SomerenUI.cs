@@ -636,6 +636,18 @@ namespace SomerenUI
             return activityId;
         }
 
+        private int GetStudentId()
+        {
+            int studentId = 0;
+            foreach (ListViewItem item in listViewActivityStudents.SelectedItems)
+            {
+                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+                studentId = ((Student)(item.Tag)).StudentId;
+            }
+
+            return studentId;
+        }
+
         private void LoadActivityStudents(int activityId)
         {
             StudentService studentService = new StudentService();
@@ -697,7 +709,8 @@ namespace SomerenUI
                 {
                     MessageBox.Show("Student added to activity");
                     //MessageBox.Show($"{activityId} + {studentId}");
-                    //activityService.AddStudent(activityId, studentId);
+                    activityService.AddStudent(activityId, studentId);
+                    LoadActivityStudents(activityId);
                 }
                 else
                 {
@@ -708,13 +721,44 @@ namespace SomerenUI
             {
                 MessageBox.Show("Something went wrong with adding a student to an activity: " + exception.Message);
                 LoggerService.WriteLog(exception);
+            }
+        }
+
+        private void deleteStudentActivityButton_Click(object sender, EventArgs e)
+        {
+            ActivityService activityService = new ActivityService();
+
+            try
+            {
+                // get id of selected activity
+                int activityId = GetActivityId();
+                if (activityId == 0)
+                    throw new Exception("No activity selected");
+
+                int studentId = GetStudentId();
+                if (studentId == 0)
+                    throw new Exception("No student selected");
+
+                DialogResult deletePopUp = MessageBox.Show("Are you sure you want to delete the student from the activity?", "Delete Confirmation", MessageBoxButtons.YesNo);
+                if (deletePopUp == DialogResult.Yes)
+                {
+                    activityService.DeleteStudent(activityId, studentId);
+                    LoadActivityStudents(activityId);
+                }
+                else if (deletePopUp == DialogResult.No)
+                {
+                    MessageBox.Show("Delete has been canceled");
+                }
+
+                
+
 
             }
-
-            
-
-
-
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with deleting a student from an activity: " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }
         }
 
         private void RefreshView()
@@ -846,6 +890,8 @@ namespace SomerenUI
 
            
         }
+
+        
 
 
         // check if a student is in a certain activity

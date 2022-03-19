@@ -1079,6 +1079,7 @@
             this.deleteStudentActivityButton.TabIndex = 15;
             this.deleteStudentActivityButton.Text = "Delete";
             this.deleteStudentActivityButton.UseVisualStyleBackColor = true;
+            this.deleteStudentActivityButton.Click += new System.EventHandler(this.deleteStudentActivityButton_Click);
             // 
             // DeleteExplanationLabel
             // 
