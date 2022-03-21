@@ -276,7 +276,7 @@ namespace SomerenUI
 
                 // ListView will show the results after the dates are selected
             }
-            else if(panelName == "Activity Participants")
+            else if(panelName == "ActivityParticipants")
             {
                 pnlActivityParticipants.Show();
                 try
@@ -288,10 +288,7 @@ namespace SomerenUI
                 {
                     MessageBox.Show("Something went wrong while loading the Activities: " + e.Message);
                     LoggerService.WriteLog(e);
-                }
-
-
-                
+                }                
             }
             else if (panelName == "Activity Supervisors")
             {
@@ -306,9 +303,6 @@ namespace SomerenUI
                     MessageBox.Show("Something went wrong while loading the Activities: " + e.Message);
                     LoggerService.WriteLog(e);
                 }
-
-
-
             }
             
         }
@@ -360,6 +354,7 @@ namespace SomerenUI
             pnlRevenue.Hide();
             pnlDrinksSuplies.Hide();
             pnlActivityParticipants.Hide();
+            pnlActivitySupervisors.Hide();
         }
 
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
