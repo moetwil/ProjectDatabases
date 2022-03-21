@@ -276,7 +276,7 @@ namespace SomerenUI
 
                 // ListView will show the results after the dates are selected
             }
-            else if(panelName == "ActivityParticipants")
+            else if(panelName == "Activity Participants")
             {
                 pnlActivityParticipants.Show();
                 try
@@ -290,9 +290,27 @@ namespace SomerenUI
                     LoggerService.WriteLog(e);
                 }
 
-                
+
                 
             }
+            else if (panelName == "Activity Supervisors")
+            {
+                pnlActivitySupervisors.Show();
+                try
+                {
+                    LoadActivities();
+                    LoadStudentsListBox();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Something went wrong while loading the Activities: " + e.Message);
+                    LoggerService.WriteLog(e);
+                }
+
+
+
+            }
+            
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -761,6 +779,56 @@ namespace SomerenUI
             }
         }
 
+        private int GetSupervicorId()
+        {
+            int supervisorId = 0;
+            foreach (ListViewItem item in listViewAllActivities.SelectedItems)
+            {
+                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+                supervisorId = ((Teacher)(item.Tag)).TeacherId;
+            }
+
+            return supervisorId;
+        }
+
+        private void LoadActivitySupervisor(int activityId)
+        {
+            TeacherService teacherService = new TeacherService();
+            List<Teacher> teachers = teacherService.GetTeacherByActivity(activityId);
+
+            listViewAllActivities.Clear();
+
+            // set styling for listView
+            listViewAllActivities.GridLines = true;
+            listViewAllActivities.View = View.Details;
+            listViewAllActivities.FullRowSelect = true;
+
+            // add columns to the listView
+            listViewAllActivities.Columns.Add("Id", 25);
+            listViewAllActivities.Columns.Add("First name", 70);
+            listViewAllActivities.Columns.Add("Last name", 70);
+
+            foreach (Teacher teacher in teachers)
+            {
+                ListViewItem item = new ListViewItem(teacher.TeacherId.ToString());
+                item.Tag = teacher;
+                item.SubItems.Add(teacher.FirstName);
+                item.SubItems.Add(teacher.LastName);
+                listViewAllActivities.Items.Add(item);
+            }
+        }
+
+        private void LoadSupervisors()
+        {
+            TeacherService teacherService = new TeacherService();
+            List<Teacher> teachers = teacherService.GetTeachers();
+
+            foreach (Teacher teacher in teachers)
+            {
+                comboBoxSupervisors.Items.Add(teacher);
+            }
+        }
+
         private void RefreshView()
         {
             showPanel("Drinks suplies");
@@ -891,7 +959,8 @@ namespace SomerenUI
            
         }
 
-        
+
+
 
 
         // check if a student is in a certain activity

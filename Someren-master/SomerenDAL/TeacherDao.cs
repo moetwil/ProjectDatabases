@@ -26,6 +26,17 @@ namespace SomerenDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public List<Teacher> GetTeacherByActivity(int activityId)
+        {
+            string query = "SELECT Students.studentId, Students.firstName, Students.lastName, Students.class, Students.dateOfBirth, Students.roomId " +
+                "FROM [Students] " +
+                "INNER JOIN [ActivityStudent] ON ActivityStudent.studentId = Students.studentId " +
+               $"WHERE [activityId] = @ActivityId";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@ActivityId", activityId);
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
+
         private List<Teacher> ReadTables(DataTable dataTable)
         {
             // linking teacher field to database and adding it to the list
