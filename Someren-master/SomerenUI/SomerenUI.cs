@@ -299,7 +299,7 @@ namespace SomerenUI
                 try
                 {
                     LoadActivities();
-                    LoadStudentsListBox();
+                    LoadSupervisors();
                 }
                 catch (Exception e)
                 {

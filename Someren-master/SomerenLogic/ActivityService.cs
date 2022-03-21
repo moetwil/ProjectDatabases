@@ -57,6 +57,35 @@ namespace SomerenLogic
             return isInActivity;
         }
 
+        /*
+        // add supervisor to activity
+        public void AddSupervisor(int activityId, int teacherId)
+        {
+            activitydb.AddSupervisor(activityId, teacherId);
+        }
+
+        // delete supervisor from activity
+        public void DeleteSupervisor(int activityId, int teacherId)
+        {
+            activitydb.DeleteSupervisor(activityId, teacherId);
+        }*/
+
+        // check if a supervisor is in an activity
+        public bool SupervisorInActivity(int activityId, int teacherId)
+        {
+            TeacherService teacherService = new TeacherService();
+            List<Teacher> teachers = teacherService.GetTeacherByActivity(activityId);
+
+            bool isInActivity = false;
+            foreach (Teacher teacher in teachers)
+            {
+                if (teacher.TeacherId == teacherId)
+                    isInActivity = true;
+            }
+
+            return isInActivity;
+        }
+
 
 
     }

@@ -30,6 +30,7 @@ namespace SomerenDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+
         // delete a student from an activity
         public void DeleteStudent(int activityId, int studentId)
         {
@@ -39,6 +40,27 @@ namespace SomerenDAL
             sqlParameters[1] = new SqlParameter("@ActivityId", activityId);
             ExecuteEditQuery(query, sqlParameters);
         }
+
+        /*
+        // add a supervisor to an activity
+        public void AddSupervisor(int activityId, int teacherId)
+        {
+            string query = "INSERT INTO [ActivityTeacher] ([teacherId], [activityId]) VALUES (@TeacherId, @ActivityId)";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@TeacherId", teacherId);
+            sqlParameters[1] = new SqlParameter("@ActivityId", activityId);
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        // delete a student from an activity
+        public void DeleteSupervisor(int activityId, int teacherId)
+        {
+            string query = "DELETE FROM [ActivityTeacher] WHERE [teacherId] = @TeacherId AND [activityId] = @ActivityId;";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@TeacherId", teacherId);
+            sqlParameters[1] = new SqlParameter("@ActivityId", activityId);
+            ExecuteEditQuery(query, sqlParameters);
+        }*/
 
         private List<Activity> ReadTables(DataTable dataTable)
         {
