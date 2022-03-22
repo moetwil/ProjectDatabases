@@ -16,6 +16,7 @@ namespace SomerenUI
     {
         public SomerenUI()
         {
+            
             InitializeComponent();
 
             // button enter and leave
