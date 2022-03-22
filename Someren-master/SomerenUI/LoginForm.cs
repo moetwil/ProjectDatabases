@@ -37,8 +37,19 @@ namespace SomerenUI
             HashSaltService hashSaltService = new HashSaltService();
             bool login = hashSaltService.VerifyPassword(passwordTextBox.Text, user.HashSalt);
 
-            MessageBox.Show(login.ToString());
+            /*if (login)
+            {
+                this.Hide();
+                SomerenUI somerenUI = new SomerenUI();
+                somerenUI.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("False password, try again");
+            }*/
 
+            //MessageBox.Show(login.ToString());
 
 
             this.Hide();
@@ -46,7 +57,10 @@ namespace SomerenUI
             somerenUI.ShowDialog();
             this.Close();
 
-            
+
+
+
+
         }
     }
 }
