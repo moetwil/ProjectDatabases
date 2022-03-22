@@ -284,7 +284,7 @@ namespace SomerenUI
                 pnlActivityParticipants.Show();
                 try
                 {
-                    LoadActivities();
+                    LoadActivities(listViewActivities);
                     LoadStudentsListBox();
                 }
                 catch (Exception e)
@@ -298,7 +298,7 @@ namespace SomerenUI
                 pnlActivitySupervisors.Show();
                 try
                 {
-                    LoadActivities();
+                    //LoadActivities();
                     LoadSupervisors();
                 }
                 catch (Exception e)
@@ -580,23 +580,23 @@ namespace SomerenUI
             showPanel("ActivityParticipants");
         }
 
-        private void LoadActivities()
+        private void LoadActivities(ListView listview)
         {
             ActivityService activityService = new ActivityService();
             List<Activity> activityList = activityService.GetActivities();
 
-            listViewActivities.Clear();
+            listview.Clear();
 
             // set styling for listView
-            listViewActivities.GridLines = true;
-            listViewActivities.View = View.Details;
-            listViewActivities.FullRowSelect = true;
+            listview.GridLines = true;
+            listview.View = View.Details;
+            listview.FullRowSelect = true;
 
             // add columns to the listView
-            listViewActivities.Columns.Add("Id", 25);
-            listViewActivities.Columns.Add("Description", 70);
-            listViewActivities.Columns.Add("Start DateTime", 110);
-            listViewActivities.Columns.Add("End DateTime", 110);
+            listview.Columns.Add("Id", 25);
+            listview.Columns.Add("Description", 70);
+            listview.Columns.Add("Start DateTime", 110);
+            listview.Columns.Add("End DateTime", 110);
 
             foreach (Activity activity in activityList)
             {
@@ -605,7 +605,7 @@ namespace SomerenUI
                 item.SubItems.Add(activity.Description);
                 item.SubItems.Add(activity.StartDateTime.ToString("dd-MM-yyyy HH:mm"));
                 item.SubItems.Add(activity.EndDateTime.ToString("dd-MM-yyyy HH:mm"));
-                listViewActivities.Items.Add(item);
+                listview.Items.Add(item);
             }
         }
 
