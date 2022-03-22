@@ -482,3 +482,7 @@ Error Number:547,State:0,Class:16
 22-3-2022 15:03:30 : Choose a valid date between 12-03-22 and 19-03-22 | System.Exception: Choose a valid date between 12-03-22 and 19-03-22
    bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 410
 
+22-3-2022 16:19:08 : *** LUKjEWABxKwpc3R4u27CLi4ZoUlbdRVDdu0GnGoowaK3KL/TxKUUwigih9DBP/B2lc+9ZxOG253IhSmpZ/TryUqSW0vGFuRYcWSf3qIFoBDqSubkZv3Qe+mW2fi8cp3yCFEpjtYT+wyObPWsWzL1LalERyg6eQcmU7dahkpYAIDXYjMs27nawM37h7OP5Cg11AKI3J/RKJzGPEZ67r9sCHRJHPASlTL1LFEJTEUZxbjfSprq6y/Ve5wXJUFBbFOBicnRPXmbBJgsC4Ij1hA5N+MFTwmmpq/lEdtFfKtFjvRt7KYXVJVSp3rw78mnIl+Bc6OhvJE9P4YG/JDyPBdnKQ== *** | System.Exception: *** LUKjEWABxKwpc3R4u27CLi4ZoUlbdRVDdu0GnGoowaK3KL/TxKUUwigih9DBP/B2lc+9ZxOG253IhSmpZ/TryUqSW0vGFuRYcWSf3qIFoBDqSubkZv3Qe+mW2fi8cp3yCFEpjtYT+wyObPWsWzL1LalERyg6eQcmU7dahkpYAIDXYjMs27nawM37h7OP5Cg11AKI3J/RKJzGPEZ67r9sCHRJHPASlTL1LFEJTEUZxbjfSprq6y/Ve5wXJUFBbFOBicnRPXmbBJgsC4Ij1hA5N+MFTwmmpq/lEdtFfKtFjvRt7KYXVJVSp3rw78mnIl+Bc6OhvJE9P4YG/JDyPBdnKQ== ***
+
+22-3-2022 16:19:08 : *** pkBQcnWtztlIArwFEHtkDUTjfEqpePLu0zJLo7hpRXu7wV84AYwU6FJG00OHMnuvkG65HyRJYkH887pNzRqDlQ== *** | System.Exception: *** pkBQcnWtztlIArwFEHtkDUTjfEqpePLu0zJLo7hpRXu7wV84AYwU6FJG00OHMnuvkG65HyRJYkH887pNzRqDlQ== ***
+

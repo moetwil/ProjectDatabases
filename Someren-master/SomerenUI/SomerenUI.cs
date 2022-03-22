@@ -99,10 +99,7 @@ namespace SomerenUI
         {
             //showPanel("Dashboard");
 
-            User user = new User();
-            user.Username = "Luc";
-            user.HashSalt = HashSaltService.GenerateSaltedHash(64, "Test");
-            MessageBox.Show(user.HashSalt.Hash.ToString() + " " + user.HashSalt.Salt.ToString());
+            
         }
 
         private void showPanel(string panelName)
