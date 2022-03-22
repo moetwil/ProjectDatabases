@@ -51,7 +51,7 @@ namespace SomerenUI
 
                 // verify the login
                 HashSaltService hashSaltService = new HashSaltService();
-                bool login = hashSaltService.VerifyPassword(passwordTextBox.Text, user.HashSalt);
+                bool login = hashSaltService.VerifyPassword(password, user.HashSalt);
             }
             catch (Exception exception)
             {
