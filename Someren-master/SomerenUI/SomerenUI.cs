@@ -831,12 +831,12 @@ namespace SomerenUI
         {
             try
             {
-                //int activityId = GetActivityId();
+                int activityId = GetActivityId(listViewAllActivities);
 
 
-                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+                //int activityId = ((Activity)(listViewAllActivities.SelectedItems[0].Tag)).ActivityId;
 
-                //LoadActivitySupervisors(activityId);
+                LoadActivitySupervisors(activityId);
             }
             catch (Exception)
             {
@@ -849,16 +849,16 @@ namespace SomerenUI
             TeacherService teacherService = new TeacherService();
             List<Teacher> teachers = teacherService.GetTeacherByActivity(activityId);
 
-            listViewAllActivities.Clear();
+            listViewActivitiesSupervisors.Clear();
 
             // set styling for listView
-            listViewAllActivities.GridLines = true;
-            listViewAllActivities.View = View.Details;
-            listViewAllActivities.FullRowSelect = true;
+            listViewActivitiesSupervisors.GridLines = true;
+            listViewActivitiesSupervisors.View = View.Details;
+            listViewActivitiesSupervisors.FullRowSelect = true;
 
             // add columns to the listView
-            listViewAllActivities.Columns.Add("Id", 25);
-            listViewAllActivities.Columns.Add("Full Name", 70);
+            listViewActivitiesSupervisors.Columns.Add("Id", 25);
+            listViewActivitiesSupervisors.Columns.Add("Full Name", 70);
 
             foreach (Teacher teacher in teachers)
             {
@@ -866,7 +866,7 @@ namespace SomerenUI
                 item.Tag = teacher;
                 item.SubItems.Add(teacher.FirstName);
                 item.SubItems.Add(teacher.LastName);
-                listViewAllActivities.Items.Add(item);
+                listViewActivitiesSupervisors.Items.Add(item);
             }
         }
 

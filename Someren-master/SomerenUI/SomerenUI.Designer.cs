@@ -1175,6 +1175,7 @@
             // 
             this.listViewAllActivities.HideSelection = false;
             this.listViewAllActivities.Location = new System.Drawing.Point(33, 102);
+            this.listViewAllActivities.MultiSelect = false;
             this.listViewAllActivities.Name = "listViewAllActivities";
             this.listViewAllActivities.Size = new System.Drawing.Size(341, 154);
             this.listViewAllActivities.TabIndex = 7;
