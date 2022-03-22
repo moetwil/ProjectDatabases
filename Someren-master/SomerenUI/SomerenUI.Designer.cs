@@ -38,6 +38,7 @@
             this.lecturersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activityParticipantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activitySupervisorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.revenueReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -125,12 +126,11 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.labelActivityParticipants = new System.Windows.Forms.Label();
             this.pnlActivitySupervisors = new System.Windows.Forms.Panel();
+            this.listViewActivitiesSupervisors = new System.Windows.Forms.ListView();
+            this.listViewAllActivities = new System.Windows.Forms.ListView();
+            this.comboBoxSupervisors = new System.Windows.Forms.ComboBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBoxSupervisors = new System.Windows.Forms.ComboBox();
-            this.listViewAllActivities = new System.Windows.Forms.ListView();
-            this.listViewActivitiesSupervisors = new System.Windows.Forms.ListView();
-            this.activitySupervisorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -171,7 +171,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1283, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1283, 26);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -183,7 +183,7 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(104, 28);
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
             this.dashboardToolStripMenuItem.Text = "Application";
             this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
@@ -210,7 +210,7 @@
             // 
             this.studentsToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(88, 28);
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.studentsToolStripMenuItem.Text = "Students";
             this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             // 
@@ -218,7 +218,7 @@
             // 
             this.lecturersToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.lecturersToolStripMenuItem.Name = "lecturersToolStripMenuItem";
-            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(93, 28);
+            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.lecturersToolStripMenuItem.Text = "Lecturers";
             this.lecturersToolStripMenuItem.Click += new System.EventHandler(this.lecturersToolStripMenuItem_Click);
             // 
@@ -229,21 +229,28 @@
             this.activityParticipantsToolStripMenuItem,
             this.activitySupervisorsToolStripMenuItem});
             this.activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
-            this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
+            this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.activitiesToolStripMenuItem.Text = "Activities";
             // 
             // activityParticipantsToolStripMenuItem
             // 
             this.activityParticipantsToolStripMenuItem.Name = "activityParticipantsToolStripMenuItem";
-            this.activityParticipantsToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
+            this.activityParticipantsToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.activityParticipantsToolStripMenuItem.Text = "Activity Participants";
             this.activityParticipantsToolStripMenuItem.Click += new System.EventHandler(this.activityParticipantsToolStripMenuItem_Click);
+            // 
+            // activitySupervisorsToolStripMenuItem
+            // 
+            this.activitySupervisorsToolStripMenuItem.Name = "activitySupervisorsToolStripMenuItem";
+            this.activitySupervisorsToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.activitySupervisorsToolStripMenuItem.Text = "Activity Supervisors";
+            this.activitySupervisorsToolStripMenuItem.Click += new System.EventHandler(this.activitySupervisorsToolStripMenuItem_Click);
             // 
             // roomsToolStripMenuItem
             // 
             this.roomsToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.roomsToolStripMenuItem.Name = "roomsToolStripMenuItem";
-            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(77, 28);
+            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.roomsToolStripMenuItem.Text = "Rooms";
             this.roomsToolStripMenuItem.Click += new System.EventHandler(this.roomsToolStripMenuItem_Click);
             // 
@@ -254,7 +261,7 @@
             this.revenueReportToolStripMenuItem,
             this.drinksSuppliesToolStripMenuItem});
             this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(61, 28);
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.shopToolStripMenuItem.Text = "Shop";
             this.shopToolStripMenuItem.Click += new System.EventHandler(this.shopToolStripMenuItem_Click);
             // 
@@ -1155,6 +1162,32 @@
             this.pnlActivitySupervisors.Size = new System.Drawing.Size(1251, 550);
             this.pnlActivitySupervisors.TabIndex = 14;
             // 
+            // listViewActivitiesSupervisors
+            // 
+            this.listViewActivitiesSupervisors.HideSelection = false;
+            this.listViewActivitiesSupervisors.Location = new System.Drawing.Point(423, 101);
+            this.listViewActivitiesSupervisors.Name = "listViewActivitiesSupervisors";
+            this.listViewActivitiesSupervisors.Size = new System.Drawing.Size(341, 154);
+            this.listViewActivitiesSupervisors.TabIndex = 8;
+            this.listViewActivitiesSupervisors.UseCompatibleStateImageBehavior = false;
+            // 
+            // listViewAllActivities
+            // 
+            this.listViewAllActivities.HideSelection = false;
+            this.listViewAllActivities.Location = new System.Drawing.Point(33, 102);
+            this.listViewAllActivities.Name = "listViewAllActivities";
+            this.listViewAllActivities.Size = new System.Drawing.Size(341, 154);
+            this.listViewAllActivities.TabIndex = 7;
+            this.listViewAllActivities.UseCompatibleStateImageBehavior = false;
+            // 
+            // comboBoxSupervisors
+            // 
+            this.comboBoxSupervisors.FormattingEnabled = true;
+            this.comboBoxSupervisors.Location = new System.Drawing.Point(33, 283);
+            this.comboBoxSupervisors.Name = "comboBoxSupervisors";
+            this.comboBoxSupervisors.Size = new System.Drawing.Size(341, 24);
+            this.comboBoxSupervisors.TabIndex = 6;
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::SomerenUI.Properties.Resources.someren;
@@ -1176,38 +1209,6 @@
             this.label11.Size = new System.Drawing.Size(272, 33);
             this.label11.TabIndex = 3;
             this.label11.Text = "Activity Supervisors";
-            // 
-            // comboBoxSupervisors
-            // 
-            this.comboBoxSupervisors.FormattingEnabled = true;
-            this.comboBoxSupervisors.Location = new System.Drawing.Point(33, 283);
-            this.comboBoxSupervisors.Name = "comboBoxSupervisors";
-            this.comboBoxSupervisors.Size = new System.Drawing.Size(341, 24);
-            this.comboBoxSupervisors.TabIndex = 6;
-            // 
-            // listViewAllActivities
-            // 
-            this.listViewAllActivities.HideSelection = false;
-            this.listViewAllActivities.Location = new System.Drawing.Point(33, 102);
-            this.listViewAllActivities.Name = "listViewAllActivities";
-            this.listViewAllActivities.Size = new System.Drawing.Size(341, 154);
-            this.listViewAllActivities.TabIndex = 7;
-            this.listViewAllActivities.UseCompatibleStateImageBehavior = false;
-            // 
-            // listViewActivitiesSupervisors
-            // 
-            this.listViewActivitiesSupervisors.HideSelection = false;
-            this.listViewActivitiesSupervisors.Location = new System.Drawing.Point(423, 101);
-            this.listViewActivitiesSupervisors.Name = "listViewActivitiesSupervisors";
-            this.listViewActivitiesSupervisors.Size = new System.Drawing.Size(341, 154);
-            this.listViewActivitiesSupervisors.TabIndex = 8;
-            this.listViewActivitiesSupervisors.UseCompatibleStateImageBehavior = false;
-            // 
-            // activitySupervisorsToolStripMenuItem
-            // 
-            this.activitySupervisorsToolStripMenuItem.Name = "activitySupervisorsToolStripMenuItem";
-            this.activitySupervisorsToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.activitySupervisorsToolStripMenuItem.Text = "Activity Supervisors";
             // 
             // SomerenUI
             // 

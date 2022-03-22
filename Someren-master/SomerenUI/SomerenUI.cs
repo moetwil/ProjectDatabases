@@ -780,7 +780,7 @@ namespace SomerenUI
             int supervisorId = 0;
             foreach (ListViewItem item in listViewAllActivities.SelectedItems)
             {
-                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+                int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
                 supervisorId = ((Teacher)(item.Tag)).TeacherId;
             }
 
@@ -823,6 +823,11 @@ namespace SomerenUI
             {
                 comboBoxSupervisors.Items.Add(teacher);
             }
+        }
+
+        private void activitySupervisorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Activity Supervisors");
         }
 
         private void RefreshView()
@@ -954,6 +959,8 @@ namespace SomerenUI
 
            
         }
+
+
 
 
 
