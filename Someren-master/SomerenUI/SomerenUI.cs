@@ -836,11 +836,16 @@ namespace SomerenUI
 
                 //int activityId = ((Activity)(listViewAllActivities.SelectedItems[0].Tag)).ActivityId;
 
+                if (activityId == 0)
+                {
+                    listViewActivitiesSupervisors.Items.Clear();
+                }
+
                 LoadActivitySupervisors(activityId);
             }
             catch (Exception)
             {
-                throw new Exception("No activity selected");
+                //throw new Exception("No activity selected");
             }
         }
 
@@ -858,7 +863,8 @@ namespace SomerenUI
 
             // add columns to the listView
             listViewActivitiesSupervisors.Columns.Add("Id", 25);
-            listViewActivitiesSupervisors.Columns.Add("Full Name", 70);
+            listViewActivitiesSupervisors.Columns.Add("Firstname", 70);
+            listViewActivitiesSupervisors.Columns.Add("Lastname", 70);
 
             foreach (Teacher teacher in teachers)
             {
