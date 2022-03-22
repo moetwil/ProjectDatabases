@@ -614,7 +614,7 @@ namespace SomerenUI
         {
             try
             {
-                int activityId = GetActivityId();
+                int activityId = GetActivityId(listViewActivities);
 
 
                 //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
@@ -637,10 +637,10 @@ namespace SomerenUI
 
         }
 
-        private int GetActivityId() 
+        private int GetActivityId(ListView listview) 
         {
             int activityId = 0;
-            foreach (ListViewItem item in listViewActivities.SelectedItems)
+            foreach (ListViewItem item in listview.SelectedItems)
             {
                 //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
                 activityId = ((Activity)(item.Tag)).ActivityId;
@@ -708,7 +708,7 @@ namespace SomerenUI
             try
             {
                 // get id of selected activity
-                int activityId = GetActivityId();
+                int activityId = GetActivityId(listViewActivities);
                 if (activityId == 0)
                     throw new Exception("No activity selected");
 
@@ -747,7 +747,7 @@ namespace SomerenUI
             try
             {
                 // get id of selected activity
-                int activityId = GetActivityId();
+                int activityId = GetActivityId(listViewActivities);
                 if (activityId == 0)
                     throw new Exception("No activity selected");
 
@@ -831,12 +831,12 @@ namespace SomerenUI
         {
             try
             {
-                int activityId = GetActivityId();
+                //int activityId = GetActivityId();
 
 
                 //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
 
-                LoadActivitySupervisors(activityId);
+                //LoadActivitySupervisors(activityId);
             }
             catch (Exception)
             {
