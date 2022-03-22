@@ -298,7 +298,7 @@ namespace SomerenUI
                 pnlActivitySupervisors.Show();
                 try
                 {
-                    //LoadActivities();
+                    LoadActivities(listViewAllActivities);
                     LoadSupervisors();
                 }
                 catch (Exception e)
@@ -827,6 +827,49 @@ namespace SomerenUI
             }
         }
 
+        private void listViewAllActivities_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int activityId = GetActivityId();
+
+
+                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+
+                LoadActivitySupervisors(activityId);
+            }
+            catch (Exception)
+            {
+                throw new Exception("No activity selected");
+            }
+        }
+
+        private void LoadActivitySupervisors(int activityId)
+        {
+            TeacherService teacherService = new TeacherService();
+            List<Teacher> teachers = teacherService.GetTeacherByActivity(activityId);
+
+            listViewAllActivities.Clear();
+
+            // set styling for listView
+            listViewAllActivities.GridLines = true;
+            listViewAllActivities.View = View.Details;
+            listViewAllActivities.FullRowSelect = true;
+
+            // add columns to the listView
+            listViewAllActivities.Columns.Add("Id", 25);
+            listViewAllActivities.Columns.Add("Full Name", 70);
+
+            foreach (Teacher teacher in teachers)
+            {
+                ListViewItem item = new ListViewItem(teacher.TeacherId.ToString());
+                item.Tag = teacher;
+                item.SubItems.Add(teacher.FirstName);
+                item.SubItems.Add(teacher.LastName);
+                listViewAllActivities.Items.Add(item);
+            }
+        }
+
         private void activitySupervisorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showPanel("Activity Supervisors");
@@ -961,6 +1004,8 @@ namespace SomerenUI
 
            
         }
+
+   
 
 
 
