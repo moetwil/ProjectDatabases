@@ -97,7 +97,7 @@ namespace SomerenUI
         // All the panels
         private void SomerenUI_Load(object sender, EventArgs e)
         {
-            //showPanel("Dashboard");
+            showPanel("Dashboard");
 
             
         }
