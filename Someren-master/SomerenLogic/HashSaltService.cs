@@ -14,14 +14,14 @@ namespace SomerenLogic
     {
 
         // creates hash and salt from the password
-        public static HashSalt GenerateSaltedHash(int size, string password)
+        public static HashSalt GenerateSaltedHash(int length, string password)
         {
-            byte[] saltBytes = new byte[size];
-            RNGCryptoServiceProvider provider = new RNGCryptoServiceProvider();
-            provider.GetNonZeroBytes(saltBytes);
-            string salt = Convert.ToBase64String(saltBytes);
+            byte[] saltInBytes = new byte[length];
+            RNGCryptoServiceProvider converter = new RNGCryptoServiceProvider();
+            converter.GetNonZeroBytes(saltInBytes);
+            string salt = Convert.ToBase64String(saltInBytes);
 
-            Rfc2898DeriveBytes rfc2898DeriveBytes = new Rfc2898DeriveBytes(password, saltBytes, 10000);
+            Rfc2898DeriveBytes rfc2898DeriveBytes = new Rfc2898DeriveBytes(password, saltInBytes, 10000);
             string hashPassword = Convert.ToBase64String(rfc2898DeriveBytes.GetBytes(256));
 
             HashSalt hashSalt = new HashSalt { Hash = hashPassword, Salt = salt };
@@ -29,11 +29,11 @@ namespace SomerenLogic
         }
 
         // checks if the given password is the same as the hashsalt password from the datbase
-        public static bool VerifyPassword(string enteredPassword, string storedHash, string storedSalt)
+        public static bool VerifyPassword(string enteredPassword, HashSalt hashSalt)
         {
-            byte[] saltBytes = Convert.FromBase64String(storedSalt);
-            Rfc2898DeriveBytes rfc2898DeriveBytes = new Rfc2898DeriveBytes(enteredPassword, saltBytes, 10000);
-            return Convert.ToBase64String(rfc2898DeriveBytes.GetBytes(256)) == storedHash;
+            byte[] saltInBytes = Convert.FromBase64String(hashSalt.Salt);
+            Rfc2898DeriveBytes rfc2898DeriveBytes = new Rfc2898DeriveBytes(enteredPassword, saltInBytes, 10000);
+            return Convert.ToBase64String(rfc2898DeriveBytes.GetBytes(256)) == hashSalt.Hash;
         }
 
 
