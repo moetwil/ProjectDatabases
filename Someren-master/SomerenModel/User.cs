@@ -11,5 +11,9 @@ namespace SomerenModel
         public string Username { get; set; }
         public HashSalt HashSalt { get; set; }
 
+        /*public User()
+        {
+            HashSalt = new HashSalt();
+        }*/
     }
 }

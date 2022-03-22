@@ -49,6 +49,7 @@
     <Compile Include="DrinkDao.cs" />
     <Compile Include="RevenueDao.cs" />
     <Compile Include="HashSaltDao.cs" />
+    <Compile Include="UserDao.cs" />
     <Compile Include="RoomDao.cs" />
     <Compile Include="StudentDao.cs" />
     <Compile Include="TeacherDao.cs" />

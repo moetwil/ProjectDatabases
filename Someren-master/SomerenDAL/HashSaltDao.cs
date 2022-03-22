@@ -14,7 +14,7 @@ namespace SomerenDAL
     {
 
         // create an hashsalt from the datatable give by the query
-        private HashSalt ReadTables(DataTable dataTable)
+        /*private HashSalt ReadTables(DataTable dataTable)
         {
             // if the datatable is empty send error message
             if (dataTable == null)
@@ -31,6 +31,6 @@ namespace SomerenDAL
                 };
             }
             return hashSalt;
-        }
+        }*/
     }
 }

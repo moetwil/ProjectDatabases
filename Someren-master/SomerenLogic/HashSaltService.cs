@@ -24,7 +24,7 @@ namespace SomerenLogic
             Rfc2898DeriveBytes rfc2898DeriveBytes = new Rfc2898DeriveBytes(password, saltInBytes, 10000);
             string hashPassword = Convert.ToBase64String(rfc2898DeriveBytes.GetBytes(256));
 
-            HashSalt hashSalt = new HashSalt { Hash = hashPassword, Salt = salt };
+            HashSalt hashSalt = new HashSalt(hashPassword, salt);
             return hashSalt;
         }
 
