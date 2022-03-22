@@ -29,7 +29,7 @@ namespace SomerenLogic
         }
 
         // checks if the given password is the same as the hashsalt password from the datbase
-        public static bool VerifyPassword(string enteredPassword, HashSalt hashSalt)
+        public  bool VerifyPassword(string enteredPassword, HashSalt hashSalt)
         {
             byte[] saltInBytes = Convert.FromBase64String(hashSalt.Salt);
             Rfc2898DeriveBytes rfc2898DeriveBytes = new Rfc2898DeriveBytes(enteredPassword, saltInBytes, 10000);
