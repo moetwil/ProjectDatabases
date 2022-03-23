@@ -299,7 +299,7 @@ namespace SomerenUI
                 try
                 {
                     LoadActivities(listViewAllActivities);
-                    LoadSupervisors();
+                    //LoadSupervisors();
                 }
                 catch (Exception e)
                 {
@@ -816,7 +816,7 @@ namespace SomerenUI
             }
         }
 
-        private void LoadSupervisors()
+        /*private void LoadSupervisors()
         {
             TeacherService teacherService = new TeacherService();
             List<Teacher> teachers = teacherService.GetTeachers();
@@ -825,7 +825,7 @@ namespace SomerenUI
             {
                 comboBoxSupervisors.Items.Add(teacher);
             }
-        }
+        }*/
 
         private void listViewAllActivities_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -878,13 +878,13 @@ namespace SomerenUI
 
         private void buttonAddSupervisor_Click(object sender, EventArgs e)
         {
-            ActivityService activityService = new ActivityService[2];
+           /* ActivityService activityService = new ActivityService[2];
 
             for (int i = 0; i <= 1; i++)
             {
                 activityService[i] = "Item" + i;
             }
-            comboBoxSupervisors.Items.AddRange(activityService);
+            comboBoxSupervisors.Items.AddRange(activityService);*/
 
             /*
             try
