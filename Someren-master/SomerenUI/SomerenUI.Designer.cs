@@ -135,7 +135,7 @@
             this.listViewAllActivities = new System.Windows.Forms.ListView();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewAllSupervisors = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -1156,7 +1156,7 @@
             // pnlActivitySupervisors
             // 
             this.pnlActivitySupervisors.BackColor = System.Drawing.Color.Lavender;
-            this.pnlActivitySupervisors.Controls.Add(this.listView1);
+            this.pnlActivitySupervisors.Controls.Add(this.listViewAllSupervisors);
             this.pnlActivitySupervisors.Controls.Add(this.buttonDeleteSupervisor);
             this.pnlActivitySupervisors.Controls.Add(this.buttonAddSupervisor);
             this.pnlActivitySupervisors.Controls.Add(this.label8);
@@ -1260,15 +1260,15 @@
             this.label11.TabIndex = 3;
             this.label11.Text = "Activity Supervisors";
             // 
-            // listView1
+            // listViewAllSupervisors
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(33, 277);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(410, 114);
-            this.listView1.TabIndex = 14;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listViewAllSupervisors.HideSelection = false;
+            this.listViewAllSupervisors.Location = new System.Drawing.Point(33, 280);
+            this.listViewAllSupervisors.Name = "listViewAllSupervisors";
+            this.listViewAllSupervisors.Size = new System.Drawing.Size(407, 103);
+            this.listViewAllSupervisors.TabIndex = 14;
+            this.listViewAllSupervisors.UseCompatibleStateImageBehavior = false;
+            this.listViewAllSupervisors.SelectedIndexChanged += new System.EventHandler(this.listViewAllSupervisors_SelectedIndexChanged);
             // 
             // SomerenUI
             // 
@@ -1443,7 +1443,7 @@
         private System.Windows.Forms.Label activityText;
         private System.Windows.Forms.Button buttonDeleteSupervisor;
         private System.Windows.Forms.Button buttonAddSupervisor;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewAllSupervisors;
     }
 }
 

@@ -816,16 +816,38 @@ namespace SomerenUI
             }
         }
 
-        /*private void LoadSupervisors()
+        private void LoadSupervisors()
+        {
+
+        }
+
+
+        private void listViewAllSupervisors_SelectedIndexChanged(object sender, EventArgs e)
         {
             TeacherService teacherService = new TeacherService();
-            List<Teacher> teachers = teacherService.GetTeachers();
+            List<Teacher> teacherList = teacherService.GetTeachers();
 
-            foreach (Teacher teacher in teachers)
+            listViewAllSupervisors.Clear();
+
+            // set styling for listView
+            listViewAllSupervisors.GridLines = true;
+            listViewAllSupervisors.View = View.Details;
+            listViewAllSupervisors.FullRowSelect = true;
+
+            // add columns to the listView
+            listViewAllSupervisors.Columns.Add("Id", 25);
+            listViewAllSupervisors.Columns.Add("First name", 70);
+            listViewAllSupervisors.Columns.Add("Last name", 70);
+
+            foreach (Teacher teacher in teacherList)
             {
-                comboBoxSupervisors.Items.Add(teacher);
+                ListViewItem item = new ListViewItem(teacher.TeacherId.ToString());
+                item.Tag = teacher;
+                item.SubItems.Add(teacher.FirstName);
+                item.SubItems.Add(teacher.LastName);
+                listViewAllSupervisors.Items.Add(item);
             }
-        }*/
+        }
 
         private void listViewAllActivities_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -878,15 +900,8 @@ namespace SomerenUI
 
         private void buttonAddSupervisor_Click(object sender, EventArgs e)
         {
-           /* ActivityService activityService = new ActivityService[2];
+             /*ActivityService activityService = new ActivityService();
 
-            for (int i = 0; i <= 1; i++)
-            {
-                activityService[i] = "Item" + i;
-            }
-            comboBoxSupervisors.Items.AddRange(activityService);*/
-
-            /*
             try
             {
                 // get id of selected activity
@@ -895,10 +910,10 @@ namespace SomerenUI
                     throw new Exception("No activity selected");
 
                 // get id from selected student
-                if (comboBoxSupervisors.SelectedItem == null)
+                if (listViewAllSupervisors.SelectedItem == null)
                     throw new Exception("No student selected");
 
-                int teacherId = ((Teacher)comboBoxSupervisors.SelectedItem).TeacherId;
+                int teacherId = ((Teacher)listViewAllSupervisors.SelectedItem).TeacherId;
 
                 // check if student is in activity
                 bool isInActivity = activityService.IsInActivity(activityId, teacherId);
@@ -1056,6 +1071,7 @@ namespace SomerenUI
 
            
         }
+
 
 
         // check if a student is in a certain activity

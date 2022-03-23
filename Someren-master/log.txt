@@ -561,3 +561,15 @@ Error Number:547,State:0,Class:16
 23-3-2022 13:02:36 : Not an existing user | System.Exception: Not an existing user
    bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
 
+23-3-2022 19:44:11 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+23-3-2022 19:52:44 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+23-3-2022 19:55:41 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+23-3-2022 19:57:26 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
