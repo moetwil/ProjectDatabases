@@ -876,6 +876,52 @@ namespace SomerenUI
             }
         }
 
+        private void buttonAddSupervisor_Click(object sender, EventArgs e)
+        {
+            ActivityService activityService = new ActivityService[2];
+
+            for (int i = 0; i <= 1; i++)
+            {
+                activityService[i] = "Item" + i;
+            }
+            comboBoxSupervisors.Items.AddRange(activityService);
+
+            /*
+            try
+            {
+                // get id of selected activity
+                int activityId = GetActivityId(listViewActivities);
+                if (activityId == 0)
+                    throw new Exception("No activity selected");
+
+                // get id from selected student
+                if (comboBoxSupervisors.SelectedItem == null)
+                    throw new Exception("No student selected");
+
+                int teacherId = ((Teacher)comboBoxSupervisors.SelectedItem).TeacherId;
+
+                // check if student is in activity
+                bool isInActivity = activityService.IsInActivity(activityId, teacherId);
+
+                if (!isInActivity)
+                {
+                    MessageBox.Show("Student added to activity");
+                    //MessageBox.Show($"{activityId} + {studentId}");
+                    activityService.AddStudent(activityId, teacherId);
+                    LoadActivityStudents(activityId);
+                }
+                else
+                {
+                    MessageBox.Show("Student already in activity");
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with adding a student to an activity: " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }*/
+        }
+
         private void activitySupervisorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showPanel("Activity Supervisors");
@@ -1010,13 +1056,6 @@ namespace SomerenUI
 
            
         }
-
-   
-
-
-
-
-
 
 
         // check if a student is in a certain activity

@@ -57,7 +57,7 @@ namespace SomerenLogic
             return isInActivity;
         }
 
-        /*
+        
         // add supervisor to activity
         public void AddSupervisor(int activityId, int teacherId)
         {
@@ -68,7 +68,7 @@ namespace SomerenLogic
         public void DeleteSupervisor(int activityId, int teacherId)
         {
             activitydb.DeleteSupervisor(activityId, teacherId);
-        }*/
+        }
 
         // check if a supervisor is in an activity
         public bool SupervisorInActivity(int activityId, int teacherId)

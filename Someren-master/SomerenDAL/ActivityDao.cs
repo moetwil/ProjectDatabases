@@ -41,8 +41,8 @@ namespace SomerenDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        /*
-        // add a supervisor to an activity
+        
+        //add a supervisor to an activity
         public void AddSupervisor(int activityId, int teacherId)
         {
             string query = "INSERT INTO [ActivityTeacher] ([teacherId], [activityId]) VALUES (@TeacherId, @ActivityId)";
@@ -60,7 +60,7 @@ namespace SomerenDAL
             sqlParameters[0] = new SqlParameter("@TeacherId", teacherId);
             sqlParameters[1] = new SqlParameter("@ActivityId", activityId);
             ExecuteEditQuery(query, sqlParameters);
-        }*/
+        }
 
         private List<Activity> ReadTables(DataTable dataTable)
         {

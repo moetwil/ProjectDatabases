@@ -126,11 +126,16 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.labelActivityParticipants = new System.Windows.Forms.Label();
             this.pnlActivitySupervisors = new System.Windows.Forms.Panel();
+            this.buttonDeleteSupervisor = new System.Windows.Forms.Button();
+            this.buttonAddSupervisor = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.activityText = new System.Windows.Forms.Label();
             this.listViewActivitiesSupervisors = new System.Windows.Forms.ListView();
             this.listViewAllActivities = new System.Windows.Forms.ListView();
-            this.comboBoxSupervisors = new System.Windows.Forms.ComboBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -1151,9 +1156,14 @@
             // pnlActivitySupervisors
             // 
             this.pnlActivitySupervisors.BackColor = System.Drawing.Color.Lavender;
+            this.pnlActivitySupervisors.Controls.Add(this.listView1);
+            this.pnlActivitySupervisors.Controls.Add(this.buttonDeleteSupervisor);
+            this.pnlActivitySupervisors.Controls.Add(this.buttonAddSupervisor);
+            this.pnlActivitySupervisors.Controls.Add(this.label8);
+            this.pnlActivitySupervisors.Controls.Add(this.label6);
+            this.pnlActivitySupervisors.Controls.Add(this.activityText);
             this.pnlActivitySupervisors.Controls.Add(this.listViewActivitiesSupervisors);
             this.pnlActivitySupervisors.Controls.Add(this.listViewAllActivities);
-            this.pnlActivitySupervisors.Controls.Add(this.comboBoxSupervisors);
             this.pnlActivitySupervisors.Controls.Add(this.pictureBox7);
             this.pnlActivitySupervisors.Controls.Add(this.label11);
             this.pnlActivitySupervisors.Location = new System.Drawing.Point(15, 31);
@@ -1162,12 +1172,58 @@
             this.pnlActivitySupervisors.Size = new System.Drawing.Size(1251, 550);
             this.pnlActivitySupervisors.TabIndex = 14;
             // 
+            // buttonDeleteSupervisor
+            // 
+            this.buttonDeleteSupervisor.Location = new System.Drawing.Point(143, 404);
+            this.buttonDeleteSupervisor.Name = "buttonDeleteSupervisor";
+            this.buttonDeleteSupervisor.Size = new System.Drawing.Size(97, 43);
+            this.buttonDeleteSupervisor.TabIndex = 13;
+            this.buttonDeleteSupervisor.Text = "Delete";
+            this.buttonDeleteSupervisor.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddSupervisor
+            // 
+            this.buttonAddSupervisor.Location = new System.Drawing.Point(33, 404);
+            this.buttonAddSupervisor.Name = "buttonAddSupervisor";
+            this.buttonAddSupervisor.Size = new System.Drawing.Size(97, 43);
+            this.buttonAddSupervisor.TabIndex = 12;
+            this.buttonAddSupervisor.Text = "Add";
+            this.buttonAddSupervisor.UseVisualStyleBackColor = true;
+            this.buttonAddSupervisor.Click += new System.EventHandler(this.buttonAddSupervisor_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 253);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(263, 17);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Select supervisors to add or delete them";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(471, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(143, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Assigned supervisors";
+            // 
+            // activityText
+            // 
+            this.activityText.AutoSize = true;
+            this.activityText.Location = new System.Drawing.Point(30, 77);
+            this.activityText.Name = "activityText";
+            this.activityText.Size = new System.Drawing.Size(81, 17);
+            this.activityText.TabIndex = 9;
+            this.activityText.Text = "All activities";
+            // 
             // listViewActivitiesSupervisors
             // 
             this.listViewActivitiesSupervisors.HideSelection = false;
-            this.listViewActivitiesSupervisors.Location = new System.Drawing.Point(423, 101);
+            this.listViewActivitiesSupervisors.Location = new System.Drawing.Point(474, 101);
             this.listViewActivitiesSupervisors.Name = "listViewActivitiesSupervisors";
-            this.listViewActivitiesSupervisors.Size = new System.Drawing.Size(341, 154);
+            this.listViewActivitiesSupervisors.Size = new System.Drawing.Size(341, 126);
             this.listViewActivitiesSupervisors.TabIndex = 8;
             this.listViewActivitiesSupervisors.UseCompatibleStateImageBehavior = false;
             // 
@@ -1177,18 +1233,10 @@
             this.listViewAllActivities.Location = new System.Drawing.Point(33, 102);
             this.listViewAllActivities.MultiSelect = false;
             this.listViewAllActivities.Name = "listViewAllActivities";
-            this.listViewAllActivities.Size = new System.Drawing.Size(341, 154);
+            this.listViewAllActivities.Size = new System.Drawing.Size(410, 125);
             this.listViewAllActivities.TabIndex = 7;
             this.listViewAllActivities.UseCompatibleStateImageBehavior = false;
             this.listViewAllActivities.SelectedIndexChanged += new System.EventHandler(this.listViewAllActivities_SelectedIndexChanged);
-            // 
-            // comboBoxSupervisors
-            // 
-            this.comboBoxSupervisors.FormattingEnabled = true;
-            this.comboBoxSupervisors.Location = new System.Drawing.Point(33, 283);
-            this.comboBoxSupervisors.Name = "comboBoxSupervisors";
-            this.comboBoxSupervisors.Size = new System.Drawing.Size(341, 24);
-            this.comboBoxSupervisors.TabIndex = 6;
             // 
             // pictureBox7
             // 
@@ -1211,6 +1259,16 @@
             this.label11.Size = new System.Drawing.Size(272, 33);
             this.label11.TabIndex = 3;
             this.label11.Text = "Activity Supervisors";
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(33, 277);
+            this.listView1.MultiSelect = false;
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(410, 114);
+            this.listView1.TabIndex = 14;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // SomerenUI
             // 
@@ -1377,10 +1435,15 @@
         private System.Windows.Forms.Panel pnlActivitySupervisors;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBoxSupervisors;
         private System.Windows.Forms.ListView listViewActivitiesSupervisors;
         private System.Windows.Forms.ListView listViewAllActivities;
         private System.Windows.Forms.ToolStripMenuItem activitySupervisorsToolStripMenuItem;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label activityText;
+        private System.Windows.Forms.Button buttonDeleteSupervisor;
+        private System.Windows.Forms.Button buttonAddSupervisor;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 
