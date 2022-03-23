@@ -573,3 +573,78 @@ Error Number:547,State:0,Class:16
 23-3-2022 19:57:26 : Not an existing user | System.Exception: Not an existing user
    bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
 
+23-3-2022 20:53:34 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 20:54:32 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 20:55:37 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 20:55:48 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 67
+
+23-3-2022 20:55:52 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 83
+
+23-3-2022 20:56:35 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 20:56:48 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 69
+
+23-3-2022 21:10:59 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 21:11:06 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 67
+
+23-3-2022 21:11:11 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 90
+
+23-3-2022 21:11:57 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 21:12:05 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 92
+
+23-3-2022 21:12:08 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 92
+
+23-3-2022 21:12:29 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 21:12:37 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 92
+
+23-3-2022 21:13:34 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 21:14:47 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 21:14:50 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 67
+
+23-3-2022 21:14:52 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 83
+

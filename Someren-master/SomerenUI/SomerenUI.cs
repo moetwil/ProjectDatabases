@@ -470,16 +470,17 @@ namespace SomerenUI
             listViewShopStudents.FullRowSelect = true;
 
             // add columns to the listView
-            listViewShopStudents.Columns.Add("student id", 80);
+            //listViewShopStudents.Columns.Add("student id", 80);
             listViewShopStudents.Columns.Add("student name", 90);
             listViewShopStudents.Columns.Add("Date of birth", 85);
 
             // fill the list view with students from the List
             foreach (Student student in studentList)
             {
-                ListViewItem item = new ListViewItem(student.StudentId.ToString());
+                //ListViewItem item = new ListViewItem(student.StudentId.ToString());
+                ListViewItem item = new ListViewItem(student.FullName);
                 item.Tag = student;
-                item.SubItems.Add(student.FullName);
+                //item.SubItems.Add(student.FullName);
                 item.SubItems.Add(student.DateOfBirth.ToString("dd-MM-yyyy"));
 
                 listViewShopStudents.Items.Add(item);
@@ -501,7 +502,7 @@ namespace SomerenUI
             listViewShopDrinks.MultiSelect = true;
 
             // add columns to the listView
-            listViewShopDrinks.Columns.Add("drink id", 50);
+           // listViewShopDrinks.Columns.Add("drink id", 50);
             listViewShopDrinks.Columns.Add("Drink name", 70);
             listViewShopDrinks.Columns.Add("Alcohol", 50);
             listViewShopDrinks.Columns.Add("Price", 50);
@@ -509,9 +510,10 @@ namespace SomerenUI
 
             foreach (Drink drink in drinkList)
             {
-                ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
+                //ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
+                ListViewItem item = new ListViewItem(drink.Name);
                 item.Tag = drink;
-                item.SubItems.Add(drink.Name);
+                //item.SubItems.Add(drink.Name);
                 item.SubItems.Add(drink.HasAlcohol.ToString());
                 item.SubItems.Add(drink.Price.ToString("0.00"));
                 item.SubItems.Add(drink.Stock.ToString());

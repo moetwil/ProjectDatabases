@@ -58,7 +58,7 @@ namespace SomerenLogic
 
         public void PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks)
         {
-            int studentId;
+            int studentId = 0;
 
             try
             {
@@ -66,7 +66,16 @@ namespace SomerenLogic
                 if (listViewShopStudents.SelectedItems.Count == 0)
                     throw new Exception("No student selected.");
                 else
-                    studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
+
+                    foreach (ListViewItem item in listViewShopStudents.SelectedItems)
+                    {
+                        // old
+                        //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+                        studentId = ((Student)(item.Tag)).StudentId;
+                    }
+
+
+                //studentId = int.Parse(listViewShopStudents.SelectedItems[0].Text);
 
                 // check if there are any drinks selected, if not send error message
                 if (listViewShopDrinks.CheckedItems.Count == 0)
@@ -80,7 +89,9 @@ namespace SomerenLogic
                         if (item.Checked)
                         {
                             // get drink id
-                            int drinkId = int.Parse(item.SubItems[0].Text);
+                            // old
+                            //int drinkId = int.Parse(item.SubItems[0].Text);
+                            int drinkId = ((Drink)(item.Tag)).DrinkId;
                             //totalPrice += double.Parse(item.SubItems[3].Text);
 
                             // write purchase to the database
