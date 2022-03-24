@@ -285,6 +285,7 @@ namespace SomerenUI
                 try
                 {
                     LoadActivities(listViewActivities);
+                    listViewActivities.Items[0].Selected = true;
                     LoadStudentsListBox();
                 }
                 catch (Exception e)
