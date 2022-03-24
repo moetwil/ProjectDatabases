@@ -92,5 +92,16 @@ namespace SomerenDAL
             sqlParameters[0] = new SqlParameter("@ActivityId", activityId);
             ExecuteEditQuery(query, sqlParameters);
         }
+
+        public void AddActivity(string description, string startDateTime, string endDateTime)
+        {
+            string query = $"INSERT INTO [Activities] (description, startDateTime, endDateTime) " +
+                $"VALUES (@description, @startDateTime, @endDateTime)";
+            SqlParameter[] sqlParameters = new SqlParameter[3];
+            sqlParameters[0] = new SqlParameter("@description", description);
+            sqlParameters[1] = new SqlParameter("@startDateTime", DateTime.Parse(startDateTime));
+            sqlParameters[2] = new SqlParameter("@endDateTime", DateTime.Parse(endDateTime));
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }
 }

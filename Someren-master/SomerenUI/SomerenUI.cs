@@ -1173,8 +1173,19 @@ namespace SomerenUI
 
         private void AddAcitivityButton_Click(object sender, EventArgs e)
         {
+            string description = DescriptionTextbox.Text;
+            string start = StartDateTextbox.Text;
+            string end = EndDateTextbox.Text;
 
+
+
+            Activity activity = GetActivityEthem();
+            ActivityService activityService = new ActivityService();
+            activityService.AddActivity(description, start, end);
+
+            LoadActivities(listViewWithActivites);
         }
+
 
 
 
