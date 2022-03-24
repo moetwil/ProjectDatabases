@@ -91,6 +91,11 @@ namespace SomerenLogic
             activitydb.DeleteActivity(activityId);
         }
 
+        public void AddActivity(string description, string startDateTime, string endDateTime)
+        {
+            activitydb.AddActivity(description, startDateTime, endDateTime);
+        }
+
 
 
     }
