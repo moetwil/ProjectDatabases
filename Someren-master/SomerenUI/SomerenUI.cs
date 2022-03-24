@@ -308,7 +308,19 @@ namespace SomerenUI
                     LoggerService.WriteLog(e);
                 }
             }
-            
+            else if (panelName == "Activities")
+            {
+                pnlActivities.Show();
+                try
+                {
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Something went wrong while loading the Activities: " + e.Message);
+                    LoggerService.WriteLog(e);
+                }
+            }
+
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -359,6 +371,7 @@ namespace SomerenUI
             pnlDrinksSuplies.Hide();
             pnlActivityParticipants.Hide();
             pnlActivitySupervisors.Hide();
+            pnlActivities.Hide();
         }
 
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1069,6 +1082,11 @@ namespace SomerenUI
             }
 
            
+        }
+
+        private void activitiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Activities");
         }
 
 
