@@ -299,6 +299,7 @@ namespace SomerenUI
                 try
                 {
                     LoadActivities(listViewAllActivities);
+                    LoadSupervisors();
                     //LoadSupervisors();
                 }
                 catch (Exception e)
@@ -820,14 +821,8 @@ namespace SomerenUI
 
         private void LoadSupervisors()
         {
-
-        }
-
-
-        private void listViewAllSupervisors_SelectedIndexChanged(object sender, EventArgs e)
-        {
             TeacherService teacherService = new TeacherService();
-            List<Teacher> teacherList = teacherService.GetTeachers();
+            List<Teacher> teachers = teacherService.GetTeachers();
 
             listViewAllSupervisors.Clear();
 
@@ -841,7 +836,7 @@ namespace SomerenUI
             listViewAllSupervisors.Columns.Add("First name", 70);
             listViewAllSupervisors.Columns.Add("Last name", 70);
 
-            foreach (Teacher teacher in teacherList)
+            foreach (Teacher teacher in teachers)
             {
                 ListViewItem item = new ListViewItem(teacher.TeacherId.ToString());
                 item.Tag = teacher;
@@ -850,6 +845,8 @@ namespace SomerenUI
                 listViewAllSupervisors.Items.Add(item);
             }
         }
+
+
 
         private void listViewAllActivities_SelectedIndexChanged(object sender, EventArgs e)
         {
