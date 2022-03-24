@@ -950,40 +950,24 @@ namespace SomerenUI
            }*/
         }
 
-        private void buttonDeleteSupervisor_Click(object sender, EventArgs e)
+        private void buttonDeleteSupervisor_Click_1(object sender, EventArgs e)
         {
             //Button button = new Button();
             //button.Enabled = false;
 
+            Teacher teacher = new Teacher();
+
+            foreach (ListViewItem item in listViewAllSupervisors.SelectedItems)
+            {
+                teacher = (Teacher)item.Tag;
+            }
+            int teacherId = teacher.TeacherId;
+
+            MessageBox.Show(teacherId.ToString());
             ActivityService activityService = new ActivityService();
 
             try
             {
-                // get id of selected activity
-                int activityId = GetActivityId(listViewActivities);
-                if (activityId == 0)
-                    throw new Exception("No activity selected");
-
-                int teacherId = GetSupervicorId();
-                if (teacherId == 0)
-                    throw new Exception("No supervisor selected");
-
-                DialogResult deletePopUp = MessageBox.Show("Are you sure you want to delete the supervisor from the activity?", "Delete Confirmation", MessageBoxButtons.YesNo);
-                if (deletePopUp == DialogResult.Yes)
-                {
-                    foreach (Teacher teacher in TeacherService.)
-                    {
-                        ListViewItem item = new ListViewItem(teacher.TeacherId.ToString());
-                        item.Tag = teacher;
-                        item.SubItems.Add(teacher.FirstName);
-                        item.SubItems.Add(teacher.LastName);
-                        listViewActivitiesSupervisors.Items.Add(item);
-                    }
-                }
-                else if (deletePopUp == DialogResult.No)
-                {
-                    MessageBox.Show("Delete has been canceled");
-                }
 
             }
             catch (Exception exception)
@@ -1132,6 +1116,8 @@ namespace SomerenUI
         {
             showPanel("Activities");
         }
+
+
 
 
 
