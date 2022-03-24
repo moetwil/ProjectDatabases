@@ -137,12 +137,19 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pnlActivities = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.DeleteActivityButton = new System.Windows.Forms.Button();
+            this.AddAcitivityButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.listViewWithActivites = new System.Windows.Forms.ListView();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.DescriptionTextbox = new System.Windows.Forms.TextBox();
+            this.StartDateTextbox = new System.Windows.Forms.TextBox();
+            this.EndDateTextbox = new System.Windows.Forms.TextBox();
+            this.DescriptionLabel = new System.Windows.Forms.Label();
+            this.StartDateLabel = new System.Windows.Forms.Label();
+            this.EndDateLabel = new System.Windows.Forms.Label();
+            this.UpdateAcitivityButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -174,7 +181,6 @@
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dashboardToolStripMenuItem,
@@ -198,7 +204,7 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(125, 34);
             this.dashboardToolStripMenuItem.Text = "Application";
             this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
@@ -225,7 +231,7 @@
             // 
             this.studentsToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(105, 26);
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(105, 34);
             this.studentsToolStripMenuItem.Text = "Students";
             this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             // 
@@ -233,7 +239,7 @@
             // 
             this.lecturersToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.lecturersToolStripMenuItem.Name = "lecturersToolStripMenuItem";
-            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(110, 26);
+            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(110, 34);
             this.lecturersToolStripMenuItem.Text = "Lecturers";
             this.lecturersToolStripMenuItem.Click += new System.EventHandler(this.lecturersToolStripMenuItem_Click);
             // 
@@ -244,7 +250,7 @@
             this.activityParticipantsToolStripMenuItem,
             this.activitySupervisorsToolStripMenuItem});
             this.activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
-            this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(107, 28);
+            this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(107, 34);
             this.activitiesToolStripMenuItem.Text = "Activities";
             this.activitiesToolStripMenuItem.Click += new System.EventHandler(this.activitiesToolStripMenuItem_Click);
             // 
@@ -266,7 +272,7 @@
             // 
             this.roomsToolStripMenuItem.BackColor = System.Drawing.Color.YellowGreen;
             this.roomsToolStripMenuItem.Name = "roomsToolStripMenuItem";
-            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(87, 26);
+            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(87, 34);
             this.roomsToolStripMenuItem.Text = "Rooms";
             this.roomsToolStripMenuItem.Click += new System.EventHandler(this.roomsToolStripMenuItem_Click);
             // 
@@ -277,7 +283,7 @@
             this.revenueReportToolStripMenuItem,
             this.drinksSuppliesToolStripMenuItem});
             this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(72, 26);
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(72, 34);
             this.shopToolStripMenuItem.Text = "Shop";
             this.shopToolStripMenuItem.Click += new System.EventHandler(this.shopToolStripMenuItem_Click);
             // 
@@ -1289,8 +1295,15 @@
             // pnlActivities
             // 
             this.pnlActivities.BackColor = System.Drawing.Color.Lavender;
-            this.pnlActivities.Controls.Add(this.button1);
-            this.pnlActivities.Controls.Add(this.button2);
+            this.pnlActivities.Controls.Add(this.UpdateAcitivityButton);
+            this.pnlActivities.Controls.Add(this.EndDateLabel);
+            this.pnlActivities.Controls.Add(this.StartDateLabel);
+            this.pnlActivities.Controls.Add(this.DescriptionLabel);
+            this.pnlActivities.Controls.Add(this.EndDateTextbox);
+            this.pnlActivities.Controls.Add(this.StartDateTextbox);
+            this.pnlActivities.Controls.Add(this.DescriptionTextbox);
+            this.pnlActivities.Controls.Add(this.DeleteActivityButton);
+            this.pnlActivities.Controls.Add(this.AddAcitivityButton);
             this.pnlActivities.Controls.Add(this.label13);
             this.pnlActivities.Controls.Add(this.listViewWithActivites);
             this.pnlActivities.Controls.Add(this.pictureBox8);
@@ -1301,25 +1314,25 @@
             this.pnlActivities.Size = new System.Drawing.Size(1407, 688);
             this.pnlActivities.TabIndex = 15;
             // 
-            // button1
+            // DeleteActivityButton
             // 
-            this.button1.Location = new System.Drawing.Point(698, 505);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 54);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.DeleteActivityButton.Location = new System.Drawing.Point(698, 505);
+            this.DeleteActivityButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteActivityButton.Name = "DeleteActivityButton";
+            this.DeleteActivityButton.Size = new System.Drawing.Size(109, 54);
+            this.DeleteActivityButton.TabIndex = 13;
+            this.DeleteActivityButton.Text = "Delete";
+            this.DeleteActivityButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // AddAcitivityButton
             // 
-            this.button2.Location = new System.Drawing.Point(534, 505);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 54);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddAcitivityButton.Location = new System.Drawing.Point(534, 505);
+            this.AddAcitivityButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddAcitivityButton.Name = "AddAcitivityButton";
+            this.AddAcitivityButton.Size = new System.Drawing.Size(109, 54);
+            this.AddAcitivityButton.TabIndex = 12;
+            this.AddAcitivityButton.Text = "Add";
+            this.AddAcitivityButton.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -1363,14 +1376,71 @@
             this.label14.TabIndex = 3;
             this.label14.Text = "Activity Supervisors";
             // 
+            // DescriptionTextbox
+            // 
+            this.DescriptionTextbox.Location = new System.Drawing.Point(784, 163);
+            this.DescriptionTextbox.Name = "DescriptionTextbox";
+            this.DescriptionTextbox.Size = new System.Drawing.Size(135, 26);
+            this.DescriptionTextbox.TabIndex = 14;
+            // 
+            // StartDateTextbox
+            // 
+            this.StartDateTextbox.Location = new System.Drawing.Point(784, 223);
+            this.StartDateTextbox.Name = "StartDateTextbox";
+            this.StartDateTextbox.Size = new System.Drawing.Size(135, 26);
+            this.StartDateTextbox.TabIndex = 15;
+            // 
+            // EndDateTextbox
+            // 
+            this.EndDateTextbox.Location = new System.Drawing.Point(784, 294);
+            this.EndDateTextbox.Name = "EndDateTextbox";
+            this.EndDateTextbox.Size = new System.Drawing.Size(135, 26);
+            this.EndDateTextbox.TabIndex = 16;
+            // 
+            // DescriptionLabel
+            // 
+            this.DescriptionLabel.AutoSize = true;
+            this.DescriptionLabel.Location = new System.Drawing.Point(671, 171);
+            this.DescriptionLabel.Name = "DescriptionLabel";
+            this.DescriptionLabel.Size = new System.Drawing.Size(89, 20);
+            this.DescriptionLabel.TabIndex = 17;
+            this.DescriptionLabel.Text = "Description";
+            // 
+            // StartDateLabel
+            // 
+            this.StartDateLabel.AutoSize = true;
+            this.StartDateLabel.Location = new System.Drawing.Point(671, 229);
+            this.StartDateLabel.Name = "StartDateLabel";
+            this.StartDateLabel.Size = new System.Drawing.Size(79, 20);
+            this.StartDateLabel.TabIndex = 18;
+            this.StartDateLabel.Text = "StartDate";
+            // 
+            // EndDateLabel
+            // 
+            this.EndDateLabel.AutoSize = true;
+            this.EndDateLabel.Location = new System.Drawing.Point(678, 300);
+            this.EndDateLabel.Name = "EndDateLabel";
+            this.EndDateLabel.Size = new System.Drawing.Size(73, 20);
+            this.EndDateLabel.TabIndex = 19;
+            this.EndDateLabel.Text = "EndDate";
+            // 
+            // UpdateAcitivityButton
+            // 
+            this.UpdateAcitivityButton.Location = new System.Drawing.Point(832, 505);
+            this.UpdateAcitivityButton.Name = "UpdateAcitivityButton";
+            this.UpdateAcitivityButton.Size = new System.Drawing.Size(111, 54);
+            this.UpdateAcitivityButton.TabIndex = 20;
+            this.UpdateAcitivityButton.Text = "Update";
+            this.UpdateAcitivityButton.UseVisualStyleBackColor = true;
+            // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1443, 745);
-            this.Controls.Add(this.pnlDrinksSuplies);
             this.Controls.Add(this.pnlActivities);
+            this.Controls.Add(this.pnlDrinksSuplies);
             this.Controls.Add(this.pnlActivitySupervisors);
             this.Controls.Add(this.pnlShop);
             this.Controls.Add(this.pnlActivityParticipants);
@@ -1542,12 +1612,19 @@
         private System.Windows.Forms.Button buttonAddSupervisor;
         private System.Windows.Forms.ListView listViewAllSupervisors;
         private System.Windows.Forms.Panel pnlActivities;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button DeleteActivityButton;
+        private System.Windows.Forms.Button AddAcitivityButton;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ListView listViewWithActivites;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button UpdateAcitivityButton;
+        private System.Windows.Forms.Label EndDateLabel;
+        private System.Windows.Forms.Label StartDateLabel;
+        private System.Windows.Forms.Label DescriptionLabel;
+        private System.Windows.Forms.TextBox EndDateTextbox;
+        private System.Windows.Forms.TextBox StartDateTextbox;
+        private System.Windows.Forms.TextBox DescriptionTextbox;
     }
 }
 
