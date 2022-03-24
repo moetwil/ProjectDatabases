@@ -1325,6 +1325,7 @@
             this.UpdateAcitivityButton.TabIndex = 20;
             this.UpdateAcitivityButton.Text = "Update";
             this.UpdateAcitivityButton.UseVisualStyleBackColor = true;
+            this.UpdateAcitivityButton.Click += new System.EventHandler(this.UpdateAcitivityButton_Click);
             // 
             // EndDateLabel
             // 
