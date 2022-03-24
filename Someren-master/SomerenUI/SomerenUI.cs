@@ -791,7 +791,7 @@ namespace SomerenUI
             }
         }
 
-        private int GetSupervicorId()
+        private int GetSupervisorId()
         {
             Teacher teacher = new Teacher();
 
@@ -881,27 +881,31 @@ namespace SomerenUI
         {
             try
             {
+                // checking the selected items with tag
                 Teacher teacher = new Teacher();
                 foreach (ListViewItem item in listViewAllSupervisors.SelectedItems)
                 {
                     teacher = (Teacher)item.Tag;
                 }
 
+                // checking if a activity is selected
                 int activityId = GetActivityId(listViewAllActivities);
                 if (activityId == 0)
                 {
                     throw new Exception("No activity selected");
                 }
-                
-                int teacherId = GetSupervicorId();
+
+                // checking if a supervisor is selected
+                int teacherId = GetSupervisorId();
                 if (teacherId == 0)
                 {
                     throw new Exception("No supervisor selected");
                 }
                 ActivityService activityService = new ActivityService();
 
+                // if a supervisor is not in an activity than the supervisor is added
+                // else the supervisor is not added
                 bool isInActivity = activityService.SupervisorInActivity(activityId, teacherId);
-
                 if (!isInActivity)
                 {
                     MessageBox.Show("Supervisor has been added to the activity");
@@ -912,7 +916,7 @@ namespace SomerenUI
                 {
                     MessageBox.Show("Supervisor is already in this activity");
                 }
-            }
+            } // if it goes wrong than there will be an exception
             catch (Exception exception)
             {
                 MessageBox.Show("Something went wrong with adding a supervisor from an activity: " + exception.Message);
@@ -923,36 +927,50 @@ namespace SomerenUI
 
         private void buttonDeleteSupervisor_Click_1(object sender, EventArgs e)
         {
-            Teacher teacher = new Teacher();
-            foreach (ListViewItem item in listViewAllSupervisors.SelectedItems)
+            try
             {
-                teacher = (Teacher)item.Tag;
+                // checking the selected items with tag
+                Teacher teacher = new Teacher();
+                foreach (ListViewItem item in listViewAllSupervisors.SelectedItems)
+                {
+                    teacher = (Teacher)item.Tag;
+                }
+
+                // checking if a activity is selected
+                int activityId = GetActivityId(listViewAllActivities);
+                if (activityId == 0)
+                {
+                    throw new Exception("No activity selected");
+                }
+
+                // checking if a supervisor is selected
+                int teacherId = GetSupervisorId();
+                if (teacherId == 0)
+                {
+                    throw new Exception("No supervisor selected");
+                }
+                ActivityService activityService = new ActivityService();
+
+                // when deleting a supervisor a confirmation will popup
+                // if you press yes, the supervisor will be deleted or else it stays
+                DialogResult deletePopUp = MessageBox.Show("Are you sure you want to delete the supervisor from the activity?", "Delete Confirmation", MessageBoxButtons.YesNo);
+                if (deletePopUp == DialogResult.Yes)
+                {
+                    MessageBox.Show("Supervisor has been deleted from the activity");
+                    activityService.DeleteSupervisor(activityId, teacherId);
+                    LoadActivitySupervisors(activityId);
+                }
+                else if (deletePopUp == DialogResult.No)
+                {
+                    MessageBox.Show("Delete has been canceled");
+                }
+            } // if it goes wrong than there will be an exception
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with deleting a supervisor from an activity: " + exception.Message);
+                LoggerService.WriteLog(exception);
             }
 
-            int activityId = GetActivityId(listViewAllActivities);
-            if (activityId == 0)
-            {
-                throw new Exception("No activity selected");
-            }         
-
-            int teacherId = GetSupervicorId();
-            if (teacherId == 0)
-            {
-                throw new Exception("No supervisor selected");
-            }
-            ActivityService activityService = new ActivityService();
-
-            DialogResult deletePopUp = MessageBox.Show("Are you sure you want to delete the supervisor from the activity?", "Delete Confirmation", MessageBoxButtons.YesNo);
-            if (deletePopUp == DialogResult.Yes)
-            {
-                MessageBox.Show("Supervisor has been deleted from the activity");
-                activityService.DeleteSupervisor(activityId, teacherId);
-                LoadActivitySupervisors(activityId);
-            }
-            else if (deletePopUp == DialogResult.No)
-            {
-                MessageBox.Show("Delete has been canceled");
-            }
 
         }
 
