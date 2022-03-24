@@ -648,3 +648,21 @@ Error Number:547,State:0,Class:16
 23-3-2022 21:14:52 : No shop item(s) selected | System.Exception: No shop item(s) selected
    bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 83
 
+24/03/2022 09:07:04 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 40
+
+24/03/2022 09:12:45 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 40
+
+24/03/2022 09:13:03 : No student selected. | System.Exception: No student selected.
+   at SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:line 67
+
+24/03/2022 09:16:12 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 40
+
+24/03/2022 09:18:20 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 40
+
+24/03/2022 09:18:49 : No student selected. | System.Exception: No student selected.
+   at SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:line 67
+

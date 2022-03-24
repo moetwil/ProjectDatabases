@@ -381,6 +381,7 @@ namespace SomerenUI
             // clear the selected rows in both listviews
             listViewShopStudents.SelectedItems.Clear();
             listViewShopDrinks.SelectedItems.Clear();
+
         }
 
         private void revenueReportToolStripMenuItem_Click_1(object sender, EventArgs e)

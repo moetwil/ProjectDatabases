@@ -96,6 +96,7 @@ namespace SomerenLogic
 
                             // write purchase to the database
                             WritePurchase(studentId, drinkId);
+                            item.Checked = false;
                         }
                     }
                     // write nice message after the purchase has been done
