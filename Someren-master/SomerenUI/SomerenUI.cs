@@ -783,9 +783,6 @@ namespace SomerenUI
                     MessageBox.Show("Delete has been canceled");
                 }
 
-                
-
-
             }
             catch (Exception exception)
             {
@@ -802,35 +799,7 @@ namespace SomerenUI
             {
                 teacher = (Teacher)item.Tag;
             }
-
             return teacher.TeacherId;
-        }
-
-        private void LoadActivitySupervisor(int activityId)
-        {
-            TeacherService teacherService = new TeacherService();
-            List<Teacher> teachers = teacherService.GetTeacherByActivity(activityId);
-
-            listViewAllActivities.Clear();
-
-            // set styling for listView
-            listViewAllActivities.GridLines = true;
-            listViewAllActivities.View = View.Details;
-            listViewAllActivities.FullRowSelect = true;
-
-            // add columns to the listView
-            listViewAllActivities.Columns.Add("Id", 25);
-            listViewAllActivities.Columns.Add("First name", 70);
-            listViewAllActivities.Columns.Add("Last name", 70);
-
-            foreach (Teacher teacher in teachers)
-            {
-                ListViewItem item = new ListViewItem(teacher.TeacherId.ToString());
-                item.Tag = teacher;
-                item.SubItems.Add(teacher.FirstName);
-                item.SubItems.Add(teacher.LastName);
-                listViewAllActivities.Items.Add(item);
-            }
         }
 
         private void LoadSupervisors()
@@ -868,9 +837,6 @@ namespace SomerenUI
             {
                 int activityId = GetActivityId(listViewAllActivities);
 
-
-                //int activityId = ((Activity)(listViewAllActivities.SelectedItems[0].Tag)).ActivityId;
-
                 if (activityId == 0)
                 {
                     listViewActivitiesSupervisors.Items.Clear();
@@ -880,7 +846,7 @@ namespace SomerenUI
             }
             catch (Exception)
             {
-                //throw new Exception("No activity selected");
+                throw new Exception("No activity selected");
             }
         }
 
@@ -916,7 +882,6 @@ namespace SomerenUI
             try
             {
                 Teacher teacher = new Teacher();
-
                 foreach (ListViewItem item in listViewAllSupervisors.SelectedItems)
                 {
                     teacher = (Teacher)item.Tag;
@@ -959,7 +924,6 @@ namespace SomerenUI
         private void buttonDeleteSupervisor_Click_1(object sender, EventArgs e)
         {
             Teacher teacher = new Teacher();
-
             foreach (ListViewItem item in listViewAllSupervisors.SelectedItems)
             {
                 teacher = (Teacher)item.Tag;
