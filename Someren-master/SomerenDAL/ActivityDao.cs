@@ -45,7 +45,7 @@ namespace SomerenDAL
         //add a supervisor to an activity
         public void AddSupervisor(int activityId, int teacherId)
         {
-            string query = "INSERT INTO [ActivityTeacher] ([teacherId], [activityId]) VALUES (@TeacherId, @ActivityId)";
+            string query = "INSERT INTO [ActivitySupervisor] ([teacherId], [activityId]) VALUES (@TeacherId, @ActivityId)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@TeacherId", teacherId);
             sqlParameters[1] = new SqlParameter("@ActivityId", activityId);
@@ -55,7 +55,7 @@ namespace SomerenDAL
         // delete a student from an activity
         public void DeleteSupervisor(int activityId, int teacherId)
         {
-            string query = "DELETE FROM [ActivityTeacher] WHERE [teacherId] = @TeacherId AND [activityId] = @ActivityId;";
+            string query = "DELETE FROM [ActivitySupervisor] WHERE [teacherId] = @TeacherId AND [activityId] = @ActivityId;";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@TeacherId", teacherId);
             sqlParameters[1] = new SqlParameter("@ActivityId", activityId);

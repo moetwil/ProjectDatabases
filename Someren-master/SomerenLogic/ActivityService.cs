@@ -70,20 +70,20 @@ namespace SomerenLogic
             activitydb.DeleteSupervisor(activityId, teacherId);
         }
 
-        // check if a supervisor is in an activity
+        // checks if a supervisor is in an activity
         public bool SupervisorInActivity(int activityId, int teacherId)
         {
             TeacherService teacherService = new TeacherService();
             List<Teacher> teachers = teacherService.GetTeacherByActivity(activityId);
 
-            bool isInActivity = false;
+            bool supervisorInActivity = false;
             foreach (Teacher teacher in teachers)
             {
                 if (teacher.TeacherId == teacherId)
-                    isInActivity = true;
+                    supervisorInActivity = true;
             }
 
-            return isInActivity;
+            return supervisorInActivity;
         }
 
         public void DeleteActivity(int activityId)
