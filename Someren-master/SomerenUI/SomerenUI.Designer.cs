@@ -137,19 +137,19 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pnlActivities = new System.Windows.Forms.Panel();
+            this.UpdateAcitivityButton = new System.Windows.Forms.Button();
+            this.EndDateLabel = new System.Windows.Forms.Label();
+            this.StartDateLabel = new System.Windows.Forms.Label();
+            this.DescriptionLabel = new System.Windows.Forms.Label();
+            this.EndDateTextbox = new System.Windows.Forms.TextBox();
+            this.StartDateTextbox = new System.Windows.Forms.TextBox();
+            this.DescriptionTextbox = new System.Windows.Forms.TextBox();
             this.DeleteActivityButton = new System.Windows.Forms.Button();
             this.AddAcitivityButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.listViewWithActivites = new System.Windows.Forms.ListView();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.DescriptionTextbox = new System.Windows.Forms.TextBox();
-            this.StartDateTextbox = new System.Windows.Forms.TextBox();
-            this.EndDateTextbox = new System.Windows.Forms.TextBox();
-            this.DescriptionLabel = new System.Windows.Forms.Label();
-            this.StartDateLabel = new System.Windows.Forms.Label();
-            this.EndDateLabel = new System.Windows.Forms.Label();
-            this.UpdateAcitivityButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -181,6 +181,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dashboardToolStripMenuItem,
@@ -1314,6 +1315,63 @@
             this.pnlActivities.Size = new System.Drawing.Size(1407, 688);
             this.pnlActivities.TabIndex = 15;
             // 
+            // UpdateAcitivityButton
+            // 
+            this.UpdateAcitivityButton.Location = new System.Drawing.Point(832, 505);
+            this.UpdateAcitivityButton.Name = "UpdateAcitivityButton";
+            this.UpdateAcitivityButton.Size = new System.Drawing.Size(111, 54);
+            this.UpdateAcitivityButton.TabIndex = 20;
+            this.UpdateAcitivityButton.Text = "Update";
+            this.UpdateAcitivityButton.UseVisualStyleBackColor = true;
+            // 
+            // EndDateLabel
+            // 
+            this.EndDateLabel.AutoSize = true;
+            this.EndDateLabel.Location = new System.Drawing.Point(678, 300);
+            this.EndDateLabel.Name = "EndDateLabel";
+            this.EndDateLabel.Size = new System.Drawing.Size(73, 20);
+            this.EndDateLabel.TabIndex = 19;
+            this.EndDateLabel.Text = "EndDate";
+            // 
+            // StartDateLabel
+            // 
+            this.StartDateLabel.AutoSize = true;
+            this.StartDateLabel.Location = new System.Drawing.Point(671, 229);
+            this.StartDateLabel.Name = "StartDateLabel";
+            this.StartDateLabel.Size = new System.Drawing.Size(79, 20);
+            this.StartDateLabel.TabIndex = 18;
+            this.StartDateLabel.Text = "StartDate";
+            // 
+            // DescriptionLabel
+            // 
+            this.DescriptionLabel.AutoSize = true;
+            this.DescriptionLabel.Location = new System.Drawing.Point(671, 171);
+            this.DescriptionLabel.Name = "DescriptionLabel";
+            this.DescriptionLabel.Size = new System.Drawing.Size(89, 20);
+            this.DescriptionLabel.TabIndex = 17;
+            this.DescriptionLabel.Text = "Description";
+            // 
+            // EndDateTextbox
+            // 
+            this.EndDateTextbox.Location = new System.Drawing.Point(784, 294);
+            this.EndDateTextbox.Name = "EndDateTextbox";
+            this.EndDateTextbox.Size = new System.Drawing.Size(187, 26);
+            this.EndDateTextbox.TabIndex = 16;
+            // 
+            // StartDateTextbox
+            // 
+            this.StartDateTextbox.Location = new System.Drawing.Point(784, 223);
+            this.StartDateTextbox.Name = "StartDateTextbox";
+            this.StartDateTextbox.Size = new System.Drawing.Size(187, 26);
+            this.StartDateTextbox.TabIndex = 15;
+            // 
+            // DescriptionTextbox
+            // 
+            this.DescriptionTextbox.Location = new System.Drawing.Point(784, 163);
+            this.DescriptionTextbox.Name = "DescriptionTextbox";
+            this.DescriptionTextbox.Size = new System.Drawing.Size(187, 26);
+            this.DescriptionTextbox.TabIndex = 14;
+            // 
             // DeleteActivityButton
             // 
             this.DeleteActivityButton.Location = new System.Drawing.Point(698, 505);
@@ -1323,6 +1381,7 @@
             this.DeleteActivityButton.TabIndex = 13;
             this.DeleteActivityButton.Text = "Delete";
             this.DeleteActivityButton.UseVisualStyleBackColor = true;
+            this.DeleteActivityButton.Click += new System.EventHandler(this.DeleteActivityButton_Click);
             // 
             // AddAcitivityButton
             // 
@@ -1333,6 +1392,7 @@
             this.AddAcitivityButton.TabIndex = 12;
             this.AddAcitivityButton.Text = "Add";
             this.AddAcitivityButton.UseVisualStyleBackColor = true;
+            this.AddAcitivityButton.Click += new System.EventHandler(this.AddAcitivityButton_Click);
             // 
             // label13
             // 
@@ -1353,6 +1413,7 @@
             this.listViewWithActivites.Size = new System.Drawing.Size(606, 333);
             this.listViewWithActivites.TabIndex = 7;
             this.listViewWithActivites.UseCompatibleStateImageBehavior = false;
+            this.listViewWithActivites.SelectedIndexChanged += new System.EventHandler(this.listViewWithActivites_SelectedIndexChanged);
             // 
             // pictureBox8
             // 
@@ -1375,63 +1436,6 @@
             this.label14.Size = new System.Drawing.Size(314, 39);
             this.label14.TabIndex = 3;
             this.label14.Text = "Activity Supervisors";
-            // 
-            // DescriptionTextbox
-            // 
-            this.DescriptionTextbox.Location = new System.Drawing.Point(784, 163);
-            this.DescriptionTextbox.Name = "DescriptionTextbox";
-            this.DescriptionTextbox.Size = new System.Drawing.Size(135, 26);
-            this.DescriptionTextbox.TabIndex = 14;
-            // 
-            // StartDateTextbox
-            // 
-            this.StartDateTextbox.Location = new System.Drawing.Point(784, 223);
-            this.StartDateTextbox.Name = "StartDateTextbox";
-            this.StartDateTextbox.Size = new System.Drawing.Size(135, 26);
-            this.StartDateTextbox.TabIndex = 15;
-            // 
-            // EndDateTextbox
-            // 
-            this.EndDateTextbox.Location = new System.Drawing.Point(784, 294);
-            this.EndDateTextbox.Name = "EndDateTextbox";
-            this.EndDateTextbox.Size = new System.Drawing.Size(135, 26);
-            this.EndDateTextbox.TabIndex = 16;
-            // 
-            // DescriptionLabel
-            // 
-            this.DescriptionLabel.AutoSize = true;
-            this.DescriptionLabel.Location = new System.Drawing.Point(671, 171);
-            this.DescriptionLabel.Name = "DescriptionLabel";
-            this.DescriptionLabel.Size = new System.Drawing.Size(89, 20);
-            this.DescriptionLabel.TabIndex = 17;
-            this.DescriptionLabel.Text = "Description";
-            // 
-            // StartDateLabel
-            // 
-            this.StartDateLabel.AutoSize = true;
-            this.StartDateLabel.Location = new System.Drawing.Point(671, 229);
-            this.StartDateLabel.Name = "StartDateLabel";
-            this.StartDateLabel.Size = new System.Drawing.Size(79, 20);
-            this.StartDateLabel.TabIndex = 18;
-            this.StartDateLabel.Text = "StartDate";
-            // 
-            // EndDateLabel
-            // 
-            this.EndDateLabel.AutoSize = true;
-            this.EndDateLabel.Location = new System.Drawing.Point(678, 300);
-            this.EndDateLabel.Name = "EndDateLabel";
-            this.EndDateLabel.Size = new System.Drawing.Size(73, 20);
-            this.EndDateLabel.TabIndex = 19;
-            this.EndDateLabel.Text = "EndDate";
-            // 
-            // UpdateAcitivityButton
-            // 
-            this.UpdateAcitivityButton.Location = new System.Drawing.Point(832, 505);
-            this.UpdateAcitivityButton.Name = "UpdateAcitivityButton";
-            this.UpdateAcitivityButton.Size = new System.Drawing.Size(111, 54);
-            this.UpdateAcitivityButton.TabIndex = 20;
-            this.UpdateAcitivityButton.Text = "Update";
-            this.UpdateAcitivityButton.UseVisualStyleBackColor = true;
             // 
             // SomerenUI
             // 
