@@ -86,6 +86,11 @@ namespace SomerenLogic
             return isInActivity;
         }
 
+        public void DeleteActivity(int activityId)
+        {
+            activitydb.DeleteActivity(activityId);
+        }
+
 
 
     }

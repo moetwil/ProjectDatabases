@@ -84,5 +84,13 @@ namespace SomerenDAL
 
             return activities;
         }
+        //Acitivity delete button
+        public void DeleteActivity(int activityId)
+        {
+            string query = "DELETE FROM [Activities] WHERE activityId = @ActivityId";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@ActivityId", activityId);
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }
 }

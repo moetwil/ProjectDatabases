@@ -1126,6 +1126,50 @@ namespace SomerenUI
             showPanel("Activities");
         }
 
+        private void DeleteActivityButton_Click(object sender, EventArgs e)
+        {
+            Activity activity = GetActivityEthem();
+            ActivityService activityService = new ActivityService();
+            activityService.DeleteActivity(activity.ActivityId);
+
+            LoadActivities(listViewWithActivites);
+            ClearActivityTextboxes();
+        }
+
+        void ClearActivityTextboxes()
+        {
+            DescriptionTextbox.Text = "";
+            StartDateTextbox.Text = "";
+            EndDateTextbox.Text = "";
+
+        }
+
+        public Activity GetActivityEthem()
+        {
+            Activity activity = new Activity();
+            // makes an activity object from the selected row in the listview
+            foreach (ListViewItem item in listViewWithActivites.SelectedItems)
+            {
+                activity = (Activity)item.Tag;
+            }
+
+            return activity;
+        }
+
+        private void listViewWithActivites_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Activity activity = GetActivityEthem();
+
+            DescriptionTextbox.Text = activity.Description;
+            StartDateTextbox.Text = activity.StartDateTime.ToString();
+            EndDateTextbox.Text = activity.EndDateTime.ToString();  
+        }
+
+        private void AddAcitivityButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
