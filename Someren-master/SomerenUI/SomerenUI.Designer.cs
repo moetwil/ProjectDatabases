@@ -1209,6 +1209,7 @@
             this.buttonDeleteSupervisor.TabIndex = 13;
             this.buttonDeleteSupervisor.Text = "Delete";
             this.buttonDeleteSupervisor.UseVisualStyleBackColor = true;
+            this.buttonDeleteSupervisor.Click += new System.EventHandler(this.buttonDeleteSupervisor_Click_1);
             // 
             // buttonAddSupervisor
             // 
