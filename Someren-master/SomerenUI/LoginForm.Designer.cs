@@ -36,6 +36,7 @@ namespace SomerenUI
             this.passwordLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.registerLInkLabel = new System.Windows.Forms.LinkLabel();
+            this.passwordLinkLabel = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +101,7 @@ namespace SomerenUI
             // registerLInkLabel
             // 
             this.registerLInkLabel.AutoSize = true;
-            this.registerLInkLabel.Location = new System.Drawing.Point(227, 495);
+            this.registerLInkLabel.Location = new System.Drawing.Point(226, 484);
             this.registerLInkLabel.Name = "registerLInkLabel";
             this.registerLInkLabel.Size = new System.Drawing.Size(92, 25);
             this.registerLInkLabel.TabIndex = 6;
@@ -108,11 +109,23 @@ namespace SomerenUI
             this.registerLInkLabel.Text = "Register";
             this.registerLInkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registerLInkLabel_LinkClicked);
             // 
+            // passwordLinkLabel
+            // 
+            this.passwordLinkLabel.AutoSize = true;
+            this.passwordLinkLabel.Location = new System.Drawing.Point(396, 484);
+            this.passwordLinkLabel.Name = "passwordLinkLabel";
+            this.passwordLinkLabel.Size = new System.Drawing.Size(202, 25);
+            this.passwordLinkLabel.TabIndex = 7;
+            this.passwordLinkLabel.TabStop = true;
+            this.passwordLinkLabel.Text = "Forgotten password";
+            this.passwordLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.passwordLinkLabel_LinkClicked);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 723);
+            this.Controls.Add(this.passwordLinkLabel);
             this.Controls.Add(this.registerLInkLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.passwordLabel);
@@ -139,5 +152,6 @@ namespace SomerenUI
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel registerLInkLabel;
+        private System.Windows.Forms.LinkLabel passwordLinkLabel;
     }
 }

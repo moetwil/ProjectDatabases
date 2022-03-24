@@ -70,6 +70,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PasswordRecoveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordRecoveryForm.Designer.cs">
+      <DependentUpon>PasswordRecoveryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>

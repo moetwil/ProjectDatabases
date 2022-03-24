@@ -100,5 +100,13 @@ namespace SomerenUI
             registerForm.ShowDialog();
             this.Close();
         }
+
+        private void passwordLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            PasswordRecoveryForm password = new PasswordRecoveryForm();
+            password.ShowDialog();
+            this.Close();
+        }
     }
 }
