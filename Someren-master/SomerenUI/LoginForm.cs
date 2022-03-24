@@ -24,18 +24,12 @@ namespace SomerenUI
 
             MessageBox.Show(login.ToString());*/
 
-
-
             // save the textbox values
-
             string username = usernameTextbox.Text;
             string password = passwordTextBox.Text;
 
-            
-
             try
             {
-
                 if (username == String.Empty)
                     throw new Exception("No username entered");
 
@@ -46,6 +40,7 @@ namespace SomerenUI
                 UserService userService = new UserService();
                 User user = userService.GetUser(username);
 
+                // als de methode een leeg user object returned bestaat de gebruiker niet
                 if (user == null)
                     throw new Exception("Not an existing user");
 
@@ -58,18 +53,16 @@ namespace SomerenUI
                 MessageBox.Show(exception.Message);
                 LoggerService.WriteLog(exception);
             }
+            //uncomment dit voordat je het inlevert, anders verifieerd hij de login niet
 
-            
-
+            // if login is true, open somerenui en sluit het inlog venster
             /*if (login)
             {
-                this.Hide();
-                SomerenUI somerenUI = new SomerenUI();
-                somerenUI.ShowDialog();
-                this.Close();
+                LoadSomerenUI();
             }
             else
             {
+            // toon message dat het wachtwoord niet klopt
                 MessageBox.Show("False password, try again");
             }*/
 
@@ -77,18 +70,32 @@ namespace SomerenUI
 
 
             LoadSomerenUI();
-
-
-
-
-
         }
 
+        // method for switching to the SomerenUI form, also closes the login form
         void LoadSomerenUI()
         {
             this.Hide();
             SomerenUI somerenUI = new SomerenUI();
             somerenUI.ShowDialog();
+            this.Close();
+        }
+
+        // register linklabel, if clicked then open register form and close the login form
+        private void registerLInkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.ShowDialog();
+            this.Close();
+        }
+
+        // password recovery linklabel, if clicked then open passwordrecovery form and close the login form
+        private void passwordLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            PasswordRecoveryForm password = new PasswordRecoveryForm();
+            password.ShowDialog();
             this.Close();
         }
     }
