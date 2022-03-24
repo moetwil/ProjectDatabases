@@ -1118,10 +1118,22 @@ namespace SomerenUI
         {
             Activity activity = GetActivityEthem();
             ActivityService activityService = new ActivityService();
-            activityService.DeleteActivity(activity.ActivityId);
+            
 
-            LoadActivities(listViewWithActivites);
-            ClearActivityTextboxes();
+            DialogResult deletePopUp = MessageBox.Show("Are you sure you want to delete the activity? from the activity?", "Delete Confirmation", MessageBoxButtons.YesNo);
+            if (deletePopUp == DialogResult.Yes)
+            {
+                activityService.DeleteActivity(activity.ActivityId);
+                LoadActivities(listViewWithActivites);
+                ClearActivityTextboxes();
+
+            }
+            else if (deletePopUp == DialogResult.No)
+            {
+                MessageBox.Show("Delete has been canceled");
+            }
+
+            
         }
 
         void ClearActivityTextboxes()
@@ -1166,6 +1178,19 @@ namespace SomerenUI
             activityService.AddActivity(description, start, end);
 
             LoadActivities(listViewWithActivites);
+        }
+
+        private void UpdateAcitivityButton_Click(object sender, EventArgs e)
+        {
+            string description = DescriptionTextbox.Text;
+            string start = StartDateTextbox.Text;
+            string end = EndDateTextbox.Text;
+            
+            Activity activity = GetActivityEthem();
+            ActivityService activityService = new ActivityService();
+            activityService.UpdateActivity(description, start, end, activity.ActivityId);
+            LoadActivities(listViewWithActivites);
+
         }
 
 

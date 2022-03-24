@@ -96,6 +96,10 @@ namespace SomerenLogic
             activitydb.AddActivity(description, startDateTime, endDateTime);
         }
 
+        public void UpdateActivity(string description, string startDateTime, string endDateTime, int activityId)
+        {
+            activitydb.UpdateActivity( activityId, description, startDateTime, endDateTime);
+        }
 
 
     }
