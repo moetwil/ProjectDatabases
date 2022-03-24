@@ -186,7 +186,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1443, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1443, 36);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1303,7 +1303,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(744, 539);
+            this.button1.Location = new System.Drawing.Point(698, 505);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 54);
@@ -1369,10 +1369,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1443, 745);
+            this.Controls.Add(this.pnlDrinksSuplies);
             this.Controls.Add(this.pnlActivities);
             this.Controls.Add(this.pnlActivitySupervisors);
             this.Controls.Add(this.pnlShop);
-            this.Controls.Add(this.pnlDrinksSuplies);
             this.Controls.Add(this.pnlActivityParticipants);
             this.Controls.Add(this.pnlRevenue);
             this.Controls.Add(this.menuStrip1);

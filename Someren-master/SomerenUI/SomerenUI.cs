@@ -313,6 +313,7 @@ namespace SomerenUI
                 pnlActivities.Show();
                 try
                 {
+                    LoadActivities(listViewWithActivites);
                 }
                 catch (Exception e)
                 {
