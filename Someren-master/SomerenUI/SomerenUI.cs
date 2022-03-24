@@ -300,6 +300,7 @@ namespace SomerenUI
                 try
                 {
                     LoadActivities(listViewAllActivities);
+                    listViewAllActivities.Items[0].Selected = true;
                     LoadSupervisors();
                     //LoadSupervisors();
                 }
@@ -854,28 +855,32 @@ namespace SomerenUI
         private void LoadActivitySupervisors(int activityId)
         {
             TeacherService teacherService = new TeacherService();
-            List<Teacher> teachers = teacherService.GetTeacherByActivity(activityId);
-
-            listViewActivitiesSupervisors.Clear();
-
-            // set styling for listView
-            listViewActivitiesSupervisors.GridLines = true;
-            listViewActivitiesSupervisors.View = View.Details;
-            listViewActivitiesSupervisors.FullRowSelect = true;
-
-            // add columns to the listView
-            listViewActivitiesSupervisors.Columns.Add("Id", 25);
-            listViewActivitiesSupervisors.Columns.Add("Firstname", 70);
-            listViewActivitiesSupervisors.Columns.Add("Lastname", 70);
-
-            foreach (Teacher teacher in teachers)
+            if (activityId != 0)
             {
-                ListViewItem item = new ListViewItem(teacher.TeacherId.ToString());
-                item.Tag = teacher;
-                item.SubItems.Add(teacher.FirstName);
-                item.SubItems.Add(teacher.LastName);
-                listViewActivitiesSupervisors.Items.Add(item);
+                List<Teacher> teachers = teacherService.GetTeacherByActivity(activityId);
+
+                listViewActivitiesSupervisors.Clear();
+
+                // set styling for listView
+                listViewActivitiesSupervisors.GridLines = true;
+                listViewActivitiesSupervisors.View = View.Details;
+                listViewActivitiesSupervisors.FullRowSelect = true;
+
+                // add columns to the listView
+                listViewActivitiesSupervisors.Columns.Add("Id", 25);
+                listViewActivitiesSupervisors.Columns.Add("Firstname", 70);
+                listViewActivitiesSupervisors.Columns.Add("Lastname", 70);
+
+                foreach (Teacher teacher in teachers)
+                {
+                    ListViewItem item = new ListViewItem(teacher.TeacherId.ToString());
+                    item.Tag = teacher;
+                    item.SubItems.Add(teacher.FirstName);
+                    item.SubItems.Add(teacher.LastName);
+                    listViewActivitiesSupervisors.Items.Add(item);
+                }
             }
+               
         }
 
         private void buttonAddSupervisor_Click(object sender, EventArgs e)
