@@ -35,14 +35,16 @@ namespace SomerenUI
             this.usernameLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.registerLInkLabel = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(153, 277);
+            this.loginButton.Location = new System.Drawing.Point(306, 533);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(100, 33);
+            this.loginButton.Size = new System.Drawing.Size(200, 63);
             this.loginButton.TabIndex = 0;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -50,51 +52,68 @@ namespace SomerenUI
             // 
             // usernameTextbox
             // 
-            this.usernameTextbox.Location = new System.Drawing.Point(114, 166);
+            this.usernameTextbox.Location = new System.Drawing.Point(228, 319);
+            this.usernameTextbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.usernameTextbox.Name = "usernameTextbox";
-            this.usernameTextbox.Size = new System.Drawing.Size(187, 20);
+            this.usernameTextbox.Size = new System.Drawing.Size(370, 31);
             this.usernameTextbox.TabIndex = 1;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(114, 228);
+            this.passwordTextBox.Location = new System.Drawing.Point(228, 438);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(187, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(370, 31);
             this.passwordTextBox.TabIndex = 2;
             // 
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(111, 150);
+            this.usernameLabel.Location = new System.Drawing.Point(222, 288);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(55, 13);
+            this.usernameLabel.Size = new System.Drawing.Size(110, 25);
             this.usernameLabel.TabIndex = 3;
             this.usernameLabel.Text = "Username";
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(113, 212);
+            this.passwordLabel.Location = new System.Drawing.Point(226, 408);
+            this.passwordLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(53, 13);
+            this.passwordLabel.Size = new System.Drawing.Size(106, 25);
             this.passwordLabel.TabIndex = 4;
             this.passwordLabel.Text = "Password";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SomerenUI.Properties.Resources.someren;
-            this.pictureBox1.Location = new System.Drawing.Point(135, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(270, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 120);
+            this.pictureBox1.Size = new System.Drawing.Size(256, 231);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // registerLInkLabel
+            // 
+            this.registerLInkLabel.AutoSize = true;
+            this.registerLInkLabel.Location = new System.Drawing.Point(227, 495);
+            this.registerLInkLabel.Name = "registerLInkLabel";
+            this.registerLInkLabel.Size = new System.Drawing.Size(92, 25);
+            this.registerLInkLabel.TabIndex = 6;
+            this.registerLInkLabel.TabStop = true;
+            this.registerLInkLabel.Text = "Register";
+            this.registerLInkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registerLInkLabel_LinkClicked);
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 376);
+            this.ClientSize = new System.Drawing.Size(842, 723);
+            this.Controls.Add(this.registerLInkLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
@@ -102,6 +121,7 @@ namespace SomerenUI
             this.Controls.Add(this.usernameTextbox);
             this.Controls.Add(this.loginButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -118,5 +138,6 @@ namespace SomerenUI
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel registerLInkLabel;
     }
 }

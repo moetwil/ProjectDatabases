@@ -91,5 +91,14 @@ namespace SomerenUI
             somerenUI.ShowDialog();
             this.Close();
         }
+
+        // register linklabel, if clicked then open register form and close the login form
+        private void registerLInkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.ShowDialog();
+            this.Close();
+        }
     }
 }
