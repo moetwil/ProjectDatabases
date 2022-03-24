@@ -913,7 +913,49 @@ namespace SomerenUI
 
         private void buttonAddSupervisor_Click(object sender, EventArgs e)
         {
-             /*ActivityService activityService = new ActivityService();
+            /*
+            ActivityService activityService = new ActivityService();
+
+           try
+           {
+               // get id of selected activity
+               int activityId = GetActivityId(listViewActivities);
+               if (activityId == 0)
+                   throw new Exception("No activity selected");
+
+               // get id from selected supervisor
+               if (listViewAllSupervisors == null)
+                   throw new Exception("No student selected");
+
+               int teacherId = listViewAllSupervisors.TeacherId;
+
+               // check if supervisor is in activity
+               bool isInActivity = activityService.IsInActivity(activityId, teacherId);
+
+               if (!isInActivity)
+               {
+                   MessageBox.Show("Supervisor added to activity");
+                   activityService.AddSupervisor(activityId, teacherId);
+                   LoadActivitySupervisor(activityId);
+               }
+               else
+               {
+                   MessageBox.Show("Supervisor is already in this activity");
+               }
+           }
+           catch (Exception exception)
+           {
+               MessageBox.Show("Something went wrong with adding a supervisor to an activity: " + exception.Message);
+               LoggerService.WriteLog(exception);
+           }*/
+        }
+
+        private void buttonDeleteSupervisor_Click(object sender, EventArgs e)
+        {
+            //Button button = new Button();
+            //button.Enabled = false;
+
+            ActivityService activityService = new ActivityService();
 
             try
             {
@@ -922,32 +964,33 @@ namespace SomerenUI
                 if (activityId == 0)
                     throw new Exception("No activity selected");
 
-                // get id from selected student
-                if (listViewAllSupervisors.SelectedItem == null)
-                    throw new Exception("No student selected");
+                int teacherId = GetSupervicorId();
+                if (teacherId == 0)
+                    throw new Exception("No supervisor selected");
 
-                int teacherId = ((Teacher)listViewAllSupervisors.SelectedItem).TeacherId;
-
-                // check if student is in activity
-                bool isInActivity = activityService.IsInActivity(activityId, teacherId);
-
-                if (!isInActivity)
+                DialogResult deletePopUp = MessageBox.Show("Are you sure you want to delete the supervisor from the activity?", "Delete Confirmation", MessageBoxButtons.YesNo);
+                if (deletePopUp == DialogResult.Yes)
                 {
-                    MessageBox.Show("Student added to activity");
-                    //MessageBox.Show($"{activityId} + {studentId}");
-                    activityService.AddStudent(activityId, teacherId);
-                    LoadActivityStudents(activityId);
+                   /* foreach (Teacher teacher in TeacherService.)
+                    {
+                        ListViewItem item = new ListViewItem(teacher.TeacherId.ToString());
+                        item.Tag = teacher;
+                        item.SubItems.Add(teacher.FirstName);
+                        item.SubItems.Add(teacher.LastName);
+                        listViewActivitiesSupervisors.Items.Add(item);
+                    }*/
                 }
-                else
+                else if (deletePopUp == DialogResult.No)
                 {
-                    MessageBox.Show("Student already in activity");
+                    MessageBox.Show("Delete has been canceled");
                 }
+
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Something went wrong with adding a student to an activity: " + exception.Message);
+                MessageBox.Show("Something went wrong with deleting a supervisor from an activity: " + exception.Message);
                 LoggerService.WriteLog(exception);
-            }*/
+            }
         }
 
         private void activitySupervisorsToolStripMenuItem_Click(object sender, EventArgs e)
