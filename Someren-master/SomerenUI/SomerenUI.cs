@@ -961,7 +961,16 @@ namespace SomerenUI
             {
                 teacher = (Teacher)item.Tag;
             }
-            int teacherId = teacher.TeacherId;
+            //int teacherId = teacher.TeacherId;
+
+
+            int activityId = GetActivityId(listViewActivities);
+            if (activityId == 0)
+                throw new Exception("No activity selected");
+
+            int teacherId = GetSupervicorId();
+            if (teacherId == 0)
+                throw new Exception("No student selected");
 
             MessageBox.Show(teacherId.ToString());
             ActivityService activityService = new ActivityService();
