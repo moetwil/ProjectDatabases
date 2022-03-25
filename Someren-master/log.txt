@@ -792,3 +792,9 @@ Error Number:547,State:0,Class:16
 24-3-2022 14:45:23 : No activity selected | System.Exception: No activity selected
    bij SomerenUI.SomerenUI.buttonDeleteSupervisor_Click_1(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 943
 
+25-3-2022 11:51:44 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 775
+
+25-3-2022 11:54:05 : No supervisor selected | System.Exception: No supervisor selected
+   bij SomerenUI.SomerenUI.buttonDeleteSupervisor_Click_1(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 956
+
