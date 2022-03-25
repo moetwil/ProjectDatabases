@@ -10,6 +10,10 @@ namespace SomerenModel
     {
         public string Username { get; set; }
         public HashSalt HashSalt { get; set; }
+        
+        public string Question { get; set; }
+        public string Answer { get; set; }
+
 
         /*public User()
         {

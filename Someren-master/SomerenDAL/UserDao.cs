@@ -17,7 +17,7 @@ namespace SomerenDAL
         public User GetUserByUsername(string username)
         {
             // SQL query that selects the information that we need, where the roomId is bigger than 200
-            string query = "SELECT [username], [hash], [salt] FROM Users WHERE [username] = @Username";
+            string query = "SELECT [username], [hash], [salt], [question], [answer] FROM Users WHERE [username] = @Username";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@Username", username);
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
@@ -38,7 +38,9 @@ namespace SomerenDAL
                 user = new User()
                 {
                     Username = (string)dr["username"],
-                    HashSalt = new HashSalt((string)dr["hash"], (string)dr["salt"])
+                    HashSalt = new HashSalt((string)dr["hash"], (string)dr["salt"]),
+                    Question = (string)dr["question"],
+                    Answer = (string)dr["answer"]
                 };
             }
             return user;
