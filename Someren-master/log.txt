@@ -798,3 +798,6 @@ Error Number:547,State:0,Class:16
 25-3-2022 11:54:05 : No supervisor selected | System.Exception: No supervisor selected
    bij SomerenUI.SomerenUI.buttonDeleteSupervisor_Click_1(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 956
 
+25-3-2022 12:23:33 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+

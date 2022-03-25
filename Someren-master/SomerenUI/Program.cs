@@ -19,7 +19,7 @@ namespace SomerenUI
 
             // change the startup form
             //Application.Run(new SomerenUI());
-            Application.Run(new SomerenUI());
+            Application.Run(new LoginForm());
         }
     }
 }
