@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SomerenLogic;
+using SomerenModel;
 
 namespace SomerenUI
 {
@@ -39,6 +41,18 @@ namespace SomerenUI
                 resetPassword.ShowDialog();
                 this.Close();
             }
+        }
+
+        private void getQuestionButton_Click(object sender, EventArgs e)
+        {
+            string usernameText = textBoxUsername.Text;
+            UserService userService = new UserService();
+
+            User user = userService.GetUser(usernameText);
+
+            questionLabel.Text = user.Question;
+
+
         }
     }
 }

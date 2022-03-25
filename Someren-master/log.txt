@@ -804,3 +804,6 @@ Error Number:547,State:0,Class:16
 25-3-2022 15:46:35 : No username entered | System.Exception: No username entered
    bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
 
+25-3-2022 15:49:47 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
