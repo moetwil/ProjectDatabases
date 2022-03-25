@@ -112,12 +112,13 @@ namespace SomerenUI
             this.button1.TabIndex = 6;
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // PasswordRecoveryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 410);
             this.Controls.Add(this.groupBox1);
             this.Name = "PasswordRecoveryForm";
             this.Text = "PasswordRecoveryForm";
