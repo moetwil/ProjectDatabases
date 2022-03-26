@@ -807,3 +807,18 @@ Error Number:547,State:0,Class:16
 25-3-2022 15:49:47 : No username entered | System.Exception: No username entered
    bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
 
+25-3-2022 16:58:58 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 64
+
+25-3-2022 17:03:00 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenUI.PasswordRecoveryForm.buttonNext_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 31
+
+25-3-2022 17:09:48 : Wrong username, please try again | System.Exception: Wrong username, please try again
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 67
+
+25-3-2022 17:10:20 : Wrong username, please try again | System.Exception: Wrong username, please try again
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 67
+
+25-3-2022 17:10:32 : Wrong username, please try again | System.Exception: Wrong username, please try again
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 67
+

@@ -19,40 +19,65 @@ namespace SomerenUI
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonNext_Click(object sender, EventArgs e)
         {
-
-            if(textBoxUsername.Text != "piet@infhaarlem.nl")
+            try
             {
-                MessageBox.Show("Wrong username and/or secret answer! Try again");
+                string questionAnswer = textBoxAnswer.Text;
+                UserService userService = new UserService();
 
-                if (textBoxUsername.Text == null)
+                User user = userService.GetUser(questionAnswer);
+
+                if (questionAnswer != user.Answer)
                 {
-                    MessageBox.Show("Please fill in your username");
+                    throw new Exception("Wrong answer. Please Try again");
                 }
+                else
+                {
+                    MessageBox.Show("Correct answer");
 
+                    this.Hide();
+                    PasswordRecoveryForm2 resetPassword = new PasswordRecoveryForm2();
+                    resetPassword.ShowDialog();
+                    this.Close();
+                }
             }
-            else
+            catch (Exception exception)
             {
-                MessageBox.Show("Correct answer and username");
-
-                this.Hide();
-                PasswordRecoveryForm2 resetPassword = new PasswordRecoveryForm2();
-                resetPassword.ShowDialog();
-                this.Close();
+                MessageBox.Show("Something went wrong with answering the question: " + exception.Message);
+                LoggerService.WriteLog(exception);
             }
+
+
         }
 
         private void getQuestionButton_Click(object sender, EventArgs e)
         {
-            string usernameText = textBoxUsername.Text;
-            UserService userService = new UserService();
+           
+            try
+            {
+                string usernameText = textBoxUsername.Text;
+                UserService userService = new UserService();
 
-            User user = userService.GetUser(usernameText);
-
-            questionLabel.Text = user.Question;
-
+                User user = userService.GetUser(usernameText);
+           
+                if (usernameText != user.Username)
+                {
+                    throw new Exception("Wrong username, please try again");
+                }
+                else
+                {
+                    MessageBox.Show("Correct username");
+                    questionLabel.Text = user.Question;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with entering the username: " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }
 
         }
+
     }
 }
