@@ -62,5 +62,19 @@ namespace SomerenUI
                 textVerifyPassword.PasswordChar = '*';
             }
         }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            // if you push the button than the password will be encrypted
+
+            string newPassword = textNewPassword.Text;
+            string verifyPassword = textVerifyPassword.Text;
+
+            if (e.Clicks == 1)
+            {
+                textNewPassword.ToString();
+                textVerifyPassword.ToString();
+            }
+        }
     }
 }
