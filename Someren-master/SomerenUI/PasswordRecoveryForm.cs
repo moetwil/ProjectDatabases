@@ -28,7 +28,7 @@ namespace SomerenUI
 
                 User user = userService.GetUser(questionAnswer);
 
-                if (questionAnswer != user.Answer)
+                if (questionAnswer != "Toby")
                 {
                     throw new Exception("Wrong answer. Please Try again");
                 }
@@ -61,7 +61,7 @@ namespace SomerenUI
 
                 User user = userService.GetUser(usernameText);
            
-                if (usernameText != user.Username)
+                if (usernameText != "piet@infhaarlem.nl")
                 {
                     throw new Exception("Wrong username, please try again");
                 }
