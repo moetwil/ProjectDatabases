@@ -12,6 +12,7 @@ namespace SomerenDAL
 {
     public class HashSaltDao : BaseDao
     {
+        private SqlConnection dbConnection;
 
         // create an hashsalt from the datatable give by the query
         /*private HashSalt ReadTables(DataTable dataTable)
@@ -32,5 +33,15 @@ namespace SomerenDAL
             }
             return hashSalt;
         }*/
+
+        public void UpdatePassword(HashSalt hashsalt)
+        {
+            dbConnection.Open();
+            SqlCommand command = new SqlCommand($"UPDATE [Users] SET hash=@Hash, hash=@Salt WHERE [username] = @Username", dbConnection);
+            command.Parameters.AddWithValue("@Hash", hashsalt.Hash);
+            command.Parameters.AddWithValue("@Salt", hashsalt.Salt);
+            command.ExecuteNonQuery();
+            dbConnection.Close();
+        }
     }
 }

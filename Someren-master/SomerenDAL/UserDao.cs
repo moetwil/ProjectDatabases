@@ -11,8 +11,7 @@ using SomerenModel;
 namespace SomerenDAL
 {
     public class UserDao : BaseDao
-    {      
-
+    {
         // select all rooms from the database
         public User GetUserByUsername(string username)
         {
@@ -45,5 +44,7 @@ namespace SomerenDAL
             }
             return user;
         }
+
+
     }
 }

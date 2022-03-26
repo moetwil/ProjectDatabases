@@ -1,4 +1,5 @@
 ﻿using SomerenLogic;
+using SomerenModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,11 @@ namespace SomerenUI
                 }
                 else
                 {
-                    MessageBox.Show("Password is verified");
+                    HashSalt hashSalt = new HashSalt(newPassword, verifyPassword);
+                    HashSaltService hashSaltService = new HashSaltService();
+                    hashSaltService.UpdatePassword(hashSalt);
+                    this.Close();
+                    MessageBox.Show("Password is verified and will be updated.");
                 }
             }
             catch (Exception exception)
@@ -54,12 +59,8 @@ namespace SomerenUI
             if (e.Clicks == 1)
             {
                 textNewPassword.PasswordChar = '*';
+                textVerifyPassword.PasswordChar = '*';
             }
-            /*
-            else if (e.Clicks == 2)
-            {
-                textNewPassword.ToString();
-            }*/
         }
     }
 }
