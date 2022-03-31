@@ -34,10 +34,10 @@ namespace SomerenUI
                 }
                 else
                 {
-                    HashSalt hashSalt = new HashSalt(newPassword, verifyPassword);
-                    HashSaltService hashSaltService = new HashSaltService();
-                    hashSaltService.UpdatePassword(hashSalt);
-                    this.Close();
+                   // HashSalt activity = GetActivityEthem();
+                    HashSaltService activityService = new HashSaltService();
+                    activityService.UpdatePassword(newPassword, verifyPassword);
+
                     MessageBox.Show("Password is verified and will be updated.");
                 }
             }
