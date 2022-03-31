@@ -47,6 +47,17 @@ namespace SomerenUI
                 // verify the login
                 HashSaltService hashSaltService = new HashSaltService();
                 bool login = hashSaltService.VerifyPassword(password, user.HashSalt);
+
+                //if login is true, open somerenui en sluit het inlog venster
+                if (login)
+                {
+                    LoadSomerenUI();
+                }
+                else
+                {
+                    // toon message dat het wachtwoord niet klopt
+                    MessageBox.Show("False password, try again");
+                }
             }
             catch (Exception exception)
             {
@@ -55,21 +66,12 @@ namespace SomerenUI
             }
             //uncomment dit voordat je het inlevert, anders verifieerd hij de login niet
 
-            // if login is true, open somerenui en sluit het inlog venster
-            /*if (login)
-            {
-                LoadSomerenUI();
-            }
-            else
-            {
-            // toon message dat het wachtwoord niet klopt
-                MessageBox.Show("False password, try again");
-            }*/
+            
 
             //MessageBox.Show(login.ToString());
 
 
-            LoadSomerenUI();
+            //LoadSomerenUI();
         }
 
         // method for switching to the SomerenUI form, also closes the login form
