@@ -15,6 +15,7 @@ namespace SomerenUI
     public partial class PasswordRecoveryForm : Form
     {
         private string username;
+        public User user;
 
         public PasswordRecoveryForm()
         {
@@ -25,12 +26,15 @@ namespace SomerenUI
         {
             try
             {
-                string questionAnswer = textBoxAnswer.Text;
-                UserService userService = new UserService();
+                string questionAnswer = textBoxAnswer.Text.ToLower();
+                //UserService userService = new UserService();
 
-                User user = userService.GetUser(questionAnswer);
+                //User user = userService.GetUser(questionAnswer);
 
-                if (questionAnswer != "Toby")
+                //MessageBox.Show(user.Answer);
+
+                //if (questionAnswer != "Toby")
+                if (questionAnswer != user.Answer.ToLower())
                 {
                     throw new Exception("Wrong answer. Please Try again");
                 }
@@ -61,13 +65,13 @@ namespace SomerenUI
                 string usernameText = textBoxUsername.Text;
                 UserService userService = new UserService();
 
-                User user = userService.GetUser(usernameText);
+                user = userService.GetUser(usernameText);
                 if (user == null)
                     throw new Exception("Not an existing user");
 
                 else
                 {
-                    MessageBox.Show("Correct username");
+                    //MessageBox.Show("Correct username");
                     username = usernameText;
                     questionLabel.Text = user.Question;
                 }
