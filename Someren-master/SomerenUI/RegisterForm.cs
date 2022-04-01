@@ -19,7 +19,22 @@ namespace SomerenUI
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
+            string username = usernameTextbox.Text;
+            string password = passwordTextbox.Text;
 
+            try
+            {
+                if (username == String.Empty)
+                    throw new Exception("No username entered");
+
+                if (password == String.Empty)
+                    throw new Exception("No password entered");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                
+            }
         }
     }
 }
