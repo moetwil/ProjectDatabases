@@ -88,9 +88,8 @@ namespace SomerenUI
             this.questionLabel.Location = new System.Drawing.Point(165, 181);
             this.questionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(13, 17);
+            this.questionLabel.Size = new System.Drawing.Size(0, 17);
             this.questionLabel.TabIndex = 7;
-            this.questionLabel.Text = "-";
             // 
             // buttonNext
             // 
