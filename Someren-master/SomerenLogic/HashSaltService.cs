@@ -42,9 +42,9 @@ namespace SomerenLogic
             hashSaltDao = new HashSaltDao();
         }
 
-        public void UpdatePassword(string hash, string salt, string username)
+        public void UpdatePassword(User user)
         {
-            hashSaltDao.UpdatePassword(hash, salt, username);
+            hashSaltDao.UpdatePassword(user);
         }
 
     }

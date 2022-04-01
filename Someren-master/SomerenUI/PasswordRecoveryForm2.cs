@@ -15,15 +15,17 @@ namespace SomerenUI
     public partial class PasswordRecoveryForm2 : Form
     {
         private string username;
+        private User user;
 
-        public PasswordRecoveryForm2(string username)
+        public PasswordRecoveryForm2(User user)
         {
-            this.username = username;
+            this.user = user;
             InitializeComponent();
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
+
             string newPassword = textNewPassword.Text;
             string verifyPassword = textVerifyPassword.Text;
 
@@ -36,8 +38,11 @@ namespace SomerenUI
                 }
                 else
                 {
-                    HashSaltService activityService = new HashSaltService();
-                    activityService.UpdatePassword(newPassword, verifyPassword, username);
+                    HashSaltService hashSaltService = new HashSaltService();
+
+                    HashSalt newHashSalt = HashSaltService.GenerateSaltedHash(100, newPassword);
+                    user.HashSalt = newHashSalt;
+                    hashSaltService.UpdatePassword(user);
 
                     MessageBox.Show("Password is verified and will be updated.");
                 }

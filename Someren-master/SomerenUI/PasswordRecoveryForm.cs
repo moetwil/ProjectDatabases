@@ -43,7 +43,7 @@ namespace SomerenUI
                     MessageBox.Show("Correct answer");
 
                     this.Hide();
-                    PasswordRecoveryForm2 resetPassword = new PasswordRecoveryForm2(username);
+                    PasswordRecoveryForm2 resetPassword = new PasswordRecoveryForm2(user);
                     resetPassword.ShowDialog();
                     this.Close();
                 }

@@ -34,13 +34,13 @@ namespace SomerenDAL
             return hashSalt;
         }*/
 
-        public void UpdatePassword(string hash, string salt, string username)
+        public void UpdatePassword(User user)
         {
             string query = $"UPDATE [Users] SET hash=@hash, salt=@salt WHERE [username] = @username";
             SqlParameter[] sqlParameters = new SqlParameter[3];
-            sqlParameters[0] = new SqlParameter("@hash", hash);
-            sqlParameters[1] = new SqlParameter("@salt", salt);
-            sqlParameters[2] = new SqlParameter("@username", username);
+            sqlParameters[0] = new SqlParameter("@hash", user.HashSalt.Hash);
+            sqlParameters[1] = new SqlParameter("@salt", user.HashSalt.Salt);
+            sqlParameters[2] = new SqlParameter("@username", user.Username);
             ExecuteEditQuery(query, sqlParameters);
         }
 
