@@ -14,6 +14,8 @@ namespace SomerenUI
 {
     public partial class PasswordRecoveryForm : Form
     {
+        private string username;
+
         public PasswordRecoveryForm()
         {
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace SomerenUI
                     MessageBox.Show("Correct answer");
 
                     this.Hide();
-                    PasswordRecoveryForm2 resetPassword = new PasswordRecoveryForm2();
+                    PasswordRecoveryForm2 resetPassword = new PasswordRecoveryForm2(username);
                     resetPassword.ShowDialog();
                     this.Close();
                 }
@@ -68,6 +70,7 @@ namespace SomerenUI
                 else
                 {
                     MessageBox.Show("Correct username");
+                    username = usernameText;
                     questionLabel.Text = user.Question;
                 }
             }

@@ -12,7 +12,7 @@ namespace SomerenLogic
 {
     public class HashSaltService
     {
-        HashSaltDao teacherdb;
+        HashSaltDao hashSaltDao;
 
         // creates hash and salt from the password
         public static HashSalt GenerateSaltedHash(int length, string password)
@@ -37,9 +37,14 @@ namespace SomerenLogic
             return Convert.ToBase64String(rfc2898DeriveBytes.GetBytes(256)) == hashSalt.Hash;
         }
 
-        public void UpdatePassword(string hash, string salt)
+        public HashSaltService()
         {
-            teacherdb.UpdatePassword(hash, salt);
+            hashSaltDao = new HashSaltDao();
+        }
+
+        public void UpdatePassword(string hash, string salt, string username)
+        {
+            hashSaltDao.UpdatePassword(hash, salt, username);
         }
 
     }

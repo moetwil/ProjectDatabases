@@ -14,9 +14,11 @@ namespace SomerenUI
 {
     public partial class PasswordRecoveryForm2 : Form
     {
+        private string username;
 
-        public PasswordRecoveryForm2()
+        public PasswordRecoveryForm2(string username)
         {
+            this.username = username;
             InitializeComponent();
         }
 
@@ -34,9 +36,8 @@ namespace SomerenUI
                 }
                 else
                 {
-                   // HashSalt activity = GetActivityEthem();
                     HashSaltService activityService = new HashSaltService();
-                    activityService.UpdatePassword(newPassword, verifyPassword);
+                    activityService.UpdatePassword(newPassword, verifyPassword, username);
 
                     MessageBox.Show("Password is verified and will be updated.");
                 }

@@ -7,6 +7,8 @@ namespace SomerenUI
 {
     public partial class LoginForm : Form
     {
+        private string username;
+
         public LoginForm()
         {
             InitializeComponent();
