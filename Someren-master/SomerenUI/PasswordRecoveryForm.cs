@@ -62,11 +62,9 @@ namespace SomerenUI
                 UserService userService = new UserService();
 
                 User user = userService.GetUser(usernameText);
-           
-                if (usernameText != "piet@infhaarlem.nl")
-                {
-                    throw new Exception("Wrong username, please try again");
-                }
+                if (user == null)
+                    throw new Exception("Not an existing user");
+
                 else
                 {
                     MessageBox.Show("Correct username");
