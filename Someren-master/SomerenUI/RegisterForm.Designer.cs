@@ -31,47 +31,87 @@ namespace SomerenUI
         {
             this.usernameTextbox = new System.Windows.Forms.TextBox();
             this.passwordTextbox = new System.Windows.Forms.TextBox();
-            this.questionTextbox = new System.Windows.Forms.TextBox();
-            this.answerTextbox = new System.Windows.Forms.TextBox();
+            this.licenseTextbox = new System.Windows.Forms.TextBox();
+            this.resgisterUsernamelabel = new System.Windows.Forms.Label();
+            this.registerPasswordlabel = new System.Windows.Forms.Label();
+            this.LicensekeyLabel = new System.Windows.Forms.Label();
+            this.RegisterButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usernameTextbox
             // 
-            this.usernameTextbox.Location = new System.Drawing.Point(202, 102);
+            this.usernameTextbox.Location = new System.Drawing.Point(152, 82);
+            this.usernameTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usernameTextbox.Name = "usernameTextbox";
-            this.usernameTextbox.Size = new System.Drawing.Size(288, 31);
+            this.usernameTextbox.Size = new System.Drawing.Size(217, 26);
             this.usernameTextbox.TabIndex = 0;
             // 
             // passwordTextbox
             // 
-            this.passwordTextbox.Location = new System.Drawing.Point(202, 174);
+            this.passwordTextbox.Location = new System.Drawing.Point(152, 139);
+            this.passwordTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passwordTextbox.Name = "passwordTextbox";
-            this.passwordTextbox.Size = new System.Drawing.Size(288, 31);
+            this.passwordTextbox.Size = new System.Drawing.Size(217, 26);
             this.passwordTextbox.TabIndex = 1;
             // 
-            // questionTextbox
+            // licenseTextbox
             // 
-            this.questionTextbox.Location = new System.Drawing.Point(202, 238);
-            this.questionTextbox.Name = "questionTextbox";
-            this.questionTextbox.Size = new System.Drawing.Size(288, 31);
-            this.questionTextbox.TabIndex = 2;
+            this.licenseTextbox.Location = new System.Drawing.Point(152, 190);
+            this.licenseTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.licenseTextbox.Name = "licenseTextbox";
+            this.licenseTextbox.Size = new System.Drawing.Size(217, 26);
+            this.licenseTextbox.TabIndex = 2;
             // 
-            // answerTextbox
+            // resgisterUsernamelabel
             // 
-            this.answerTextbox.Location = new System.Drawing.Point(202, 300);
-            this.answerTextbox.Name = "answerTextbox";
-            this.answerTextbox.Size = new System.Drawing.Size(288, 31);
-            this.answerTextbox.TabIndex = 3;
+            this.resgisterUsernamelabel.AutoSize = true;
+            this.resgisterUsernamelabel.Location = new System.Drawing.Point(67, 88);
+            this.resgisterUsernamelabel.Name = "resgisterUsernamelabel";
+            this.resgisterUsernamelabel.Size = new System.Drawing.Size(83, 20);
+            this.resgisterUsernamelabel.TabIndex = 4;
+            this.resgisterUsernamelabel.Text = "Username";
+            // 
+            // registerPasswordlabel
+            // 
+            this.registerPasswordlabel.AutoSize = true;
+            this.registerPasswordlabel.Location = new System.Drawing.Point(67, 145);
+            this.registerPasswordlabel.Name = "registerPasswordlabel";
+            this.registerPasswordlabel.Size = new System.Drawing.Size(78, 20);
+            this.registerPasswordlabel.TabIndex = 5;
+            this.registerPasswordlabel.Text = "Password";
+            // 
+            // LicensekeyLabel
+            // 
+            this.LicensekeyLabel.AutoSize = true;
+            this.LicensekeyLabel.Location = new System.Drawing.Point(53, 196);
+            this.LicensekeyLabel.Name = "LicensekeyLabel";
+            this.LicensekeyLabel.Size = new System.Drawing.Size(94, 20);
+            this.LicensekeyLabel.TabIndex = 6;
+            this.LicensekeyLabel.Text = "License Key";
+            // 
+            // RegisterButton
+            // 
+            this.RegisterButton.Location = new System.Drawing.Point(152, 264);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(217, 59);
+            this.RegisterButton.TabIndex = 7;
+            this.RegisterButton.Text = "Register";
+            this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.answerTextbox);
-            this.Controls.Add(this.questionTextbox);
+            this.ClientSize = new System.Drawing.Size(600, 360);
+            this.Controls.Add(this.RegisterButton);
+            this.Controls.Add(this.LicensekeyLabel);
+            this.Controls.Add(this.registerPasswordlabel);
+            this.Controls.Add(this.resgisterUsernamelabel);
+            this.Controls.Add(this.licenseTextbox);
             this.Controls.Add(this.passwordTextbox);
             this.Controls.Add(this.usernameTextbox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
             this.ResumeLayout(false);
@@ -83,7 +123,10 @@ namespace SomerenUI
 
         private System.Windows.Forms.TextBox usernameTextbox;
         private System.Windows.Forms.TextBox passwordTextbox;
-        private System.Windows.Forms.TextBox questionTextbox;
-        private System.Windows.Forms.TextBox answerTextbox;
+        private System.Windows.Forms.TextBox licenseTextbox;
+        private System.Windows.Forms.Label resgisterUsernamelabel;
+        private System.Windows.Forms.Label registerPasswordlabel;
+        private System.Windows.Forms.Label LicensekeyLabel;
+        private System.Windows.Forms.Button RegisterButton;
     }
 }
