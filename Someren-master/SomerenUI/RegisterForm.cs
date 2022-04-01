@@ -16,5 +16,10 @@ namespace SomerenUI
         {
             InitializeComponent();
         }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace SomerenUI
         {
             this.usernameTextbox = new System.Windows.Forms.TextBox();
             this.passwordTextbox = new System.Windows.Forms.TextBox();
-            this.questionTextbox = new System.Windows.Forms.TextBox();
+            this.licenseTextbox = new System.Windows.Forms.TextBox();
             this.resgisterUsernamelabel = new System.Windows.Forms.Label();
             this.registerPasswordlabel = new System.Windows.Forms.Label();
             this.LicensekeyLabel = new System.Windows.Forms.Label();
@@ -54,13 +54,13 @@ namespace SomerenUI
             this.passwordTextbox.Size = new System.Drawing.Size(217, 26);
             this.passwordTextbox.TabIndex = 1;
             // 
-            // questionTextbox
+            // licenseTextbox
             // 
-            this.questionTextbox.Location = new System.Drawing.Point(152, 190);
-            this.questionTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.questionTextbox.Name = "questionTextbox";
-            this.questionTextbox.Size = new System.Drawing.Size(217, 26);
-            this.questionTextbox.TabIndex = 2;
+            this.licenseTextbox.Location = new System.Drawing.Point(152, 190);
+            this.licenseTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.licenseTextbox.Name = "licenseTextbox";
+            this.licenseTextbox.Size = new System.Drawing.Size(217, 26);
+            this.licenseTextbox.TabIndex = 2;
             // 
             // resgisterUsernamelabel
             // 
@@ -97,6 +97,7 @@ namespace SomerenUI
             this.RegisterButton.TabIndex = 7;
             this.RegisterButton.Text = "Register";
             this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // RegisterForm
             // 
@@ -107,7 +108,7 @@ namespace SomerenUI
             this.Controls.Add(this.LicensekeyLabel);
             this.Controls.Add(this.registerPasswordlabel);
             this.Controls.Add(this.resgisterUsernamelabel);
-            this.Controls.Add(this.questionTextbox);
+            this.Controls.Add(this.licenseTextbox);
             this.Controls.Add(this.passwordTextbox);
             this.Controls.Add(this.usernameTextbox);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -122,7 +123,7 @@ namespace SomerenUI
 
         private System.Windows.Forms.TextBox usernameTextbox;
         private System.Windows.Forms.TextBox passwordTextbox;
-        private System.Windows.Forms.TextBox questionTextbox;
+        private System.Windows.Forms.TextBox licenseTextbox;
         private System.Windows.Forms.Label resgisterUsernamelabel;
         private System.Windows.Forms.Label registerPasswordlabel;
         private System.Windows.Forms.Label LicensekeyLabel;
