@@ -84,5 +84,12 @@ namespace SomerenUI
 
         }
 
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm backToLogin = new LoginForm();
+            backToLogin.ShowDialog();
+            this.Close();
+        }
     }
 }

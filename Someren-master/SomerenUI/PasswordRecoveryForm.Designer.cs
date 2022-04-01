@@ -30,6 +30,8 @@ namespace SomerenUI
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.getQuestionButton = new System.Windows.Forms.Button();
             this.questionLabel = new System.Windows.Forms.Label();
             this.buttonNext = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,8 +39,7 @@ namespace SomerenUI
             this.textBoxAnswer = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.getQuestionButton = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,25 @@ namespace SomerenUI
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Forgot password";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(31, 139);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(384, 10);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            // 
+            // getQuestionButton
+            // 
+            this.getQuestionButton.Location = new System.Drawing.Point(31, 75);
+            this.getQuestionButton.Margin = new System.Windows.Forms.Padding(4);
+            this.getQuestionButton.Name = "getQuestionButton";
+            this.getQuestionButton.Size = new System.Drawing.Size(384, 35);
+            this.getQuestionButton.TabIndex = 1;
+            this.getQuestionButton.Text = "Get Question";
+            this.getQuestionButton.UseVisualStyleBackColor = true;
+            this.getQuestionButton.Click += new System.EventHandler(this.getQuestionButton_Click);
             // 
             // questionLabel
             // 
@@ -126,30 +146,22 @@ namespace SomerenUI
             this.label1.TabIndex = 1;
             this.label1.Text = "Secret question:";
             // 
-            // getQuestionButton
+            // buttonBack
             // 
-            this.getQuestionButton.Location = new System.Drawing.Point(31, 75);
-            this.getQuestionButton.Margin = new System.Windows.Forms.Padding(4);
-            this.getQuestionButton.Name = "getQuestionButton";
-            this.getQuestionButton.Size = new System.Drawing.Size(384, 35);
-            this.getQuestionButton.TabIndex = 1;
-            this.getQuestionButton.Text = "Get Question";
-            this.getQuestionButton.UseVisualStyleBackColor = true;
-            this.getQuestionButton.Click += new System.EventHandler(this.getQuestionButton_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Location = new System.Drawing.Point(31, 139);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(384, 10);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
+            this.buttonBack.Location = new System.Drawing.Point(23, 36);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(115, 39);
+            this.buttonBack.TabIndex = 1;
+            this.buttonBack.Text = "Back to Login";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // PasswordRecoveryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 410);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PasswordRecoveryForm";
@@ -172,5 +184,6 @@ namespace SomerenUI
         private System.Windows.Forms.Button getQuestionButton;
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

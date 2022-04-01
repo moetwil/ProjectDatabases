@@ -30,13 +30,14 @@ namespace SomerenUI
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textVerifyPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textNewPassword = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,16 @@ namespace SomerenUI
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Reset password";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(108, 144);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(62, 32);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "show";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
             // 
             // button1
             // 
@@ -108,21 +119,22 @@ namespace SomerenUI
             this.textNewPassword.Size = new System.Drawing.Size(300, 22);
             this.textNewPassword.TabIndex = 0;
             // 
-            // button2
+            // buttonBack
             // 
-            this.button2.Location = new System.Drawing.Point(108, 144);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 32);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "show";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            this.buttonBack.Location = new System.Drawing.Point(17, 38);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(109, 39);
+            this.buttonBack.TabIndex = 1;
+            this.buttonBack.Text = "Back to Login";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // PasswordRecoveryForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 345);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.groupBox1);
             this.Name = "PasswordRecoveryForm2";
             this.Text = "PasswordRecoveryForm2";
@@ -142,5 +154,6 @@ namespace SomerenUI
         private System.Windows.Forms.TextBox textNewPassword;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonBack;
     }
 }
