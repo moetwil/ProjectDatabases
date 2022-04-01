@@ -30,5 +30,11 @@ namespace SomerenLogic
 
             return teachers;
         }
+
+        public List<Teacher> GetTeacherByActivity(int activityId)
+        {
+            List<Teacher> teachers = teacherdb.GetTeacherByActivity(activityId);
+            return teachers;
+        }
     }
 }

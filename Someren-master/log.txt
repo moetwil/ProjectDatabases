@@ -458,3 +458,477 @@ Error Number:547,State:0,Class:16
 18-3-2022 19:21:45 : Make sure to enter an Id | System.Exception: Make sure to enter an Id
    bij SomerenUI.SomerenUI.DeleteButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 801
 
+19-3-2022 14:24:13 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 724
+
+19-3-2022 14:27:16 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 740
+
+19-3-2022 14:27:54 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 740
+
+19-3-2022 14:27:58 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 744
+
+19-3-2022 14:28:21 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 740
+
+19-3-2022 14:28:23 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 744
+
+20-3-2022 12:25:02 : Choose a valid date between 12-03-22 and 19-03-22 | System.Exception: Choose a valid date between 12-03-22 and 19-03-22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 392
+
+22-3-2022 15:03:30 : Choose a valid date between 12-03-22 and 19-03-22 | System.Exception: Choose a valid date between 12-03-22 and 19-03-22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 410
+
+22-3-2022 16:19:08 : *** LUKjEWABxKwpc3R4u27CLi4ZoUlbdRVDdu0GnGoowaK3KL/TxKUUwigih9DBP/B2lc+9ZxOG253IhSmpZ/TryUqSW0vGFuRYcWSf3qIFoBDqSubkZv3Qe+mW2fi8cp3yCFEpjtYT+wyObPWsWzL1LalERyg6eQcmU7dahkpYAIDXYjMs27nawM37h7OP5Cg11AKI3J/RKJzGPEZ67r9sCHRJHPASlTL1LFEJTEUZxbjfSprq6y/Ve5wXJUFBbFOBicnRPXmbBJgsC4Ij1hA5N+MFTwmmpq/lEdtFfKtFjvRt7KYXVJVSp3rw78mnIl+Bc6OhvJE9P4YG/JDyPBdnKQ== *** | System.Exception: *** LUKjEWABxKwpc3R4u27CLi4ZoUlbdRVDdu0GnGoowaK3KL/TxKUUwigih9DBP/B2lc+9ZxOG253IhSmpZ/TryUqSW0vGFuRYcWSf3qIFoBDqSubkZv3Qe+mW2fi8cp3yCFEpjtYT+wyObPWsWzL1LalERyg6eQcmU7dahkpYAIDXYjMs27nawM37h7OP5Cg11AKI3J/RKJzGPEZ67r9sCHRJHPASlTL1LFEJTEUZxbjfSprq6y/Ve5wXJUFBbFOBicnRPXmbBJgsC4Ij1hA5N+MFTwmmpq/lEdtFfKtFjvRt7KYXVJVSp3rw78mnIl+Bc6OhvJE9P4YG/JDyPBdnKQ== ***
+
+22-3-2022 16:19:08 : *** pkBQcnWtztlIArwFEHtkDUTjfEqpePLu0zJLo7hpRXu7wV84AYwU6FJG00OHMnuvkG65HyRJYkH887pNzRqDlQ== *** | System.Exception: *** pkBQcnWtztlIArwFEHtkDUTjfEqpePLu0zJLo7hpRXu7wV84AYwU6FJG00OHMnuvkG65HyRJYkH887pNzRqDlQ== ***
+
+22-3-2022 20:17:23 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:21:24 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:24:12 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:33:42 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:39:59 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:44:51 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:46:30 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:47:55 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:48:33 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:52:45 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:54:24 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:55:02 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:57:21 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 20:57:56 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+22-3-2022 21:54:51 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+22-3-2022 21:55:11 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+22-3-2022 21:55:42 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+22-3-2022 21:56:05 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+22-3-2022 21:56:51 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+22-3-2022 21:57:07 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+22-3-2022 21:57:26 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+22-3-2022 21:58:48 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+23-3-2022 12:31:52 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+23-3-2022 12:34:07 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+23-3-2022 13:02:36 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+23-3-2022 19:44:11 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+23-3-2022 19:52:44 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+23-3-2022 19:55:41 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+23-3-2022 19:57:26 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+23-3-2022 20:53:34 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 20:54:32 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 20:55:37 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 20:55:48 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 67
+
+23-3-2022 20:55:52 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 83
+
+23-3-2022 20:56:35 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 20:56:48 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 69
+
+23-3-2022 21:10:59 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 21:11:06 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 67
+
+23-3-2022 21:11:11 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 90
+
+23-3-2022 21:11:57 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 21:12:05 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 92
+
+23-3-2022 21:12:08 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 92
+
+23-3-2022 21:12:29 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 21:12:37 : De indeling van de invoertekenreeks is onjuist. | System.FormatException: De indeling van de invoertekenreeks is onjuist.
+   bij System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bij System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bij System.Int32.Parse(String s)
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 92
+
+23-3-2022 21:13:34 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 21:14:47 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+23-3-2022 21:14:50 : No student selected. | System.Exception: No student selected.
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 67
+
+23-3-2022 21:14:52 : No shop item(s) selected | System.Exception: No shop item(s) selected
+   bij SomerenLogic.PurchaseService.PlaceOrder(ListView listViewShopStudents, ListView listViewShopDrinks) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenLogic\PurchaseService.cs:regel 83
+
+24-3-2022 09:18:42 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+24-3-2022 09:25:59 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+24-3-2022 09:26:41 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+24-3-2022 09:28:31 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+24-3-2022 09:35:16 : Not an existing user | System.Exception: Not an existing user
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 50
+
+24-3-2022 09:46:33 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 40
+
+24/03/2022 11:24:13 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 40
+
+24/03/2022 11:25:59 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 40
+
+24/03/2022 11:37:18 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 40
+
+24/03/2022 11:44:35 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 40
+
+24/03/2022 11:58:30 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 40
+
+24/03/2022 12:41:34 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 12:45:30 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 12:47:00 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 12:47:43 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 12:49:26 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 12:49:47 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 12:50:22 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 12:51:53 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 12:53:22 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 12:53:59 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 12:57:00 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 13:04:41 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 13:06:27 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 13:09:33 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24-3-2022 13:10:04 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+24-3-2022 13:13:28 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+24-3-2022 13:14:21 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+24-3-2022 13:15:17 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+24-3-2022 13:15:46 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+24/03/2022 13:25:30 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 13:58:41 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 14:01:21 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 14:36:36 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 14:37:37 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 14:38:13 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 14:40:59 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24/03/2022 14:41:45 : No username entered | System.Exception: No username entered
+   at SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Ethos\OneDrive\Bureaublad\Project\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:line 34
+
+24-3-2022 14:38:05 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+24-3-2022 14:38:22 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+24-3-2022 14:38:38 : No supervisor selected | System.Exception: No supervisor selected
+   bij SomerenUI.SomerenUI.buttonAddSupervisor_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 902
+
+24-3-2022 14:38:46 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+24-3-2022 14:38:52 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.buttonAddSupervisor_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 895
+
+24-3-2022 14:39:00 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+24-3-2022 14:43:47 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+24-3-2022 14:45:13 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+24-3-2022 14:45:19 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.buttonDeleteSupervisor_Click_1(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 943
+
+24-3-2022 14:45:23 : No activity selected | System.Exception: No activity selected
+   bij SomerenUI.SomerenUI.buttonDeleteSupervisor_Click_1(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 943
+
+25-3-2022 11:51:44 : No student selected | System.Exception: No student selected
+   bij SomerenUI.SomerenUI.deleteStudentActivityButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 775
+
+25-3-2022 11:54:05 : No supervisor selected | System.Exception: No supervisor selected
+   bij SomerenUI.SomerenUI.buttonDeleteSupervisor_Click_1(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 956
+
+25-3-2022 12:23:33 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+25-3-2022 15:46:35 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+25-3-2022 15:49:47 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\Luc\Documents\School\Periode 3\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+25-3-2022 16:58:58 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 64
+
+25-3-2022 17:03:00 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenUI.PasswordRecoveryForm.buttonNext_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 31
+
+25-3-2022 17:09:48 : Wrong username, please try again | System.Exception: Wrong username, please try again
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 67
+
+25-3-2022 17:10:20 : Wrong username, please try again | System.Exception: Wrong username, please try again
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 67
+
+25-3-2022 17:10:32 : Wrong username, please try again | System.Exception: Wrong username, please try again
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 67
+
+26-3-2022 12:51:08 : No username entered | System.Exception: No username entered
+   bij SomerenUI.LoginForm.loginButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\LoginForm.cs:regel 34
+
+26-3-2022 12:53:20 : Choose a valid date between 12-03-22 and 19-03-22 | System.Exception: Choose a valid date between 12-03-22 and 19-03-22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 425
+
+26-3-2022 12:54:12 : Choose a valid date between 12-03-22 and 19-03-22 | System.Exception: Choose a valid date between 12-03-22 and 19-03-22
+   bij SomerenUI.SomerenUI.buttonRevenue_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\SomerenUI.cs:regel 425
+
+26-3-2022 12:57:33 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenUI.PasswordRecoveryForm.buttonNext_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 31
+
+26-3-2022 13:09:37 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 71
+
+26-3-2022 13:15:58 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 71
+
+26-3-2022 13:22:16 : Wrong username, please try again | System.Exception: Wrong username, please try again
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 66
+
+26-3-2022 13:22:32 : Wrong answer. Please Try again | System.Exception: Wrong answer. Please Try again
+   bij SomerenUI.PasswordRecoveryForm.buttonNext_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 33
+
+26-3-2022 13:22:59 : The passwords do not match. Please try again. | System.Exception: The passwords do not match. Please try again.
+   bij SomerenUI.PasswordRecoveryForm2.buttonReset_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm2.cs:regel 30
+
+26-3-2022 13:23:38 : Wrong username, please try again | System.Exception: Wrong username, please try again
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 66
+
+26-3-2022 13:23:58 : Wrong answer. Please Try again | System.Exception: Wrong answer. Please Try again
+   bij SomerenUI.PasswordRecoveryForm.buttonNext_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 33
+
+26-3-2022 13:24:23 : The passwords do not match. Please try again. | System.Exception: The passwords do not match. Please try again.
+   bij SomerenUI.PasswordRecoveryForm2.buttonReset_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm2.cs:regel 30
+
+26-3-2022 14:10:08 : Wrong username, please try again | System.Exception: Wrong username, please try again
+   bij SomerenUI.PasswordRecoveryForm.getQuestionButton_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm.cs:regel 66
+
+31-3-2022 16:39:22 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenLogic.HashSaltService.UpdatePassword(HashSalt hashSalt) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\HashSaltService.cs:regel 42
+   bij SomerenUI.PasswordRecoveryForm2.buttonReset_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm2.cs:regel 39
+
+31-3-2022 17:11:56 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenLogic.HashSaltService.UpdatePassword(String hash, String salt) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\HashSaltService.cs:regel 42
+   bij SomerenUI.PasswordRecoveryForm2.buttonReset_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm2.cs:regel 39
+
+31-3-2022 17:17:00 : The variable name '@hash' has already been declared. Variable names must be unique within a query batch or stored procedure.
+Must declare the scalar variable "@username". | System.Data.SqlClient.SqlException (0x80131904): The variable name '@hash' has already been declared. Variable names must be unique within a query batch or stored procedure.
+Must declare the scalar variable "@username".
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.UserDao.UpdatePassword(String hash, String salt) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\UserDao.cs:regel 54
+   bij SomerenLogic.UserService.UpdatePassword(String hash, String salt) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\UserService.cs:regel 27
+   bij SomerenUI.PasswordRecoveryForm2.buttonReset_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm2.cs:regel 39
+ClientConnectionId:bc30938a-d60e-4b74-9051-e71420ef77d9
+Error Number:134,State:1,Class:15
+
+31-3-2022 17:17:38 : The variable name '@hash' has already been declared. Variable names must be unique within a query batch or stored procedure.
+Must declare the scalar variable "@username". | System.Data.SqlClient.SqlException (0x80131904): The variable name '@hash' has already been declared. Variable names must be unique within a query batch or stored procedure.
+Must declare the scalar variable "@username".
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.UserDao.UpdatePassword(String hash, String salt) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\UserDao.cs:regel 54
+   bij SomerenLogic.UserService.UpdatePassword(String hash, String salt) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\UserService.cs:regel 27
+   bij SomerenUI.PasswordRecoveryForm2.buttonReset_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm2.cs:regel 39
+ClientConnectionId:bc30938a-d60e-4b74-9051-e71420ef77d9
+Error Number:134,State:1,Class:15
+
+31-3-2022 17:24:26 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenLogic.HashSaltService.UpdatePassword(String hash, String salt) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\HashSaltService.cs:regel 42
+   bij SomerenUI.PasswordRecoveryForm2.buttonReset_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm2.cs:regel 39
+
+1-4-2022 11:01:50 : De objectverwijzing is niet op een exemplaar van een object ingesteld. | System.NullReferenceException: De objectverwijzing is niet op een exemplaar van een object ingesteld.
+   bij SomerenLogic.HashSaltService.UpdatePassword(String hash, String salt) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\HashSaltService.cs:regel 42
+   bij SomerenUI.PasswordRecoveryForm2.buttonReset_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm2.cs:regel 39
+
+1-4-2022 12:56:10 : Must declare the scalar variable "@username". | System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@username".
+   bij System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   bij System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   bij System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   bij System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   bij System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   bij System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   bij SomerenDAL.BaseDao.ExecuteEditQuery(String query, SqlParameter[] sqlParameters) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\BaseDao.cs:regel 77
+   bij SomerenDAL.HashSaltDao.UpdatePassword(String hash, String salt) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenDAL\HashSaltDao.cs:regel 43
+   bij SomerenLogic.HashSaltService.UpdatePassword(String hash, String salt) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenLogic\HashSaltService.cs:regel 47
+   bij SomerenUI.PasswordRecoveryForm2.buttonReset_Click(Object sender, EventArgs e) in C:\Users\amber\OneDrive\Documenten\Inholland\Klas 1\Periode 3\Project Databases\ProjectDatabases\Someren-master\SomerenUI\PasswordRecoveryForm2.cs:regel 39
+ClientConnectionId:79baee9a-e8d0-46e6-8fa1-6af7d13037d0
+Error Number:137,State:2,Class:15
+

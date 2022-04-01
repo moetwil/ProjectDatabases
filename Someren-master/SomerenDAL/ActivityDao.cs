@@ -20,15 +20,46 @@ namespace SomerenDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        // add a student to an activity
         public void AddStudent(int activityId, int studentId)
         {
-            string query = $"INSERT INTO [ActivityStudent] ([studentId], [activityId]) VALUES (@StudentId, @ActivityId)";
+            string query = "INSERT INTO [ActivityStudent] ([studentId], [activityId]) VALUES (@StudentId, @ActivityId)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@StudentId", studentId);
             sqlParameters[1] = new SqlParameter("@ActivityId", activityId);
             ExecuteEditQuery(query, sqlParameters);
+        }
 
 
+        // delete a student from an activity
+        public void DeleteStudent(int activityId, int studentId)
+        {
+            string query = "DELETE FROM [ActivityStudent] WHERE [studentId] = @StudentId AND [activityId] = @ActivityId;";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@StudentId", studentId);
+            sqlParameters[1] = new SqlParameter("@ActivityId", activityId);
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        
+        //add a supervisor to an activity
+        public void AddSupervisor(int activityId, int teacherId)
+        {
+            string query = "INSERT INTO [ActivitySupervisor] ([teacherId], [activityId]) VALUES (@TeacherId, @ActivityId)";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@TeacherId", teacherId);
+            sqlParameters[1] = new SqlParameter("@ActivityId", activityId);
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        // delete a student from an activity
+        public void DeleteSupervisor(int activityId, int teacherId)
+        {
+            string query = "DELETE FROM [ActivitySupervisor] WHERE [teacherId] = @TeacherId AND [activityId] = @ActivityId;";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@TeacherId", teacherId);
+            sqlParameters[1] = new SqlParameter("@ActivityId", activityId);
+            ExecuteEditQuery(query, sqlParameters);
         }
 
         private List<Activity> ReadTables(DataTable dataTable)
@@ -52,6 +83,36 @@ namespace SomerenDAL
             }
 
             return activities;
+        }
+        //Acitivity delete button
+        public void DeleteActivity(int activityId)
+        {
+            string query = "DELETE FROM [Activities] WHERE activityId = @ActivityId";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@ActivityId", activityId);
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void AddActivity(string description, string startDateTime, string endDateTime)
+        {
+            string query = $"INSERT INTO [Activities] (description, startDateTime, endDateTime) " +
+                $"VALUES (@description, @startDateTime, @endDateTime)";
+            SqlParameter[] sqlParameters = new SqlParameter[3];
+            sqlParameters[0] = new SqlParameter("@description", description);
+            sqlParameters[1] = new SqlParameter("@startDateTime", DateTime.Parse(startDateTime));
+            sqlParameters[2] = new SqlParameter("@endDateTime", DateTime.Parse(endDateTime));
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void UpdateActivity(int ActivityId, string description, string startDateTime, string endDateTime)
+        {
+            string query = $"UPDATE [Activities] SET description=@description, startDateTime=@startDateTime, endDateTime=@endDateTime WHERE activityId=@activityId";
+            SqlParameter[] sqlParameters = new SqlParameter[4];
+            sqlParameters[0] = new SqlParameter("@description", description);
+            sqlParameters[1] = new SqlParameter("@startDateTime", DateTime.Parse(startDateTime));
+            sqlParameters[2] = new SqlParameter("@endDateTime", DateTime.Parse(endDateTime));
+            sqlParameters[3] = new SqlParameter("@activityId", ActivityId);
+            ExecuteEditQuery(query, sqlParameters);
         }
     }
 }

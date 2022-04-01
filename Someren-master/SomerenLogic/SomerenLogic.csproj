@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivityService.cs" />
+    <Compile Include="HashSaltService.cs" />
     <Compile Include="LoggerService.cs" />
     <Compile Include="DrinkService.cs" />
+    <Compile Include="UserService.cs" />
     <Compile Include="RevenueService.cs" />
     <Compile Include="RoomService.cs" />
     <Compile Include="PurchaseService.cs" />

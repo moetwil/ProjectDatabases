@@ -10,3 +10,13 @@ Amber: C
 Ethem: A
 Luc: B
 
+Assignment4:
+Amber: B
+Ethem: A
+Luc: C
+
+Assignment5:
+Amber: C
+Ethem: B
+Luc: A
+

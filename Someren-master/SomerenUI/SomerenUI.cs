@@ -16,6 +16,7 @@ namespace SomerenUI
     {
         public SomerenUI()
         {
+            
             InitializeComponent();
 
             // button enter and leave
@@ -97,6 +98,8 @@ namespace SomerenUI
         private void SomerenUI_Load(object sender, EventArgs e)
         {
             showPanel("Dashboard");
+
+            
         }
 
         private void showPanel(string panelName)
@@ -281,18 +284,46 @@ namespace SomerenUI
                 pnlActivityParticipants.Show();
                 try
                 {
-                    LoadActivities();
+                    LoadActivities(listViewActivities);
+                    listViewActivities.Items[0].Selected = true;
                     LoadStudentsListBox();
                 }
                 catch (Exception e)
                 {
                     MessageBox.Show("Something went wrong while loading the Activities: " + e.Message);
                     LoggerService.WriteLog(e);
-                }
-
-                
-                
+                }                
             }
+            else if (panelName == "Activity Supervisors")
+            {
+                pnlActivitySupervisors.Show();
+                try
+                {
+                    LoadActivities(listViewAllActivities);
+                    listViewAllActivities.Items[0].Selected = true;
+                    LoadSupervisors();
+                    //LoadSupervisors();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Something went wrong while loading the Activities: " + e.Message);
+                    LoggerService.WriteLog(e);
+                }
+            }
+            else if (panelName == "Activities")
+            {
+                pnlActivities.Show();
+                try
+                {
+                    LoadActivities(listViewWithActivites);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Something went wrong while loading the Activities: " + e.Message);
+                    LoggerService.WriteLog(e);
+                }
+            }
+
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -342,6 +373,8 @@ namespace SomerenUI
             pnlRevenue.Hide();
             pnlDrinksSuplies.Hide();
             pnlActivityParticipants.Hide();
+            pnlActivitySupervisors.Hide();
+            pnlActivities.Hide();
         }
 
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -454,16 +487,17 @@ namespace SomerenUI
             listViewShopStudents.FullRowSelect = true;
 
             // add columns to the listView
-            listViewShopStudents.Columns.Add("student id", 80);
+            //listViewShopStudents.Columns.Add("student id", 80);
             listViewShopStudents.Columns.Add("student name", 90);
             listViewShopStudents.Columns.Add("Date of birth", 85);
 
             // fill the list view with students from the List
             foreach (Student student in studentList)
             {
-                ListViewItem item = new ListViewItem(student.StudentId.ToString());
+                //ListViewItem item = new ListViewItem(student.StudentId.ToString());
+                ListViewItem item = new ListViewItem(student.FullName);
                 item.Tag = student;
-                item.SubItems.Add(student.FullName);
+                //item.SubItems.Add(student.FullName);
                 item.SubItems.Add(student.DateOfBirth.ToString("dd-MM-yyyy"));
 
                 listViewShopStudents.Items.Add(item);
@@ -485,7 +519,7 @@ namespace SomerenUI
             listViewShopDrinks.MultiSelect = true;
 
             // add columns to the listView
-            listViewShopDrinks.Columns.Add("drink id", 50);
+           // listViewShopDrinks.Columns.Add("drink id", 50);
             listViewShopDrinks.Columns.Add("Drink name", 70);
             listViewShopDrinks.Columns.Add("Alcohol", 50);
             listViewShopDrinks.Columns.Add("Price", 50);
@@ -493,9 +527,10 @@ namespace SomerenUI
 
             foreach (Drink drink in drinkList)
             {
-                ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
+                //ListViewItem item = new ListViewItem(drink.DrinkId.ToString());
+                ListViewItem item = new ListViewItem(drink.Name);
                 item.Tag = drink;
-                item.SubItems.Add(drink.Name);
+                //item.SubItems.Add(drink.Name);
                 item.SubItems.Add(drink.HasAlcohol.ToString());
                 item.SubItems.Add(drink.Price.ToString("0.00"));
                 item.SubItems.Add(drink.Stock.ToString());
@@ -564,23 +599,23 @@ namespace SomerenUI
             showPanel("ActivityParticipants");
         }
 
-        private void LoadActivities()
+        private void LoadActivities(ListView listview)
         {
             ActivityService activityService = new ActivityService();
             List<Activity> activityList = activityService.GetActivities();
 
-            listViewActivities.Clear();
+            listview.Clear();
 
             // set styling for listView
-            listViewActivities.GridLines = true;
-            listViewActivities.View = View.Details;
-            listViewActivities.FullRowSelect = true;
+            listview.GridLines = true;
+            listview.View = View.Details;
+            listview.FullRowSelect = true;
 
             // add columns to the listView
-            listViewActivities.Columns.Add("Id", 25);
-            listViewActivities.Columns.Add("Description", 70);
-            listViewActivities.Columns.Add("Start DateTime", 110);
-            listViewActivities.Columns.Add("End DateTime", 110);
+            listview.Columns.Add("Id", 25);
+            listview.Columns.Add("Description", 70);
+            listview.Columns.Add("Start DateTime", 110);
+            listview.Columns.Add("End DateTime", 110);
 
             foreach (Activity activity in activityList)
             {
@@ -589,7 +624,7 @@ namespace SomerenUI
                 item.SubItems.Add(activity.Description);
                 item.SubItems.Add(activity.StartDateTime.ToString("dd-MM-yyyy HH:mm"));
                 item.SubItems.Add(activity.EndDateTime.ToString("dd-MM-yyyy HH:mm"));
-                listViewActivities.Items.Add(item);
+                listview.Items.Add(item);
             }
         }
 
@@ -598,7 +633,7 @@ namespace SomerenUI
         {
             try
             {
-                int activityId = GetActivityId();
+                int activityId = GetActivityId(listViewActivities);
 
 
                 //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
@@ -621,10 +656,10 @@ namespace SomerenUI
 
         }
 
-        private int GetActivityId() 
+        private int GetActivityId(ListView listview) 
         {
             int activityId = 0;
-            foreach (ListViewItem item in listViewActivities.SelectedItems)
+            foreach (ListViewItem item in listview.SelectedItems)
             {
                 //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
                 activityId = ((Activity)(item.Tag)).ActivityId;
@@ -634,6 +669,18 @@ namespace SomerenUI
                 throw new Exception("No activity selected");*/
 
             return activityId;
+        }
+
+        private int GetStudentId()
+        {
+            int studentId = 0;
+            foreach (ListViewItem item in listViewActivityStudents.SelectedItems)
+            {
+                //int activityId = ((Activity)(listViewActivities.SelectedItems[0].Tag)).ActivityId;
+                studentId = ((Student)(item.Tag)).StudentId;
+            }
+
+            return studentId;
         }
 
         private void LoadActivityStudents(int activityId)
@@ -680,7 +727,7 @@ namespace SomerenUI
             try
             {
                 // get id of selected activity
-                int activityId = GetActivityId();
+                int activityId = GetActivityId(listViewActivities);
                 if (activityId == 0)
                     throw new Exception("No activity selected");
 
@@ -697,7 +744,8 @@ namespace SomerenUI
                 {
                     MessageBox.Show("Student added to activity");
                     //MessageBox.Show($"{activityId} + {studentId}");
-                    //activityService.AddStudent(activityId, studentId);
+                    activityService.AddStudent(activityId, studentId);
+                    LoadActivityStudents(activityId);
                 }
                 else
                 {
@@ -708,13 +756,233 @@ namespace SomerenUI
             {
                 MessageBox.Show("Something went wrong with adding a student to an activity: " + exception.Message);
                 LoggerService.WriteLog(exception);
+            }
+        }
+
+        private void deleteStudentActivityButton_Click(object sender, EventArgs e)
+        {
+            ActivityService activityService = new ActivityService();
+
+            try
+            {
+                // get id of selected activity
+                int activityId = GetActivityId(listViewActivities);
+                if (activityId == 0)
+                    throw new Exception("No activity selected");
+
+                int studentId = GetStudentId();
+                if (studentId == 0)
+                    throw new Exception("No student selected");
+
+                DialogResult deletePopUp = MessageBox.Show("Are you sure you want to delete the student from the activity?", "Delete Confirmation", MessageBoxButtons.YesNo);
+                if (deletePopUp == DialogResult.Yes)
+                {
+                    activityService.DeleteStudent(activityId, studentId);
+                    LoadActivityStudents(activityId);
+                }
+                else if (deletePopUp == DialogResult.No)
+                {
+                    MessageBox.Show("Delete has been canceled");
+                }
 
             }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with deleting a student from an activity: " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }
+        }
 
-            
+        private int GetSupervisorId()
+        {
+            Teacher teacher = new Teacher();
+
+            foreach (ListViewItem item in listViewAllSupervisors.SelectedItems)
+            {
+                teacher = (Teacher)item.Tag;
+            }
+            return teacher.TeacherId;
+        }
+
+        private void LoadSupervisors()
+        {
+            TeacherService teacherService = new TeacherService();
+            List<Teacher> teachers = teacherService.GetTeachers();
+
+            listViewAllSupervisors.Clear();
+
+            // set styling for listView
+            listViewAllSupervisors.GridLines = true;
+            listViewAllSupervisors.View = View.Details;
+            listViewAllSupervisors.FullRowSelect = true;
+
+            // add columns to the listView
+            listViewAllSupervisors.Columns.Add("Id", 25);
+            listViewAllSupervisors.Columns.Add("First name", 70);
+            listViewAllSupervisors.Columns.Add("Last name", 70);
+
+            foreach (Teacher teacher in teachers)
+            {
+                ListViewItem item = new ListViewItem(teacher.TeacherId.ToString());
+                item.Tag = teacher;
+                item.SubItems.Add(teacher.FirstName);
+                item.SubItems.Add(teacher.LastName);
+                listViewAllSupervisors.Items.Add(item);
+            }
+        }
 
 
 
+        private void listViewAllActivities_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int activityId = GetActivityId(listViewAllActivities);
+
+                if (activityId == 0)
+                {
+                    listViewActivitiesSupervisors.Items.Clear();
+                }
+
+                LoadActivitySupervisors(activityId);
+            }
+            catch (Exception)
+            {
+                throw new Exception("No activity selected");
+            }
+        }
+
+        private void LoadActivitySupervisors(int activityId)
+        {
+            TeacherService teacherService = new TeacherService();
+            if (activityId != 0)
+            {
+                List<Teacher> teachers = teacherService.GetTeacherByActivity(activityId);
+
+                listViewActivitiesSupervisors.Clear();
+
+                // set styling for listView
+                listViewActivitiesSupervisors.GridLines = true;
+                listViewActivitiesSupervisors.View = View.Details;
+                listViewActivitiesSupervisors.FullRowSelect = true;
+
+                // add columns to the listView
+                listViewActivitiesSupervisors.Columns.Add("Id", 25);
+                listViewActivitiesSupervisors.Columns.Add("Firstname", 70);
+                listViewActivitiesSupervisors.Columns.Add("Lastname", 70);
+
+                foreach (Teacher teacher in teachers)
+                {
+                    ListViewItem item = new ListViewItem(teacher.TeacherId.ToString());
+                    item.Tag = teacher;
+                    item.SubItems.Add(teacher.FirstName);
+                    item.SubItems.Add(teacher.LastName);
+                    listViewActivitiesSupervisors.Items.Add(item);
+                }
+            }
+               
+        }
+
+        private void buttonAddSupervisor_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // checking the selected items with tag
+                Teacher teacher = new Teacher();
+                foreach (ListViewItem item in listViewAllSupervisors.SelectedItems)
+                {
+                    teacher = (Teacher)item.Tag;
+                }
+
+                // checking if a activity is selected
+                int activityId = GetActivityId(listViewAllActivities);
+                if (activityId == 0)
+                {
+                    throw new Exception("No activity selected");
+                }
+
+                // checking if a supervisor is selected
+                int teacherId = GetSupervisorId();
+                if (teacherId == 0)
+                {
+                    throw new Exception("No supervisor selected");
+                }
+                ActivityService activityService = new ActivityService();
+
+                // if a supervisor is not in an activity than the supervisor is added
+                // else the supervisor is not added
+                bool isInActivity = activityService.SupervisorInActivity(activityId, teacherId);
+                if (!isInActivity)
+                {
+                    MessageBox.Show("Supervisor has been added to the activity");
+                    activityService.AddSupervisor(activityId, teacherId);
+                    LoadActivitySupervisors(activityId);
+                }
+                else
+                {
+                    MessageBox.Show("Supervisor is already in this activity");
+                }
+            } // if it goes wrong than there will be an exception
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with adding a supervisor from an activity: " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }
+
+        }
+
+        private void buttonDeleteSupervisor_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                // checking the selected items with tag
+                Teacher teacher = new Teacher();
+                foreach (ListViewItem item in listViewAllSupervisors.SelectedItems)
+                {
+                    teacher = (Teacher)item.Tag;
+                }
+
+                // checking if a activity is selected
+                int activityId = GetActivityId(listViewAllActivities);
+                if (activityId == 0)
+                {
+                    throw new Exception("No activity selected");
+                }
+
+                // checking if a supervisor is selected
+                int teacherId = GetSupervisorId();
+                if (teacherId == 0)
+                {
+                    throw new Exception("No supervisor selected");
+                }
+                ActivityService activityService = new ActivityService();
+
+                // when deleting a supervisor a confirmation will popup
+                // if you press yes, the supervisor will be deleted or else it stays
+                DialogResult deletePopUp = MessageBox.Show("Are you sure you want to delete the supervisor from the activity?", "Delete Confirmation", MessageBoxButtons.YesNo);
+                if (deletePopUp == DialogResult.Yes)
+                {
+                    MessageBox.Show("Supervisor has been deleted from the activity");
+                    activityService.DeleteSupervisor(activityId, teacherId);
+                    LoadActivitySupervisors(activityId);
+                }
+                else if (deletePopUp == DialogResult.No)
+                {
+                    MessageBox.Show("Delete has been canceled");
+                }
+            } // if it goes wrong than there will be an exception
+            catch (Exception exception)
+            {
+                MessageBox.Show("Something went wrong with deleting a supervisor from an activity: " + exception.Message);
+                LoggerService.WriteLog(exception);
+            }
+
+
+        }
+
+        private void activitySupervisorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Activity Supervisors");
         }
 
         private void RefreshView()
@@ -846,6 +1114,94 @@ namespace SomerenUI
 
            
         }
+
+        private void activitiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showPanel("Activities");
+        }
+
+        private void DeleteActivityButton_Click(object sender, EventArgs e)
+        {
+            Activity activity = GetActivityEthem();
+            ActivityService activityService = new ActivityService();
+            
+
+            DialogResult deletePopUp = MessageBox.Show("Are you sure you want to delete the activity? from the activity?", "Delete Confirmation", MessageBoxButtons.YesNo);
+            if (deletePopUp == DialogResult.Yes)
+            {
+                activityService.DeleteActivity(activity.ActivityId);
+                LoadActivities(listViewWithActivites);
+                ClearActivityTextboxes();
+
+            }
+            else if (deletePopUp == DialogResult.No)
+            {
+                MessageBox.Show("Delete has been canceled");
+            }
+
+            
+        }
+
+        void ClearActivityTextboxes()
+        {
+            DescriptionTextbox.Text = "";
+            StartDateTextbox.Text = "";
+            EndDateTextbox.Text = "";
+
+        }
+
+        public Activity GetActivityEthem()
+        {
+            Activity activity = new Activity();
+            // makes an activity object from the selected row in the listview
+            foreach (ListViewItem item in listViewWithActivites.SelectedItems)
+            {
+                activity = (Activity)item.Tag;
+            }
+
+            return activity;
+        }
+
+        private void listViewWithActivites_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Activity activity = GetActivityEthem();
+
+            DescriptionTextbox.Text = activity.Description;
+            StartDateTextbox.Text = activity.StartDateTime.ToString();
+            EndDateTextbox.Text = activity.EndDateTime.ToString();  
+        }
+
+        private void AddAcitivityButton_Click(object sender, EventArgs e)
+        {
+            string description = DescriptionTextbox.Text;
+            string start = StartDateTextbox.Text;
+            string end = EndDateTextbox.Text;
+
+
+
+            Activity activity = GetActivityEthem();
+            ActivityService activityService = new ActivityService();
+            activityService.AddActivity(description, start, end);
+
+            LoadActivities(listViewWithActivites);
+        }
+
+        private void UpdateAcitivityButton_Click(object sender, EventArgs e)
+        {
+            string description = DescriptionTextbox.Text;
+            string start = StartDateTextbox.Text;
+            string end = EndDateTextbox.Text;
+            
+            Activity activity = GetActivityEthem();
+            ActivityService activityService = new ActivityService();
+            activityService.UpdateActivity(description, start, end, activity.ActivityId);
+            LoadActivities(listViewWithActivites);
+
+        }
+
+
+
+
 
 
         // check if a student is in a certain activity
